@@ -1,0 +1,1341 @@
+﻿--------------------------------------------------
+
+2017/11/11 9:43:27：Path              = /admin9876/stat/orderreport4.aspx?sign=8&menuId=11
+Time              = 2017-11-11 09:43:27
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_order' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 2
+                        Number : 208
+                        Procedure : 
+                        Server : .
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.AgentStat2(DateTime sdt, DateTime edt, Int32 page, Int32 pagesize, String orderby) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 30
+--------------------------------------------------
+
+2017/11/11 11:03:33：Path              = /index.aspx
+Time              = 2017-11-11 11:03:33
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 11:03:34：Path              = /User/index.aspx
+Time              = 2017-11-11 11:03:34
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 11:03:34：Path              = /User/index.aspx
+Time              = 2017-11-11 11:03:34
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 11:12:28：Path              = /admin9876/User/UserIdImgList.aspx?s=1&sign=19&menuId=22
+Time              = 2017-11-11 11:12:28
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_useridimglist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_c85whn1k.4.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:12:28：Path              = /admin9876/User/UserIdImgList.aspx?s=1&sign=19&menuId=22
+Time              = 2017-11-11 11:12:28
+ClientIP          = ::1
+Type              = System.ArgumentException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 传入的值必须是枚举的枚举基或基础类型，如 Int32。
+参数名: value
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = ParamName : value
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.String GetName(System.Type, System.Object)
+                        
+StackTrace        =    在 System.Enum.GetName(Type enumType, Object value)
+                           在 ASP.admin9876_user_useridimglist_aspx.__DataBind__control12(Object sender, EventArgs e) 位置 e:\3_ASP\Aiyang_web\admin9876\User\UserIdImgList.aspx:行号 155
+                           在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+                           在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+                           在 System.Web.UI.Control.DataBind()
+                           在 System.Web.UI.Control.DataBindChildren()
+                           在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+                           在 System.Web.UI.Control.DataBind()
+                           在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+                           在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+                           在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+                           在 System.Web.UI.WebControls.Repeater.DataBind()
+                           在 KuaiCard.WebUI.Manage.User.UserIdImgLists.LoadData() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\User\UserIdImgLists.cs:行号 125
+                           在 KuaiCard.WebUI.Manage.User.UserIdImgLists.btnSearch_Click(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\User\UserIdImgLists.cs:行号 50
+                           在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+                           在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+                           在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+                           在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+                           在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:06：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:06
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:06：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:06
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:06：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:06
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:06：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:06
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:15：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:15
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:15：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:15
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:15：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:15
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:15：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:15
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:16：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:16
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:16：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 11:13:16
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 11:13:16：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:16
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_q6cxnqb6.5.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 11:13:16：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 11:13:16
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 13:13:50：Path              = /admin9876/stat/orderreport4.aspx?sign=8&menuId=11
+Time              = 2017-11-11 13:13:50
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_order' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 2
+                        Number : 208
+                        Procedure : 
+                        Server : .
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.AgentStat2(DateTime sdt, DateTime edt, Int32 page, Int32 pagesize, String orderby) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 30
+--------------------------------------------------
+
+2017/11/11 13:13:54：Path              = /admin9876/stat/orderreport4.aspx?sign=8&menuId=11
+Time              = 2017-11-11 13:13:54
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_order' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 2
+                        Number : 208
+                        Procedure : 
+                        Server : .
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.AgentStat2(DateTime sdt, DateTime edt, Int32 page, Int32 pagesize, String orderby) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 30
+--------------------------------------------------
+
+2017/11/11 13:17:14：Path              = /admin9876/User/UserEdit.aspx?id=86000047
+Time              = 2017-11-11 13:17:14
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 13:45:56：Path              = /admin9876/Order/BankOrderShow.aspx?id=3813646
+Time              = 2017-11-11 13:45:56
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 13:45:56：Path              = /admin9876/Order/BankOrderShow.aspx?id=3813646
+Time              = 2017-11-11 13:45:56
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 14:12:11：Path              = /admin9876/Channel/ChannelEdit.aspx
+Time              = 2017-11-11 14:12:11
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = INSERT 语句与 FOREIGN KEY 约束"FK__channel__typeId__4AA30C57"冲突。该冲突发生于数据库"aiyang_oldvip"，表"dbo.channeltype", column 'typeId'。
+语句已终止。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 27
+                        Number : 547
+                        Procedure : proc_channel_add
+                        Server : .
+                        State : 0
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+                           在 DBAccess.DataBase.ExecuteNonQuery(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 510
+                           在 DBAccess.DataBase.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 546
+                           在 DBAccess.DataBase.ExecuteNonQuery(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 422
+                           在 KuaiCard.BLL.Channel.Channel.Add(ChannelInfo model) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Channel\Channel.cs:行号 38
+--------------------------------------------------
+
+2017/11/11 14:14:04：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:04
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:14:04：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:04
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:14:05：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:14:05
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:14:05：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:14:05
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:14:07：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:07
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:14:07：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:07
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:14:45：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:45
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:14:45：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:14:45
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:14:56：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:14:56
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:14:56：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:14:56
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:15:12：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:15:12
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:15:12：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:15:12
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:15:12：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:12
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:15:12：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:12
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:15:13：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:13
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:15:13：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:13
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:15:27：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:15:27
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:15:27：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 14:15:27
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:15:27：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:27
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_pnjqncif.7.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 14:15:27：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 14:15:27
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 14:42:10：Path              = /admin9876/admin9876/User/PayRate.aspx?sign=13&menuId=18
+Time              = 2017-11-11 14:42:10
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/admin9876/User/PayRate.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 15:36:38：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 15:36:38
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_lpoi6um9.6.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 15:36:38：Path              = /admin9876/User/idimg.aspx?id=212&show=down
+Time              = 2017-11-11 15:36:38
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 24
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 15:36:38：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 15:36:38
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_idimg_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_lpoi6um9.6.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 15:36:38：Path              = /admin9876/User/idimg.aspx?id=212&show=on
+Time              = 2017-11-11 15:36:38
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 可为空的对象必须具有一个值。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ThrowInvalidOperationException(System.ExceptionResource)
+                        
+StackTrace        =    在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+                           在 System.Nullable`1.get_Value()
+                           在 Console_User_idimg.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\Console_User_idimg.cs:行号 17
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 15:39:50：Path              = /index.aspx
+Time              = 2017-11-11 15:39:50
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 15:39:51：Path              = /User/index.aspx
+Time              = 2017-11-11 15:39:51
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 15:39:51：Path              = /User/index.aspx
+Time              = 2017-11-11 15:39:51
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 16:57:02：Path              = /admin9876/SiteInfo.aspx?sign=40&menuId=41
+Time              = 2017-11-11 16:57:02
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/11 16:58:01：Path              = /admin9876/DataBackup.aspx?sign=40&menuId=43
+Time              = 2017-11-11 16:58:01
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_databackup_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_qfstncv7.10.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/11 16:58:01：Path              = /admin9876/DataBackup.aspx?sign=40&menuId=43
+Time              = 2017-11-11 16:58:01
+ClientIP          = ::1
+Type              = System.IO.DirectoryNotFoundException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未能找到路径“d:\BACKUP\Pay\”的一部分。
+Source            = mscorlib
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void WinIOError(Int32, System.String)
+                        
+StackTrace        =    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+                           在 System.IO.Directory.InternalCreateDirectory(String fullPath, String path, DirectorySecurity dirSecurity)
+                           在 System.IO.Directory.CreateDirectory(String path, DirectorySecurity directorySecurity)
+                           在 System.IO.Directory.CreateDirectory(String path)
+                           在 KuaiCard.WebUI.Manage.DataBackup.bt_sub_Click(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\DataBackup.cs:行号 29
+                           在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+                           在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+                           在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+                           在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+                           在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/11 16:58:43：Path              = /admin9876/SiteInfo.aspx?sign=40&menuId=41
+Time              = 2017-11-11 16:58:43
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43

@@ -1,0 +1,382 @@
+﻿@import "/css2.0/animate.css";
+@import "/css2.0/animate.min.css";
+@import "/css2.0/bootstrap.min.css";
+@import "/css2.0/bootstrap-datetimepicker.min.css";
+@import "/css2.0/calendar.css";
+@import "/css2.0/file-manager.css";
+@import "/css2.0/font-awesome.min.css";
+@import "/css2.0/form.css";
+@import "/css2.0/generics.css";
+@import "/css2.0/icons.css";
+@import "/css2.0/lightbox.css";
+@import "/css2.0/media-player.css";
+@import "/css2.0/style.css";
+@import "/skin/user/Css/verify_manage.css";
+@import "/skin/user/Css/workorder_type.css";
+@import "/static/dialog/skins/default.css";
+@import "/skin/user/css/addbank.css";
+
+/*自定义css   查看类table*/
+/*使用：客户订单详情*/
+.view-table tr
+{
+    height:60px;
+}
+.view-table tr td
+{
+    vertical-align: middle !important;/*设置垂直居中*/
+}
+.view-table tr th
+{
+    vertical-align: middle !important;/*设置垂直居中*/
+}
+.view-title
+{
+    width: 100px;
+}
+
+/*自定义2017.4.13 表格表头*/
+.tr-list-head
+{
+    font-size:14px;
+}
+.tr-list-head th
+{
+    text-align:left;
+}
+
+/*==【字体样式】==*/
+.color_lan{ font-size:16px; color:#00A0E9;}/*蓝*/
+.color_tiann{ color:#00AFE8;}/*天蓝*/
+.color_shenn{ color:#007BB6;}/*深蓝*/	
+.color_hs{ color:#ff0000;}/*红色*/	
+.color_zh{ color:#F39800;}/*棕黄*/
+.color_ju{ color:#EA5514;}/*橘色*/
+.color_fei{ color:#A1A1A1;}/*灰*/
+
+/**/
+.left-span{ margin-left: 10px; }
+.33{ background: url('/img/33.png') no-repeat top center; }
+.34{ background: url('/img/34.png') no-repeat top center; }
+
+/**/
+.title-font-self { font-size: 16px; }
+
+/*消息*/
+.message-table .tr-header th {
+    padding-left: 10px;
+    text-align: left;
+    font-weight: normal;
+    color: #afb0b0;
+}
+.message-tr-item {
+    cursor: pointer;
+}
+.message-title {
+    padding-left: 18px;
+    background: url(/skin/images/User/Icon/point_light.png) no-repeat left center;
+}
+.message-title a {
+    color: #333;
+}
+.message-title a:hover {
+    color: #f30;
+}
+.message-read {
+    background-image: url(/skin/images/User/Icon/point_dark.png);
+}
+.message-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 21px;
+    background: url(/skin/images/User/Icon/checkbox_unchecked.png) no-repeat center;
+}
+.message-checkbox--checked {
+    background-image: url(/skin/images/User/Icon/checkbox_checked.png);
+}
+.message-checkbox input {
+    display: none;
+}
+.message-control {
+
+    padding-left: 10px;
+}
+.message-control-checkbox-container {
+    display: inline-block;
+    line-height: 28px;
+    cursor: pointer;
+}
+.message-control-checkbox-container .message-checkbox {
+    vertical-align: sub;
+    *vertical-align: middle;
+}
+.message-control-button {
+    display: inline-block;
+    height: 26px;
+    padding: 0 15px;
+    border: 1px solid #009fd9;
+    border-radius: 1px;
+    line-height: 26px;
+    color: #009fd9;
+}
+.message-control-button:hover {
+    background: #009fd9;
+    color: white;
+}
+.message-control-button--disable, .message-control-button--disable:hover {
+    background: #f2f8f9;
+    border-color: #cccccc;
+    color: #898b8b;
+    cursor: default;
+}
+
+/*============提现============*/
+.account-balance,#userPoundage,#actualToAccount{
+	color: #ff7200;
+	font-weight: bolder;
+}
+.payment-choices, .more-methods {
+	position: relative;
+	float: left;
+	width: 12%;
+	min-width: 200px;
+	height: 45px;
+	border: 1px dashed #c3c3c3;
+	text-align: right;
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding-right: 20px;
+	margin-right: 2%;
+	margin-top:10px;
+}
+.payment-choices span {
+	line-height: 45px;
+	display: inline-block;
+	max-width: 130px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.more-methods a {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 45px;
+	text-align: left;
+	padding-left:20px;
+	font-size: 14px;
+	color:#666;
+}
+.more-methods a:hover,
+.more-methods a:hover .more-methods-plus{
+	color:#0095da;
+}
+.methods-chosen:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: url(/images/payment_chosen.png);
+}
+.bank-list {
+	min-width: 150px;
+	height: 45px;
+	text-align: right;
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+
+/*============提现============*/
+
+/*银行背景图*/
+.card-icbc {
+	background-image: url(/img/bank_logos_small/bank_icbc.png); background-repeat:no-repeat;
+}
+.card-1002 {
+	background-image: url(/img/bank_logos_small/bank_icbc.png); background-repeat:no-repeat;
+}
+.card-icbc-b2b{
+	background-image: url(/img/bank_logos_small/bank_icbc_etp.png); background-repeat:no-repeat;
+}
+.card-1002-b2b {
+	background-image: url(/img/bank_logos_small/bank_icbc_etp.png); background-repeat:no-repeat;
+}
+.card-abc {
+	background-image: url(/img/bank_logos_small/bank_abc.png); background-repeat:no-repeat;
+}
+.card-1005 {
+	background-image: url(/img/bank_logos_small/bank_abc.png); background-repeat:no-repeat;
+}
+.card-abc-b2b {
+	background-image: url(/img/bank_logos_small/bank_abc_etp.png); background-repeat:no-repeat;
+}
+.card-1005-b2b {
+	background-image: url(/img/bank_logos_small/bank_abc_etp.png); background-repeat:no-repeat;
+}
+.card-bjbank {
+	background-image: url(/img/bank_logos_small/bank_beijing.png); background-repeat:no-repeat;
+}
+.card-1023 {
+	background-image: url(/img/bank_logos_small/bank_beijing.png); background-repeat:no-repeat;
+}
+.card-boc {
+	background-image: url(/img/bank_logos_small/bank_boc.png); background-repeat:no-repeat;
+}
+.card-1026 {
+	background-image: url(/img/bank_logos_small/bank_boc.png); background-repeat:no-repeat;
+}
+.card-boc-b2b{
+	background-image: url(/img/bank_logos_small/bank_boc_etp.png); background-repeat:no-repeat;
+}
+.card-1026-b2b {
+	background-image: url(/img/bank_logos_small/bank_boc_etp.png); background-repeat:no-repeat;
+}
+.card-ccb {
+	background-image: url(/img/bank_logos_small/bank_ccb.png); background-repeat:no-repeat;
+}
+.card-1003 {
+	background-image: url(/img/bank_logos_small/bank_ccb.png); background-repeat:no-repeat;
+}
+.card-ccb-b2b {
+	background-image: url(/img/bank_logos_small/bank_ccb_etp.png); background-repeat:no-repeat;
+}
+.card-1003-b2b {
+	background-image: url(/img/bank_logos_small/bank_ccb_etp.png); background-repeat:no-repeat;
+}
+.card-dlb{
+	background-image: url(/img/bank_logos_small/bank_dalian.png); background-repeat:no-repeat;
+}
+.card-1031 {
+	background-image: url(/img/bank_logos_small/bank_dalian.png); background-repeat:no-repeat;
+}
+.card-ceb {
+	background-image: url(/img/bank_logos_small/bank_everbright.png); background-repeat:no-repeat;
+}
+.card-1022 {
+	background-image: url(/img/bank_logos_small/bank_everbright.png); background-repeat:no-repeat;
+}
+.card-gdb{
+	background-image: url(/img/bank_logos_small/bank_guangfa.png); background-repeat:no-repeat;
+}
+.card-1027{
+	background-image: url(/img/bank_logos_small/bank_guangfa.png); background-repeat:no-repeat;
+}
+.card-hzcb {
+	background-image: url(/img/bank_logos_small/bank_hangzhou.png); background-repeat:no-repeat;
+}
+.card-1024 {
+	background-image: url(/img/bank_logos_small/bank_hangzhou.png); background-repeat:no-repeat;
+}
+.card-hsbc {
+	background-image: url(/img/bank_logos_small/bank_hsbc.png); background-repeat:no-repeat;
+}
+.card-1035 {
+	background-image: url(/img/bank_logos_small/bank_hsbc.png); background-repeat:no-repeat;
+}
+.card-hxb {
+	background-image: url(/img/bank_logos_small/bank_huaxia.png); background-repeat:no-repeat;
+}
+.card-1025 {
+	background-image: url(/img/bank_logos_small/bank_huaxia.png); background-repeat:no-repeat;
+}
+.card-comm {
+	background-image: url(/img/bank_logos_small/bank_jiaotong.png); background-repeat:no-repeat;
+}
+.card-1022 {
+	background-image: url(/img/bank_logos_small/bank_jiaotong.png); background-repeat:no-repeat;
+}
+.card-cmbc {
+	background-image: url(/img/bank_logos_small/bank_minsheng.png); background-repeat:no-repeat;
+}
+.card-1006 {
+	background-image: url(/img/bank_logos_small/bank_minsheng.png); background-repeat:no-repeat;
+}
+.card-nbbank{
+	background-image: url(/img/bank_logos_small/bank_ningbo.png); background-repeat:no-repeat;
+}
+.card-1029 {
+	background-image: url(/img/bank_logos_small/bank_ningbo.png); background-repeat:no-repeat;
+}
+.card-spabank{
+	background-image: url(/img/bank_logos_small/bank_pingan.png); background-repeat:no-repeat;
+}
+.card-1010{
+	background-image: url(/img/bank_logos_small/bank_pingan.png); background-repeat:no-repeat;
+}
+.card-spdb{
+	background-image: url(/img/bank_logos_small/bank_pufa.png); background-repeat:no-repeat;
+}
+.card-1004{
+	background-image: url(/img/bank_logos_small/bank_pufa.png); background-repeat:no-repeat;
+}
+.card-spdb-b2b {
+	background-image: url(/img/bank_logos_small/bank_pufa_etp.png); background-repeat:no-repeat;
+}
+.card-1004-b2b {
+	background-image: url(/img/bank_logos_small/bank_pufa_etp.png); background-repeat:no-repeat;
+}
+.card-shbank {
+	background-image: url(/img/bank_logos_small/bank_shanghai.png); background-repeat:no-repeat;
+}
+.card-1028 {
+	background-image: url(/img/bank_logos_small/bank_shanghai.png); background-repeat:no-repeat;
+}
+.card-sjb{
+	background-image: url(/img/bank_logos_small/bank_shengjing.png); background-repeat:no-repeat;
+}
+.card-1034 {
+	background-image: url(/img/bank_logos_small/bank_shengjing.png); background-repeat:no-repeat;
+}
+.card-szdb {
+	background-image: url(/img/bank_logos_small/bank_shenzhen.png); background-repeat:no-repeat;
+}
+.card-1033 {
+	background-image: url(/img/bank_logos_small/bank_shenzhen.png); background-repeat:no-repeat;
+}
+.card-cib {
+	background-image: url(/img/bank_logos_small/bank_xingye.png); background-repeat:no-repeat;
+}
+.card-1009 {
+	background-image: url(/img/bank_logos_small/bank_xingye.png); background-repeat:no-repeat;
+}
+.card-postgc {
+	background-image: url(/img/bank_logos_small/bank_youzheng.png); background-repeat:no-repeat;
+}
+.card-1066 {
+	background-image: url(/img/bank_logos_small/bank_youzheng.png); background-repeat:no-repeat;
+}
+.card-cmb {
+	background-image: url(/img/bank_logos_small/bank_zhaoshang.png); background-repeat:no-repeat;
+}
+.card-1001 {
+	background-image: url(/img/bank_logos_small/bank_zhaoshang.png); background-repeat:no-repeat;
+}
+.card-cmb-b2b {
+	background-image: url(/img/bank_logos_small/bank_zhaoshang_etp.png); background-repeat:no-repeat;
+}
+.card-1001-b2b {
+	background-image: url(/img/bank_logos_small/bank_zhaoshang_etp.png); background-repeat:no-repeat;
+}
+.card-czsb{
+	background-image: url(/img/bank_logos_small/bank_zheshang.png); background-repeat:no-repeat;
+}
+.card-1032{
+	background-image: url(/img/bank_logos_small/bank_zheshang.png); background-repeat:no-repeat;
+}
+.card-citic{
+	background-image: url(/img/bank_logos_small/bank_zhongxin.png); background-repeat:no-repeat;
+}
+.card-1021{
+	background-image: url(/img/bank_logos_small/bank_zhongxin.png); background-repeat:no-repeat;
+}
+.pay-alipay{
+	background-image: url(/img/alipay.png);background-position:20px  center; background-repeat:no-repeat;
+}

@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" Class="KuaiCard.WebUI.User.Service.changethemes" CodeBehind="changethemes.ashx.cs"%>

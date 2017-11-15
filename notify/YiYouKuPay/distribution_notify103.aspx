@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify103.aspx.cs" Inherits="KuaiCard.Gateway.notify.YiYouKu.distribution_notify103" %>

@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html{_text-overflow:ellipsis;}
+*{ margin:0px;}
+body{}
+.common{ margin:0px auto; width:1000px;}
+.commin{ margin:0px auto; width:1020px;}
+.clear{ clear:both;}
+.bg_white{ background:#fff; width:1000px; margin:0 auto; padding:0 10px 10px;}
+.bg_wh{ background:#fff; width:970px; margin:0 auto; padding:15px 15px 10px;}
+.p_t13{ padding-top:13px;}
+.m_t10{ margin-top:10px;}
+.m_r20{ margin-right:20px;}
+.f_l{ float:left;}
+.f_r{ float:right;}
+
+.openlogin{ width:50px; height:168px;position:fixed; top:50%; right:0px; margin-top:-90px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop+200)); _right:0px; _margin-top:0px; cursor:pointer; z-index:999}
+.openlogin a{ width:50px; height:168px; background:url(../images/imc_access.png) no-repeat; display:block;}
+#loginalert{width: 700px; height: 400px;background:#fff;position:fixed;top: 100px;left: 50%; margin-left:-400px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop+100));_margin-left:-400px; display:none; border:10px solid #777777; z-index:999;}
+.login_bar_tit{ line-height:36px; height:36px; background:url(../images/tit_bar.jpg) repeat-x; width:100%; overflow:hidden; color:#666;}
+.login_bar_tit p{ float:left; padding-left:40px; background:url(../images/zx.jpg) 10px 6px no-repeat;}
+.login_bar_tit p b{ font-weight:normal; font-family:"Microsoft YaHei"; font-size:20px;}
+.closealert{ float:right; margin:8px 8px 0 0; width:20px;height:20px; display:inline-block;cursor:pointer;background:url(../images/close-icons.png) no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.closealert:hover{transform:rotate(-180deg);-moz-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
+.loginmask{width:100%;height:100%;z-index:8;background:#000;position:fixed;top:0;left:0; _position:absolute; _top:expression(eval(document.documentElement.scrollTop+0));_left:0;display:none;}
+.ggd{ color:#666; width: 570px; height: 126px; padding:20px 10px 20px 90px; margin:0 20px; border-bottom:1px dotted #ccc;}
+.zx_01{background:url(../images/zx_04.jpg) 20px 20px no-repeat;}
+.zx_02{background:url(../images/zx_02.jpg) 20px 20px no-repeat;}
+.zx_03{background:url(../images/zx_01.jpg) 20px 20px no-repeat; }
+.zx_tit{ }
+.zx_tit p{font-family:"Microsoft YaHei"; font-size:20px; float:left; padding-top:10px;}
+.zx_tit span{ display:inline-block; padding-top:20px; margin-left:10px;}
+.lxkf{ margin-top:10px;}
+.lxkf div{ height:38px; background:url(../images/lxkf.jpg) right no-repeat; padding-right:10px; float:left; display:inline;}
+.lxkf span{ display:block; float:left; width:10px; height:38px; overflow:hidden; background:url(../images/lxkf.jpg) left no-repeat;}
+.lxkf div p{ float:left; line-height:38px;}
+.lxkf div img{ float:left; margin:7px 0 0 8px;}
+/* loginalert */
+.login_tomain{display:block;width:220px;height:40px;line-height:40px;margin-top:10px;background-color:#0a5ac2;color:#ffffff;text-align:center;font-size:16px;font-family: Microsoft Yahei;text-indent:6px;letter-spacing:10px;text-shadow:0px 0px 1px #999999;}
+.login_tomain:hover{background-color:#ff6600;cursor: pointer;}
+
+
+
+
+
+

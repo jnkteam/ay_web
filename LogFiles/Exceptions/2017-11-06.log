@@ -1,0 +1,1499 @@
+﻿--------------------------------------------------
+
+2017/11/6 9:08:31：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 09:08:31
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(18): error CS0103: 当前上下文中不存在名称“treeView”
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 9:08:51：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 09:08:51
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(18): error CS0103: 当前上下文中不存在名称“treeView”
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 9:47:50：Path              = /admin9876/Default.aspx?sign=1&menuId=2
+Time              = 2017-11-06 09:47:50
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(2): error CS1955: 不能像使用方法那样使用不可调用的成员“System.Web.HttpRequest.QueryString”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 9:51:08：Path              = /admin9876/Default.aspx?sign=1&menuId=2
+Time              = 2017-11-06 09:51:08
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(2): error CS1955: 不能像使用方法那样使用不可调用的成员“System.Web.HttpRequest.QueryString”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 9:53:32：Path              = /admin9876/Default.aspx?sign=1&menuId=2
+Time              = 2017-11-06 09:53:32
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(3): error CS1061: “System.Web.HttpResponse”不包含“write”的定义，并且找不到可接受类型为“System.Web.HttpResponse”的第一个参数的扩展方法“write”(是否缺少 using 指令或程序集引用?)
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 10:06:23：Path              = /admin9876/order.aspx?sign=1&menuId=3
+Time              = 2017-11-06 10:06:23
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/order.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 10:08:58：Path              = /admin9876/order.aspx?sign=8&menuId=9
+Time              = 2017-11-06 10:08:58
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/order.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 10:32:03：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 10:32:03
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_order_bankorderlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_qg8angul.13.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 10:32:03：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 10:32:03
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = WebUI
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void Page_Load(System.Object, System.EventArgs)
+                        
+StackTrace        =    在 KuaiCard.WebUI.Manage.Order.BankOrderList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 302
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 10:37:36：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 10:37:36
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\admin9876\Order\Top.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 4
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 10:37:59：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 10:37:59
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Top.aspx(74): error CS0103: 当前上下文中不存在名称“username”
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:17:42：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 11:17:42
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Top.aspx(83): error CS0103: 当前上下文中不存在名称“logintime”
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:19:31：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 11:19:31
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Left.aspx(19): error CS0103: 当前上下文中不存在名称“treeView”
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : 
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+                        
+StackTrace        =    在 System.Web.Compilation.AssemblyBuilder.Compile()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:20:31：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 11:20:31
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.BLL
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Int32 GetCurrent()
+                        
+StackTrace        =    在 KuaiCard.BLL.ManageFactory.GetCurrent() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\ManageFactory.cs:行号 148
+--------------------------------------------------
+
+2017/11/6 11:20:31：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 11:20:31
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase..ctor() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 22
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList..ctor() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 38
+                           在 ASP.admin9876_order_bankorderlist_aspx..ctor() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_frzoa_xu.6.cs:行号 0
+                           在 __ASP.FastObjectFactory_app_web_frzoa_xu.Create_ASP_admin9876_order_bankorderlist_aspx() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_frzoa_xu.12.cs:行号 0
+                           在 System.Web.Compilation.BuildResultCompiledType.CreateInstance()
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:22:19：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:22:19
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.BLL
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Int32 GetCurrent()
+                        
+StackTrace        =    在 KuaiCard.BLL.ManageFactory.GetCurrent() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\ManageFactory.cs:行号 148
+--------------------------------------------------
+
+2017/11/6 11:22:19：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:22:19
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase..ctor() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 22
+                           在 KuaiCard.WebUI.Manage.Index..ctor()
+                           在 ASP.admin9876_index_aspx..ctor() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_gjnzt5_y.16.cs:行号 0
+                           在 __ASP.FastObjectFactory_app_web_gjnzt5_y.Create_ASP_admin9876_index_aspx() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_gjnzt5_y.21.cs:行号 0
+                           在 System.Web.Compilation.BuildResultCompiledType.CreateInstance()
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:25:45：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:25:45
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.BLL
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Int32 GetCurrent()
+                        
+StackTrace        =    在 KuaiCard.BLL.ManageFactory.GetCurrent() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\ManageFactory.cs:行号 148
+--------------------------------------------------
+
+2017/11/6 11:25:45：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:25:45
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase..ctor() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 22
+                           在 KuaiCard.WebUI.Manage.Index..ctor()
+                           在 ASP.admin9876_index_aspx..ctor() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_aefc5kef.17.cs:行号 0
+                           在 __ASP.FastObjectFactory_app_web_aefc5kef.Create_ASP_admin9876_index_aspx() 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_aefc5kef.21.cs:行号 0
+                           在 System.Web.Compilation.BuildResultCompiledType.CreateInstance()
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:48:34：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 11:48:34
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_default_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_3ntozsfh.2.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:48:34：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 11:48:34
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 72
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 11:48:47：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:48:47
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_index_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_3ntozsfh.10.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:48:47：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:48:47
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 72
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 11:49:13：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:49:13
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_index_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_c3hxbeyg.8.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:49:13：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:49:13
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 72
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 11:50:25：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:50:25
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_index_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_c3hxbeyg.8.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:50:25：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:50:25
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 72
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 11:50:40：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:50:40
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_index_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_6_vlurkv.0.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:50:40：Path              = /admin9876/index.aspx
+Time              = 2017-11-06 11:50:40
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 72
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 11:51:58：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 11:51:58
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_default_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_fqcgqtda.20.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 11:51:58：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 11:51:58
+ClientIP          = ::1
+Type              = System.NullReferenceException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未将对象引用设置到对象的实例。
+Source            = KuaiCard.WebComponents
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void checkLogin()
+                        
+StackTrace        =    在 KuaiCard.WebComponents.Web.ManagePageBase.checkLogin() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 36
+                           在 KuaiCard.WebComponents.Web.ManagePageBase.OnInit(EventArgs e) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.WebComponents2.0\KuaiCard\WebComponents\Web\ManagePageBase.cs:行号 73
+                           在 System.Web.UI.Control.InitRecursive(Control namingContainer)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/6 12:50:17：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 12:50:17
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\admin9876\Top.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 4
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 12:50:44：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 12:50:44
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\admin9876\Top.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 3
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 12:51:06：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 12:51:06
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\admin9876\public\Footer.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 243
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 12:51:36：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 12:51:36
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\admin9876\Footer.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 317
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 12:56:49：Path              = /admin9876/default.aspx
+Time              = 2017-11-06 12:56:49
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\Top.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\default.aspx
+                        VirtualPath : /admin9876/default.aspx
+                        Line : 3
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:04:47：Path              = /admin9876/default.aspx
+Time              = 2017-11-06 13:04:47
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到文件“E:\3_ASP\Aiyang_web\Top.aspx”。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\default.aspx
+                        VirtualPath : /admin9876/default.aspx
+                        Line : 3
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:06:51：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 13:06:51
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 路径中具有非法字符。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 3
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:11:07：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 13:11:07
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 路径中具有非法字符。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 6
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:14:38：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 13:14:38
+ClientIP          = ::1
+Type              = System.Web.HttpCompileException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = e:\3_ASP\Aiyang_web\admin9876\Default.aspx(3): error CS1002: 应输入 ;
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = Results : System.CodeDom.Compiler.CompilerResults
+                        SourceCode : #pragma checksum "E:\3_ASP\Aiyang_web\admin9876\Default.aspx" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "29A59CF1CE2461D8F9E6DDA53CD868BB"
+                        //------------------------------------------------------------------------------
+                        // <auto-generated>
+                        //     此代码由工具生成。
+                        //     运行时版本:2.0.50727.8745
+                        //
+                        //     对此文件的更改可能会导致不正确的行为，并且如果
+                        //     重新生成代码，这些更改将会丢失。
+                        // </auto-generated>
+                        //------------------------------------------------------------------------------
+                        
+                        namespace ASP {
+                            
+                            #line 285 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.Profile;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 280 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Text.RegularExpressions;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 282 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.Caching;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 278 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Configuration;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 277 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Collections.Specialized;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 289 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.UI.HtmlControls;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 287 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.UI.WebControls;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 276 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Collections;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 286 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.UI;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 288 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.UI.WebControls.WebParts;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 275 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 284 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.Security;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 281 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 283 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Web.SessionState;
+                            
+                            #line default
+                            #line hidden
+                            
+                            #line 279 "C:\Windows\Microsoft.NET\Framework\v2.0.50727\Config\web.config"
+                            using System.Text;
+                            
+                            #line default
+                            #line hidden
+                            
+                            
+                            [System.Runtime.CompilerServices.CompilerGlobalScopeAttribute()]
+                            public class admin9876_default_aspx : global::KuaiCard.WebUI.Manage.Default, System.Web.SessionState.IRequiresSessionState, System.Web.IHttpHandler {
+                                
+                                private static bool @__initialized;
+                                
+                                private static object @__stringResource;
+                                
+                                private static object @__fileDependencies;
+                                
+                                [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+                                public admin9876_default_aspx() {
+                                    string[] dependencies;
+                                    ((global::KuaiCard.WebUI.Manage.Default)(this)).AppRelativeVirtualPath = "~/admin9876/Default.aspx";
+                                    if ((global::ASP.admin9876_default_aspx.@__initialized == false)) {
+                                        global::ASP.admin9876_default_aspx.@__stringResource = this.ReadStringResource();
+                                        dependencies = new string[2];
+                                        dependencies[0] = "~/admin9876/Default.aspx";
+                                        dependencies[1] = "~/admin9876/public/Footer.aspx";
+                                        global::ASP.admin9876_default_aspx.@__fileDependencies = this.GetWrappedFileDependencies(dependencies);
+                                        global::ASP.admin9876_default_aspx.@__initialized = true;
+                                    }
+                                    this.Server.ScriptTimeout = 30000000;
+                                }
+                                
+                                protected System.Web.Profile.DefaultProfile Profile {
+                                    get {
+                                        return ((System.Web.Profile.DefaultProfile)(this.Context.Profile));
+                                    }
+                                }
+                                
+                                protected ASP.global_asax ApplicationInstance {
+                                    get {
+                                        return ((ASP.global_asax)(this.Context.ApplicationInstance));
+                                    }
+                                }
+                                
+                                [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+                                private void @__BuildControlTree(admin9876_default_aspx @__ctrl) {
+                                    
+                                    #line 1 "E:\3_ASP\Aiyang_web\admin9876\Default.aspx"
+                                    this.InitializeCulture();
+                                    
+                                    #line default
+                                    #line hidden
+                                    @__ctrl.SetRenderMethodDelegate(new System.Web.UI.RenderMethod(this.@__Render__control1));
+                                }
+                                
+                                private void @__Render__control1(System.Web.UI.HtmlTextWriter @__w, System.Web.UI.Control parameterContainer) {
+                                    @__w.Write("\r\n<!-----------------header---------------->\r\n");
+                                    
+                                    #line 3 "E:\3_ASP\Aiyang_web\admin9876\Default.aspx"
+                           Response.WriteFile("public/Top.aspx") 
+                                    
+                                    #line default
+                                    #line hidden
+                                    this.WriteUTF8ResourceString(@__w, 0, 8536, false);
+                                    this.WriteUTF8ResourceString(@__w, 8536, 7194, true);
+                                    
+                                    #line 215 "E:\3_ASP\Aiyang_web\admin9876\public\Footer.aspx"
+                                   @__w.Write(Request.QueryString["sign"]);
+                        
+                                    
+                                    #line default
+                                    #line hidden
+                                    @__w.Write("\";\r\n    var menuId  = \"");
+                                    
+                                    #line 216 "E:\3_ASP\Aiyang_web\admin9876\public\Footer.aspx"
+                                   @__w.Write(Request.QueryString["menuId"]);
+                        
+                                    
+                                    #line default
+                                    #line hidden
+                                    this.WriteUTF8ResourceString(@__w, 15730, 1932, true);
+                                    @__w.Write("\r\n<!-----------------footer------------------>");
+                                }
+                                
+                                [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+                                protected override void FrameworkInitialize() {
+                                    base.FrameworkInitialize();
+                                    this.SetStringResourcePointer(global::ASP.admin9876_default_aspx.@__stringResource, 0);
+                                    this.@__BuildControlTree(this);
+                                    this.AddWrappedFileDependencies(global::ASP.admin9876_default_aspx.@__fileDependencies);
+                                    this.Request.ValidateInput();
+                                }
+                                
+                                [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+                                public override int GetTypeHashCode() {
+                                    return -957128423;
+                                }
+                                
+                                [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+                                public override void ProcessRequest(System.Web.HttpContext context) {
+                                    base.ProcessRequest(context);
+                                }
+                            }
+                        }
+                        
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:21:44：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 13:21:44
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到路径“E:\3_ASP\Aiyang_web\admin9876\public\Top.aspx”的一部分。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 3
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:22:02：Path              = /admin9876/Default.aspx
+Time              = 2017-11-06 13:22:02
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到路径“E:\3_ASP\Aiyang_web\admin9876\public\Footer.aspx”的一部分。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Default.aspx
+                        VirtualPath : /admin9876/Default.aspx
+                        Line : 243
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:22:29：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:22:29
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到路径“E:\3_ASP\Aiyang_web\admin9876\public\Top.aspx”的一部分。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 4
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:40:49：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:40:49
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 未能找到路径“E:\3_ASP\Aiyang_web\admin9876\public\Top.aspx”的一部分。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 4
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:43:52：Path              = /admin9876/Order/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:43:52
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/Order/Order/BankOrderList.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:44:01：Path              = /admin9876/Order/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:44:01
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/Order/Order/BankOrderList.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:44:53：Path              = /admin9876/Order/Default.aspx
+Time              = 2017-11-06 13:44:53
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin9876/Order/Default.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:45:55：Path              = /Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:45:55
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/Order/BankOrderList.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 13:46:29：Path              = /admin/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 13:46:29
+ClientIP          = ::1
+Type              = System.Web.HttpException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 文件“/admin/Order/BankOrderList.aspx”不存在。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void CheckVirtualFileExists(System.Web.VirtualPath)
+                        
+StackTrace        =    在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 14:46:44：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 14:46:44
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 标记包含重复的“id”属性。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 64
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/6 15:19:22：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-06 15:19:22
+ClientIP          = ::1
+Type              = System.Web.HttpParseException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = ID“ddlChannelType”已被其他控件使用。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = FileName : E:\3_ASP\Aiyang_web\admin9876\Order\BankOrderList.aspx
+                        VirtualPath : /admin9876/Order/BankOrderList.aspx
+                        Line : 53
+                        ParserErrors : System.Web.ParserErrorCollection
+                        ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void ParseString(System.String, System.Web.VirtualPath, System.Text.Encoding)
+                        
+StackTrace        =    在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+                           在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+                           在 System.Web.UI.TemplateParser.ParseInternal()
+                           在 System.Web.UI.TemplateParser.Parse()
+                           在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+                           在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+                           在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+                           在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+                           在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+                           在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+                           在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+                           在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+                           在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+                           在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

@@ -1,0 +1,219 @@
+@charset "UTF-8";
+.page{margin-top: 30px;}
+.container{margin-left: auto;margin-right: auto;width: 990px;}
+.abouts-banner{background:url(../cmsstatic/aboutus/banner.png) center center no-repeat;height:208px;}
+.mobileapp-banner{background:url(../cmsstatic/mobileapp/banner.png) center center no-repeat;height:208px;}
+.paymentonline-banner{background:url(../cmsstatic/paymentonline/banner.png) center center no-repeat;height:208px;}
+.merchantNav-banner{background:url(../cmsstatic/merchantNav/banner.png) center center no-repeat;height:208px;}
+.aboutUs{border: 1px solid #e6e6e6;margin-bottom: 40px;}
+.au_head{height: 70px;border-bottom:1px solid #e6e6e6;background-color:#f5f5f5;background-image:url(../img/aboutus.png);background-repeat:no-repeat;}
+.au1>.au_head{background-position:0 0;text-indent: -9999px;}
+.au2>.au_head{background-position:0 -70px;text-indent: -9999px;}
+.au3>.au_head{background-position:0 -140px;text-indent: -9999px;}
+.au_body>p{margin: 25px;font-size: 16px;line-height: 200%;}
+
+.paymentonline .au_head{background-image:none;text-indent:0;font-size:24px;font-weight:bold;line-height:70px;padding:0 25px;}
+
+.shoppingnavigation>dl{float:left;width:228px;margin-right:10px;border:1px solid #e6e6e6;}
+.shoppingnavigation>dl.last{margin-right:0;}
+.shoppingnavigation>dl>dt{height:80px;padding: 10px 0;text-align:center;}
+.shoppingnavigation>dl>dd{height: 160px;padding: 20px;background:#f9f9f9;border-top:1px solid #e6e6e6;position:relative;}
+.shoppingnavigation>dl>dd>h4{height:20px;font-weight:bold;}
+.shoppingnavigation>dl>dd>p{line-height: 200%;}
+.shoppingnavigation>dl>dd>span{display:block;position:absolute;bottom: 20px;left: 20px;}
+
+.mobileapp .au_head{background-image:none;text-indent:0;font-size:24px;font-weight:bold;line-height:70px;padding:0 25px;}
+.mobileapp .au_body{padding: 30px 20px;height: 320px;}
+.mobileapp .au_body.linyongqian{border-top: 1px solid #e6e6e6;}
+.app_logo{float:left;width:100px;height: 100px;}
+
+.mobileapp .youqian{ height: 680px; }
+.mobileapp .youqian .app_content{ width: 500px; }
+.youqian>.app_logo{background: url(../img/aboutus/yqb.png);}
+.linyongqian>.app_logo{background: url(../img/aboutus/lyq.png);}
+.app_content{float:left;padding: 0 0 0 20px;}
+.app_content>h4{font-size: 20px;font-weight: bold;line-height: 26px;}
+.app_content>p{line-height: 2;}
+.app_content>h6{line-height: 200%;margin-top: 10px;font-weight: bolder;}
+.app_content>ul{padding-left: 20px;margin-bottom: 0;}
+.app_content>ul>li{line-height: 200%;}
+.app_content>ol{padding-left:20px;}
+.app_content>ol>li{line-height: 2;}
+.app_content>p.more{margin-top: 20px;}
+.app_slide{float:right;width:237px;padding: 0 10px;}
+.app_slide>.app_btns{width:237px;}
+.app_slide>.app_btns>span{display:block;height: 56px;margin-bottom: 15px;text-align:center;line-height: 40px;font-size: 18px;}
+.app_slide>.app_btns>span>a{display:block;}
+.app_slide>.app_btns>span.apple{background:url(../img/aboutus/normal_iphone1.png) center 0 no-repeat ;text-indent:-9999px;}
+.app_slide>.app_btns>span.android{background:url(../img/aboutus/normal_android1.png) center 0 no-repeat ;text-indent:-9999px;}
+.app_slide>.app_btns>span.normal_app{background:url(../img/aboutus/normal_app.jpg) center 0 no-repeat ;text-indent:-9999px;}
+ .linyongqian span.apple.disabled{
+     background-image: url(../img/aboutus/disabled_iphone.jpg);
+ }
+.two_dimension{ margin-top: 24px; }
+.two_dimension>p{float:left;height: 49px;padding-top:58px;line-height:20px;}
+.two_dimension>span{float:right; width:94px;height:94px;border:1px solid #ccc;}
+
+div .topone, div .downone{
+	font-size: 24px;
+	color: #0087e3;
+	padding-left: 30px;
+	height: 60px;
+	line-height: 60px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #e6e6e6
+}
+.towp{
+	color: #699380;
+	margin: 15px 0;
+}
+div .htitle{
+	font-size: 16px;
+	color: #0087e3;
+	margin-bottom: 3px;	
+}
+div.twocen{margin-bottom: 10px; }
+div.twocen a{
+	float: right;
+	margin-right: 30px;
+	font-size: 12px;
+	text-decoration: underline;
+}
+ul{
+	position: relative; 
+}
+ul li{
+	float: left;
+	list-style: none;
+}
+li span.num{
+	font-size: 40px;
+	color: #0087e3;
+}
+.topthree{
+	height: 110px;
+	border-top: 1px solid #e6e6e6;			
+	background-color: #f5f5f5;
+	margin-top: 30px;
+	padding-left: 30px;
+}
+.topthree h2{
+	font-size: 24px;
+	margin-top: 10px;
+	color: #666;
+}
+li.threeli .pic_1{
+	display: inline-block;
+	width: 50px;
+	height:50px;
+	background: url("../img/aboutus/paysefa.png") -2px 6px no-repeat;
+}
+li.threeli .pic_2{
+	display: inline-block;
+	width: 40px;
+	height:50px;
+	background: url("../img/aboutus/paysefa.png") -52px 5px no-repeat;
+}
+li.threeli .pic_3{
+	display: inline-block;
+	width: 50px;
+	height:50px;
+	background: url("../img/aboutus/paysefa.png") -92px 5px no-repeat;
+}
+li.threeli div.tx_1{
+	display: inline-block;
+	width: 110px;
+	margin-left: 5px;
+}
+li.threeli div.tx_1 .txm{
+	color: #0087e3;
+}
+li.threeli div.tx_2{
+	display: inline-block;
+	width: 190px;
+	margin-left: 5px;
+}
+li.threeli div.tx_3{
+	display: inline-block;
+	width: 190px;
+	margin-left: 5px;
+}
+li.threeli .gtp{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url("../img/aboutus/paysefa.png") -145px 9px no-repeat;
+} 
+.ad-down{
+	margin-top: 30px;
+	border: 1px solid #e6e6e6;
+	margin-bottom: 30px;
+}
+.ad-down .downone{color: #666;}
+.downtwo{padding-left: 30px;}
+.downtwo div.down-box{margin-top: 15px; margin-bottom: 15px;}
+.downtwo .downtit{font-size: 16px;}
+.downtwo .downp{margin-left: 10px;}
+/*---------------------merchantNav----------------------------------*/
+ul.logo-side-nav > li > a {text-decoration:none;}
+ul.logo-side-nav > li > a:hover,ul.logo-side-nav > li > a.active, ul.logo-side-nav > li > a.active:visited{color:#ff9138;}
+.au1 > div.au_head_merchant,.au1 div.au_head_merchant{
+	background-image:none;
+	text-indent:0px;
+	line-height:70px;
+	font-size:22px;
+	padding-left:26px;
+	letter-spacing:2px;
+	color:#5e5e5e;
+}
+table.merchantsContent,table.publicizeImgs{width:100%;margin-bottom:28px;}
+table.publicizeImgs th{width:693px;height:254px;text-align:left;}
+table.publicizeImgs td{width:285px;height:122px;vertical-align:top;}
+table.publicizeImgs td.vBottom{vertical-align:bottom;}
+table.publicizeImgs th div,table.publicizeImgs td div{text-align:center;}
+table.publicizeImgs th div{height:100%;}
+table.publicizeImgs td div{height:118px;float:right;}
+table.publicizeImgs th div img,table.publicizeImgs td div img{border:solid 2px #ededed;}
+table.merchantsContent th,table.merchantsContent td{border-bottom:dotted 1px #cccccc;}
+table.merchantsContent th {padding:30px;}
+table.merchantsContent td{padding:30px 35px 30px 0;}
+table.merchantsContent th img{border:solid 1px #cccccc;}
+table.merchantsContent td h3{color:#845d51;font-size:18px;letter-spacing:2px;height:18px;margin-top:2px;margin-bottom:11px;font-weight:bold;}
+table.merchantsContent td p{line-height:22px;font-size:14px;}
+table.merchantsContent tr.endTr th,table.merchantsContent tr.endTr td{border-bottom:none;}
+/*----------#imgDiv css---------------*/
+table.publicizeImgs,div.publicizeDiv {position:relative;}
+#imgDiv a img{width:100%;height:100%;position:absolute;top:0;left:0;display:none;margin:0;border:solid 2px #ededed;}
+#SwitchNav{bottom: 10%;left: 58%;margin-left: -60px;width: 122px;height: 14px;position: absolute;}
+#SwitchNav .nocurrent {background: #999;}
+#SwitchNav .current {background: #eee;}
+#SwitchNav li{float: left;display: inline-block;width: 14px;height: 14px;overflow: hidden;border: 0;border-radius: 8px;margin-left: 12px;_margin-left: 6px;margin-right: 14px;_margin-right: 20px;cursor: pointer;text-indent: 999px;list-style: none;}
+
+.abouts-banner-top{ background:url(../img/aboutus/banner_top.png) center center no-repeat; height:490px;}
+.abouts-banner-bottom{ background:url(../img/aboutus/banner_bottom.png) center bottom no-repeat; min-height:2500px;}
+.top-infor-box{ width:660px; padding-top:170px; overflow:hidden; margin:0 auto 0 auto; color:#fff;}
+.top-infor-box > div{ display:inline-block; vertical-align:top;}
+.abstract{ width:350px; padding-left:74px; padding-right:60px;}
+.abstractTitle{ font-size:18px; text-align:center; line-height:65px;}
+.abstractTxt{ text-indent:20px; font-size:14px;}
+.sign01{ color:#919ff0; padding-left:5px; padding-right:5px;}
+.title01{ font-size:20px; color:#000; line-height:60px;}
+.title02{ font-size:14px; color:#000; line-height:22px;}
+.text{ font-size:14px; color:#818181; padding-bottom:30px; line-height:22px;}
+.line01{background:#eaeaea; width:100%; height:1px; overflow:hidden; margin-top:10px; margin-bottom:10px;}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.listBox{display:inline; float:left; width:30%; overflow:hidden;}
+.middle{ margin-left:5%; margin-right:5%;}
+.win{ width:100%; height:101px; margin-top:10px; margin-bottom:10px;}
+.Img01{ background:url(../img/aboutus/c1.png) center center no-repeat;}
+.Img02{ background:url(../img/aboutus/c2.png) center center no-repeat;}
+.Img03{ background:url(../img/aboutus/c3.png) center center no-repeat;}
+.Img04{ background:url(../img/aboutus/c4.png) center center no-repeat;}
+.Img05{ background:url(../img/aboutus/c5.png) center center no-repeat;}
+.Img06{ background:url(../img/aboutus/c6.png) center center no-repeat;}
+.txtCenter{ text-align:center;}
+.lh50{ line-height:50px;}
+.pb20{ padding-bottom:20px;}
+.pt25{ padding-top:25px;}
+.mt150{ margin-top:150px;}
+.white{ color:#fff;}

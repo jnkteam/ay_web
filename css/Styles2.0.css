@@ -1,0 +1,36 @@
+﻿/*用途：后台使用*/
+td{ border:1px solid #e6e6e6;}
+.mainbody{ width:90%; text-align:center; margin:10px auto;}
+.P3 {width:  3%} .P5 {width:  5%} .P8 {width:  8%} .P10 {width: 10%} .P13 {width: 13%} .P15 {width: 15%} .P20 {width: 20%} .P25 {width: 25%} .P30 {width: 30%} .P35 {width: 35%} .P40 {width: 40%} .P50{ width: 50%} .P80{ width: 80%} .P90{ width: 90%}
+.W100{width:100px} .W150{width:150px} .W200{width:200px} .W300{width:300px} .W400{width:400px}
+.btn{color: #000000; width: 80px; height:26px; color:#ffffff; border:1px solid #4075ab; vertical-align:middle; background:url(/images/btnbg.png) no-repeat;}
+
+#admin{ width:1000px;  float:left; margin-left:6px; }
+#admin_top{ width:100%; height:50px; padding-bottom:10px;}
+#admin_center{ width:100%; height:auto; text-align:center;}
+#admin_bottom{ width:100%;  height:30px; padding-top:10px;}
+/**/
+#admin_center .tb{ width:100%; margin:0px; padding:0px; border:0px; background-color:#afafaf; text-align:center; }
+#admin_center .tb_title{ height:40px;  text-align:center; font-weight:bold; font-size:16pt; background-color:#f3f3f5;}
+#admin_center .tb_left{ width:140px; line-height:35px;  background-color:#f3f3f5; text-align:center;}
+#admin_center .tb_right{ width:auto; line-height:35px;  background-color:#f3f3f5; text-align:left;}
+#admin_center .tb_list{ height:30px; text-align:center; background-color:#f3f3f5;}
+
+.tb{ margin:0px auto; padding:0px; text-align:center;  background-color:#fff }
+.tb tr{ height:50px; }
+.tb_title{  height:60px;  text-align:center; font-weight:bold; font-size:16pt; background-color: #EFF5FE}
+.tb_left{ width:150px;  text-align:center; }
+.tb_right{ width:auto;  text-align:left;} 
+.tb_list{ height:55px;  text-align:center; }
+.txt { width:150px; }
+
+.cmb { width:150px; }
+/*list style，2012-4-15 add 独立*/
+.list{width:100%; margin:0px; padding:0px; border:0px; background-color:#fff; text-align:center; }
+.listhead{ line-height:30px; font-size:14px; font-weight:bold; background-color:#f3f3f5; text-align:center;}
+.listitem{ background-color: #fff; text-align:center; line-height:30px;}
+.alternatingitem{ background-color: #d8e9fd; text-align:center; line-height:30px;}
+.listfoot{ background-color: #f3f3f5; text-align:center; line-height:40px; font-size:14px; }
+
+.btnSubmit{ padding:0 10px; width:100px; height:28px; line-height:28px; color:#3D80B3; font-weight:bold; border:1px solid #AED0EA; background:url(btn_bg.gif) 0 -44px repeat-x; cursor:pointer; vertical-align:middle; overflow:hidden; }
+.btnSubmit:hover{ background-position:0 -72px;}

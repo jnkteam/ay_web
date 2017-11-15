@@ -1,0 +1,7 @@
+[Add.Code]
+AyActiveX.ocx=AyActiveX.ocx
+[AyActiveX.ocx]
+file=AyActiveX.ocx
+clsid={FBD232C1-F6E5-4A88-AEEC-CF30C84A5847}
+FileVersion=1,0,0,5
+RegisterServer=yes

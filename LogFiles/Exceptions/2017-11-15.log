@@ -1,0 +1,591 @@
+﻿--------------------------------------------------
+
+2017/11/15 8:40:34：Path              = /admin9876/User/UserChannel.aspx?id=86000046
+Time              = 2017-11-15 08:40:34
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/15 9:11:28：Path              = /admin9876/User/UserEdit.aspx?id=86000039
+Time              = 2017-11-15 09:11:28
+ClientIP          = ::1
+Type              = System.InvalidOperationException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 未启用当前数据库的 SQL Server Service Broker，因此查询通知不受支持。如果希望使用通知，请为此数据库启用 Service Broker。
+Source            = System.Data
+HelpLink          = 
+ReflectionInfo    = Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void .ctor(SqlConnectionContainerHashHelper, System.String, Boolean)
+                        
+StackTrace        = 
+                        Server stack trace: 
+                           在 SqlDependencyProcessDispatcher.SqlConnectionContainer..ctor(SqlConnectionContainerHashHelper hashHelper, String appDomainKey, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.Start(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& queueService, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart, Boolean useDefaults)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.PrivateProcessMessage(RuntimeMethodHandle md, Object[] args, Object server, Int32 methodPtr, Boolean fExecuteInContext, Object[]& outArgs)
+                           在 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+                        
+                        Exception rethrown at [0]: 
+                           在 System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+                           在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+                           在 SqlDependencyProcessDispatcher.StartWithDefault(String connectionString, String& server, DbConnectionPoolIdentity& identity, String& user, String& database, String& service, String appDomainKey, SqlDependencyPerAppDomainDispatcher dispatcher, Boolean& errorOccurred, Boolean& appDomainStart)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString, String queue, Boolean useDefaults)
+                           在 System.Data.SqlClient.SqlDependency.Start(String connectionString)
+                           在 DBAccess.DataBase.AddSqlDependency(String cacheKey, String strSql, IDictionary`2 parameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 43
+--------------------------------------------------
+
+2017/11/15 9:24:24：Path              = /admin9876/stat/orderreport4.aspx?sign=8&menuId=11
+Time              = 2017-11-15 09:24:24
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_order' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 2
+                        Number : 208
+                        Procedure : 
+                        Server : .
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.AgentStat2(DateTime sdt, DateTime edt, Int32 page, Int32 pagesize, String orderby) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 30
+--------------------------------------------------
+
+2017/11/15 9:32:51：Path              = /admin9876/Default.aspx
+Time              = 2017-11-15 09:32:51
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_default_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_default.aspx.d6fc9d63.xj1g1zit.0.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 9:32:51：Path              = /admin9876/Default.aspx
+Time              = 2017-11-15 09:32:51
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'ex_menu' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.ExMenuFactory.getExMenuList() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\ExMenuFactory.cs:行号 22
+                           在 KuaiCard.WebUI.Manage.Default.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Default.cs:行号 21
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/15 9:33:41：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 09:33:41
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_order_bankorderlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_iqpfz15a.10.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 9:33:41：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 09:33:41
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'supplier' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 208
+                           在 KuaiCard.BLL.SupplierFactory.GetList(String where) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\SupplierFactory.cs:行号 152
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.InitForm() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 203
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 306
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/15 9:38:57：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 09:38:57
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_order_bankorderlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_iqpfz15a.10.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 9:38:57：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 09:38:57
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'supplier' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 208
+                           在 KuaiCard.BLL.SupplierFactory.GetList(String where) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\SupplierFactory.cs:行号 152
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.InitForm() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 203
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 306
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/15 9:39:01：Path              = /admin9876/stat/orderreport7.aspx?sign=8&menuId=9
+Time              = 2017-11-15 09:39:01
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_orderbank' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 6
+                        Number : 208
+                        Procedure : proc_orderbank_profit_stat
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.BusinessStat7(DateTime sdt, DateTime edt) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 239
+--------------------------------------------------
+
+2017/11/15 9:39:06：Path              = /admin9876/stat/orderreport4.aspx?sign=8&menuId=11
+Time              = 2017-11-15 09:39:06
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'v_ordercard' 无效。
+由于绑定错误，无法使用视图或函数 'v_order'。
+对象名 'v_ordercard' 无效。
+由于绑定错误，无法使用视图或函数 'v_order'。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 4
+                        Number : 208
+                        Procedure : v_order
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 213
+                           在 KuaiCard.BLL.Order.Dal.AgentStat2(DateTime sdt, DateTime edt, Int32 page, Int32 pagesize, String orderby) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Order\Dal.cs:行号 30
+--------------------------------------------------
+
+2017/11/15 9:39:09：Path              = /admin9876/Supplier/SupplierList.aspx?sign=13&menuId=14
+Time              = 2017-11-15 09:39:09
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_supplier_supplierlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_mjttg1ld.0.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 9:39:09：Path              = /admin9876/Supplier/SupplierList.aspx?sign=13&menuId=14
+Time              = 2017-11-15 09:39:09
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'supplier' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 208
+                           在 KuaiCard.BLL.SupplierFactory.GetList(String where) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\SupplierFactory.cs:行号 152
+                           在 KuaiCard.WebUI.Manage.SupplierList.LoadData() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\SupplierList.cs:行号 24
+                           在 KuaiCard.WebUI.Manage.SupplierList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\SupplierList.cs:行号 34
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/15 9:43:02：Path              = /admin9876/User/UserList.aspx?UserStatus=2&sign=19&menuId=20
+Time              = 2017-11-15 09:43:02
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_user_userlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_js3thow1.9.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 9:43:02：Path              = /admin9876/User/UserList.aspx?UserStatus=2&sign=19&menuId=20
+Time              = 2017-11-15 09:43:02
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'payrate' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 208
+                           在 KuaiCard.BLL.Payment.PayRateFactory.GetUserlevData() 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\Payment\PayRateFactory.cs:行号 560
+                           在 KuaiCard.WebUI.Manage.User.UserList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\User\UserList.cs:行号 239
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------
+
+2017/11/15 10:07:31：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 10:07:31
+ClientIP          = ::1
+Type              = System.Web.HttpUnhandledException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message           = 引发类型为“System.Web.HttpUnhandledException”的异常。
+Source            = System.Web
+HelpLink          = 
+ReflectionInfo    = ErrorCode : -2147467259
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Boolean HandleError(System.Exception)
+                        
+StackTrace        =    在 System.Web.UI.Page.HandleError(Exception e)
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+                           在 System.Web.UI.Page.ProcessRequest()
+                           在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+                           在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+                           在 ASP.admin9876_order_bankorderlist_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\2c698c89\32fb458\App_Web_iqpfz15a.10.cs:行号 0
+                           在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+                           在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------
+
+2017/11/15 10:07:31：Path              = /admin9876/Order/BankOrderList.aspx?status=2&sign=1&menuId=2
+Time              = 2017-11-15 10:07:31
+ClientIP          = ::1
+Type              = System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message           = 对象名 'supplier' 无效。
+Source            = .Net SqlClient Data Provider
+HelpLink          = 
+ReflectionInfo    = Errors : System.Data.SqlClient.SqlErrorCollection
+                        Class : 16
+                        LineNumber : 1
+                        Number : 208
+                        Procedure : 
+                        Server : 118.178.192.235
+                        State : 1
+                        ErrorCode : -2146232060
+                        Data : System.Collections.ListDictionaryInternal
+                        TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+                        
+StackTrace        =    在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+                           在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+                           在 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+                           在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+                           在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+                           在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+                           在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+                           在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+                           在 DBAccess.DataBase.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 304
+                           在 DBAccess.DataBase.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 345
+                           在 DBAccess.DataBase.ExecuteDataset(CommandType commandType, String commandText) 位置 E:\3_ASP\Aiyang_cs\DBAccess2.0\DBAccess\DataBase.cs:行号 208
+                           在 KuaiCard.BLL.SupplierFactory.GetList(String where) 位置 E:\3_ASP\Aiyang_cs\KuaiCard.BLL2.0\KuaiCard\BLL\SupplierFactory.cs:行号 152
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.InitForm() 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 203
+                           在 KuaiCard.WebUI.Manage.Order.BankOrderList.Page_Load(Object sender, EventArgs e) 位置 E:\3_ASP\Aiyang_cs\WebUI2.0\KuaiCard\WebUI\Manage\Order\BankOrderList.cs:行号 306
+                           在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+                           在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+                           在 System.Web.UI.Control.OnLoad(EventArgs e)
+                           在 System.Web.UI.Control.LoadRecursive()
+                           在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

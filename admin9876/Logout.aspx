@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="True" inherits="KuaiCard.WebUI.Manage.Logout" Codebehind="logout.aspx.cs" %>

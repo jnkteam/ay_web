@@ -1,0 +1,45 @@
+BODY {
+	BACKGROUND: url(gray_bg.png) #fff repeat-x 0px 49px
+}
+.hidden {
+	OVERFLOW: hidden
+}
+.err_box {
+	BORDER-BOTTOM: #e9e9e9 2px solid; MARGIN-BOTTOM: 15px; OVERFLOW: hidden
+}
+.err_403 {
+	MARGIN: 55px auto 25px; WIDTH: 550px; BACKGROUND: url(403.png) no-repeat right 0px; HEIGHT: 280px; OVERFLOW: hidden
+}
+.err_404 {
+	MARGIN: 55px auto 25px; WIDTH: 550px; BACKGROUND: url(403.png) no-repeat right 0px; HEIGHT: 280px; OVERFLOW: hidden
+}
+.err_500 {
+	MARGIN: 55px auto 25px; WIDTH: 550px; BACKGROUND: url(403.png) no-repeat right 0px; HEIGHT: 280px; OVERFLOW: hidden
+}
+.err_404 {
+	BACKGROUND: url(404.png) no-repeat right 0px
+}
+.err_500 {
+	BACKGROUND: url(500.png) no-repeat right 0px
+}
+.err_box H3 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 75px; PADDING-RIGHT: 0px; FONT-SIZE: 16px; PADDING-TOP: 105px
+}
+.err_box OL {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 75px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.err_box LI {
+	PADDING-BOTTOM: 8px
+}
+.err_404 H3 {
+	PADDING-LEFT: 40px
+}
+.err_404 OL {
+	PADDING-LEFT: 40px
+}
+.err_500 H3 {
+	PADDING-LEFT: 40px
+}
+.err_500 OL {
+	PADDING-LEFT: 40px
+}

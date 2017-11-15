@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<Configuration>
+  <bank bankcode="967" bankname="工商银行" engname="" channelCode="ICBC" />
+  <bank bankcode="964" bankname="农业银行" engname="" channelCode="ABC" />
+  <bank bankcode="963" bankname="中国银行" engname="" channelCode="BOC" />
+  <bank bankcode="965" bankname="建设银行" engname="" channelCode="CCB" />
+  <bank bankcode="981" bankname="交通银行" engname="" channelCode="BOCM" />
+  <bank bankcode="970" bankname="招商银行" engname="" channelCode="CMB" />
+  <bank bankcode="985" bankname="广发银行" engname="" channelCode="GDB" />
+  <bank bankcode="962" bankname="中信银行" engname="" channelCode="CITIC" />
+  <bank bankcode="980" bankname="民生银行" engname="" channelCode="CMBC" />
+  <bank bankcode="986" bankname="光大银行" engname="" channelCode="CEB" />
+  <bank bankcode="978" bankname="平安银行" engname="" channelCode="PABC" />
+  <bank bankcode="977" bankname="浦发银行" engname="" channelCode="SPDB" />
+  <bank bankcode="971" bankname="邮政储蓄" engname="" channelCode="PSBC" />
+  <bank bankcode="982" bankname="华夏银行" engname="" channelCode="HXB" />
+  <bank bankcode="972" bankname="兴业银行" engname="" channelCode="CIB" /> 
+  
+  <bank bankcode="975" bankname="上海银行" engname="" channelCode="BOS" />
+  <bank bankcode="989" bankname="北京银行" engname="" channelCode="BCCB" />
+</Configuration>

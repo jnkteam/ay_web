@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<Configuration>
+  <bank bankcode="1002" bankname="工商银行" engname="" channelCode="102" />
+  <bank bankcode="1005" bankname="农业银行" engname="" channelCode="103" />
+  <bank bankcode="1026" bankname="中国银行" engname="" channelCode="104" />
+  <bank bankcode="1003" bankname="建设银行" engname="" channelCode="105" />
+  <bank bankcode="1010" bankname="平安银行" engname="" channelCode="307" />
+  <bank bankcode="1020" bankname="交通银行" engname="" channelCode="301" />
+  <bank bankcode="1021" bankname="中信银行" engname="" channelCode="302" />
+  <bank bankcode="1022" bankname="光大银行" engname="" channelCode="303" />
+  <bank bankcode="1025" bankname="华夏银行" engname="" channelCode="304" />
+  <bank bankcode="1006" bankname="民生银行" engname="" channelCode="305" />
+  <bank bankcode="1027" bankname="广发银行" engname="" channelCode="306" />
+  <bank bankcode="1001" bankname="招商银行" engname="" channelCode="308" />
+  <bank bankcode="1009" bankname="兴业银行" engname="" channelCode="309" />
+  <bank bankcode="1004" bankname="浦东发展银行" engname="" channelCode="310" />
+</Configuration>
