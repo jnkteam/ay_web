@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Audits" CodeBehind="Audits.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Audits" CodeBehind="Audits.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -170,12 +170,12 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.SettledmodeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.SettledmodeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("amount","{0:f2}")%>
@@ -187,7 +187,7 @@ vertical-align: middle !important;
                                         <%# Eval("required", "{0:yyyy-MM-dd}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
+                                        <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnAudit" runat="server" class="button btn btn-xs  btn-info" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />
@@ -209,12 +209,12 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.SettledmodeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.SettledmodeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("amount","{0:f2}")%>
@@ -226,7 +226,7 @@ vertical-align: middle !important;
                                         <%# Eval("required", "{0:yyyy-MM-dd}")%>
                                     </td>
                                     <td>
-                                         <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
+                                         <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnAudit" class="button btn btn-xs  btn-info" runat="server" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />

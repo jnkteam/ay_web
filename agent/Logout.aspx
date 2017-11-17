@@ -1,1 +1,1 @@
-﻿<%@ page language="C#" autoeventwireup="True" inherits="KuaiCard.WebUI.agent.Logout" Codebehind="logout.aspx.cs" %>
+﻿<%@ page language="C#" autoeventwireup="True" inherits="OriginalStudio.WebUI.agent.Logout" Codebehind="logout.aspx.cs" %>

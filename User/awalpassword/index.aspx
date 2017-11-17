@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="KuaiCard.WebUI.User.awalpassword.index" Title="修改提现密码" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="OriginalStudio.WebUI.User.awalpassword.index" Title="修改提现密码" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <asp:HiddenField ID="hidMode" runat="server" />
     <div class="titlebar">

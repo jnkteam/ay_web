@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="view.aspx.cs" Inherits="KuaiCard.WebUI.User.ordercard.view" Title="卡类订单详情" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="view.aspx.cs" Inherits="OriginalStudio.WebUI.User.ordercard.view" Title="卡类订单详情" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
      <h5 class="page-title">卡类订单详情<a href="/user/ordercard/" class="pull-right" style="font-size:10px"><<返回订单列表</a></h5>
     <div class="block-area" id="tableHover">

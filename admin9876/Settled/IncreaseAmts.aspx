@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Settled.IncreaseAmts" Codebehind="IncreaseAmts.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Settled.IncreaseAmts" Codebehind="IncreaseAmts.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -114,7 +114,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                     <%#Enum.GetName(typeof(KuaiCard.Model.Settled.optypeenum),Eval("optype"))%>             
+                                     <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.optypeenum),Eval("optype"))%>             
                                 </td>
                                 <td>
                                     <%# Eval("increaseAmt", "{0:f2}")%>
@@ -148,7 +148,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.Settled.optypeenum),Eval("optype"))%>             
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.optypeenum),Eval("optype"))%>             
                                     </td>
                                     <td>
                                         <%# Eval("increaseAmt", "{0:f2}")%>

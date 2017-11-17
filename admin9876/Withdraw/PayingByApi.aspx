@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.PayingByApi" Codebehind="PayingByApi.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.PayingByApi" Codebehind="PayingByApi.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
@@ -176,7 +176,7 @@ vertical-align: middle !important;
                                         <%# Eval("amount", "{0:f2}") %>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.SettledmodeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.SettledmodeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index2.aspx.cs" Inherits="KuaiCard.WebUI.User.withdrawal.index2"%>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index2.aspx.cs" Inherits="OriginalStudio.WebUI.User.withdrawal.index2"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="titlebar">
         <h1 class="title">余额提现</h1>

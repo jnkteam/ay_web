@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Reconciliation2"
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Reconciliation2"
     ValidateRequest="false" CodeBehind="Reconciliation2.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -234,7 +234,7 @@
                                                 <%# Eval("refervalue", "{0:f2}")%>
                                             </td>
                                             <td id="tr_supplier" runat="server">
-                                                <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
+                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
@@ -261,7 +261,7 @@
                                                 <%# Eval("refervalue", "{0:f2}")%>
                                             </td>
                                             <td id="tr_supplier" runat="server">
-                                                <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
+                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
                                             </td>
                                         </tr>
                                     </AlternatingItemTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="tel.aspx.cs" Inherits="KuaiCard.WebUI.User.validate.tel" Title="无标题页" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="tel.aspx.cs" Inherits="OriginalStudio.WebUI.User.validate.tel" Title="无标题页" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 	<script type="text/javascript">
 	    //验证码

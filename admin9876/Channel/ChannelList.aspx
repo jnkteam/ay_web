@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.ChannelList" Codebehind="ChannelList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.ChannelList" Codebehind="ChannelList.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
 <!-----------------header---------------->

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.SiteInfo" ValidateRequest="false" Codebehind="SiteInfo.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.SiteInfo" ValidateRequest="false" Codebehind="SiteInfo.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->

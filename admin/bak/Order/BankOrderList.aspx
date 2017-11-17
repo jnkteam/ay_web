@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Order.BankOrderList" Codebehind="BankOrderList.aspx.cs" EnableEventValidation="true" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.BankOrderList" Codebehind="BankOrderList.aspx.cs" EnableEventValidation="true" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -175,7 +175,7 @@
                                                 <%# Eval("version")%>
                                             </td>
                                             <td>
-                                                <%#Enum.GetName(typeof(KuaiCard.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                                
+                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                                
                                             </td>
                                             <td>
                                                 <%# Eval("userorder")%>
@@ -214,13 +214,13 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
                                             </td>
                                             <td id="tr_supplier" runat="server">
-                                                <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
+                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
                                             </td>
                                             <td>
                                                 <%# Eval("server")%>
@@ -245,7 +245,7 @@
                                                 <%# Eval("version")%>
                                             </td>
                                              <td>
-                                                <%#Enum.GetName(typeof(KuaiCard.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                              
+                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                              
                                             </td>
                                             <td>
                                                 <%# Eval("userorder")%>
@@ -284,13 +284,13 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
                                             </td>
                                             <td id="tr_supplier" runat="server">
-                                                <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
+                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
                                             </td>
                                             <td>
                                                 <%# Eval("server")%>

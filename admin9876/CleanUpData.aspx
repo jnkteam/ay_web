@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Console_CleanUpData" Codebehind="CleanUpData.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Console_CleanUpData" Codebehind="CleanUpData.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->

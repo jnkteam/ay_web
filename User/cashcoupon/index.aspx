@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="KuaiCard.WebUI.User.cashcoupon.index" Title="修改密码" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="OriginalStudio.WebUI.User.cashcoupon.index" Title="修改密码" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <script type="text/javascript" src="/js2.0/lib/laydate/laydate.js"></script>
@@ -61,9 +61,9 @@
                         <td><%# Eval("trade_no") %></td>
                         <td>银行卡</td><td><%#Eval("amount", "{0:f1}")%></td>
                         <td><%# Eval("PayeeName") %></td>
-                        <td><%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString()) %></td>
+                        <td><%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString()) %></td>
                         <td><%# Eval("Account").ToString() %></td>
-                        <td><%# Enum.GetName(typeof(KuaiCard.Model.SettledStatus), Eval("status")) %></td>
+                        <td><%# Enum.GetName(typeof(OriginalStudio.Model.SettledStatus), Eval("status")) %></td>
                         <td><%# Eval("paytime", "{0:yyyy-MM-dd HH:mm:ss}") %></td>
                     </tr>
                 </ItemTemplate>

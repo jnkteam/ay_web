@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.DataBackup" Codebehind="DataBackup.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.DataBackup" Codebehind="DataBackup.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->

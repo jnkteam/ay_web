@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="CodeImage.aspx.cs" Inherits="KuaiCard.WebUI.CodeImage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="CodeImage.aspx.cs" Inherits="OriginalStudio.WebUI.CodeImage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" Inherits="KuaiCard.WebUI.Manage.User.orderreport3" Codebehind="orderreport3.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="OriginalStudio.WebUI.Manage.User.orderreport3" Codebehind="orderreport3.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

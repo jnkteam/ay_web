@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.CahceManage" Codebehind="CahceManage.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.CahceManage" Codebehind="CahceManage.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->

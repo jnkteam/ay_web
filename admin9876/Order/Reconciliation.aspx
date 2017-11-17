@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Reconciliation" ValidateRequest="false" Codebehind="Reconciliation.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Reconciliation" ValidateRequest="false" Codebehind="Reconciliation.aspx.cs" %>
 
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->

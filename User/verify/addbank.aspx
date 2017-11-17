@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="addbank.aspx.cs" Inherits="KuaiCard.WebUI.User.verify.addbank" Title="添加收款帐号" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="addbank.aspx.cs" Inherits="OriginalStudio.WebUI.User.verify.addbank" Title="添加收款帐号" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="titlebar">
         <h1 class="title">添加收款账户</h1>

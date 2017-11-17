@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user/MainSite.Master" AutoEventWireup="True" CodeBehind="Index.aspx.cs" Inherits="KuaiCard.WebUI.User.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user/MainSite.Master" AutoEventWireup="True" CodeBehind="Index.aspx.cs" Inherits="OriginalStudio.WebUI.User.Index" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="titlebar">
         <h1 class="title">商户首页</h1>

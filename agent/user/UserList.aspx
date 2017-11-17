@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.agent.User.UserList" Codebehind="UserList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.agent.User.UserList" Codebehind="UserList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -106,7 +106,7 @@
                             <ItemTemplate>
                                 <tr style="background-color: #EFF3FB">                                    
                                     <td>
-                                        <%#KuaiCard.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
                                         <%# Eval("id")%>
@@ -136,7 +136,7 @@
                             <AlternatingItemTemplate>
                                 <tr style="background-color: #ffffff">
                                    <td>
-                                        <%#KuaiCard.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
                                         <%# Eval("id")%>

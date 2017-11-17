@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="KuaiCard.WebUI.Manage.Order.Console_Order_ResetOrder" Codebehind="resetorder.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="OriginalStudio.WebUI.Manage.Order.Console_Order_ResetOrder" Codebehind="resetorder.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
 <!-----------------header---------------->

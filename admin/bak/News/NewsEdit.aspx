@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="NewsEdit.aspx.cs" Inherits="KuaiCard.WebUI.Manage.News.NewsEdit"
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="NewsEdit.aspx.cs" Inherits="OriginalStudio.WebUI.Manage.News.NewsEdit"
     ValidateRequest="false" %>
 <!DOCTYPE html>
 <html>

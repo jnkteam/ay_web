@@ -1,1 +1,1 @@
-<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify1002.aspx.cs" Inherits="KuaiCard.Gateway.notify.Hnapay.distribution_notify1002" %>
+<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify1002.aspx.cs" Inherits="OriginalStudio.Gateway.notify.Hnapay.distribution_notify1002" %>

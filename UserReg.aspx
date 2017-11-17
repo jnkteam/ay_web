@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ZFTRegister.aspx.cs" Inherits="KuaiCard.WebUI.User.ZFTRegister" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ZFTRegister.aspx.cs" Inherits="OriginalStudio.WebUI.User.ZFTRegister" %>
 <!doctype html>
 <html>
 <head>

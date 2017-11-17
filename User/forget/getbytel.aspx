@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getbytel.aspx.cs" Inherits="KuaiCard.WebUI.User.Forget.GetByTel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getbytel.aspx.cs" Inherits="OriginalStudio.WebUI.User.Forget.GetByTel" %>
 <!doctype html>
 <head>
     <meta charset="utf-8" />

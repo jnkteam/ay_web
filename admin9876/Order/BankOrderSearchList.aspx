@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Order.BankOrderSearchList" Codebehind="BankOrderSearchList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.BankOrderSearchList" Codebehind="BankOrderSearchList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -106,7 +106,7 @@
                                                 <%# Eval("version")%>
                                             </td>
                                             <td>
-                                                <%#Enum.GetName(typeof(KuaiCard.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                                
+                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                                
                                             </td>
                                             <td>
                                                 <%# Eval("userorder")%>
@@ -130,10 +130,10 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
                                             </td>
                                             <td>
                                                 <asp:Button ID="btnReissue" runat="server" Text="补发" ToolTip="手动回发" CommandName="Reissue" CommandArgument='<%# Eval("orderid")%>' />
@@ -152,7 +152,7 @@
                                                 <%# Eval("version")%>
                                             </td>
                                              <td>
-                                                <%#Enum.GetName(typeof(KuaiCard.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                              
+                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>                                              
                                             </td>
                                             <td>
                                                 <%# Eval("userorder")%>
@@ -176,10 +176,10 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%>
                                             </td>
                                             <td>
                                                 <asp:Button ID="btnReissue" runat="server" Text="补发" ToolTip="手动回发" CommandName="Reissue" CommandArgument='<%# Eval("orderid")%>' />

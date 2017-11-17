@@ -1,8 +1,8 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Login" Codebehind="login.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Login" Codebehind="login.aspx.cs" %>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>登录-后台管理</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -69,7 +69,7 @@
     }
     return true
     }
-    //重新生成验证码
+
     function ChangeMap(obj) {
         obj.src = "/CodeImage.aspx?code=" + Math.random();
     }

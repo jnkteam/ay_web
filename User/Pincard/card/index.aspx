@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/Site1.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="KuaiCard.WebUI.User.Pincard.card.index" Title="卡类普通消耗" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/Site1.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="OriginalStudio.WebUI.User.Pincard.card.index" Title="卡类普通消耗" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style>
     .tab-head {

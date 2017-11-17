@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.distribution.Distributions" Codebehind="Distributions.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.distribution.Distributions" Codebehind="Distributions.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -141,7 +141,7 @@
                                          <%# Eval("userid")%>
                                     </td>                                    
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
                                         <%# Eval("bankAccountName")%> <br />
                                         <%# Eval("bankAccount")%>
                                     </td>
@@ -149,13 +149,13 @@
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.distribution.GetStatusText(Eval("status"))%>
+                                        <%# OriginalStudio.BLL.distribution.GetStatusText(Eval("status"))%>
                                     </td>
                                      <td>
                                         <%# Eval("processingTime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
+                                        <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
                                     </td>                                     
                                     <td>
                                         <%# Eval("supp_trade_no")%>
@@ -185,7 +185,7 @@
                                          <%# Eval("userid")%>
                                     </td>                                    
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
                                         <%# Eval("bankAccountName")%> <br />
                                         <%# Eval("bankAccount")%>
                                     </td>
@@ -193,13 +193,13 @@
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.distribution.GetStatusText(Eval("status"))%>
+                                        <%# OriginalStudio.BLL.distribution.GetStatusText(Eval("status"))%>
                                     </td>
                                      <td>
                                         <%# Eval("processingTime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
+                                        <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
                                     </td>                                     
                                     <td>
                                         <%# Eval("supp_trade_no")%>

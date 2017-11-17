@@ -1,1 +1,1 @@
-<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify60850.aspx.cs" Inherits="KuaiCard.Gateway.notify.YWYQS.distribution_notify60850" %>
+<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify60850.aspx.cs" Inherits="OriginalStudio.Gateway.notify.YWYQS.distribution_notify60850" %>

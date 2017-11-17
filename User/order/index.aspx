@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="KuaiCard.WebUI.user.order.index"  %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="index.aspx.cs" Inherits="OriginalStudio.WebUI.user.order.index"  %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <script type="text/javascript" src="/js2.0/lib/laydate/laydate.js"></script>
@@ -81,7 +81,7 @@
                     <td><em><%# Eval("refervalue", "{0:f0}")%></em></td>
                     <td><em><%#GetViewSuccessAmt(Eval("status"),Eval("realvalue"))%></em></td>
                     <td><%#GetViewStatusName(Eval("status"))%></td>
-                    <td><%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%></td>
+                    <td><%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderNofityStatusEnum), Eval("notifystat"))%></td>
                     <td><%# Eval("addtime", "{0:yyyy-MM-dd HH:mm:ss}")%></td>
                     <td><a href="/user/order/view.aspx?orderid=<%#Eval("orderid")%>">&laquo; 查看</a></td>
                 </tr>

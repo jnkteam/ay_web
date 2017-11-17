@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.agent.Left" Codebehind="Left.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.agent.Left" Codebehind="Left.aspx.cs" %>
 
 <html xmlns="">
 <head>

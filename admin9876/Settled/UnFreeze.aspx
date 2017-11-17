@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.UnFreeze" Codebehind="UnFreeze.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UnFreeze" Codebehind="UnFreeze.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -116,10 +116,10 @@
                                      <%# Eval("why")%>
                                 </td>
                                 <td>
-                                     <%#Enum.GetName(typeof(KuaiCard.Model.Settled.AmtFreezeInfoStatus),Eval("status"))%>
+                                     <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.AmtFreezeInfoStatus),Eval("status"))%>
                                 </td>
                                 <td>
-                                    <%#Enum.GetName(typeof(KuaiCard.Model.Settled.AmtunFreezeMode), Eval("unfreezemode"))%>                                     
+                                    <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.AmtunFreezeMode), Eval("unfreezemode"))%>                                     
                                 </td>
                                 <td>
                                      <%# Eval("addtime","{0:yyyy-MM-dd HH:mm:ss}")%>
@@ -150,10 +150,10 @@
                                      <%# Eval("why")%>
                                 </td>
                                 <td>
-                                     <%#Enum.GetName(typeof(KuaiCard.Model.Settled.AmtFreezeInfoStatus),Eval("status"))%>
+                                     <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.AmtFreezeInfoStatus),Eval("status"))%>
                                 </td>
                                 <td>
-                                    <%#Enum.GetName(typeof(KuaiCard.Model.Settled.AmtunFreezeMode), Eval("unfreezemode"))%>                                              
+                                    <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.AmtunFreezeMode), Eval("unfreezemode"))%>                                              
                                 </td>
                                 <td>
                                      <%# Eval("addtime","{0:yyyy-MM-dd HH:mm:ss}")%>

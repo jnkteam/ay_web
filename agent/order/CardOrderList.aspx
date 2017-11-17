@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.agent.Order.CardOrderList" Codebehind="CardOrderList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.agent.Order.CardOrderList" Codebehind="CardOrderList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -173,7 +173,7 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%> [<%#Eval("msg")%>]
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%> [<%#Eval("msg")%>]
                                             </td>                                            
                                                                                     
                                         </tr>
@@ -239,10 +239,10 @@
                                                     &nbsp;<%# Eval("realvalue", "{0:f0}")%>
                                                 </td> 
                                                 <td>
-                                                    &nbsp;<%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
+                                                    &nbsp;<%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
                                                 </td>  
                                                 <td>
-                                                    &nbsp;<%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                    &nbsp;<%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                                 </td>  
                                                 <td>
                                                     &nbsp;<%# Eval("msg")%>
@@ -296,7 +296,7 @@
                                                 <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
                                             </td>
                                             <td>
-                                                <%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%> [<%#Eval("msg")%>]
+                                                <%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%> [<%#Eval("msg")%>]
                                             </td>                                           
                                         </tr>
                                         <tr id="tr_carddetail" runat="server" style="display:none">
@@ -361,10 +361,10 @@
                                                     &nbsp;<%# Eval("realvalue", "{0:f0}")%>
                                                 </td> 
                                                 <td>
-                                                    &nbsp;<%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
+                                                    &nbsp;<%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("suppid"))%>
                                                 </td>  
                                                 <td>
-                                                    &nbsp;<%# Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum),Eval("status"))%>
+                                                    &nbsp;<%# Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum),Eval("status"))%>
                                                 </td>  
                                                 <td>
                                                     &nbsp;<%# Eval("msg")%>

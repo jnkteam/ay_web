@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="batch.aspx.cs" Inherits="KuaiCard.WebUI.User.withdrawal.batch" Title="修改绑定邮箱" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="batch.aspx.cs" Inherits="OriginalStudio.WebUI.User.withdrawal.batch" Title="修改绑定邮箱" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="titlebar">
         <h1 class="title">批量下发</h1>

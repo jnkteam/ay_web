@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account.aspx.cs" Inherits="KuaiCard.WebUI.User.Forget.Account" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account.aspx.cs" Inherits="OriginalStudio.WebUI.User.Forget.Account" %>
 <!doctype html>
 <head>
     <meta charset="utf-8" />

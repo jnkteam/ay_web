@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.UserIdImgLists" Codebehind="UserIdImgList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserIdImgLists" Codebehind="UserIdImgList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -171,7 +171,7 @@ vertical-align: middle !important;
                                             style="border: 0" /></a>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.User.IdImageStatus),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.User.IdImageStatus),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("checktime","{0:yyyy-MM-dd HH:ss:mm}")%>
@@ -222,7 +222,7 @@ vertical-align: middle !important;
                                             style="border: 0" /></a>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.User.IdImageStatus),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.User.IdImageStatus),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("checktime","{0:yyyy-MM-dd HH:ss:mm}")%>

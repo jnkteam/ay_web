@@ -1,1 +1,1 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="notify.aspx.cs" Inherits="KuaiCard.WebUI.User.Recharge.notify" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="notify.aspx.cs" Inherits="OriginalStudio.WebUI.User.Recharge.notify" %>

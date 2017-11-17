@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="setpwd.aspx.cs" Inherits="KuaiCard.WebUI.User.Forget.SetPwd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="setpwd.aspx.cs" Inherits="OriginalStudio.WebUI.User.Forget.SetPwd" %>
 <!doctype html>
 <head>
     <meta charset="utf-8" />

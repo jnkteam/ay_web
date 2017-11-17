@@ -1,4 +1,4 @@
-<%@ page language="C#" autoeventwireup="True" inherits="KuaiCard.WebUI.Manage.Default" Codebehind="Default.aspx.cs" %>
+<%@ page language="C#" autoeventwireup="True" inherits="OriginalStudio.WebUI.Manage.Default" Codebehind="Default.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->

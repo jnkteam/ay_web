@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.UserList" Codebehind="UserList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserList" Codebehind="UserList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -232,7 +232,7 @@
                                         <input id="chkItem" type="checkbox"  value='<%#Eval("id")%>' name="chkItem" />
                                     </td>
                                      <td>
-                                        <%#KuaiCard.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
                                         <%# Eval("id")%>
@@ -300,7 +300,7 @@
                                         <input id="chkItem" type="checkbox" value='<%#Eval("id")%>' name="chkItem" />
                                     </td>
                                      <td>
-                                        <%#KuaiCard.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
                                         <%# Eval("id")%>

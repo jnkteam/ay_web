@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="KuaiCard.WebUI.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="OriginalStudio.WebUI.Global" Language="C#" %>

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.feedback.List" Codebehind="list.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.feedback.List" Codebehind="list.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -127,7 +127,7 @@
                                     <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.feedbacktype), Eval("typeid"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.feedbacktype), Eval("typeid"))%>
                                 </td> 
                                 <td>
                                      <%# Eval("title")%>
@@ -136,7 +136,7 @@
                                      <%# Eval("cont")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.feedbackstatus),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.feedbackstatus),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("reply")%>
@@ -166,7 +166,7 @@
                                     <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.feedbacktype), Eval("typeid"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.feedbacktype), Eval("typeid"))%>
                                 </td> 
                                 <td>
                                      <%# Eval("title")%>
@@ -175,7 +175,7 @@
                                      <%# Eval("cont")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.feedbackstatus),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.feedbackstatus),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("reply")%>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="add.aspx.cs" Inherits="KuaiCard.WebUI.User.realname.add" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="add.aspx.cs" Inherits="OriginalStudio.WebUI.User.realname.add" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

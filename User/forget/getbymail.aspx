@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getbymail.aspx.cs" Inherits="KuaiCard.WebUI.User.Forget.GetByMail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getbymail.aspx.cs" Inherits="OriginalStudio.WebUI.User.Forget.GetByMail" %>
 <!doctype html>
 <head>
     <meta charset="utf-8" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="selectmode.aspx.cs" Inherits="KuaiCard.WebUI.User.Forget.SelectMode" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="selectmode.aspx.cs" Inherits="OriginalStudio.WebUI.User.Forget.SelectMode" %>
 <html>
 <head>
     <meta charset="utf-8" />

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="MainSite.master.cs" Inherits="KuaiCard.WebUI.User.MainSite" %>
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="MainSite.master.cs" Inherits="OriginalStudio.WebUI.User.MainSite" %>
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Order.DebugInfos" Codebehind="DebugInfos.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.DebugInfos" Codebehind="DebugInfos.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
@@ -126,7 +126,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <%#Enum.GetName(typeof(KuaiCard.Model.Sys.debugtypeenum), Eval("bugtype"))%>
+                                    <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.debugtypeenum), Eval("bugtype"))%>
                                 </td>
                                 <td style="word-break:break-all">
                                     <%# Eval("url")%>
@@ -161,7 +161,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.Sys.debugtypeenum), Eval("bugtype"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.debugtypeenum), Eval("bugtype"))%>
                                     </td>
                                     <td style="word-break:break-all">
                                         <%# Eval("url")%>

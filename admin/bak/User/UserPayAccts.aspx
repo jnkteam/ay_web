@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.UserPayAccts" Codebehind="UserPayAccts.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserPayAccts" Codebehind="UserPayAccts.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -134,13 +134,13 @@
                                     </strong></a>
                                 </td>
                                 <td>
-                                    <%# KuaiCard.BLL.User.userspaybank.GetSettleModeName(Eval("pmode"))%>
+                                    <%# OriginalStudio.BLL.User.userspaybank.GetSettleModeName(Eval("pmode"))%>
                                 </td>
                                 <td>
-                                    <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
+                                    <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
                                 </td>
                                 <td>
-                                     <%# Eval("account")%>£¨<%#KuaiCard.BLL.User.userspaybank.GetAccoutTypeName(Eval("accoutType"))%>£©
+                                     <%# Eval("account")%>£¨<%#OriginalStudio.BLL.User.userspaybank.GetAccoutTypeName(Eval("accoutType"))%>£©
                                 </td>
                                  <td>
                                     <%# Eval("payeeName")%>
@@ -180,13 +180,13 @@
                                     </strong></a>
                                 </td>
                                 <td>
-                                     <%# KuaiCard.BLL.User.userspaybank.GetSettleModeName(Eval("pmode"))%>
+                                     <%# OriginalStudio.BLL.User.userspaybank.GetSettleModeName(Eval("pmode"))%>
                                 </td>
                                 <td>
-                                   <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
+                                   <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
                                 </td>
                                 <td>
-                                   <%# Eval("account")%>£¨<%#KuaiCard.BLL.User.userspaybank.GetAccoutTypeName(Eval("accoutType"))%>£©
+                                   <%# Eval("account")%>£¨<%#OriginalStudio.BLL.User.userspaybank.GetAccoutTypeName(Eval("accoutType"))%>£©
                                 </td>
                                  <td>
                                     <%# Eval("payeeName")%>

@@ -1,4 +1,4 @@
-<%@ page language="C#" autoeventwireup="True" inherits="KuaiCard.WebUI.agent.Default" Codebehind="Default.aspx.cs" %>
+<%@ page language="C#" autoeventwireup="True" inherits="OriginalStudio.WebUI.agent.Default" Codebehind="Default.aspx.cs" %>
 <html xmlns="">
 <head runat="server">
 <title>支付平台-后台管理系统</title>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="set.aspx.cs" Inherits="KuaiCard.WebUI.User.validate.set" Title="无标题页" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="set.aspx.cs" Inherits="OriginalStudio.WebUI.User.validate.set" Title="无标题页" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <h5 class="page-title">绑定邮箱</h5>
     <input type="hidden" id="sendtime" value="0" />

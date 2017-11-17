@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Jubao.List" Codebehind="list.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Jubao.List" Codebehind="list.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -122,13 +122,13 @@
                                     <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.JuBaoEnum), Eval("type"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.JuBaoEnum), Eval("type"))%>
                                 </td> 
                                 <td>
                                      <%# cutword(Eval("remark"))%>
                                 </td>   
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.JuBaoStatusEnum),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.JuBaoStatusEnum),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("check")%>
@@ -156,13 +156,13 @@
                                     <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.JuBaoEnum), Eval("type"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.JuBaoEnum), Eval("type"))%>
                                 </td> 
                                 <td>
                                      <%# cutword(Eval("remark"))%>
                                 </td>   
                                 <td>
-                                    <%# Enum.GetName(typeof(KuaiCard.Model.JuBaoStatusEnum),Eval("status"))%>
+                                    <%# Enum.GetName(typeof(OriginalStudio.Model.JuBaoStatusEnum),Eval("status"))%>
                                 </td>
                                 <td>
                                     <%# Eval("check")%>

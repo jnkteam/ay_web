@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="view.aspx.cs" Inherits="KuaiCard.WebUI.User.order.view" Title="网银订单详情" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/MainSite.Master" AutoEventWireup="True" CodeBehind="view.aspx.cs" Inherits="OriginalStudio.WebUI.User.order.view" Title="网银订单详情" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     <div class="titlebar">
         <h1 class="title">网银订单管理</h1>
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td class="th">商家返回</td>
-                        <td><%#Enum.GetName(typeof(KuaiCard.Model.Order.OrderStatusEnum), Eval("notifystat"))%> <%#Eval("notifycontext")%></td>
+                        <td><%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderStatusEnum), Eval("notifystat"))%> <%#Eval("notifycontext")%></td>
                     </tr>
                     <tr>
                         <td class="th">回调次数</td>

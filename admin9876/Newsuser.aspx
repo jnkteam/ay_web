@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Newsuser"
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Newsuser"
     CodeBehind="Newsuser.aspx.cs" %>
 
 <!-----------------header---------------->

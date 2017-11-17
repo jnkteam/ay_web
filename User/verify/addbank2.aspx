@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/User/Site1.Master" AutoEventWireup="True" CodeBehind="addbank.aspx.cs" Inherits="KuaiCard.WebUI.User.verify.addbank" Title="添加收款帐号" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/User/Site1.Master" AutoEventWireup="True" CodeBehind="addbank.aspx.cs" Inherits="OriginalStudio.WebUI.User.verify.addbank" Title="添加收款帐号" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <link href="/skin/user/css/addbank.css" rel="stylesheet" type="text/css" media="screen,projection" />
 		<SCRIPT LANGUAGE="JavaScript">

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.Audits" CodeBehind="Audits.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Audits" CodeBehind="Audits.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -153,12 +153,12 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td style="text-align: right">
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.SettledmodeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.SettledmodeEnum), Eval("settmode"))%>
                                     </td>
                                     <td style="text-align: right">
                                         <%# Eval("amount","{0:f2}")%>
@@ -170,7 +170,7 @@
                                         <%# Eval("required", "{0:yyyy-MM-dd}")%>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
+                                        <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnAudit" runat="server" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />
@@ -192,12 +192,12 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%# KuaiCard.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
+                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td style="text-align: right">
-                                        <%#Enum.GetName(typeof(KuaiCard.Model.SettledmodeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.SettledmodeEnum), Eval("settmode"))%>
                                     </td>
                                     <td style="text-align: right">
                                         <%# Eval("amount","{0:f2}")%>
@@ -209,7 +209,7 @@
                                         <%# Eval("required", "{0:yyyy-MM-dd}")%>
                                     </td>
                                     <td>
-                                         <%# KuaiCard.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
+                                         <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnAudit" runat="server" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />

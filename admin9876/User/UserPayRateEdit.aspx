@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="KuaiCard.WebUI.Manage.User.UserPayRateEdit" CodeBehind="UserPayRateEdit.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserPayRateEdit" CodeBehind="UserPayRateEdit.aspx.cs" %>
 
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
