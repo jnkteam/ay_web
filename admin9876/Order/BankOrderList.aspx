@@ -13,8 +13,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        ÁΩëÈì∂ËÆ¢Âçï
-        <small>Á¨¨‰∏âÊñπÊîØ‰ªòÂπ≥Âè∞</small>
+        Õ¯“¯∂©µ•
+        <small>µ⁄»˝∑Ω÷ß∏∂∆ΩÃ®</small>
       </h1>
       <ol class="breadcrumb">
 
@@ -25,7 +25,7 @@
 
     <section class="content">
 
-    <form id="form1" runat="server">
+    <!--<form id="form1" runat="server">-->
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
 
         <tr>
@@ -35,7 +35,7 @@
                         <td colspan="2">
                             <div class="input-group">
                             <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary">ÂïÜÊà∑ID</button>
+                            <button type="button" class="btn btn-primary">…ÃªßID</button>
                             </div>
                             <asp:TextBox ID="txtuserid" class="form-control" runat="server"></asp:TextBox>
 
@@ -45,14 +45,14 @@
 
 
                             <div class="input-group">
-                             <%--  ‰ª£ÁêÜIDÔºö
+                             <%--  ¥˙¿ÌID£∫
                                             <asp:TextBox ID="txtpromid" runat="server" Width="30px"></asp:TextBox>--%>
                                                         <asp:DropDownList ID="ddlChannelType" class="form-control" runat="server" >
-                                                            <asp:ListItem Value="">--ÈÄöÈÅìÁ±ªÂûã--</asp:ListItem>
-                                                            <asp:ListItem Value="102">ÁΩë‰∏äÈì∂Ë°å</asp:ListItem>
-                                                            <asp:ListItem Value="101">ÊîØ‰ªòÂÆù</asp:ListItem>
-                                                            <asp:ListItem Value="100">Ë¥¢ÂØåÈÄö</asp:ListItem>
-                                                            <asp:ListItem Value="99">ÂæÆ‰ø°</asp:ListItem>
+                                                            <asp:ListItem Value="">--Õ®µ¿¿‡–Õ--</asp:ListItem>
+                                                            <asp:ListItem Value="102">Õ¯…œ“¯––</asp:ListItem>
+                                                            <asp:ListItem Value="101">÷ß∏∂±¶</asp:ListItem>
+                                                            <asp:ListItem Value="100">≤∆∏ªÕ®</asp:ListItem>
+                                                            <asp:ListItem Value="99">Œ¢–≈</asp:ListItem>
                               </asp:DropDownList>
                             </div>
 
@@ -61,19 +61,19 @@
                             </div>
                             <div class="input-group">
                             <asp:DropDownList ID="ddlOrderStatus" class="form-control" runat="server" Width="95px">
-                                <asp:ListItem>--ËÆ¢ÂçïÁä∂ÊÄÅ--</asp:ListItem>
-                                <asp:ListItem Value="1">Â§ÑÁêÜ‰∏≠</asp:ListItem>
-                                <asp:ListItem Value="2">Â∑≤ÊàêÂäü</asp:ListItem>
-                                <asp:ListItem Value="4">Â§±Ë¥•</asp:ListItem>
-                                <asp:ListItem Value="8">Êâ£Èáè</asp:ListItem>
+                                <asp:ListItem>--∂©µ•◊¥Ã¨--</asp:ListItem>
+                                <asp:ListItem Value="1">¥¶¿Ì÷–</asp:ListItem>
+                                <asp:ListItem Value="2">“—≥…π¶</asp:ListItem>
+                                <asp:ListItem Value="4"> ß∞‹</asp:ListItem>
+                                <asp:ListItem Value="8">ø€¡ø</asp:ListItem>
                             </asp:DropDownList>
                             </div>
                             <div class="input-group">
                             <asp:DropDownList ID="ddlNotifyStatus" class="form-control" runat="server" Width="95px">
-                                <asp:ListItem>--‰∏ãÂèëÁä∂ÊÄÅ--</asp:ListItem>
-                                <asp:ListItem Value="1">Â§ÑÁêÜ‰∏≠</asp:ListItem>
-                                <asp:ListItem Value="2">Â∑≤ÊàêÂäü</asp:ListItem>
-                                <asp:ListItem Value="4">Â§±Ë¥•</asp:ListItem>
+                                <asp:ListItem>--œ¬∑¢◊¥Ã¨--</asp:ListItem>
+                                <asp:ListItem Value="1">¥¶¿Ì÷–</asp:ListItem>
+                                <asp:ListItem Value="2">“—≥…π¶</asp:ListItem>
+                                <asp:ListItem Value="4"> ß∞‹</asp:ListItem>
                             </asp:DropDownList>
                             </div>
                             <div class="input-group">
@@ -89,19 +89,20 @@
                      <tr  height="30" >
                             <td>
                             <div class="input-group date">
-                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;ÂºÄÂßã</div>
+                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;ø™ º</div>
                                 <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
                             </div>
 
                              <div class="input-group date">
-                               <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;Êà™Ê≠¢</div>
+                               <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;Ωÿ÷π</div>
                             <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
                             </div>
                             <div class="input-group">
-                            <asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" Êü• ËØ¢ " OnClick="btn_Search_Click"></asp:Button>
+                            <!--<asp:Button ID="btn_Search" runat="server"  CssClass="button btn  btn-danger" Text=" ≤È —Ø " OnClick="btn_Search_Click"></asp:Button>-->
+                            <button Class="button btn  btn-danger" id="search" >≤È—Ø</button>
                             </div>
                              <div class="input-group">
-                            <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="ÂØºÂá∫"
+                            <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="µº≥ˆ"
                             OnClick="btnExport_Click"></asp:Button>
                             </div>
                             </td>
@@ -110,19 +111,19 @@
                         <td>
                         <div class="input-group">
                         <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary">ËÆ¢ÂçïÂè∑</button>
+                        <button type="button" class="btn btn-primary">∂©µ•∫≈</button>
                         </div>
                             <asp:TextBox ID="txtOrderId" runat="server" class="form-control" ></asp:TextBox>
                         </div>
                         <div class="input-group">
                         <div class="input-group-btn">
-                        <button type="button" class="btn  btn-primary">ÂïÜÊà∑ËÆ¢ÂçïÂè∑</button>
+                        <button type="button" class="btn  btn-primary">…Ãªß∂©µ•∫≈</button>
                         </div>
                             <asp:TextBox ID="txtUserOrder" runat="server" class="form-control" ></asp:TextBox>
                         </div>
                         <div class="input-group">
                         <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary">Êé•Âè£ÂïÜËÆ¢ÂçïÂè∑</button>
+                        <button type="button" class="btn btn-primary">Ω”ø⁄…Ã∂©µ•∫≈</button>
                         </div>
                             <asp:TextBox ID="txtSuppOrder" runat="server" class="form-control"></asp:TextBox>
                         </div>
@@ -136,10 +137,10 @@
 
                         <td align="left" bgcolor="">
                         <div class="btn-group">
-                                              <button type="button" class="btn btn-default">ÊÄªÈ¢ùÔºö<% = TotalTranATM %></button>
-                                              <button type="button" class="btn btn-default">ÂïÜÊà∑ÊâÄÂæóÔºö<% = TotalUserATM %></button>
-                                              <button type="button" class="btn btn-default">‰∏öÂä°ÊÄªÊèêÊàêÔºö<% = TotalCommission %></button>
-                                              <button type="button" class="btn btn-default">Âπ≥Âè∞Âà©Ê∂¶Ôºö<% = TotalProfit%></button>
+                                              <button type="button" class="btn btn-default">◊‹∂Ó£∫<% = TotalTranATM %></button>
+                                              <button type="button" class="btn btn-default">…ÃªßÀ˘µ√£∫<% = TotalUserATM %></button>
+                                              <button type="button" class="btn btn-default">“µŒÒ◊‹Ã·≥…£∫<% = TotalCommission %></button>
+                                              <button type="button" class="btn btn-default">∆ΩÃ®¿˚»Û£∫<% = TotalProfit%></button>
                                             </div>
 
                         </td>
@@ -152,196 +153,72 @@
                 <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered">
                     <tr>
                         <td align="center">
-                            <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered table-hover dataTable">
-                                <asp:Repeater ID="rptOrders" runat="server" OnItemCommand="rptOrders_ItemCommand"
-                                    OnItemDataBound="rptOrders_ItemDataBound">
-                                    <HeaderTemplate>
+
+                <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered table-hover dataTable">
+
                                         <tr height="30"  style="background: #e8eaee" >
                                             <td>
-                                                ÂïÜÊà∑ID
+                                                …ÃªßID
                                             </td>
                                             <td>
-                                                Êé•Âè£
+                                                Ω”ø⁄
                                             </td>
                                             <td>
-                                                ËÆ¢ÂçïÁ±ªÂûã
+                                                ∂©µ•¿‡–Õ
                                             </td>
 
 
                                             <td>
-                                                ÈÄöÈÅìÁ±ªÂûã
+                                                Õ®µ¿¿‡–Õ
                                             </td>
                                             <td>
-                                                Èì∂Ë°å
+                                                “¯––
                                             </td>
                                             <td>
-                                                ÈáëÈ¢ù
+                                                Ω∂Ó
                                             </td>
                                             <td>
-                                                ÂïÜÊà∑
+                                                …Ãªß
                                             </td>
                                             <td>
-                                                Âπ≥Âè∞
+                                                ∆ΩÃ®
                                             </td>
                                             <td>
-                                                ‰ª£ÁêÜ
+                                                ¥˙¿Ì
                                             </td>
                                             <td>
-                                                ‰∏öÂä°
+                                                “µŒÒ
                                             </td>
-                                            <td id="th_profits" runat="server">
-                                                Âà©Ê∂¶
+                                            <td id="rptOrders_ctl00_th_profits">
+                                                ¿˚»Û
+                                            </td>
+
+                                            <td>
+                                                µΩ’  ±º‰
                                             </td>
                                             <td>
-                                                Âà∞Â∏êÊó∂Èó¥
+                                                ◊¥Ã¨
                                             </td>
                                             <td>
-                                                Áä∂ÊÄÅ
+                                                œ¬∑¢◊¥Ã¨
+                                            </td>
+                                            <td id="rptOrders_ctl00_th_supplier">
+                                                Ω”ø⁄…Ã
+                                            </td>
+
+                                            <td>
+                                                ∑˛ŒÒ∆˜
                                             </td>
                                             <td>
-                                                ‰∏ãÂèëÁä∂ÊÄÅ
-                                            </td>
-                                            <td id="th_supplier" runat="server">
-                                                Êé•Âè£ÂïÜ
-                                            </td>
-                                            <td>
-                                                ÊúçÂä°Âô®
-                                            </td>
-                                            <td>
-                                                Êìç‰Ωú
+                                                ≤Ÿ◊˜
                                             </td>
                                         </tr>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <tr height="30"  ondblclick="javascript:sendInfo('<%# Eval("id")%>')">
-                                            <td>
-                                                <a href="?action=userpay&userid=<%# Eval("userid") %>&status=2">
-                                                    <%# Eval("userid")%>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <%# Eval("version")%>
-                                            </td>
-                                            <td>
-                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>
-                                            </td>
+                                        <tbody id="data"></tbody>
 
 
-                                            <td>
-                                                <%# Eval("modetypename")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("modeName")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("refervalue", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("payAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("supplierAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("promAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("commission", "{0:f2}")%>
-                                            </td>
-                                            <td id="tr_profits" runat="server">
-                                                <%# Eval("profits", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
-                                            </td>
-                                            <td>
-                                                <%# getStatusStyle(Eval("status").ToString()) %>
 
-                                            </td>
-                                            <td>
-                                                <%# getNotifystatStatusStyle(Eval("notifystat").ToString()) %>
-
-                                            </td>
-                                            <td id="tr_supplier" runat="server">
-                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("server")%>
-                                            </td>
-                                            <td>
-                                                <asp:Button ID="btnReissue" class="button btn btn-xs  btn-info" runat="server" Text="Ë°•Âèë" ToolTip="ÊâãÂä®ÂõûÂèë" CommandName="Reissue" CommandArgument='<%# Eval("orderid")%>' />
-                                                <asp:Button ID="btnRest" class="button btn btn-xs  btn-info" runat="server" Text="Ë°•Âçï" CommandName="ResetOrder" CommandArgument='<%#GetParm(Eval("orderid"),Eval("supplierId"),Eval("refervalue"))%>' />
-                                                <asp:Button ID="btnDeduct" class="button btn btn-xs  btn-info" runat="server" Text="Êâ£"  ToolTip="Êâ£Èáè" CommandName="Deduct" CommandArgument='<%# Eval("orderid")%>' />
-                                                <asp:Button ID="btnReDeduct" class="button btn btn-xs  btn-info" runat="server" Text="Ëøò"  CommandName="ReDeduct" CommandArgument='<%# Eval("orderid")%>' />
-												&nbsp;<a title="ÊâìÂç∞" alt="ÊâìÂç∞" style="font-size:15px; color:#00c0ef"  href="BankOrderPrint.aspx?ID=<%# Eval("ID") %>" target="_blank" ><i class="fa fa-print"></i></a>
-                                            </td>
-                                        </tr>
-                                    </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        <tr height="30" ondblclick="javascript:sendInfo('<%# Eval("id")%>')">
-                                            <td>
-                                                <a href="?action=userpay&userid=<%# Eval("userid") %>&status=2">
-                                                    <%# Eval("userid")%>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <%# Eval("version")%>
-                                            </td>
-                                             <td>
-                                                <%#Enum.GetName(typeof(OriginalStudio.Model.Order.OrderTypeEnum),Eval("ordertype"))%>
-                                            </td>
-
-
-                                            <td>
-                                                <%# Eval("modetypename")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("modeName")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("refervalue", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("payAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("supplierAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("promAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("commission", "{0:f2}")%>
-                                            </td>
-                                            <td id="tr_profits" runat="server">
-                                                <%# Eval("profits", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("completetime", "{0:yyyy-MM-dd HH:mm:ss}")%>
-                                            </td>
-                                            <td>
-                                                <%# getStatusStyle(Eval("status").ToString()) %>
-                                            </td>
-                                            <td>
-                                               <%# getNotifystatStatusStyle(Eval("notifystat").ToString()) %>
-                                            </td>
-                                            <td id="tr_supplier" runat="server">
-                                                <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("supplierId"))%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("server")%>
-                                            </td>
-                                            <td>
-                                                <asp:Button ID="btnReissue" runat="server" class="button btn btn-xs  btn-info" Text="Ë°•Âèë" ToolTip="ÊâãÂä®ÂõûÂèë" CommandName="Reissue" CommandArgument='<%# Eval("orderid")%>' />
-                                                <asp:Button ID="btnRest" runat="server" class="button btn btn-xs  btn-info" Text="Ë°•Âçï" CommandName="ResetOrder" CommandArgument='<%#GetParm(Eval("orderid"),Eval("supplierId"),Eval("refervalue"))%>' />
-                                                <asp:Button ID="btnDeduct" runat="server" class="button btn btn-xs  btn-info" Text="Êâ£" ToolTip="Êâ£Èáè" CommandName="Deduct" CommandArgument='<%# Eval("orderid")%>' />
-                                                <asp:Button ID="btnReDeduct" runat="server" class="button btn btn-xs  btn-info" Text="Ëøò" ToolTip="ËÆ¢ÂçïÂΩíËøò" CommandName="ReDeduct" CommandArgument='<%# Eval("orderid")%>' />
-												&nbsp;<a title="ÊâìÂç∞" alt="ÊâìÂç∞" style="font-size:15px; color:#00c0ef" href="BankOrderPrint.aspx?ID=<%# Eval("ID") %>" target="_blank" ><i class="fa fa-print"></i></a>
-                                            </td>
-                                        </tr>
-                                    </AlternatingItemTemplate>
-                                </asp:Repeater>
                             </table>
+
                         </td>
                     </tr>
                     <!---------------------pager------------------>
@@ -353,7 +230,7 @@
             </td>
         </tr>
     </table>
-    </form>
+    <!--</form>-->
 
     </section>
     </div>
@@ -380,6 +257,79 @@
 
              });
 
+     // ˝æ›≤È—Ø=======================
+     $("#search").click(function() {
+           $.ajax({
+                          method: 'POST',
+                          cache: false,
+                          contentType: "application/json",
+                          url: './BankOrderList.ashx',
+                          data: {
+                                   txtOrderId       : $("#txtOrderId").val(),
+                                   txtuserid        : $("#txtuserid").val(),
+                                   ddlChannelType   : $("#ddlChannelType").val(),
+                                   ddlsupp          : $("#ddlsupp").val(),
+                                   txtUserOrder     : $("#txtUserOrder").val(),
+                                   txtSuppOrder     : $("#txtSuppOrder").val(),
+                                   ddlOrderStatus   : $("#ddlOrderStatus").val(),
+                                   ddlNotifyStatus  : $("#ddlNotifyStatus").val(),
+                                   StimeBox         : $("#StimeBox").val(),
+                                   EtimeBox         : $("#EtimeBox").val(),
+                              },
+                          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                          beforeSend: function () {
+                              $("#search").html("≤È—Ø÷–...");
+                          },
+                          success: function (data, textStatus) {
+                              data = JSON.parse(data);
+                              $("#search").html("≤È—Ø");
+
+
+                              if (data['success']) {
+                                   console.info(data['data']);
+
+                                  var dtCount = data['data'].length;
+                                  var html = "";
+                                  for (var i = 0; i < dtCount; i++) {
+
+
+                                      html+= "<tr height='30'  ondblclick='javascript:sendInfo()'>";
+                                      html+= "<td> "+data['data'][i]['userid']+"</td>";
+                                      html+= "<td> "+data['data'][i]['version']+"</td>";
+                                      html+= "<td> "+data['data'][i]['ordertype']+"</td>";
+                                      html+= "<td> "+data['data'][i]['modetypename']+"</td>";
+                                      html+= "<td> "+data['data'][i]['modeName']+"</td>";
+                                      html+= "<td> "+data['data'][i]['refervalue']+"</td>";
+                                      html+= "<td> "+data['data'][i]['payAmt']+"</td>";
+                                      html+= "<td> "+data['data'][i]['supplierAmt']+"</td>";
+                                      html+= "<td> "+data['data'][i]['promAmt']+"</td>";
+                                      html+= "<td> "+data['data'][i]['commission']+"</td>";
+                                      html+= "<td> "+data['data'][i]['profits']+"</td>";
+                                      html+= "<td> "+data['data'][i]['completetime']+"</td>";
+                                      html+= "<td><%=getStatusStyle("") %></td>";
+                                      html+= "<td> "+data['data'][i]['notifystat']+"</td>";
+
+                                      html+= "<td><a title='“—ÕÍ≥…' style='color:#1db283' href='javascript:void(0)'><i class='fa  fa-check-circle'></i></a></td>";
+                                      html+= "<td><a title='“—ÕÍ≥…' style='color:#1db283' href='javascript:void(0)'><i class='fa  fa-check-circle'></i></a></td>";
+
+                                  html+= "<td><input type='submit' name='rptOrders$ctl01$btnReissue' value='≤π∑¢' id='rptOrders_ctl01_btnReissue' title=' ÷∂Øªÿ∑¢' class='button btn btn-xs  btn-info' /><input type='submit' name='rptOrders$ctl01$btnDeduct' value='≤ªƒ‹' onclick='return confirm(\' «∑Ò»∑∂®ø€¡ø£ø\'); id='rptOrders_ctl01_btnDeduct' title='ø€¡ø' class='button btn btn-xs  btn-info' />&nbsp;<a title='¥Ú”°' alt='¥Ú”°' style='font-size:15px; color:#00c0ef'  href='BankOrderPrint.aspx?ID=3813646' target='_blank' ><i class='fa fa-print'></i></a></td></tr>";
+
+
+
+                                  };
+                              $("#data").html(html);
+                              }
+                          },
+                          error: function (XMLHttpRequest, textStatus, errorThrown) {
+                              errorMsg = '';
+                          }
+                      });
+
+
+
+
+     });
+     // ˝æ›≤È—Ø=======================
 
 
   })
@@ -388,22 +338,19 @@
   function sendInfo(id) {
 
 
-  //È°µÈù¢‰∏ÄÊâìÂºÄÂ∞±ÊâßË°åÔºåÊîæÂÖ•readyÊòØ‰∏∫‰∫ÜlayerÊâÄÈúÄÈÖç‰ª∂Ôºàcss„ÄÅÊâ©Â±ïÊ®°ÂùóÔºâÂä†ËΩΩÂÆåÊØï
+  //“≥√Ê“ª¥Úø™æÕ÷¥––£¨∑≈»Îready «Œ™¡ÀlayerÀ˘–Ë≈‰º˛£®css°¢¿©’πƒ£øÈ£©º”‘ÿÕÍ±œ
           layer.ready(function(){
-              //Ëá™ÂÆöÈ°µ
+              //◊‘∂®“≥
               layer.open({
                   type: 2,
-                  title: 'ÁΩëÈì∂ËÆ¢Âçï',
-                  skin: 'layui-layer-rim', //Âä†‰∏äËæπÊ°Ü
-                  //closeBtn: 0, //‰∏çÊòæÁ§∫ÂÖ≥Èó≠ÊåâÈíÆ
-                  area: ['67%', '90%'], //ÂÆΩÈ´ò
+                  title: 'Õ¯“¯∂©µ•',
+                  skin: 'layui-layer-rim', //º”…œ±ﬂøÚ
+                  //closeBtn: 0, //≤ªœ‘ æπÿ±’∞¥≈•
+                  area: ['67%', '90%'], //øÌ∏ﬂ
                   content: "./BankOrderShow.aspx?id="+id,
               });
           });
-
-
-
-
-
       }
+
+
 </script>
