@@ -48,12 +48,7 @@
                              <%--  代理ID：
                                             <asp:TextBox ID="txtpromid" runat="server" Width="30px"></asp:TextBox>--%>
                                                         <asp:DropDownList ID="ddlChannelType" class="form-control" runat="server" >
-                                                            <asp:ListItem Value="">--通道类型--</asp:ListItem>
-                                                            <asp:ListItem Value="102">网上银行</asp:ListItem>
-                                                            <asp:ListItem Value="101">支付宝</asp:ListItem>
-                                                            <asp:ListItem Value="100">财富通</asp:ListItem>
-                                                            <asp:ListItem Value="99">微信</asp:ListItem>
-                              </asp:DropDownList>
+                                                        </asp:DropDownList>
                             </div>
 
                              <div class="input-group">
@@ -99,7 +94,7 @@
                             </div>
                             <div class="input-group">
                             <!--<asp:Button ID="btn_Search" runat="server"  CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>-->
-                            <button Class="button btn  btn-danger" id="search" >查询</button>
+                            <button Class="button btn  btn-danger" id="search" onclick="search(1)" >查询</button>
                             </div>
                              <div class="input-group">
                             <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出"
@@ -161,7 +156,7 @@
                                                 商户ID
                                             </td>
                                             <td>
-                                                接口
+                                                订单号
                                             </td>
                                             <td>
                                                 订单类型
@@ -171,9 +166,7 @@
                                             <td>
                                                 通道类型
                                             </td>
-                                            <td>
-                                                银行
-                                            </td>
+
                                             <td>
                                                 金额
                                             </td>
@@ -183,12 +176,8 @@
                                             <td>
                                                 平台
                                             </td>
-                                            <td>
-                                                代理
-                                            </td>
-                                            <td>
-                                                业务
-                                            </td>
+
+
                                             <td id="rptOrders_ctl00_th_profits">
                                                 利润
                                             </td>
@@ -221,10 +210,45 @@
 
                         </td>
                     </tr>
-                    <!---------------------pager------------------>
-                    <!-- #include file="../Pager.aspx" -->
+                    <style>
+                                         #Pager1{
+                                             margin-top: 7px;
+                                         }
+                                         #Pager1_input{
+
+
+                                             height: 34px;
+                                             padding: 6px 12px;
+                                             font-size: 14px;
+                                             line-height: 1.42857143;
+                                             color: #555;
+                                             background-color: #fff;
+                                             background-image: none;
+                                             border: 1px solid #ccc;
+                                             border-radius: 4px;
+                                             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                                             box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                                             -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                                             -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                                             transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                                         }
+                                         #Pager1 a{
+
+                                                       padding: 6px 12px;
+                                                         height: 34px;
+                                                       line-height: 1.42857143;
+                                                       color: #333;
+                                                       text-decoration: none;
+                                                       background-color: #fff;
+                                                       border: 1px solid #ddd;}
+
+                                         </style>
+                    <tbody id="pager">
+
                     <!---------------------pager------------------>
 
+                    <!---------------------pager------------------>
+                    </tbody>
 
                 </table>
             </td>
@@ -241,6 +265,7 @@
 <!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
+<script src="<%=ADMIN_URI%>/style/admin/bank_order_list.js"></script>
 <script>
   $(function () {
 
@@ -257,83 +282,11 @@
 
              });
 
-     //数据查询=======================
-     $("#search").click(function() {
-           $.ajax({
-                          method: 'POST',
-                          cache: false,
-                          contentType: "application/json",
-                          url: './BankOrderList.ashx',
-                          data: {
-                                   txtOrderId       : $("#txtOrderId").val(),
-                                   txtuserid        : $("#txtuserid").val(),
-                                   ddlChannelType   : $("#ddlChannelType").val(),
-                                   ddlsupp          : $("#ddlsupp").val(),
-                                   txtUserOrder     : $("#txtUserOrder").val(),
-                                   txtSuppOrder     : $("#txtSuppOrder").val(),
-                                   ddlOrderStatus   : $("#ddlOrderStatus").val(),
-                                   ddlNotifyStatus  : $("#ddlNotifyStatus").val(),
-                                   StimeBox         : $("#StimeBox").val(),
-                                   EtimeBox         : $("#EtimeBox").val(),
-                              },
-                          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                          beforeSend: function () {
-                              $("#search").html("查询中...");
-                          },
-                          success: function (data, textStatus) {
-                              data = JSON.parse(data);
-                              $("#search").html("查询");
 
 
-                              if (data['success']) {
-                                   console.info(data['data']);
-
-                                  var dtCount = data['data'].length;
-                                  var html = "";
-                                  for (var i = 0; i < dtCount; i++) {
-
-
-                                      html+= "<tr height='30'  ondblclick='javascript:sendInfo()'>";
-                                      html+= "<td> "+data['data'][i]['userid']+"</td>";
-                                      html+= "<td> "+data['data'][i]['version']+"</td>";
-                                      html+= "<td> "+data['data'][i]['ordertype']+"</td>";
-                                      html+= "<td> "+data['data'][i]['modetypename']+"</td>";
-                                      html+= "<td> "+data['data'][i]['modeName']+"</td>";
-                                      html+= "<td> "+data['data'][i]['refervalue']+"</td>";
-                                      html+= "<td> "+data['data'][i]['payAmt']+"</td>";
-                                      html+= "<td> "+data['data'][i]['supplierAmt']+"</td>";
-                                      html+= "<td> "+data['data'][i]['promAmt']+"</td>";
-                                      html+= "<td> "+data['data'][i]['commission']+"</td>";
-                                      html+= "<td> "+data['data'][i]['profits']+"</td>";
-                                      html+= "<td> "+data['data'][i]['completetime']+"</td>";
-                                      html+= "<td><%=getStatusStyle("") %></td>";
-                                      html+= "<td> "+data['data'][i]['notifystat']+"</td>";
-
-                                      html+= "<td><a title='已完成' style='color:#1db283' href='javascript:void(0)'><i class='fa  fa-check-circle'></i></a></td>";
-                                      html+= "<td><a title='已完成' style='color:#1db283' href='javascript:void(0)'><i class='fa  fa-check-circle'></i></a></td>";
-
-                                  html+= "<td><input type='submit' name='rptOrders$ctl01$btnReissue' value='补发' id='rptOrders_ctl01_btnReissue' title='手动回发' class='button btn btn-xs  btn-info' /><input type='submit' name='rptOrders$ctl01$btnDeduct' value='不能' onclick='return confirm(\'是否确定扣量？\'); id='rptOrders_ctl01_btnDeduct' title='扣量' class='button btn btn-xs  btn-info' />&nbsp;<a title='打印' alt='打印' style='font-size:15px; color:#00c0ef'  href='BankOrderPrint.aspx?ID=3813646' target='_blank' ><i class='fa fa-print'></i></a></td></tr>";
-
-
-
-                                  };
-                              $("#data").html(html);
-                              }
-                          },
-                          error: function (XMLHttpRequest, textStatus, errorThrown) {
-                              errorMsg = '';
-                          }
-                      });
-
-
-
-
-     });
-     //数据查询=======================
 
 
   })
-
 
   function sendInfo(id) {
 
