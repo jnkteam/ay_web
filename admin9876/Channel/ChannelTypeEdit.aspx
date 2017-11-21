@@ -5,7 +5,7 @@
 <head id="Head1">
     <title>新建编辑供应商</title>
 
-  
+
  <!-- Bootstrap 3.3.7 -->
    <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
    <!-- Theme style -->
@@ -169,7 +169,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             </tr>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr >
+                            <tr class="childCheck">
                                 <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("SupplierCode")%>' />
                                 <td>
                                     <input id="chkItem" type="checkbox" runat="server"  name="chkItem" />
@@ -188,7 +188,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             </tr>
                         </ItemTemplate>
                         <AlternatingItemTemplate>
-                            <tr >
+                            <tr class="childCheck">
                                 <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("SupplierCode")%>' />
                                 <td>
                                     <input id="chkItem" type="checkbox" runat="server"  name="chkItem"/>
@@ -257,3 +257,18 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
     </form>
 </body>
 </html>
+<script src="<%=ADMIN_URI%>/style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function() {
+        var clickCheckAll = false;
+        $("#chkAll").click(function() {
+                        if (clickCheckAll) {
+                            $(".childCheck input[type='checkbox']").each(function() {this.checked = false;});
+                            clickCheckAll = false;
+                        } else {
+                            $(".childCheck input[type='checkbox']").each(function() {this.checked = true;});
+                            clickCheckAll = true;
+                        }
+        });
+    });
+</script>
