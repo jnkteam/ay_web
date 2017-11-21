@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.SupplierEdit" Codebehind="SupplierEdit.aspx.cs" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
     <title>新建编辑供应商</title>
-    <link href="../style/admin.css" type="text/css" rel="stylesheet" />
+
    <!-- Bootstrap 3.3.7 -->
    <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
    <!-- Theme style -->
@@ -15,7 +15,7 @@
          {
              width: 100%;
              max-width: 100%;
-             margin-bottom: 20px;
+           
              border: 1px solid #f4f4f4;
              able-layout:fixed;
          }
@@ -64,6 +64,11 @@ padding:12px 15px 15px 15px;
 }
 #txtdesc{width: 193px !important;
            margin-left: 11px;}
+.form-control{width: 317px !important}
+#Active{border:0 !important;}
+#IsDebug{border:0 !important;}
+#Active td{border:0 !important;}
+#IsDebug td{border:0 !important;}
 </style>
 
     <script type="text/javascript">
@@ -79,52 +84,34 @@ function backreturn(){
             <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered table-hover dataTable">
                 <tr>
                     <td class="td2">
-                        供应商编号</td>
+                        接口商编号</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtcode" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="txtcode"  required class="form-control" runat="server" Width="50%"></asp:TextBox>
                     </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        供应商名称</td>
+                        接口商名称</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtname" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="txtname" required class="form-control" runat="server" Width="50%"></asp:TextBox>
                     </div>
                     </td>
                 </tr>
+
+
                 <tr>
                     <td class="td2">
-                        网址地址</td>
+                        支持功能</td>
                     <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpurl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        Logo图片</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtlogourl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        支持种类</td>
-                    <td class="td1">
-                        <asp:CheckBox ID="chkisbank" Text="在线" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkiscard" Text="卡类" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkissms" Text="短信" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkissx" Text="声讯" runat="server" Checked="True" />
+
+
+                        <asp:CheckBox ID="chkiwap" Text="网银" runat="server" Checked="True" />
+                        <asp:CheckBox ID="chkiali" Text="支付宝" runat="server" Checked="True" />
+                        <asp:CheckBox ID="chkiwx" Text="微信" runat="server" Checked="True" />
                         <asp:CheckBox ID="chkisdistribution" Text="代付" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkiwap" Text="手机网银" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkiali" Text="手机支付宝" runat="server" Checked="True" />
-                        <asp:CheckBox ID="chkiwx" Text="手机微信" runat="server" Checked="True" />
                     </td>
                 </tr>
                 <tr>
@@ -147,7 +134,7 @@ function backreturn(){
                 </tr>
                 <tr>
                     <td class="td2">
-                        用户名称</td>
+                        商户名称</td>
                     <td class="td1">
                     <div class="input-group">
                         <asp:TextBox ID="txtpusername" class="form-control" runat="server" Width="50%"></asp:TextBox>
@@ -156,170 +143,151 @@ function backreturn(){
                 </tr>
                 <tr>
                     <td class="td2">
-                        账号1</td>
+                        预留参数1</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpuserid1" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 神州行账号
+                        <asp:TextBox ID="PUserParm1" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        密钥1</td>
+                        预留参数2</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpuserkey1" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 神州行密钥
+                        <asp:TextBox ID="PUserParm2" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        账号2</td>
+                        预留参数3</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpuserid2" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 联通充值卡账号
+                        <asp:TextBox ID="PUserParm3" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        密钥2</td>
+                        预留参数4</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpuserkey2" class="form-control" runat="server" Width="50%"></asp:TextBox> <span class="txt">快钱联通充值卡账号</span>
+                        <asp:TextBox ID="PUserParm4" class="form-control" runat="server" Width="50%"></asp:TextBox> <span class="txt"></span>
                         </div>
 
                     </td>
                 </tr>
-                <tr>
-                    <td class="td2">
-                        账号3</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpuserid3" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 电信账号
-                        </div>
 
-                    </td>
-                </tr>
                 <tr>
-                    <td class="td2">
-                        密钥3</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpuserkey3" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱  电信密钥
-                        </div>
+             <td class="td2">
+                                        启停标记</td>
+                                    <td class="td1">
+                                    <div class="input-group">
+                                                           <asp:RadioButtonList ID="Active" runat="server" RepeatDirection="horizontal">
+                                                               <asp:ListItem Selected="true" Value="1">是</asp:ListItem>
+                                                               <asp:ListItem Value="0">否</asp:ListItem>
+                                                           </asp:RadioButtonList>
+                                                           </div>
 
-                    </td>
-                </tr>
+                                    </td>
+                                </tr>
+
+                 <tr>
+                             <td class="td2">
+                                    开关调试标记</td>
+                                                    <td class="td1">
+                                                     <div class="input-group">
+                                                                                                               <asp:RadioButtonList ID="IsDebug" runat="server" RepeatDirection="horizontal">
+                                                                                                                   <asp:ListItem Selected="true" Value="1">是</asp:ListItem>
+                                                                                                                   <asp:ListItem Value="0">否</asp:ListItem>
+                                                                                                               </asp:RadioButtonList>
+                                                                                                               </div>
+
+                                                    </td>
+                                                </tr>
+
                 <tr>
                     <td class="td2">
-                        账号4</td>
+                        网关地址</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpuserid4" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 骏网一卡通账号</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        密钥4</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpuserkey4" class="form-control" runat="server" Width="50%"></asp:TextBox>快钱 骏网一卡通密钥</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        账号5</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpuserid5" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="BankPostUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td class="td2">
-                        密钥5</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpuserkey5" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        网址返回地址</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpbakurl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        卡类返回地址</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtCardbakUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        中转域名</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtJumpUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        网银提交地址</td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox ID="txtpostBankUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
+
                 <tr>
                     <td class="td2">
                         异步通知地址</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpostCardUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="BankReturnUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
-                 <tr>
+
+ <tr>
                     <td class="td2">
-                        卡类查询地址</td>
+                        同步返回地址</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtQueryCardUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="BankNotifyUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        短信息提交地址</td>
+                        查单接口地址</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtpostSMSUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="BankSearchUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        代付款提交地址</td>
+                        中转域名地址</td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox ID="txtdistributionUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        <asp:TextBox ID="BankJumUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td class="td2">
+                        代付提交地址</td>
+                    <td class="td1">
+                    <div class="input-group">
+                        <asp:TextBox ID="DistributionUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td2">
+                        代付通知地址</td>
+                    <td class="td1">
+                    <div class="input-group">
+                        <asp:TextBox ID="DistributionNotifyUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                                    <td class="td2">
+                                        代付查询地址</td>
+                                    <td class="td1">
+                                    <div class="input-group">
+                                        <asp:TextBox ID="DistributionSearchUrl" class="form-control" runat="server" Width="50%"></asp:TextBox>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
                 <tr>
                     <td class="td2">
                         说明</td>
@@ -338,6 +306,7 @@ function backreturn(){
                         </div>
                     </td>
                 </tr>
+                <!--
                 <tr>
                     <td class="td2">
                         是否系统</td>
@@ -348,9 +317,10 @@ function backreturn(){
                     </td>
                 </tr>
                 <tr>
+                -->
                     <td colspan="2" style="text-align: center; height: 30px;">
-                        <asp:Button ID="btnSave" CssClass="button btn-xs  btn-danger" runat="server" Text="保 存" OnClick="btnSave_Click"></asp:Button>
-                        <input type="button" Class="button btn-xs  btn-danger"  value="返 回" onclick="void (0)" />
+                        <asp:Button ID="btnSave" CssClass="button btn  btn-danger" runat="server" Text="保 存" OnClick="btnSave_Click"></asp:Button>
+
                     </td>
                 </tr>
             </table>

@@ -43,10 +43,10 @@
                     <asp:GridView ID="GVSupplier" runat="server" AutoGenerateColumns="False" CellPadding="4"
                         ForeColor="#333333" GridLines="None" Width="100%" cssClass="table table-bordered table-hover dataTable" CellSpacing="1">
                         <Columns>
-                            <asp:BoundField DataField="code" HeaderText="代号">
+                            <asp:BoundField DataField="SupplierCode" HeaderText="代号">
                                 <ControlStyle Width="5%" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="name" HeaderText="名称">
+                            <asp:BoundField DataField="SupplierName" HeaderText="名称">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>
                             <%--<asp:BoundField DataField="purl" HeaderText="网址">--%>
@@ -61,12 +61,12 @@
                                      <%--</a>--%>
                                 <%--</ItemTemplate>--%>
                             <%--</asp:TemplateField>--%>
-                            <asp:BoundField DataField="desc" HeaderText="说明">
+                            <asp:BoundField DataField="SpDesc" HeaderText="说明">
                                 <ControlStyle Width="20%" />
                             </asp:BoundField>                           
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <a class="button btn btn-xs  btn-info" href="javascript:fee('<%# Eval("code") %>','<%#Eval("name")%>')"  class="cvlink">费率</a>
+                                    <a class="button btn btn-xs  btn-info" href="javascript:fee('<%# Eval("SupplierCode") %>','<%#Eval("SupplierName")%>')"  class="cvlink">费率</a>
                                     <a class="button btn btn-xs  btn-info" href="javascript:edit('<%# Eval("ID") %>')"  class="cvlink">编辑</a>
                                     </ItemTemplate>
                             </asp:TemplateField>

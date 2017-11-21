@@ -269,6 +269,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             $(".childCheck input[type='checkbox']").each(function() {this.checked = true;});
                             clickCheckAll = true;
                         }
+
         });
     });
 </script>
