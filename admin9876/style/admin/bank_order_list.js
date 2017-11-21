@@ -40,7 +40,7 @@ function search(page) {
 
 
                     html+= "<tr height='30'  ondblclick='javascript:sendInfo("+data['data'][i]['id']+")'>";
-                    html+= "<td> "+data['data'][i]['userid']+"</td>";
+                    html+= "<td> "+data['data'][i]['MerchantName']+"</td>";
                     html+= "<td> "+data['data'][i]['orderid']+"</td>";
                     html+= "<td> "+data['data'][i]['orderTypeName']+"</td>";
                     html+= "<td> "+data['data'][i]['TypeName']+"</td>";
@@ -48,6 +48,7 @@ function search(page) {
                     html+= "<td> "+data['data'][i]['payAmt']+"</td>";
                     html+= "<td> "+data['data'][i]['supplierAmt']+"</td>";
                     html+= "<td> "+data['data'][i]['profits']+"</td>";
+                    html+= "<td> "+data['data'][i]['addtime']+"</td>";
                     html+= "<td> "+data['data'][i]['completetime']+"</td>";
                     html+= "<td> "+getStatusStyle(data['data'][i]['status'])+"</td>";
                     html+= "<td> "+getNotifystatStatusStyle(data['data'][i]['notifystat'])+"</td>";
@@ -130,7 +131,7 @@ function getHandler(status, orderid, supplierId, refervalue, difftime) {
     var button2 = "<input type='submit' onclick=handleButton('btnRest','"+orderid.toString()+"','"+supplierId.toString()+"','"+refervalue.toString()+"') ID='btnRest'  value='补单'  title='' class='button btn btn-xs  btn-info' />";
     var button3 = "";
     var button4 = "<input type='submit' onclick=handleButton('btnReDeduct','"+orderid.toString()+"') ID='btnReDeduct'  value='还'  title='' class='button btn btn-xs  btn-info' />";
-    var print   = "&nbsp;<a title='打印' alt='打印' style='font-size:15px; color:#00c0ef'  href='BankOrderPrint.aspx?ID=3813646' target='_blank' ><i class='fa fa-print'></i></a>";
+
     var handlerStr = "";
     switch (status)
     {
@@ -171,7 +172,7 @@ function getHandler(status, orderid, supplierId, refervalue, difftime) {
             handlerStr+= button4;
             break;
     }
-    handlerStr+=print;
+
     return handlerStr;
 
 }

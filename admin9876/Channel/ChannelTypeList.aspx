@@ -90,7 +90,7 @@
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <input type="button" class="button btn btn-xs  btn-info" value="Éè ÖÃ" onclick="javascript:setting('<%#Eval("id")%>')" />
-                                    <input type="button" class="button btn btn-xs  btn-info" value="Ïú¿¨ÉèÖÃ" onclick="javascript:deleteCard('<%#Eval("id")%>')" />
+
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
     <title>新建编辑供应商</title>
-    <link href="../style/admin.css" type="text/css" rel="stylesheet" />
-    <script src="../../js/common.js" type="text/javascript"></script>
+
+  
  <!-- Bootstrap 3.3.7 -->
    <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
    <!-- Theme style -->
@@ -107,14 +107,12 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         通道类型 ：</td>
                     <td class="td1">
                         <asp:RadioButtonList ID="rblType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                            <asp:ListItem Value="1">在线</asp:ListItem>
-                            <asp:ListItem Value="2">充值卡</asp:ListItem>
-                            <asp:ListItem Value="4">声讯</asp:ListItem>
-                            <asp:ListItem Value="8">短信</asp:ListItem>
-                            <asp:ListItem Value="6">手机网银</asp:ListItem>
-                            <asp:ListItem Value="9">支付宝</asp:ListItem>
-                            <asp:ListItem Value="10">微信</asp:ListItem>
-							<asp:ListItem Value="11">京东</asp:ListItem>
+                            <asp:ListItem Value="1">网银</asp:ListItem>
+                            <asp:ListItem Value="2">支付宝</asp:ListItem>
+                            <asp:ListItem Value="3">微信</asp:ListItem>
+                            <asp:ListItem Value="4">QQ</asp:ListItem>
+                            <asp:ListItem Value="5">京东</asp:ListItem>
+
                         </asp:RadioButtonList></td>
                 </tr>
                 <tr>
@@ -249,9 +247,9 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                 <tr>
                     <td class="td2">                        
                     </td>
-                    <td class="td1">
-                        <asp:Button ID="btnSave" CssClass="button btn-xs  btn-danger" runat="server" Text="保 存" OnClick="btnSave_Click"></asp:Button>
-                        <input type="button" Class="button btn-xs  btn-danger" value="返 回"  />
+                    <td class="td1" style="text-align: center">
+                        <asp:Button ID="btnSave" CssClass="button btn  btn-danger" runat="server" Text="保 存" OnClick="btnSave_Click"></asp:Button>
+
                     </td>
                 </tr>
             </table>

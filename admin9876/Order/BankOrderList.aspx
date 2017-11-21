@@ -35,7 +35,7 @@
                         <td colspan="2">
                             <div class="input-group">
                             <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary">商户ID</button>
+                            <button type="button" class="btn btn-primary">商户号</button>
                             </div>
                             <asp:TextBox ID="txtuserid" class="form-control" runat="server"></asp:TextBox>
 
@@ -153,7 +153,7 @@
 
                                         <tr height="30"  style="background: #e8eaee" >
                                             <td>
-                                                商户ID
+                                                商户号
                                             </td>
                                             <td>
                                                 订单号
@@ -181,7 +181,9 @@
                                             <td id="rptOrders_ctl00_th_profits">
                                                 利润
                                             </td>
-
+                                            <td>
+                                                下单时间
+                                            </td>
                                             <td>
                                                 到帐时间
                                             </td>
