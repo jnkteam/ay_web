@@ -172,15 +172,15 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr >
-                                <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("code")%>' />
+                                <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("SupplierCode")%>' />
                                 <td>
                                     <input id="chkItem" type="checkbox" runat="server"  name="chkItem" />
                                 </td>
                                 <td>
-                                    <%# Eval("code")%>
+                                    <%# Eval("SupplierCode")%>
                                 </td>
                                 <td>
-                                    <%# Eval("name")%>
+                                    <%# Eval("SupplierName")%>
                                 </td>
                                 <td>
                                 <div class="input-group">
@@ -191,15 +191,15 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </ItemTemplate>
                         <AlternatingItemTemplate>
                             <tr >
-                                <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("code")%>' />
+                                <asp:HiddenField ID="hfsuppid" runat="server" Value='<%# Eval("SupplierCode")%>' />
                                 <td>
                                     <input id="chkItem" type="checkbox" runat="server"  name="chkItem"/>
                                 </td>
                                 <td>
-                                    <%# Eval("code")%>
+                                    <%# Eval("SupplierCode")%>
                                 </td>
                                 <td>
-                                    <%# Eval("name")%>
+                                    <%# Eval("SupplierName")%>
                                 </td>
                                 <td>
                                 <div class="input-group">

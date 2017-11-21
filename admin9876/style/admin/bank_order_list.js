@@ -39,7 +39,7 @@ function search(page) {
                 for (var i = 0; i < dtCount; i++) {
 
 
-                    html+= "<tr height='30'  ondblclick='javascript:sendInfo()'>";
+                    html+= "<tr height='30'  ondblclick='javascript:sendInfo("+data['data'][i]['id']+")'>";
                     html+= "<td> "+data['data'][i]['userid']+"</td>";
                     html+= "<td> "+data['data'][i]['orderid']+"</td>";
                     html+= "<td> "+data['data'][i]['orderTypeName']+"</td>";

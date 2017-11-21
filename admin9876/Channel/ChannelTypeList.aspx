@@ -36,10 +36,10 @@
                             <asp:BoundField DataField="typeId" HeaderText="代码">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="modetypename" HeaderText="名称">
+                            <asp:BoundField DataField="typename" HeaderText="名称">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>    
-                             <asp:BoundField DataField="code" HeaderText="英文代码">
+                             <asp:BoundField DataField="typecode" HeaderText="英文代码">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>                   
                             <asp:TemplateField>
@@ -77,14 +77,14 @@
                                     </asp:RadioButtonList>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                             <asp:BoundField DataField="Name" HeaderText="当前接口商">                               
+                             <asp:BoundField DataField="typeName" HeaderText="当前接口商">
                             </asp:BoundField>
                              <asp:TemplateField>
                                 <HeaderTemplate>
                                     平台费率
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <%#Eval("supprate","{0:p2}")%>
+                                    <%#Eval("supplierrate","{0:p2}")%>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
