@@ -1,10 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.ChannelEdit" Codebehind="ChannelEdit.aspx.cs" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
-    <title>新建编辑供应商</title>
-    <link href="../style/admin.css" type="text/css" rel="stylesheet" />
+    <title></title>
+
      <!-- Bootstrap 3.3.7 -->
        <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
        <!-- Theme style -->
@@ -77,31 +76,41 @@ function backreturn(){
     </script>
 
 </head>
+
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" >
         <div>
             <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered table-hover dataTable">
                 <tr>
                     <td class="td2">
-                        通道代号 </td>
+                        通道编号 </td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox  class="form-control"  ID="txtcode" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox required  class="form-control"  ID="txtcode" runat="server" Width="200px"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
+                <tr>
+                                    <td class="td2">
+                                        通道名称 </td>
+                                    <td class="td1">
+                                    <div class="input-group">
+                                        <asp:TextBox required  class="form-control"  ID="txtmodeName" runat="server" Width="200px"></asp:TextBox>
+                                        </div>
+                                    </td>
+                                </tr>
                 <tr>
                     <td class="td2">
                         英文代码 </td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:TextBox  class="form-control"  ID="txtenmodeName" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox required  class="form-control"  ID="txtenmodeName" runat="server" Width="200px"></asp:TextBox>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="td2">
-                        通道类别 </td>
+                        通道类型 </td>
                     <td class="td1">
                     <div class="input-group">
                         <asp:DropDownList class="form-control" ID="ddlType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlType_SelectedIndexChanged">
@@ -111,7 +120,7 @@ function backreturn(){
                 </tr>
                 <tr>
                     <td class="td2">
-                        通道类别供应商 </td>
+                        接口商 </td>
                     <td class="td1">
                     <div class="input-group">
                         <asp:DropDownList class="form-control" ID="ddlTypeSupp" runat="server">
@@ -119,57 +128,18 @@ function backreturn(){
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td class="td2">
-                        供应商 </td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:DropDownList class="form-control" ID="ddlSupp" runat="server">
-                        </asp:DropDownList>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        通道名称 </td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox  class="form-control"  ID="txtmodeName" runat="server" Width="200px"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        面值 </td>
-                    <td class="td1">
-                    <div class="input-group">
-                        <asp:TextBox  class="form-control"  ID="txtfaceValue" runat="server" Width="200px" Text="0"></asp:TextBox>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td2">
-                        类别开启状态 </td>
-                    <td class="td1">
-                    <div class="input-group">
-                         <asp:RadioButtonList ID="rblTypeOpen" runat="server" RepeatDirection="horizontal">                                        
-                                <asp:ListItem Value="2" Selected="true">全部开启</asp:ListItem>
-                                <asp:ListItem Value="1">全部关闭</asp:ListItem>
-                                <asp:ListItem Value="8" Selected="true">按配置(默认开启)</asp:ListItem>
-                                <asp:ListItem Value="4">按配置(默认关闭)</asp:ListItem>
-                         </asp:RadioButtonList>
-                         </div>
-                    </td>
-                    
-                </tr>  
+
+
+
+
                 <tr>
                     <td class="td2">
                         是否开启 </td>
                     <td class="td1">
                     <div class="input-group">
                          <asp:RadioButtonList ID="rblOpen" runat="server" RepeatDirection="horizontal">
-                                <asp:ListItem Value="-1" Selected="true">默认</asp:ListItem>
-                                <asp:ListItem Value="1">开启</asp:ListItem>
+
+                                <asp:ListItem Value="1" Selected="true">开启</asp:ListItem>
                                 <asp:ListItem Value="0">关闭</asp:ListItem>
                          </asp:RadioButtonList>
                          </div>
@@ -178,7 +148,7 @@ function backreturn(){
                 </tr>               
                 <tr>
                     <td class="td2">
-                        排序 </td>
+                        序号 </td>
                     <td class="td1">
                     <div class="input-group">
                         <asp:TextBox  class="form-control"  ID="txtsort" runat="server" Width="200px" Text="0"></asp:TextBox>
@@ -189,11 +159,11 @@ function backreturn(){
                     <td class="td2">
 
                     </td>
-                    <td class="td1">
+                    <td class="td1" style="text-align: center">
 
-                     <asp:Button ID="btnSave" runat="server" CssClass="button btn-xs  btn-danger" Text="保 存" OnClick="btnSave_Click"></asp:Button>
+                     <asp:Button ID="btnSave" runat="server" CssClass="button btn  btn-danger" Text="保 存" OnClick="btnSave_Click"></asp:Button>
 
-                        <input type="button"  Class="button btn-xs  btn-danger" value="返 回" onclick="backreturn()" />
+
                     </td>
                 </tr>
             </table>

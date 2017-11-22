@@ -223,22 +223,22 @@
                                     <td>通道</td>
                                     <td>比率</td>
                                     <td>操作</td>
-									<td>备注</td>
+
                                 </tr>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <tr height="30">
                                     <td>
-                                        <input id="chkItem" type="checkbox"  value='<%#Eval("id")%>' name="chkItem" />
+                                        <input id="chkItem" type="checkbox"  value='<%#Eval("userid")%>' name="chkItem" />
                                     </td>
                                      <td>
                                         <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
-                                        <%# Eval("id")%>
+                                        <%# Eval("userid")%>
                                     </td>
                                     <td>
-                                        <a href="javascript:showInfo('<%# Eval("ID")%>')">
+                                        <a href="javascript:showInfo('<%# Eval("userid")%>')">
                                             <strong>
                                             <%#Eval("UserName")%>
                                             </strong>
@@ -248,13 +248,13 @@
                                         <%# Eval("balance")%>
                                     </td>
                                     <td>
-                                        <%#getpassview(Eval("isRealNamePass"))%>
+                                        <%#getpassview(Eval("IsRealName"))%>
                                     </td>
                                      <td>
-                                        <%#getpassview(Eval("isPhonePass"))%>
+                                        <%#getpassview(Eval("IsPhone"))%>
                                     </td>
                                      <td>
-                                        <%#getpassview(Eval("isEmailPass"))%>
+                                        <%#getpassview(Eval("IsEmail"))%>
                                     </td>
                                     <td>
                                         <%# Eval("schemename")%>
@@ -263,7 +263,7 @@
                                         <%# Eval("lastLoginTime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                     </td>
                                     <td>
-                                        <%# Eval("full_name")%>
+                                        <%# Eval("ContactName")%>
                                     </td>
                                     <td>
                                         <asp:Label ID="lblUserType" runat="server"></asp:Label>
@@ -278,36 +278,34 @@
                                         <asp:Label ID="lblUserSettle" runat="server"></asp:Label>
                                     </td>
                                     <td><asp:Label ID="labagcmd" runat="server"></asp:Label></td>
-                                    <td><a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("ID")%>')">
-                                            通 道<%#isSpecialChannel(Eval("ID"))%>
+                                    <td><a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
+                                            通 道<%#isSpecialChannel(Eval("userid"))%>
                                         </a></td>
-                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("id")%>">费率</a></td>
+                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">费率</a></td>
                                     <td>
                                       <asp:Label ID="labcmd" class="button btn btn-xs  btn-info"  runat="server"></asp:Label>
-                                      <a class="button btn btn-xs  btn-info"  href="javascript:sendMsg(<%# Eval("ID") %>);">发信息</a>
-                                      <a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("ID") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
+                                      <a class="button btn btn-xs  btn-info"  href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
+                                      <a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("userid") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
                                     </td>
 										
                                     </td>                                    
-									<td>
-                                        <%# Eval("desc")%>
-                                    </td>	
+
                                 </tr>
                             </ItemTemplate>
                             <AlternatingItemTemplate>
                                 <tr height="30">
                                     <td>
-                                        <input id="chkItem" type="checkbox" value='<%#Eval("id")%>' name="chkItem" />
+                                        <input id="chkItem" type="checkbox" value='<%#Eval("userid")%>' name="chkItem" />
                                     </td>
                                      <td>
                                         <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
                                     </td>
                                     <td>
-                                        <%# Eval("id")%>
+                                        <%# Eval("userid")%>
                                     </td>
                                     <td>
 
-                                        <a href="javascript:showInfo('<%# Eval("ID")%>')">
+                                        <a href="javascript:showInfo('<%# Eval("userid")%>')">
                                             <strong>
                                             <%#Eval("UserName")%>
                                             </strong>
@@ -317,13 +315,13 @@
                                         <%# Eval("balance")%>
                                     </td>
                                     <td>
-                                        <%#getpassview(Eval("isRealNamePass"))%>
+                                        <%#getpassview(Eval("IsRealName"))%>
                                     </td>
                                      <td>
-                                        <%#getpassview(Eval("isPhonePass"))%>
+                                        <%#getpassview(Eval("IsPhone"))%>
                                     </td>
                                      <td>
-                                        <%#getpassview(Eval("isEmailPass"))%>
+                                        <%#getpassview(Eval("isEmail"))%>
                                     </td>
                                     <td>
                                         <%# Eval("schemename")%>
@@ -332,7 +330,7 @@
                                         <%# Eval("lastLoginTime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                     </td>
                                     <td>
-                                        <%# Eval("full_name")%>
+                                        <%# Eval("ContactName")%>
                                     </td>
                                     <td>
                                         <asp:Label ID="lblUserType" runat="server"></asp:Label>
@@ -348,21 +346,21 @@
                                     </td>
                                     <td><asp:Label ID="labagcmd" runat="server"></asp:Label></td>
                                     <td>
-                                    <a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("ID")%>')">
-                                        通 道<%#isSpecialChannel(Eval("ID"))%>
+                                    <a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
+                                        通 道<%#isSpecialChannel(Eval("userid"))%>
                                     </a>
                                     </td>
                                       
-                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("id")%>">
+                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">
                                             费率</a></td>
                                     <td>
                                         <asp:Label ID="labcmd" class="button btn btn-xs  btn-info" runat="server"></asp:Label>
-                                        <a class="button btn btn-xs  btn-info" href="javascript:sendMsg(<%# Eval("ID") %>);">发信息</a>
-										<a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("ID") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
+                                        <a class="button btn btn-xs  btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
+										<a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("userid") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
                                     </td>
 									<td>
                                         <%# Eval("desc")%>
-                                    </td>									
+                                    </td>
                                 </tr>
                             </AlternatingItemTemplate>
                         </asp:Repeater>

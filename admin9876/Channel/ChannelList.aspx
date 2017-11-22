@@ -51,56 +51,46 @@
                         ForeColor="#333333" GridLines="None" Width="100%" CellSpacing="1" 
                         OnRowDataBound="GVChannel_RowDataBound" onrowcommand="GVChannel_RowCommand">
                         <Columns>    
-                             <asp:BoundField DataField="modetypename" HeaderText="类别">
+
+                            <asp:BoundField DataField="ChannelCode" HeaderText="通道编号">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="code" HeaderText="代码">
+                              <asp:BoundField DataField="ChannelName" HeaderText="名称">
+                                                            <ControlStyle Width="8%" />
+                                                        </asp:BoundField>
+                            <asp:BoundField DataField="ChannelEnName" HeaderText="英文名称">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="modeEnName" HeaderText="英文代码">
-                                <ControlStyle Width="8%" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="modeName" HeaderText="名称">
-                                <ControlStyle Width="8%" />
-                            </asp:BoundField>                       
-                            <asp:TemplateField>
-                                <HeaderTemplate>
-                                    面值
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <%#Eval("faceValue")%>
-                                </ItemTemplate>
-                            </asp:TemplateField>  
-                            <asp:BoundField DataField="usingSupplierName" HeaderText="通道接口商">
-                                <ControlStyle Width="8%" />
-                            </asp:BoundField> 
+
+
+
                              <asp:TemplateField>
-                                <HeaderTemplate>
-                                    通道费率
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <%#Eval("supprate","{0:p2}")%>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                             <asp:BoundField DataField="typesupp" HeaderText="通道类别接口商">
+                                                            <HeaderTemplate>
+                                                                通道类型
+                                                            </HeaderTemplate>
+                                                            <ItemTemplate>
+                                                                <asp:Literal ID="ChannelTypeName" runat="server"></asp:Literal>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+
+
+                            <asp:BoundField DataField="SupplierName" nulldisplaytext="暂无" HeaderText="默认接口商">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField> 
+
+
+
                             <asp:TemplateField>
                                 <HeaderTemplate>
-                                    通道类别费率
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <%#Eval("typesupprate", "{0:p2}")%>
-                                </ItemTemplate>
-                            </asp:TemplateField>                            
-                            <asp:TemplateField>
-                                <HeaderTemplate>
-                                    开启状态
+                                    是否开启
                                 </HeaderTemplate>
                                 <ItemTemplate>
                                     <asp:Literal ID="litopen" runat="server"></asp:Literal>
                                 </ItemTemplate>
-                            </asp:TemplateField>                          
+                            </asp:TemplateField>
+                            <asp:BoundField DataField="ListSort" HeaderText="序号">
+                                                            <ControlStyle Width="8%" />
+                                                        </asp:BoundField>
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <input type="button" value="设 置" class="button btn btn-xs  btn-info" onclick="javascript:setting('<%#Eval("id")%>')" />
