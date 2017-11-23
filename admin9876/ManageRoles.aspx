@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.ManageRoles" Codebehind="ManageRoles.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.ManageRoles" Codebehind="ManageRoles.aspx.cs" EnableEventValidation="false"%>
 <!-----------------header---------------->
  <!-- #include file="./Top.aspx" -->
 <!-----------------header---------------->
@@ -85,10 +85,11 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
 
                                                 <asp:TemplateField HeaderText="操作">
                                                     <ItemTemplate>
-                                                        <a class="button btn btn-xs  btn-info" href=""  class="cvlink">菜单授权</a>
-                                                        <a class="button btn btn-xs  btn-info" href=""  class="cvlink">访问授权</a>
+                                                        <a class="button btn btn-xs  btn-info" href="javascript:menu(<%# Eval("ID")%>)"  class="cvlink">菜单授权</a>
+                                                        <a class="button btn btn-xs  btn-info" href="javascript:rules(<%# Eval("ID")%>)"  class="cvlink">访问授权</a>
                                                         <a class="button btn btn-xs  btn-info" href="javascript:edit(<%# Eval("ID")%>)"  class="cvlink">编辑</a>
-                                                        <a class="button btn btn-xs  btn-danger" href=""  class="cvlink">删除</a>
+
+                                                        <asp:Button ID="delete" runat="server" class="button btn btn-xs  btn-danger" Text="删除 " CommandName="del" CommandArgument='<%#Eval("id")%>'  oncommand="BtnDelete_Click"> </asp:Button>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
@@ -145,4 +146,34 @@ function add() {
                     });
                 });
             }
+
+
+        function menu(id) {
+               //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+                       layer.ready(function(){
+                           //自定页
+                           layer.open({
+                               type: 2,
+                               title: '菜单授权',
+                               skin: 'layui-layer-rim', //加上边框
+                               //closeBtn: 0, //不显示关闭按钮
+                               area: ['67%', '90%'], //宽高
+                               content: "ManageRolesMenu.aspx?id="+id,
+                           });
+                       });
+                   }
+         function rules(id) {
+                //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+                        layer.ready(function(){
+                            //自定页
+                            layer.open({
+                                type: 2,
+                                title: '访问授权',
+                                skin: 'layui-layer-rim', //加上边框
+                                //closeBtn: 0, //不显示关闭按钮
+                                area: ['67%', '90%'], //宽高
+                                content: "ManageRolesRules.aspx?id="+id,
+                            });
+                        });
+                    }
 </script>
