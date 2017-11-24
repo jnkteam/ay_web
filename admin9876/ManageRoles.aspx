@@ -41,6 +41,11 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content">这是内容</div>
+            </div>
+
     <section class="content-header">
       <h1>
         角色设置
@@ -118,6 +123,17 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
 <script>
+var top_alert = $("#top-alert");
+function showPageMsg(msg) {
+
+   $(".alert-content").html(msg);
+   top_alert.addClass('block').slideDown(200);
+   setTimeout(function(){top_alert.removeClass('block').slideUp(200); window.location.reload();},2000);
+   //window.location.reload();
+}
+function closeTopAlert() {
+   top_alert.removeClass('block').slideUp(200);
+}
 function add() {
   //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
           layer.ready(function(){

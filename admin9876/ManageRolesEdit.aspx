@@ -69,27 +69,12 @@
 
     </style>
 
-    <script type="text/javascript">
-        $().ready(function() {
-            var isUpdate = $("input[name='hf_isupdate']").val();
-            if (isUpdate == "0") {
-                $("#tr_lastloginip").hide();
-                $("#tr_lastlogintime").hide();
-                $("#tr_balance").hide();
-            }
-            else if (isUpdate == "1") {                
-                $("#tr_lastloginip").show();
-                $("#tr_lastlogintime").show();
-                $("#tr_balance").show();
-            }
-        })     
-function backreturn(){
-    history.go(-1);
-}
-    </script>
+
 
 </head>
-<body>    
+<body>
+
+
     <form id="form1" runat="server">
     <asp:HiddenField ID="hf_isupdate" runat="server" Value="0" />
 
