@@ -45,7 +45,7 @@
 
     .nrml{background-color:#eeeeee;font-weight: bold;}
     .radio { border:none; }
-    .checkbox1 { border:none; height: 18px; width: 40px;}
+    .checkbox1 { border:none; height: 18px; width: 23px;   margin: 0 !important; vertical-align:middle;}
     .addnew {font-size: 12px;color: #FF0000;}
     a.servername{height:470px;width: 527px;color:#E54202;cursor:hand;}
     .current {border:#ff6600 1px solid;}
@@ -68,7 +68,7 @@
     }
     #sign{background: url("<%=ADMIN_URI%>/style/images/tab_sign.png"); width: 70px; margin-left:20px; height: 23px; float: left;}
     #sign1{float: left;}
-    .sign1{float: left; }
+    .sign1{float: left; margin-left: 10px; }
     #rblTypeOpen{border:0 !important;}
     #rblOpen{border:0 !important;}
     #rblTypeOpen td{border:0 !important;}
@@ -87,7 +87,7 @@ function backreturn(){
 <body>
     <form id="form1" runat="server">
 
-    <asp:HiddenField ID="rolesMenuCheckBox" runat="server"  />
+    <asp:HiddenField ID="rolesRulesCheckBox" runat="server"  />
     <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered table-hover dataTable">
 
 
@@ -106,38 +106,7 @@ function backreturn(){
         		</tr>
 
         		<!---------------Rules View------------->
-        		<tbody style='width: 90%'>
-                <tr><td style='font-weight: bold;' align='left'>订单管理</td></tr>
-                <tr>
-                <td>
-                <div class="sign1">
-                <input class='checkbox1'  name='rulesId[]' checked value='2' type='checkbox'/><span class='textsign'>网银订单</span>
-                </div>
-                <div class="sign1">
-                               <input class='checkbox1'  name='rulesId[]' checked value='2' type='checkbox'/><span class='textsign'>编辑</span>
-                               </div>
-                </td>
-
-                </tr>
-
-
-                </tbody>
-
-                 <tr><td align='left'>接口管理</td></tr>
-                                <tr>
-                                <td>
-                                <div class="sign1">
-                                <input class='checkbox1'  name='rulesId[]' checked value='2' type='checkbox'/><span class='textsign'>增加</span>
-                                </div>
-                                <div class="sign1">
-                                               <input class='checkbox1'  name='rulesId[]' checked value='2' type='checkbox'/><span class='textsign'>设置</span>
-                                               </div>
-                                </td>
-
-                                </tr>
-
-
-
+        		<%=rolesRules %>
         		<!---------------Rules View------------->
             <tr>
             <td colspan="4" style="height: 20px">
@@ -171,12 +140,12 @@ function backreturn(){
     function beforeSubmit() {
 
         var checkboxSelectText = '';
-        $('input[name="menuId[]"]:checked').each(function(){//遍历每一个名字为interest的复选框，其中选中的执行函数
+        $('input[name="rulesId[]"]:checked').each(function(){//遍历每一个名字为interest的复选框，其中选中的执行函数
             //chk_value.push($(this).val());//将选中的值添加到数组chk_value中
             checkboxSelectText += $(this).val()+',';
         });
         //console.info(checkboxSelectText);
-        $("#rolesMenuCheckBox").val(checkboxSelectText);
+        $("#rolesRulesCheckBox").val(checkboxSelectText);
 
     }
 </script>

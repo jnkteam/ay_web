@@ -136,6 +136,17 @@ function backreturn(){
                 </asp:CheckBoxList>
             </td>
         </tr>
+
+            <tr>
+            <td class="td2">
+                角色
+            </td>
+            <td class="td1" style="width:80%">
+                 <asp:DropDownList class="form-control" ID="roles" runat="server">
+                                                </asp:DropDownList>
+            </td>
+        </tr>
+
         <tr>
             <td class="td2">
                 状态 

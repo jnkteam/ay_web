@@ -75,6 +75,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             <asp:BoundField DataField="ID" HeaderText="ID" />
                             <asp:BoundField DataField="UserName" HeaderText="用户名" />
                             <asp:BoundField DataField="RelName" HeaderText="姓名" />
+                            <asp:BoundField DataField="manageRoleName" HeaderText="角色" />
                             <asp:BoundField DataField="qq" HeaderText="qq" />
                             <asp:BoundField DataField="tel" HeaderText="手机" />
                             <asp:BoundField DataField="LevelText" HeaderText="身份" />
@@ -83,7 +84,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             <asp:BoundField DataField="CardCommission" HeaderText="点卡提成" />
                             <asp:BoundField DataField="statusName" HeaderText="状态" />
                              <asp:BoundField DataField="Balance" HeaderText="余额" DataFormatString="{0:f2}"/>
-                            <asp:TemplateField>
+                            <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
                                     <a class="button btn btn-xs  btn-info" href="javascript:edit('<%# Eval("ID") %>')">编辑</a>
                                     <a class="button btn btn-xs  btn-info" onclick="return confirm('确定要删除这个用户？')" href="?cmd=del&amp;ID=<%# Eval("ID") %>">删除</a>
