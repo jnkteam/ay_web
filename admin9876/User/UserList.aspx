@@ -295,77 +295,7 @@
 
                                 </tr>
                             </ItemTemplate>
-                            <AlternatingItemTemplate>
-                                <tr height="30">
-                                    <td>
-                                        <input id="chkItem" type="checkbox" value='<%#Eval("userid")%>' name="chkItem" />
-                                    </td>
-                                     <td>
-                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("userid")%>
-                                    </td>
-                                    <td>
 
-                                        <a href="javascript:showInfo('<%# Eval("userid")%>')">
-                                            <strong>
-                                            <%#Eval("UserName")%>
-                                            </strong>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <%# Eval("balance")%>
-                                    </td>
-                                    <td>
-                                        <%#getpassview(Eval("IsRealName"))%>
-                                    </td>
-                                     <td>
-                                        <%#getpassview(Eval("IsPhone"))%>
-                                    </td>
-                                     <td>
-                                        <%#getpassview(Eval("isEmail"))%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("schemename")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("lastLoginTime","{0:yyyy-MM-dd HH:ss:mm}")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("ContactName")%>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="lblUserType" runat="server"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="lblUserStat" runat="server"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="lblUserLevel" runat="server"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="lblUserSettle" runat="server"></asp:Label>
-                                    </td>
-                                    <td><asp:Label ID="labagcmd" runat="server"></asp:Label></td>
-                                    <td>
-                                    <a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
-                                        通 道<%#isSpecialChannel(Eval("userid"))%>
-                                    </a>
-                                    </td>
-                                      
-                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">
-                                            费率</a></td>
-                                    <td>
-                                        <asp:Label ID="labcmd" class="button btn btn-xs  btn-info" runat="server"></asp:Label>
-                                        <a class="button btn btn-xs  btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
-										<a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("userid") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
-                                    </td>
-									<td>
-                                        <%# Eval("desc")%>
-                                    </td>
-                                </tr>
-                            </AlternatingItemTemplate>
                         </asp:Repeater>
                     </table>
                     <!---------------------pager------------------>

@@ -116,7 +116,7 @@
                                     <%# Eval("userName")%>
                                 </td>  
                                 <td>
-                                    <%# Eval("full_name")%>
+                                    <%# Eval("ContactName")%>
                                 </td>                               
                                 <td>
                                     <%# Eval("balance", "{0:f2}")%>

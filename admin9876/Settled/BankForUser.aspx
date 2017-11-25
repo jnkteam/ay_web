@@ -153,7 +153,7 @@
                             <tr style="background-color: #EFF3FB">
                                 <asp:HiddenField ID="hfuserid" runat="server" Value='<%# Eval("id")%>' />
                                 <td>
-                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("id")%>' name="chkItem" />                                    
+                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("id")%>' name="chkItem" />
                                 </td>
                                 <td>
                                     <%# Eval("id")%>
@@ -175,7 +175,7 @@
                                     <%# Eval("payeeName")%>
                                 </td>
                                  <td>
-                                    <%#Eval("payeeBank")%>
+                                    <%#Eval("payeeBank").ToString())%>
                                 </td>
                                 <td>
                                     <%# Eval("account")%>
@@ -197,53 +197,7 @@
                                 </td>
                             </tr>
                         </ItemTemplate>
-                        <AlternatingItemTemplate>
-                            <tr style="background-color: #ffffff">
-                                <asp:HiddenField ID="hfuserid" runat="server" Value='<%# Eval("id")%>' />
-                                <td>
-                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("id")%>' name="chkItem" />
-                                </td>
-                                <td>
-                                    <%# Eval("id")%>                                   
-                                </td> 
-                                <td>
-                                    <%# Eval("username")%>
-                                </td>                              
-                                <td>
-                                    <%# Eval("balance", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("unpayment", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("Freeze", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("payeeName")%>
-                                </td>
-                                 <td>
-                                    <%#Eval("payeeBank")%>
-                                </td>
-                                <td>
-                                    <%# Eval("account")%>
-                                </td>
-                                 <td>
-                                    <%# Eval("bankAddress")%>
-                                </td>
-                                <td>
-                                    T+<%# Eval("settles")%>
-                                </td>
-                                <td>
-                                    <asp:Literal ID="litTodayIncome" runat="server"></asp:Literal>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtpayAmt" runat="server" Width="80px"></asp:TextBox>
-                                </td>                               
-                                <td>
-                                    <asp:Button ID="btnSettled" runat="server" CommandName="Settled" CommandArgument='<%#Eval("id")%>' Text="½áËã" />
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
+                        
                     </asp:Repeater>
                 </table>
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
