@@ -175,7 +175,7 @@
                                     <%# Eval("payeeName")%>
                                 </td>
                                  <td>
-                                    <%#OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
+                                    <%#Eval("payeeBank")%>
                                 </td>
                                 <td>
                                     <%# Eval("account")%>
@@ -222,7 +222,7 @@
                                     <%# Eval("payeeName")%>
                                 </td>
                                  <td>
-                                    <%#OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("payeeBank").ToString())%>
+                                    <%#Eval("payeeBank")%>
                                 </td>
                                 <td>
                                     <%# Eval("account")%>

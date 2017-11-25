@@ -12,7 +12,10 @@
 </style>
 
  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -73,7 +76,7 @@
                                 </asp:TemplateField>
                             </Columns>
                             <FooterStyle BackColor="#e8eaee" Font-Bold="True" ForeColor="White" />
-                                                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                                                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="left" />
                                                                                                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                                                                 <HeaderStyle BackColor="#e8eaee" Font-Bold="True"  />
 

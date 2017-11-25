@@ -99,7 +99,7 @@ function backreturn(){
                 用户名
             </td>
             <td class="td1">
-                <div class="input-group"><asp:TextBox class="form-control"  ID="txtusername" runat="server" Width="200px"></asp:TextBox></div>
+                <div class="input-group"><asp:TextBox required class="form-control"  ID="txtusername" runat="server" Width="200px"></asp:TextBox></div>
             </td>
         </tr>
         <tr>
@@ -107,7 +107,7 @@ function backreturn(){
                 密码
             </td>
             <td class="td1">
-                <div class="input-group"><asp:TextBox class="form-control"  ID="txtpassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>（不修改请留空）</div>
+                <div class="input-group"><asp:TextBox  class="form-control"  ID="txtpassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>（不修改请留空）</div>
             </td>
         </tr>
         <tr>
@@ -115,7 +115,7 @@ function backreturn(){
                 二级密码 
             </td>
             <td class="td1">
-                <div class="input-group"><asp:TextBox class="form-control"  ID="txtsecondpwd" runat="server" Width="200px" TextMode="Password"></asp:TextBox>（不修改请留空）</div>
+                <div class="input-group"><asp:TextBox  class="form-control"  ID="txtsecondpwd" runat="server" Width="200px" TextMode="Password"></asp:TextBox>（不修改请留空）</div>
             </td>
         </tr>
         <tr>

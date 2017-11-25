@@ -10,7 +10,10 @@
 
 
  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -158,7 +161,7 @@
                                          <%# Eval("userid")%>
                                     </td>                                    
                                     <td>
-                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
+                                        "bankCode" <%# Eval("bankBranch")%> <br />
                                         <%# Eval("bankAccountName")%> <br />
                                         <%# Eval("bankAccount")%>
                                     </td>
@@ -166,7 +169,7 @@
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                        <%# OriginalStudio.BLL.distribution.GetStatusText(Eval("status"))%>
+                                       <%# Eval("status")%>
                                     </td>
                                      <td>
                                         <%# Eval("processingTime", "{0:yyyy-MM-dd HH:mm:ss}")%>
@@ -202,7 +205,7 @@
                                          <%# Eval("userid")%>
                                     </td>                                    
                                     <td>
-                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("bankCode").ToString())%> <%# Eval("bankBranch")%> <br />
+                                        "bankCode" <%# Eval("bankBranch")%> <br />
                                         <%# Eval("bankAccountName")%> <br />
                                         <%# Eval("bankAccount")%>
                                     </td>
@@ -210,7 +213,7 @@
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                        <%# OriginalStudio.BLL.distribution.GetStatusText(Eval("status"))%>
+                                        <%# Eval("status")%>
                                     </td>
                                      <td>
                                         <%# Eval("processingTime", "{0:yyyy-MM-dd HH:mm:ss}")%>

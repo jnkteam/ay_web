@@ -9,7 +9,10 @@
 <!-----------------left------------------>
 
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>

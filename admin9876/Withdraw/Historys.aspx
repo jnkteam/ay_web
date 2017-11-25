@@ -15,7 +15,10 @@ vertical-align: middle !important;
 </style>
 
  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -162,7 +165,7 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                        <%# OriginalStudio.BLL.SettledFactory.GetSettleBankName(Eval("PayeeBank").ToString())%> <%# Eval("Payeeaddress")%> <br />
+                                        "PayeeBank" <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("Account")%>
                                     </td>

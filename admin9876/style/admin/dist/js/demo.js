@@ -161,6 +161,9 @@ $(function () {
 
   }
 
+
+
+
   // Create the new tab
   var $tabPane = $('<div />', {
     'id'   : 'control-sidebar-theme-demo-options-tab',
@@ -297,3 +300,17 @@ $(function () {
 
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+//==============
+//===========
+var top_alert = $("#top-alert");
+function showPageMsg(msg) {
+
+    $(".alert-content").html(msg);
+    top_alert.addClass('block').slideDown(200);
+    setTimeout(function(){top_alert.removeClass('block').slideUp(200); window.location.reload();},2000);
+    //window.location.reload();
+}
+function closeTopAlert() {
+    top_alert.removeClass('block').slideUp(200);
+}

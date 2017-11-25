@@ -114,7 +114,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                     <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.optypeenum),Eval("optype"))%>             
+                                     <%# Eval("optype")%>
                                 </td>
                                 <td>
                                     <%# Eval("increaseAmt", "{0:f2}")%>
@@ -148,7 +148,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.optypeenum),Eval("optype"))%>             
+                                        <%#Eval("optype")%>
                                     </td>
                                     <td>
                                         <%# Eval("increaseAmt", "{0:f2}")%>
