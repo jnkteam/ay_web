@@ -39,27 +39,26 @@ vertical-align: middle !important;
                 <td>
                     <table>
                         <tr>
-                <td>
-                    <div class="input-group">
-                    <div class="input-group-btn">
-                    <button type="button" class="btn btn-primary">搜索</button></div>
-                    <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox>
-                    </div>
-                        <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                    <asp:TextBox ID="StimeBox" runat="server" class="form-control"></asp:TextBox></div>
-                        <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                    <asp:TextBox ID="EtimeBox" runat="server" class="form-control"></asp:TextBox></div>
-                    <div class="input-group">
-                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                    </asp:Button>  </div>
-                </td>
-            </tr>
+                            <td>
+                                <div class="input-group">
+                                <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary">搜索</button></div>
+                                <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox>
+                                </div>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
+                                <asp:TextBox ID="StimeBox" runat="server" class="form-control"></asp:TextBox></div>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
+                                <asp:TextBox ID="EtimeBox" runat="server" class="form-control"></asp:TextBox></div>
+                                <div class="input-group">
+                                <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
+                                </asp:Button>  </div>
+                            </td>
+                        </tr>
                     </table>
                 </td>
             </tr>
-
             <tr>
                 <td bgcolor="#ffffff">
                     <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered">
@@ -145,7 +144,18 @@ vertical-align: middle !important;
 <!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" >
+
+        $(function () {
+           $("#StimeBox").jeDate({
+               format: "YYYY-MM-DD hh:mm:ss",
+           });
+           $("#EtimeBox").jeDate({
+               format: "YYYY-MM-DD hh:mm:ss",
+           });
+        })
+
+
           function sendInfo(id) {
           //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
                   layer.ready(function(){
@@ -160,8 +170,7 @@ vertical-align: middle !important;
                       });
                   });
               }
-    </script>
-<script type="text/javascript">
+
     $().ready(function(){
          $("#chkAll").click(function(){
             $("input[type='checkbox']").each(function(){
@@ -173,26 +182,25 @@ vertical-align: middle !important;
             });
         });
     });
-</script>
 
-<script type="text/javascript">
- function handler(tp){
- }
 
-var mytr =  document.getElementById("tab").getElementsByTagName("tr");
-for(var i=1;i<mytr.length;i++){
-  mytr[i].onmouseover= function(){ 
-var rows = this.childNodes.length;
-for(var row=0;row<rows;row++){
-this.childNodes[row].style.backgroundColor='#E6EEFF';
-}
-};
-  mytr[i].onmouseout= function(){ 
-var rows = this.childNodes.length;
-for(var row=0;row<rows;row++){
-this.childNodes[row].style.backgroundColor='';
-}
-};
-}
+     function handler(tp){
+     }
+
+    var mytr =  document.getElementById("tab").getElementsByTagName("tr");
+    for(var i=1;i<mytr.length;i++){
+      mytr[i].onmouseover= function(){
+    var rows = this.childNodes.length;
+    for(var row=0;row<rows;row++){
+    this.childNodes[row].style.backgroundColor='#E6EEFF';
+    }
+    };
+      mytr[i].onmouseout= function(){
+    var rows = this.childNodes.length;
+    for(var row=0;row<rows;row++){
+    this.childNodes[row].style.backgroundColor='';
+    }
+    };
+    }
 
     </script>
