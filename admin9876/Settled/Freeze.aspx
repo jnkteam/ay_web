@@ -1,38 +1,51 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.Freeze" Codebehind="Freeze.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
-<!-----------------header---------------->
- <!-- #include file="../Top.aspx" -->
-<!-----------------header---------------->
-<!-----------------left------------------>
- <!-- #include file="../Left.aspx" -->
-<!-----------------left------------------>
-<style>
-td{
-vertical-align: middle !important;
-}
-</style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="../style/union.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        .rptheadlink
+        {
+            color: White;
+            font-family: 宋体;
+            font-size: 12px;
+        }
+         ;</style>
 
- <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
-                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
-                <div class="alert-content"></div>
-</div>
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        冻结款项
-        <small>第三方支付平台</small>
-      </h1>
-      <ol class="breadcrumb">
+    <script src="../../js/common.js" type="text/javascript"></script>
 
-      </ol>
-    </section>
+    <script src="../../js/ControlDate/WdatePicker.js" type="text/javascript"></script>
 
-    <!-- Main content -->
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#chkAll").click(function() {
+                $("input[type='checkbox']").each(function() {
+                    if ($("#chkAll").attr('checked') == true) {
+                        $(this).attr("checked", true);
+                    }
+                    else
+                        $(this).attr("checked", false);
+                });
+            });
+        })
+        function sendMsg(uid) {
+            window.showModelessDialog("SendMsg.aspx?uid=" + uid, window, "dialogWidth=800px;dialogHeight=500px;");
+        }
+    
+    </script>
 
-    <section class="content">
+    <script type="text/javascript">
+        function sendInfo(id) {
+            window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "'height=700, width=1000, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no");
+        }
+    </script>
 
+</head>
+<body class="yui-skin-sam">
     <form id="form1" runat="server">
     <div id="modelPanel" style="background-color: #F2F2F2">
     </div>
@@ -41,7 +54,7 @@ vertical-align: middle !important;
         <tr>
             <td align="center" style="font-weight: bold; font-size: 14px; background-image: url(../style/images/topbg.gif);
                 color: teal; background-repeat: repeat-x; height: 24px">
-                冻结款项
+                冻结款项 
             </td>
         </tr>
         <tr>
@@ -55,7 +68,7 @@ vertical-align: middle !important;
         <tr>
             <td align="center">
                 <table width="100%" id="tab" border="0" align="center" cellpadding="2" cellspacing="1">
-                    <asp:Repeater ID="rptUsers" runat="server"
+                    <asp:Repeater ID="rptUsers" runat="server" 
                         OnItemDataBound="rptUsersItemDataBound" onitemcommand="rptUsers_ItemCommand">
                         <HeaderTemplate>
                             <tr style="background-color: #507CD1; color: #fff; height: 22;">
@@ -64,13 +77,13 @@ vertical-align: middle !important;
                                 </td>
                                 <td>
                                     商户ID
-                                </td>
+                                </td>  
                                 <td>
                                     用户名
-                                </td>
+                                </td>   
                                  <td>
                                     真实姓名
-                                </td>
+                                </td>                                 
                                 <td>
                                     商户余额
                                 </td>
@@ -98,13 +111,13 @@ vertical-align: middle !important;
                                 </td>
                                 <td>
                                     <%# Eval("userid")%>
-                                </td>
+                                </td>  
                                 <td>
                                     <%# Eval("userName")%>
-                                </td>
+                                </td>  
                                 <td>
-                                    <%# Eval("full_name")%>
-                                </td>
+                                    <%# Eval("ContactName")%>
+                                </td>                               
                                 <td>
                                     <%# Eval("balance", "{0:f2}")%>
                                 </td>
@@ -132,13 +145,13 @@ vertical-align: middle !important;
                                 </td>
                                 <td>
                                     <%# Eval("userid")%>
-                                </td>
+                                </td>    
                                  <td>
                                     <%# Eval("userName")%>
-                                </td>
+                                </td>  
                                 <td>
                                     <%# Eval("full_name")%>
-                                </td>
+                                </td>                             
                                 <td>
                                     <%# Eval("balance", "{0:f2}")%>
                                 </td>
@@ -161,50 +174,30 @@ vertical-align: middle !important;
                         </AlternatingItemTemplate>
                     </asp:Repeater>
                 </table>
-                            <!---------------------pager------------------>
-                            <!-- #include file="../PagerIng.aspx" -->
-                            <!---------------------pager------------------>
-                        </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr style="background-color: #EFEFEF">
+                        <td style="height: 16px;">
+                            <aspxc:AspNetPager ID="Pager1" runat="server"
+                                AlwaysShow="True" CustomInfoHTML="总记录数：%RecordCount%&nbsp;总页数：%PageCount%&nbsp;当前页：%CurrentPageIndex%&nbsp;"
+                                CustomInfoTextAlign="Left" FirstPageText="首页" HorizontalAlign="Right" LastPageText="末页"
+                                NavigationToolTipTextFormatString="跳转{0}页" NextPageText="下一页" PageIndexBoxType="DropDownList"
+                                PageSize="20" PrevPageText="上一页" ShowBoxThreshold="50" ShowCustomInfoSection="Left"
+                                ShowPageIndex="False" ShowPageIndexBox="Always" SubmitButtonText="GO&gt;&gt;"
+                                TextAfterPageIndexBox="页" TextBeforePageIndexBox="跳到" Width="100%" 
+                                Height="30px" onpagechanging="Pager1_PageChanging1">
+                            </aspxc:AspNetPager>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        说明：冻结的金额可以到解冻款项去解冻
                     </td>
-                </tr>
-            </table>
-    </div>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
     </form>
-
-</section>
-</div>
-
-
-<!-----------------footer------------------>
- <!-- #include file="../Footer.aspx" -->
-<!-----------------footer------------------>
-
-<script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
-    </form>
-
-    <script type="text/javascript">
-            $().ready(function() {
-                $("#chkAll").click(function() {
-                    $("input[type='checkbox']").each(function() {
-                        if ($("#chkAll").attr('checked') == true) {
-                            $(this).attr("checked", true);
-                        }
-                        else
-                            $(this).attr("checked", false);
-                    });
-                });
-            })
-            function sendMsg(uid) {
-                window.showModelessDialog("SendMsg.aspx?uid=" + uid, window, "dialogWidth=800px;dialogHeight=500px;");
-            }
-
-    </script>
-
-    <script type="text/javascript">
-        function sendInfo(id) {
-            window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "'height=700, width=1000, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no");
-        }
-    </script>
 
     <script type="text/javascript">
         function handler(tp) {
@@ -228,4 +221,5 @@ vertical-align: middle !important;
 
     </script>
 
-
+</body>
+</html>
