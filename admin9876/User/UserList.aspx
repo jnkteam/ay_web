@@ -35,11 +35,14 @@
         </div>
         <input id="selectedUsers" runat="server" type="hidden" />
         <table width="100%" border="0" cellspacing="1" cellpadding="1" class="table1">
-        <div class="input-group" style="position: absolute;left:94%;top: 64px;">
+        <div class="input-group" style="position: absolute;left:88%;top: 64px;">
 
-            <a class="button btn  btn-danger" href="javascript:userAdd('<%# Eval("userid")%>')">
+            <a class="button btn  btn-danger" href="javascript:userAdd()">
                新增商户
-            </a>
+            </a>&nbsp;
+             <a class="button btn  btn-danger" href="javascript:userIdImg()">
+                           证件审核
+                        </a>
         </div>
 
             <tr height="30" >
@@ -190,17 +193,16 @@
                                 <asp:Repeater ID="rptUsers" EnableViewState="false" runat="server" OnItemDataBound="rptUsersItemDataBound">
                                 <HeaderTemplate>
                                 <tr height="30"  style="background: #e8eaee">
-                                    <td>
-                                        <input id="chkAll" type="checkbox">
-                                    </td>
-                                    <td>
-                                        签约属性</td>
-                                    <td>
-                                        商户ID</td>
+                                   <td>
+                                   商户ID</td>
+
+
                                     <td>
                                         用户名</td>
+                                        <td>签约属性</td>
+                                         <td>类型</td>
                                     <td>
-                                        <asp:HyperLink ID="hlinkOrderby" runat="server" NavigateUrl="?orderby=balance&type=asc" CssClass="rptheadlink">余额↑</asp:HyperLink>
+                                        <asp:HyperLink ID="hlinkOrderby" runat="server" NavigateUrl="?orderby=balance&type=asc" CssClass="rptheadlink">余额<i class="fa fa-sort-amount-asc"></i></asp:HyperLink>
                                     </td>
                                     <td>
                                         实名认证</td>
@@ -208,45 +210,40 @@
                                         手机认证</td>
                                     <td>
                                         邮件认证</td>
+
                                     <td>
-                                        提现方案</td>
+                                        注册时间</td>
                                     <td>
-                                        最后登录</td>
-                                    <td>
-                                        姓名</td>
-                                    <td>
-                                        类型</td>
+                                        联系人</td>
+
                                     <td>
                                         状态</td>
-                                    <td>
-                                        级别</td>
-                                    <td>
-                                        结算</td>
-                                     <td>业务</td>
-                                    <td>通道</td>
-                                    <td>比率</td>
+
                                     <td>操作</td>
 
                                 </tr>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <tr height="30">
-                                    <td>
-                                        <input id="chkItem" type="checkbox"  value='<%#Eval("userid")%>' name="chkItem" />
-                                    </td>
-                                     <td>
-                                        <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
-                                    </td>
+
+
                                     <td>
                                         <%# Eval("userid")%>
                                     </td>
+
                                     <td>
-                                        <a href="javascript:showInfo('<%# Eval("userid")%>')">
+                                        <a style="color: #dd4b39" href="javascript:showInfo('<%# Eval("userid")%>')">
                                             <strong>
                                             <%#Eval("UserName")%>
                                             </strong>
                                         </a>
                                     </td>
+                                     <td>
+                                     <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+                                     </td>
+                                       <td>
+                                        <asp:Label ID="lblUserType" runat="server"></asp:Label>
+                                                                         </td>
                                     <td>
                                         <%# Eval("balance")%>
                                     </td>
@@ -259,36 +256,28 @@
                                      <td>
                                         <%#getpassview(Eval("IsEmail"))%>
                                     </td>
+
                                     <td>
-                                        <%# Eval("schemename")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("lastLoginTime","{0:yyyy-MM-dd HH:ss:mm}")%>
+                                        <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                     </td>
                                     <td>
                                         <%# Eval("ContactName")%>
                                     </td>
-                                    <td>
-                                        <asp:Label ID="lblUserType" runat="server"></asp:Label>
-                                    </td>
+
                                     <td>
                                         <asp:Label ID="lblUserStat" runat="server"></asp:Label>
                                     </td>
+
                                     <td>
-                                        <asp:Label ID="lblUserLevel" runat="server"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="lblUserSettle" runat="server"></asp:Label>
-                                    </td>
-                                    <td><asp:Label ID="labagcmd" runat="server"></asp:Label></td>
-                                    <td><a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
-                                            通 道<%#isSpecialChannel(Eval("userid"))%>
-                                        </a></td>
-                                    <td><a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">费率</a></td>
-                                    <td>
+                                    <a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
+                                                                                通 道<%#isSpecialChannel(Eval("userid"))%>
+                                                                            </a>
+
+                                    <a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">费率</a>
+
                                       <asp:Label ID="labcmd" class="button btn btn-xs  btn-info"  runat="server"></asp:Label>
                                       <a class="button btn btn-xs  btn-info"  href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
-                                      <a style="font-size:15px; color:#00c0ef" href="UserInfoPrint.aspx?ID=<%# Eval("userid") %>" target="_blank" ><i class="fa fa-print"></i></a></td>
+                                     </td>
                                     </td>
 										
                                     </td>                                    
@@ -372,6 +361,20 @@ function userAdd(id) {
           });
       });
 }
+function userIdImg(id) {
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: '证件审核',
+              skin: 'layui-layer-rim', //加上边框
+              //closeBtn: 0, //不显示关闭按钮
+              area: ['67%', '90%'], //宽高
+              content:"UserIdImgList.aspx"
+
+          });
+      });
+}
 
 function tongDao(id) {
      layer.ready(function(){
@@ -400,7 +403,7 @@ function showInfo(id) {
               skin: 'layui-layer-rim', //加上边框
               //closeBtn: 0, //不显示关闭按钮
               area: ['67%', '90%'], //宽高
-              content:" ../User/UserEdit.aspx?id=" + id,
+              content:" UserAdd.aspx?id=" + id,
           });
       });
 }

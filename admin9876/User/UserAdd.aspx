@@ -22,7 +22,7 @@ td {    padding: 8px;
         word-break: break-all;
         word-wrap: break-word; }
 .td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
-.td1 {    padding：5px;
+.td1 {    padding5px;
           color: #3e3e3e;
           width: 35%;}
 .td2 {padding-right: 10px;
@@ -127,9 +127,9 @@ function backreturn(){
             <tr>
 
                 <td class="td2">
-                    用户名：</td>
+                    用户名</td>
                 <td class="td1">
-                    <asp:TextBox ID="txtuserName" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="UserName" required runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td class="td2">
                 </td>
@@ -139,240 +139,212 @@ function backreturn(){
             </tr>
              <tr>
                 <td class="td2">
-                    签约属性：</td>
+                    签约属性</td>
                 <td class="td1">
                 <div class="input-group">
-                    &nbsp;<asp:RadioButtonList ID="rbuserclass" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                        <asp:ListItem Value="0">个人</asp:ListItem>
+                    &nbsp;<asp:RadioButtonList ID="ClassID" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                        <asp:ListItem Selected="true" Value="0">个人</asp:ListItem>
                         <asp:ListItem Value="1">企业</asp:ListItem>
                     </asp:RadioButtonList>
                    </div>
                 </td>
                 <td class="td2">
-                    真实姓名：</td>
+                    联系人</td>
                 <td class="td1">
-                    <asp:TextBox ID="txtfullname" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="ContactName" runat="server" Width="200px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="td2">
-                    用户密码：</td>
+                    用户密码</td>
                 <td class="td1">
-                    <asp:TextBox ID="txtpassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="UserPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td class="td2">
-                    提现密码：</td>
+                    提现密码</td>
                 <td class="td1">
-                <asp:TextBox ID="txtpassword2" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
-                    &nbsp;<asp:RadioButtonList ID="rbluserType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                        <asp:ListItem Value="3" Selected="True">会员</asp:ListItem>
-                        <asp:ListItem Value="4">代理</asp:ListItem>
-                    </asp:RadioButtonList>
+                <asp:TextBox ID="UserPayPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td class="td2">
-                    商户等级：</td>
-                <td class="td1">
-                   <div class="input-group"><asp:DropDownList ID="ddlmemvip" class="form-control" runat="server" Width="150px">
-                       </asp:DropDownList>
-                       <asp:DropDownList ID="ddlpromvip" runat="server" Width="150px">
-                       </asp:DropDownList>
-                   </div>
-                </td>
-                <td class="td2">
-                    所属业务员：</td>
-                <td class="td1">
-                <div class="input-group">
-                    <asp:DropDownList ID="ddlmange" class="form-control" runat="server"></asp:DropDownList>
-                    <asp:TextBox ID="txtGetPromSuperior" runat="server" Width="200px" Visible="false"></asp:TextBox>
-                </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    扣率：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtCPSDrate" runat="server" Width="200px">0</asp:TextBox>
-                </td>
-                <td class="td2">
-                    转率：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtCVSNrate" runat="server" Width="200px">0</asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    邮箱地址：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtemail" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    QQ号码：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtqq" runat="server" Width="200px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    手机号码：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txttel" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    身份证号码：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtidCard" runat="server" Width="200px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    收款方式：</td>
-                <td class="td1">
-                <div class="input-group">
-                    &nbsp;<asp:RadioButtonList ID="rblsettlemode" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                        <asp:ListItem Value="1">银行帐户</asp:ListItem>
-                        <asp:ListItem Value="2">支付宝</asp:ListItem>
-                        <asp:ListItem Value="3">财付通</asp:ListItem>
-                    </asp:RadioButtonList>
-                    </div></td>
-                <td class="td2">
-                    开户银行：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtpayeeBank" runat="server" Width="200px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    省份：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtbankProvince" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    城市：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtbankCity" runat="server" Width="200px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    支行名称：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtbankAddress" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    收款人：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtpayeeName" runat="server" Width="200px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    银行帐号：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtaccount" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    状态 ：</td>
-                <td class="td1">
-                <div class="input-group">
-                    <asp:DropDownList class="form-control" ID="ddlStatus" runat="server" Width="150px">
-                    </asp:DropDownList>
-                </div>
-                </td>
-            </tr>            
-            <tr>
-                <td class="td2">
-                    提现方案 ：</td>
-                <td class="td1">
-                <div class="input-group">
-                    <asp:DropDownList ID="ddlTocashScheme" class="form-control" runat="server" Width="150px"></asp:DropDownList>
-                </div>
-                </td>
-                <td class="td2">
-                    </td>
-                <td class="td1">
-                    
-                </td>
-            </tr>            
-            <tr>
-                <td class="td2">
-                    网站名称 ：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtsiteName" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    API账号：</td>
-                <td class="td1">
-                <div class="input-group">
-                     <asp:TextBox ID="txtapiAcct" runat="server"   Width="160px"></asp:TextBox>
-                </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    安全问题 ：</td>
-                <td class="td1">
-                    <asp:TextBox ID="txtquestion" runat="server" Width="200px"></asp:TextBox>
-                </td>
-                <td class="td2">
-                    安全答案：</td>
-                <td class="td1">
-                <div class="input-group">
-                     <asp:TextBox ID="txtanswer" runat="server"  Width="160px"></asp:TextBox>
-                </div>
-                </td>
-            </tr>           
-            <tr>                
-                <td class="td2">
-                    无来路状态 ：</td>
-                <td class="td1">
-                    <asp:CheckBox ID="cb_UrlNoRefPayUrl" runat="server" Text="开启" />
-                    是否记录交易错误日志：<asp:CheckBox ID="cb_isdebug" runat="server" Text="是" />
-                 </td>
-                 <td class="td2">
-                    结算模式：</td>
-                <td class="td1">
-                    <asp:RadioButtonList ID="rbl_settledmode" class="rbl-asp" runat="server" RepeatDirection="Horizontal">
-                        <asp:ListItem Text="T+0" class="form-group" Value="0"></asp:ListItem>
-                        <asp:ListItem Text="T+1" class="form-group" Value="1"></asp:ListItem>
-                    </asp:RadioButtonList>             
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    网站地址：</td>
-                <td class="td1" colspan="5" style="width:100%">
-                    <asp:TextBox ID="txtsiteUrl" runat="server" Width="80%"></asp:TextBox>
-                </td>                
-            </tr>           
-            <tr>
-                <td class="td2">
-                    API通讯密钥：</td>
-                <td class="td1" colspan="5" style="width:100%">
-                    <asp:TextBox ID="txtapikey" runat="server" Rows="2" TextMode="MultiLine" Width="80%" CssClass="lable"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    认证信息 ：</td>
-                <td class="td1" colspan="5" style="width:100%">
-                    <asp:CheckBox ID="cb_isRealNamePass" runat="server" Text="实名认证" />
-                &nbsp;<asp:CheckBox ID="cb_isEmailPass" runat="server" Text="邮件认证" />
-                &nbsp;<asp:CheckBox ID="cb_isPhonePass" runat="server" Text="手机认证" /></td>
-            </tr>
-            <tr>
-                <td class="td2">
-                    备注 ：</td>
-                <td class="td1" colspan="5" style="width:100%">
-                    <asp:TextBox ID="txtdesc" runat="server" Rows="3" TextMode="MultiLine" Width="80%" CssClass="lable"></asp:TextBox>
-                </td>
-            </tr>            
+
+
+
+             <tr>
+                            <td class="td2">
+                                商户名</td>
+                            <td class="td1">
+                                <asp:TextBox ID="MerchantName" runat="server" Width="200px" ></asp:TextBox>
+                            </td>
+                            <td class="td2">
+                                秘钥</td>
+                            <td class="td1">
+                                <asp:TextBox ID="ApiKey" runat="server" Width="200px" ></asp:TextBox>
+                            </td>
+                        </tr>
+                <tr>
+                            <td class="td2">
+                                身份证</td>
+                            <td class="td1">
+                                <asp:TextBox ID="IDCard" runat="server" Width="200px"></asp:TextBox>
+                            </td>
+                            <td class="td2">
+                                是否认证</td>
+                            <td class="td1">
+                                 <div class="input-group">
+                                                    &nbsp;<asp:RadioButtonList ID="IsRealName" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                        <asp:ListItem  Value="1">是</asp:ListItem>
+                                                        <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
+                                                    </asp:RadioButtonList>
+                                                   </div>
+                            </td>
+                 </tr>
+                <tr>
+                                            <td class="td2">
+                                                电话</td>
+                                            <td class="td1">
+                                            <asp:TextBox ID="Phone" runat="server" Width="200px"></asp:TextBox>
+                                            </td>
+                                            <td class="td2">
+                                                是否认证</td>
+                                            <td class="td1">
+                                            <div class="input-group">
+                                                                                                &nbsp;<asp:RadioButtonList ID="IsPhone" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                                                                    <asp:ListItem  Value="1">是</asp:ListItem>
+                                                                                                    <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
+                                                                                                </asp:RadioButtonList>
+                                                                                               </div>
+                                            </td>
+                                 </tr>
+
+                                 <tr>
+                                   <td class="td2">Email</td>
+                                                             <td class="td1">
+                                                             <asp:TextBox ID="EMail" runat="server" Width="200px"></asp:TextBox>
+                                                             </td>
+                                                             <td class="td2">
+                                                                 是否认证</td>
+                                                             <td class="td1">
+<div class="input-group">
+                                                                                                &nbsp;<asp:RadioButtonList ID="IsEmail" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                                                                    <asp:ListItem  Value="1">是</asp:ListItem>
+                                                                                                    <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
+                                                                                                </asp:RadioButtonList>
+                                                                                               </div>
+                                                             </td>
+                                                  </tr>
+
+
+
+                    <tr>
+                            <td class="td2">
+                                QQ</td>
+                            <td class="td1">
+                                 <asp:TextBox ID="QQ" runat="server" Width="200px"></asp:TextBox>
+                            </td>
+                            <td class="td2">
+                                注册时间</td>
+                            <td class="td1">
+                            <asp:TextBox ID="AddTime" runat="server" Width="200px"></asp:TextBox>
+
+
+
+                            </td>
+                 </tr>
+
+
+
+                <tr>
+               <td class="td2">
+                                                结算方案</td>
+                                            <td class="td1">
+
+                                            <asp:DropDownList ID="WithdrawSchemeID" class="form-control" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
+
+                                            </td>
+                                            <td class="td2">
+                                                费率方案</td>
+                                            <td class="td1">
+                                <asp:DropDownList ID="PayRateID" class="form-control" runat="server"></asp:DropDownList>
+                                            </td>
+                                 </tr>
+
+
+                                <tr>
+                                            <td class="td2">
+                                                管理员</td>
+                                            <td class="td1">
+                                            <asp:DropDownList ID="manageId" class="form-control" runat="server"></asp:DropDownList>
+                                            </td>
+                                            <td class="td2">
+                                                网址</td>
+                                            <td class="td1">
+                                            <asp:TextBox ID="SiteUrl" runat="server" Width="200px"></asp:TextBox>
+                                            </td>
+                                 </tr>
+
+                                <tr>
+                                   <td class="td2">
+                                    结算方式</td>
+                                     <td class="td1">
+ <div class="input-group">
+                                             &nbsp;<asp:RadioButtonList ID="WithdrawType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                              <asp:ListItem  Value="0" Selected="true">前台</asp:ListItem>
+                                              <asp:ListItem Value="1" >接口</asp:ListItem>
+                                              <asp:ListItem Value="2" >前台+接口</asp:ListItem>
+                                              </asp:RadioButtonList>
+                                              </div>
+                                     </td>
+                                       <td class="td2">
+                                        随机商品名称</td>
+                                        <td class="td1">
+                                    <asp:TextBox ID="RandomProduct" runat="server" Width="200px"></asp:TextBox>
+                                        </td>
+                                 </tr>
+                                 <tr>
+                                 <td class="td2">
+                                 企业联系人</td>
+                                 <td class="td1">
+<asp:TextBox ID="LinkMan" runat="server" Width="200px"></asp:TextBox>
+                                 </td>
+                                 <td class="td2">
+                                  代理人</td>
+                                  <td class="td1">
+
+<asp:DropDownList ID="AgentID" runat="server" class="form-control" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
+                                  </td>
+                                  </tr>
+                                  <tr>
+                                                                   <td class="td2">
+                                                                   状态</td>
+                                                                   <td class="td1">
+<asp:DropDownList ID="Status" class="form-control" runat="server" Width="150px"></asp:DropDownList>
+                                                                   </td>
+                                                                   <td class="td2">
+                                                                    备注</td>
+                                                                    <td class="td1">
+                        <asp:TextBox ID="LastLoginRemark" runat="server" Width="200px"></asp:TextBox>
+                                                                    </td>
+                                                                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <tr>
                 <td colspan="4" style="height: 20px">
                     <div align="center">
                         <asp:Button ID="btnAdd" runat="server" class="button btn  btn-danger" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
-                        <input type="button" class="button btn  btn-danger" value="返 回" onclick="backreturn()" />
+
                     </div>
                 </td>
             </tr>
@@ -381,3 +353,17 @@ function backreturn(){
     </form>
 </body>
 </html>
+<link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/skin/jedate.css">
+<script src="<%=ADMIN_URI%>/style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/jquery.jedate.js"></script>
+<script>
+  $(function () {
+
+     $("#AddTime").jeDate({
+
+            format: "YYYY-MM-DD hh:mm:ss",
+
+        });
+
+  });
+</script>

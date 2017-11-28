@@ -1,38 +1,102 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserIdImgLists" Codebehind="UserIdImgList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
-<!-----------------header---------------->
- <!-- #include file="../Top.aspx" -->
-<!-----------------header---------------->
-<!-----------------left------------------>
- <!-- #include file="../Left.aspx" -->
-<!-----------------left------------------>
 
-<style>
-td{
-vertical-align: middle !important;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>
+    <link href="../style/union.css" type="text/css" rel="stylesheet" />
+    <script src="../../js/common.js" type="text/javascript"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../style/admin/dist/css/AdminLTE.min.css">
+    <style type="text/css">
+table { FONT-WEIGHT:normal;line-height:170%;FONT-FAMILY:Arial}
+A:link {COLOR:#237C04;TEXT-DECORATION: none;}
+td {    padding: 8px;
+        line-height: 1.42857143;
+
+        border-top: 1px solid #ddd;
+        font-size: 14px;
+        overflow: hidden;
+        word-break: break-all;
+        word-wrap: break-word; }
+.td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
+.td1 {    padding5px;
+          color: #3e3e3e;
+          width: 35%;}
+.td2 {padding-right: 10px;
+          padding-left: 8px;
+          padding-top: 8px;
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+          background: #e8eaee;
+          text-align: right;
+          width: 15%;}
+.td3 {padding:1px 1px 0 0px;color:#083772;background:#EFF3FB;font-size:12px;text-align:center;}
+.moban {padding-top:0px;border:0px}
+input {
+           padding: 6px 12px;
+           font-size: 14px;
+           line-height: 1.42857143;
+           color: #555;
+           background-color: #fff;
+           background-image: none;
+           border: 1px solid #ccc;
+           }
+label{font-weight: 400; margin-right: 10px;}
+.lable { border:1px solid #999;padding:3px;font:12px tahoma;ling-height:16px;}
+select { border:1px solid #999;padding:3px;margin-left:3px;font:12px tahoma;ling-height:16px}
+.input4 {border:1px solid #999;padding:3px;margin-left:10px;font:11px tahoma;ling-height:16px;height:45px;}
+.button {color: #135294; border:1px solid #666; height:21px; line-height:21px;}
+.nrml{background-color:#eeeeee;font-weight: bold;}
+.radio { border:none; }
+.checkbox { border:none; }
+.addnew {font-size: 12px;color: #FF0000;}
+a.servername{height:470px;width: 527px;color:#E54202;cursor:hand;}
+.current {border:#ff6600 1px solid;}
+a:hover {height:470px;width: 527px;color:#E54202;cursor:hand;}
+#nav LI A.noncurrent {/*border:#DC171E 3px solid;*/}
+#nav UL {PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 0px}
+#nav LI {DISPLAY: inline; padding-left:10px;}
+#nav LI a:hover {border:#B6E000 1px solid;}
+#nav li A:visited {border:#ff0000 1px solid;}
+img{border:#CCCCCC 1px solid;padding:0 5px}
+#tplPreview {
+position: absolute;
+top:0px;
+left:0px;
+background:#ffffff;
+border:1px solid #333;
+font-size:12px;
+color:#4B4B4B;
+padding:12px 15px 15px 15px;}
+.form-group input{
+width: 13px;
+height: 13px;
+color:#0e76a8;
+position:relative;
+top:2px;
+}
+.td1 input{
+position: relative;
+top:2px;
+}
+.rbl-asp td{
+border: none;
+}
+.btn-danger{
+height: 40px;
+color: #fff;
+border: none;
 }
 </style>
 
- <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
-                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
-                <div class="alert-content"></div>
-</div>
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        证件审核
-        <small>第三方支付平台</small>
-      </h1>
-      <ol class="breadcrumb">
-
-      </ol>
-    </section>
-
-    <!-- Main content -->
-
-    <section class="content">
+</head>
+<body>
     <form id="form1" runat="server">
 
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
@@ -40,51 +104,7 @@ vertical-align: middle !important;
 
         <tr>
             <td>
-                <table>
-                <div class="input-group">
-                <asp:DropDownList class="form-control" ID="StatusList" runat="server" EnableViewState="false">
-                    <asp:ListItem Value="">—审核状态—</asp:ListItem>
-                    <asp:ListItem Value="1">待审核</asp:ListItem>
-                    <asp:ListItem Value="2">已审核</asp:ListItem>
-                    <asp:ListItem Value="4">审核失败</asp:ListItem>
-                </asp:DropDownList>
-                </div>
-
-                <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">用户ID</button></div>
-                       <asp:TextBox ID="txtUserId" class="form-control" runat="server" EnableViewState="false"></asp:TextBox>
-                    </div>
-
-
-                <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">用户名</button></div>
-                <asp:TextBox ID="txtUserName" class="form-control" runat="server" EnableViewState="false"></asp:TextBox></div>
-
-                <div class="input-group date">
-                <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                <asp:TextBox ID="StimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
-                <div class="input-group date">
-
-                <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                <asp:TextBox ID="EtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
-
-                <div class="input-group">
-                <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                </asp:Button>
-                </div>
-
-                <div class="input-group">
-                <asp:Button ID="btnDelete" runat="server" CssClass="button btn  btn-danger" Text=" 删 除" OnClientClick="return Del_Confirm();"
-                    OnClick="btnDelete_Click"></asp:Button>
-                </div>
-
-                <div class="input-group">
-                <asp:Button ID="btnCashTo" runat="server" CssClass="button btn  btn-danger" Text="审 核" OnClientClick="return GetMoney_Confirm();"
-                    OnClick="btnCashTo_Click"></asp:Button>
-                </div>
-                </table>
+               
             </td>
         </tr>
 
@@ -174,7 +194,7 @@ vertical-align: middle !important;
                                             style="border: 0" /></a>
                                 </td>
                                 <td>
-                                    <%# Enum.GetName(typeof(OriginalStudio.Model.User.IdImageStatus),Eval("status"))%>
+                                    <%# Eval("status")%>
                                 </td>
                                 <td>
                                     <%# Eval("checktime","{0:yyyy-MM-dd HH:ss:mm}")%>
@@ -190,64 +210,12 @@ vertical-align: middle !important;
                                 </td>
                             </tr>
                         </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                            <tr ondblclick="javascript:sendInfo('<%# Eval("id")%>')">
-                                <td>
-                                    <input id="chkItem" type="checkbox" value='<%#Eval("id")%>' name="chkItem" />
-                                </td>
-                                <td>
-                                    <%# Eval("userId")%>
-                                </td>
-                                <td>
-                                   <a href="javascript:showInfo('<%# Eval("ID")%>')">
-                                        <strong>
-                                        <%#Eval("UserName")%>
-                                        </strong>
-                                    </a>
-                                </td>
-                                <td>
-                                    <%# Eval("payeeName")%>
-                                </td>
-                                <td>
-                                    <%# Eval("IdCard")%>
-                                </td>
-                                <td>
-                                    <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
-                                </td>
-                                <td>
-                                    <a href="idimg.aspx?id=<%#Eval("id")%>&show=on" target="_blank">
-                                        <img id="img1" src="idimg.aspx?id=<%#Eval("id")%>&show=on" width="180px" height="120px"
-                                            style="border: 0" /></a>
-                                </td>
-                                <td>
-                                    <a href="idimg.aspx?id=<%#Eval("id")%>&show=down" target="_blank">
-                                        <img id="img2" src="idimg.aspx?id=<%#Eval("id")%>&show=down" width="180" height="120px"
-                                            style="border: 0" /></a>
-                                </td>
-                                <td>
-                                    <%# Enum.GetName(typeof(OriginalStudio.Model.User.IdImageStatus),Eval("status"))%>
-                                </td>
-                                <td>
-                                    <%# Eval("checktime","{0:yyyy-MM-dd HH:ss:mm}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("why")%>
-                                </td>
-                                <td>
-                                    <%# Eval("admin")%>
-                                </td>
-                                <td>
-                                    <asp:Label ID="labagcmd" runat="server"></asp:Label>
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
+
                                 </asp:Repeater>
                             </table>
                         </td>
                     </tr>
-                    <!---------------------pager------------------>
-                    <!-- #include file="../PagerIng.aspx" -->
-                    <!---------------------pager------------------>
+
                 </table>
             </td>
          </tr>
@@ -255,13 +223,10 @@ vertical-align: middle !important;
 
 </table>
 </form>
-</section>
-</div>
+</body>
+</html>
 
 
-<!-----------------footer------------------>
- <!-- #include file="../Footer.aspx" -->
-<!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
     <script type="text/javascript">
