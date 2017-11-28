@@ -1,89 +1,79 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.Freeze" Codebehind="Freeze.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
-    <style type="text/css">
-        .rptheadlink
-        {
-            color: White;
-            font-family: 宋体;
-            font-size: 12px;
-        }
-         ;</style>
+<!-----------------header---------------->
+ <!-- #include file="../Top.aspx" -->
+<!-----------------header---------------->
+<!-----------------left------------------>
+ <!-- #include file="../Left.aspx" -->
+<!-----------------left------------------>
+<style>
+td{
+vertical-align: middle !important;
+}
+</style>
 
-    <script src="../../js/common.js" type="text/javascript"></script>
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        冻结款项
+        <small>第三方支付平台</small>
+      </h1>
+      <ol class="breadcrumb">
 
-    <script src="../../js/ControlDate/WdatePicker.js" type="text/javascript"></script>
+      </ol>
+    </section>
 
-    <script type="text/javascript">
-        $().ready(function() {
-            $("#chkAll").click(function() {
-                $("input[type='checkbox']").each(function() {
-                    if ($("#chkAll").attr('checked') == true) {
-                        $(this).attr("checked", true);
-                    }
-                    else
-                        $(this).attr("checked", false);
-                });
-            });
-        })
-        function sendMsg(uid) {
-            window.showModelessDialog("SendMsg.aspx?uid=" + uid, window, "dialogWidth=800px;dialogHeight=500px;");
-        }
-    
-    </script>
+    <!-- Main content -->
 
-    <script type="text/javascript">
-        function sendInfo(id) {
-            window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "'height=700, width=1000, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no");
-        }
-    </script>
+    <section class="content">
 
-</head>
-<body class="yui-skin-sam">
     <form id="form1" runat="server">
-    <div id="modelPanel" style="background-color: #F2F2F2">
-    </div>
-    <input id="selectedUsers" runat="server" type="hidden" />
-    <table width="100%" border="0" cellspacing="1" cellpadding="1" class="table1">
+    <div>
+        <table border="0" cellspacing="1" cellpadding="1" style="width: 100%; height: 100%;">
+            <tr style="height: 30px">
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                            <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary">用户ID</button></div>
+                                    <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox></div>
+                                <div class="input-group">
+                                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
         <tr>
-            <td align="center" style="font-weight: bold; font-size: 14px; background-image: url(../style/images/topbg.gif);
-                color: teal; background-repeat: repeat-x; height: 24px">
-                冻结款项 
-            </td>
-        </tr>
-        <tr>
-            <td>
-                用户ID
-                <asp:TextBox ID="txtuserId" runat="server"></asp:TextBox>
-                <asp:Button ID="btnSearch" runat="server" CssClass="button" Text=" 查 询 " OnClick="btnSearch_Click">
-                </asp:Button>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <table width="100%" id="tab" border="0" align="center" cellpadding="2" cellspacing="1">
-                    <asp:Repeater ID="rptUsers" runat="server" 
-                        OnItemDataBound="rptUsersItemDataBound" onitemcommand="rptUsers_ItemCommand">
+            <td bgcolor="#ffffff">
+                <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered">
+                    <tr>
+                        <td align="center" bgcolor="#ffffff">
+                            <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered table-hover dataTable">
+                        <asp:Repeater ID="rptUsers" runat="server" OnItemDataBound="rptUsersItemDataBound" onitemcommand="rptUsers_ItemCommand">
                         <HeaderTemplate>
-                            <tr style="background-color: #507CD1; color: #fff; height: 22;">
-                                <td>
+                            <tr style="background: #e8eaee">
+                                <td style="display: none">
                                     <input id="chkAll" type="checkbox">
                                 </td>
                                 <td>
                                     商户ID
-                                </td>  
+                                </td>
                                 <td>
                                     用户名
-                                </td>   
+                                </td>
                                  <td>
                                     真实姓名
-                                </td>                                 
+                                </td>
                                 <td>
                                     商户余额
                                 </td>
@@ -105,19 +95,19 @@
                             </tr>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr style="background-color: #EFF3FB">
-                                <td>
+                            <tr>
+                                <td style="display: none">
                                     <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("userid")%>' name="chkItem" />
                                 </td>
                                 <td>
                                     <%# Eval("userid")%>
-                                </td>  
+                                </td>
                                 <td>
                                     <%# Eval("userName")%>
-                                </td>  
+                                </td>
                                 <td>
                                     <%# Eval("ContactName")%>
-                                </td>                               
+                                </td>
                                 <td>
                                     <%# Eval("balance", "{0:f2}")%>
                                 </td>
@@ -127,77 +117,69 @@
                                 <td>
                                     <%# Eval("unpayment", "{0:f2}")%>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="txtFreezeMoney" runat="server" Width="80px"></asp:TextBox>
+                                <td><div>
+                                    <asp:TextBox ID="txtFreezeMoney" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
+                                </td>
+                                <td><div>
+                                    <asp:TextBox ID="txtWhy" runat="server" class="form-control" Text="用户投诉" MaxLength="25"></asp:TextBox></div>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtWhy" runat="server" Text="用户投诉" MaxLength="25"></asp:TextBox>
-                                </td>
-                                <td>
-                                    <asp:Button ID="btn_freeze" runat="server" CommandName="freeze" CommandArgument='<%#GetParm(Eval("userid"),Eval("balance"),Eval("Freeze"),Eval("unpayment"))%>' Text="冻结" />
+                                    <asp:Button ID="btn_freeze" runat="server" class="button btn btn-xs  btn-info" CommandName="freeze" CommandArgument='<%#GetParm(Eval("userid"),Eval("balance"),Eval("Freeze"),Eval("unpayment"))%>' Text="冻结" />
                                 </td>
                             </tr>
                         </ItemTemplate>
-                        <AlternatingItemTemplate>
-                            <tr style="background-color: #ffffff">
-                                <td>
-                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("userid")%>' name="chkItem" />
-                                </td>
-                                <td>
-                                    <%# Eval("userid")%>
-                                </td>    
-                                 <td>
-                                    <%# Eval("userName")%>
-                                </td>  
-                                <td>
-                                    <%# Eval("full_name")%>
-                                </td>                             
-                                <td>
-                                    <%# Eval("balance", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("Freeze", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <%# Eval("unpayment", "{0:f2}")%>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtFreezeMoney" runat="server" Width="80px"></asp:TextBox>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtWhy" runat="server" Text="用户投诉" MaxLength="25"></asp:TextBox>
-                                </td>
-                                <td>
-                                  <asp:Button ID="btn_freeze" runat="server" CommandName="freeze" CommandArgument='<%#GetParm(Eval("userid"),Eval("balance"),Eval("Freeze"),Eval("unpayment"))%>' Text="冻结" />
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
+
                     </asp:Repeater>
-                </table>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr style="background-color: #EFEFEF">
-                        <td style="height: 16px;">
-                            <aspxc:AspNetPager ID="Pager1" runat="server"
-                                AlwaysShow="True" CustomInfoHTML="总记录数：%RecordCount%&nbsp;总页数：%PageCount%&nbsp;当前页：%CurrentPageIndex%&nbsp;"
-                                CustomInfoTextAlign="Left" FirstPageText="首页" HorizontalAlign="Right" LastPageText="末页"
-                                NavigationToolTipTextFormatString="跳转{0}页" NextPageText="下一页" PageIndexBoxType="DropDownList"
-                                PageSize="20" PrevPageText="上一页" ShowBoxThreshold="50" ShowCustomInfoSection="Left"
-                                ShowPageIndex="False" ShowPageIndexBox="Always" SubmitButtonText="GO&gt;&gt;"
-                                TextAfterPageIndexBox="页" TextBeforePageIndexBox="跳到" Width="100%" 
-                                Height="30px" onpagechanging="Pager1_PageChanging1">
-                            </aspxc:AspNetPager>
+                            </table>
                         </td>
                     </tr>
-                    <tr>
-                    <td>
-                        说明：冻结的金额可以到解冻款项去解冻
-                    </td>
-                    </tr>
+                            <!---------------------pager------------------>
+                            <!-- #include file="../PagerIng.aspx" -->
+                            <!---------------------pager------------------>
                 </table>
             </td>
         </tr>
-    </table>
+        <tr>
+            <td bgcolor="#ffffff" style="color: red;font-weight: 600;padding-bottom: 15px;">
+                说明：冻结的金额可以到解冻款项去解冻
+            </td>
+        </tr>
+        </table>
+    </div>
     </form>
+
+</section>
+</div>
+
+<!-----------------footer------------------>
+ <!-- #include file="../Footer.aspx" -->
+<!-----------------footer------------------>
+
+<script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
+
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#chkAll").click(function() {
+                $("input[type='checkbox']").each(function() {
+                    if ($("#chkAll").attr('checked') == true) {
+                        $(this).attr("checked", true);
+                    }
+                    else
+                        $(this).attr("checked", false);
+                });
+            });
+        })
+        function sendMsg(uid) {
+            window.showModelessDialog("SendMsg.aspx?uid=" + uid, window, "dialogWidth=800px;dialogHeight=500px;");
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function sendInfo(id) {
+            window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "'height=700, width=1000, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no");
+        }
+    </script>
 
     <script type="text/javascript">
         function handler(tp) {
@@ -221,5 +203,4 @@
 
     </script>
 
-</body>
-</html>
+
