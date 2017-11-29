@@ -269,14 +269,14 @@
                                     </td>
 
                                     <td>
-                                    <a class="button btn btn-xs  btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">
-                                                                                通 道<%#isSpecialChannel(Eval("userid"))%>
-                                                                            </a>
 
-                                    <a class="button btn btn-xs  btn-info" href="UserPayRateEdit.aspx?ID=<%# Eval("userid")%>">费率</a>
 
-                                      <asp:Label ID="labcmd" class="button btn btn-xs  btn-info"  runat="server"></asp:Label>
-                                      <a class="button btn btn-xs  btn-info"  href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:UserTypeLimit('<%# Eval("userid")%>')">通道限额</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:UserBindIp('<%# Eval("userid")%>')">IP</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:UserPayRate('<%# Eval("userid")%>')">费率</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:UserBankCard('<%# Eval("userid")%>')">银行卡</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">独立通道</a>
+                                    <a class="button btn btn-xs btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
                                      </td>
                                     </td>
 										
@@ -394,7 +394,6 @@ function tongDao(id) {
 
 
 function showInfo(id) {
-//    window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "Width=800px;Height=350px;");
      layer.ready(function(){
           //自定页
           layer.open({
@@ -408,5 +407,64 @@ function showInfo(id) {
       });
 }
 
+//===============//=====================//
 
+
+//通道限额
+function UserTypeLimit(id) {
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: '通道限额',
+              skin: 'layui-layer-rim', //加上边框
+              area: ['67%', '90%'], //宽高
+              content:" UserTypeLimit.aspx?id=" + id,
+          });
+      });
+}
+
+//绑定IP
+function UserBindIp(id) {
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: 'IP绑定',
+              skin: 'layui-layer-rim', //加上边框
+              //closeBtn: 0, //不显示关闭按钮
+              area: ['67%', '90%'], //宽高
+              content:" UserBindIp.aspx?id=" + id,
+          });
+      });
+}
+
+//费率
+function UserPayRate(id) {
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: '单独费率设置',
+              skin: 'layui-layer-rim', //加上边框
+              //closeBtn: 0, //不显示关闭按钮
+              area: ['67%', '90%'], //宽高
+              content:" UserPayRate.aspx?id=" + id,
+          });
+      });
+}
+//银行卡
+function UserBankCard(id) {
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: '银行卡',
+              skin: 'layui-layer-rim', //加上边框
+              //closeBtn: 0, //不显示关闭按钮
+              area: ['67%', '90%'], //宽高
+              content:" UserBankCard.aspx?id=" + id,
+          });
+      });
+}
 </script>
