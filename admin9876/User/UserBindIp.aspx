@@ -181,4 +181,4 @@ function backreturn(){
     </form>
 </body>
 </html>
-<script src="<%=ADMIN_URI%>/style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+
