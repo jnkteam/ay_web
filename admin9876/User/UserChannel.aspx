@@ -1,31 +1,32 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.UserChannel" Codebehind="UserChannel.aspx.cs" %>
-
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head id="Head1">
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-     <link href="../style/union.css" type="text/css" rel="stylesheet" />
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
-    <script src="../../js/common.js" type="text/javascript"></script>
+
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="../style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../style/admin/dist/css/AdminLTE.min.css">
+     <!-- Font Awesome -->
+      <link rel="stylesheet" href="..//style/admin/bower_components/font-awesome/css/font-awesome.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="../style/admin/bower_components/Ionicons/css/ionicons.min.css">
     <style type="text/css">
     table { FONT-WEIGHT:normal;line-height:170%;FONT-FAMILY:Arial}
     A:link {COLOR:#237C04;TEXT-DECORATION: none;}
     td {    padding: 8px;
             line-height: 1.42857143;
-
+            text-align: center;
             border-top: 1px solid #ddd;
             font-size: 14px;
             overflow: hidden;
             word-break: break-all;
             word-wrap: break-word; }
     .td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
-    .td1 {    padding：5px;
+    .td1 {    padding:5px;
               color: #3e3e3e;
               width: 35%;}
     .td2 {padding-right: 10px;
@@ -101,6 +102,7 @@
     color: #fff;
     border: none;
     }
+    .btn[disabled] {background: #c3c3c3}
     </style>
 
     <script src="../../js/common.js" type="text/javascript"></script>
@@ -127,7 +129,7 @@
         <input id="selectedUsers" runat="server" type="hidden" />
         <table width="100%" border="0" cellspacing="1" cellpadding="1" class="table1">
             <tr>
-                <td align="center" >
+                <td align="left" style="text-align: left !important;">
                     <asp:Button ID="btnAllOpen" class="button btn  btn-danger" runat="server" Text="全部开启" OnClick="btnAllOpen_Click"/>  <asp:Button class="button btn  btn-danger" ID="btnAllColse" runat="server" Text="全部关闭" OnClick="btnAllColse_Click"/>
                     <asp:Button ID="btnReSet" class="button btn  btn-danger" runat="server" Text="恢复默认" onclick="btnReSet_Click"/>
 
@@ -136,7 +138,7 @@
                     </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td colspan="2" style="text-align: left !important;">
                     <asp:Label ID="lblInfo" runat="server"></asp:Label>
                 </td>
             </tr>
@@ -173,17 +175,17 @@
                                             <%#Eval("typeId")%><asp:HiddenField ID="hftypeId" runat="server" Value='<%#Eval("typeId")%>' />
                                         </td>
                                         <td>
-                                            <%#Eval("modetypename")%></td>
+                                            <%#Eval("typename")%></td>
                                         <td>
                                             <%#Eval("payrate","{0:0.00}")%>%</td>
                                         <td>
-                                            <img id="imgstus<%#Eval("id")%>" src="../style/images/<%#Eval("type_status")%>.png" alt=""/>
+                                            <%#Eval("type_status")%>
                                         </td>
                                         <td>
-                                            <img  src="../style/images/<%#Eval("user_setting")%>.png" alt="" />
+                                            <%#Eval("user_setting")%>
                                         </td>
                                         <td>
-                                            <img  src="../style/images/<%#Eval("sys_setting")%>.png" alt="" />
+                                            <%#Eval("sys_setting")%>
                                         </td>
                                         <td>
                                             <div class="input-group">
@@ -193,45 +195,16 @@
                                         </td>
                                         <td>
                                             <div class="height40">
-                                                <asp:Button ID="btn_open"  class="button btn btn-xs  btn-info" runat="server" Text="开启" CommandName="open" CommandArgument='<%#Eval("typeId")%>' />
-                                                <asp:Button ID="btn_close"  class="button btn btn-xs  btn-info" runat="server" Text="关闭" CommandName="close" CommandArgument='<%#Eval("typeId")%>'/>
+                                                <asp:Button ID="btn_open"  CssClass="button btn btn-xs  btn-info" runat="server" Text="开启" CommandName="open" CommandArgument='<%#Eval("typeId")%>' />
+                                                <asp:Button ID="btn_close"  CssClass="button btn btn-xs  btn-info" runat="server" Text="关闭" CommandName="close" CommandArgument='<%#Eval("typeId")%>'/>
                                             </div>
                                         </td>
                                     </tr>
                                 </ItemTemplate>
-                                <AlternatingItemTemplate>
-                                    <tr>
-                                        <td>
-                                            <%#Eval("typeId")%><asp:HiddenField ID="hftypeId" runat="server" Value='<%#Eval("typeId")%>' /></td>
-                                        <td>
-                                            <%#Eval("modetypename")%></td>
-                                        <td>
-                                            <%#Eval("payrate","{0:0.00}")%>%</td>
-                                        <td>
-                                            <img id="imgstus<%#Eval("id")%>" src="../style/images/<%#Eval("type_status")%>.png" alt="" />
-                                        </td>
-                                        <td>
-                                            <img  src="../style/images/<%#Eval("user_setting")%>.png" alt="" />
-                                        </td>
-                                        <td>
-                                            <img  src="../style/images/<%#Eval("sys_setting")%>.png" alt="" />
-                                        </td>
-                                        <td>
-                                        <div class="input-group">
-                                           <asp:DropDownList ID="ddlsupp" class="form-control" runat="server">
-                                            </asp:DropDownList>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="height40">
-                                                  <asp:Button ID="btn_open"  class="button btn btn-xs  btn-info" runat="server" Text="开启" CommandName="open" CommandArgument='<%#Eval("typeId")%>' />
-                                                <asp:Button ID="btn_close"  class="button btn btn-xs  btn-info" runat="server" Text="关闭" CommandName="close" CommandArgument='<%#Eval("typeId")%>'/>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </AlternatingItemTemplate>
+
                                 <FooterTemplate>
                                     </table>
+
                                 </FooterTemplate>
                             </asp:Repeater>
                             <tr>
@@ -282,30 +255,9 @@ $(document).ready(function() {
 	    })
 });
     </script>
-    <script type="text/javascript">
-    function backreturn(){
-    history.go(-1);
-}
- function handler(tp){
- }
 
-var mytr =  document.getElementById("tab").getElementsByTagName("tr");
-for(var i=1;i<mytr.length;i++){
-  mytr[i].onmouseover= function(){ 
-var rows = this.childNodes.length;
-for(var row=0;row<rows;row++){
-this.childNodes[row].style.backgroundColor='#E6EEFF';
-}
-};
-  mytr[i].onmouseout= function(){ 
-var rows = this.childNodes.length;
-for(var row=0;row<rows;row++){
-this.childNodes[row].style.backgroundColor='';
-}
-};
-}
 
-    </script>
+
 
 </body>
 </html>

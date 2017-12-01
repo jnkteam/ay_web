@@ -72,18 +72,26 @@
                     </div>
                     <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox>
                     </div>
-
+                     <div class="input-group">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-primary">联系人</button>
+                                        </div>
+                                        <asp:TextBox ID="txtfullname" class="form-control" runat="server"></asp:TextBox>
+                                        </div>
+                    <%--
                     <div class="input-group">
                     <div class="input-group-btn">
                        <button type="button" class="btn btn-primary">代理ID</button>
                     </div>
                     <asp:TextBox ID="txtagent" class="form-control" runat="server"></asp:TextBox>
                     </div>
+                    --%>
                 </td>
             </tr>
 
             <tr height="30" >
                 <td>
+                <%--
                     <div class="input-group">
                         <asp:DropDownList ID="ddlisSpecialPayRate" class="form-control" runat="server">
                             <asp:ListItem Value="">—单独费率—</asp:ListItem>
@@ -105,11 +113,39 @@
                             <asp:ListItem Value="0">未设置</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-
-
-
+                    --%>
                     <div class="input-group">
-                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-primary" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button>
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-primary">QQ号码</button>
+                                        </div>
+                                        <asp:TextBox ID="txtQQ" class="form-control" runat="server"></asp:TextBox>
+                                        </div>
+
+                                        <div class="input-group">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-primary">手机</button>
+                                        </div>
+                                        <asp:TextBox ID="txtTel" class="form-control" runat="server"></asp:TextBox>
+                                        </div>
+
+                                        <div class="input-group">
+                                        <div class="input-group-btn">
+                                           <button type="button" class="btn btn-primary">Email</button>
+                                        </div>
+                                        <asp:TextBox ID="txtMail" class="form-control" runat="server"></asp:TextBox>
+                                        </div>
+
+
+
+
+                </td>
+            </tr>
+
+            <tr height="30" >
+                <td>
+
+<div class="input-group">
+                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button>
                     </div>
 
                     <div class="input-group">
@@ -136,39 +172,6 @@
                     <div class="input-group">
                     <input type="button" class="button btn  btn-primary" value="发送手机短信" onclick="sentsmswin();" />
                     </div>
-
-                </td>
-            </tr>
-
-            <tr height="30" >
-                <td>
-                    <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">QQ号码</button>
-                    </div>
-                    <asp:TextBox ID="txtQQ" class="form-control" runat="server"></asp:TextBox>
-                    </div>
-
-                    <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">手机</button>
-                    </div>
-                    <asp:TextBox ID="txtTel" class="form-control" runat="server"></asp:TextBox>
-                    </div>
-
-                    <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">Email</button>
-                    </div>
-                    <asp:TextBox ID="txtMail" class="form-control" runat="server"></asp:TextBox>
-                    </div>
-
-                    <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">姓名</button>
-                    </div>
-                    <asp:TextBox ID="txtfullname" class="form-control" runat="server"></asp:TextBox>
-                    </div>
                    
                 </td>
             </tr>
@@ -193,6 +196,9 @@
                                 <asp:Repeater ID="rptUsers" EnableViewState="false" runat="server" OnItemDataBound="rptUsersItemDataBound">
                                 <HeaderTemplate>
                                 <tr height="30"  style="background: #e8eaee">
+                                    <td>
+                                    <input id="chkAll" type="checkbox">
+</td>
                                    <td>
                                    商户ID</td>
 
@@ -226,7 +232,9 @@
                             <ItemTemplate>
                                 <tr height="30">
 
-
+                                <td>
+                                   <input id="chkItem" type="checkbox"  value='<%#Eval("userid")%>' name="chkItem" />
+                                </td>
                                     <td>
                                         <%# Eval("userid")%>
                                     </td>
@@ -276,7 +284,7 @@
                                     <a class="button btn btn-xs btn-info" href="javascript:UserPayRate('<%# Eval("userid")%>')">费率</a>
                                     <a class="button btn btn-xs btn-info" href="javascript:UserBankCard('<%# Eval("userid")%>')">银行卡</a>
                                     <a class="button btn btn-xs btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">独立通道</a>
-                                    <a class="button btn btn-xs btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>
+                                    <%--<a class="button btn btn-xs btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>--%>
                                      </td>
                                     </td>
 										
