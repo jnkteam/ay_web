@@ -230,7 +230,7 @@
                                 </tr>
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <tr height="30">
+                                <tr height="30" class="childCheck">
 
                                 <td>
                                    <input id="chkItem" type="checkbox"  value='<%#Eval("userid")%>' name="chkItem" />
@@ -335,15 +335,17 @@ this.childNodes[row].style.backgroundColor='';
 }
 
 $().ready(function(){
-     $("#chkAll").click(function(){
-        $("input[type='checkbox']").each(function(){
-           if ($("#chkAll").attr('checked') == true){
-               $(this).attr("checked", true);
-           }
-           else
-               $(this).attr("checked", false);
-        });
-    });
+     var clickCheckAll = false;
+             $("#chkAll").click(function() {
+                             if (clickCheckAll) {
+                                 $(".childCheck input[type='checkbox']").each(function() {this.checked = false;});
+                                 clickCheckAll = false;
+                             } else {
+                                 $(".childCheck input[type='checkbox']").each(function() {this.checked = true;});
+                                 clickCheckAll = true;
+                             }
+
+             });
     var btnDeleteId = "#<%=btnDelete.ClientID%>";
     $(btnDeleteId).click(function(){
         return confirm("确定要删除这些商户吗?");
