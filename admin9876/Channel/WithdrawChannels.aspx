@@ -48,7 +48,7 @@
                                 <td>
                                     ºÚ–¥
                                 </td>                                
-                                <td style="    width: 15%;">
+                                <td style="width: 15%;">
                                     Õ®µ¿
                                 </td>
                                 <td>
@@ -77,27 +77,7 @@
                                 </td>
                             </tr>
                         </ItemTemplate>
-                        <AlternatingItemTemplate>
-                            <tr >
-                                <td>
-                                    <%# Eval("bankName")%>
-                                </td>                              
-                                <td>
-                                    <%# Eval("bankCode")%>
-                                </td>
-                                <td>
-                                    <%# Eval("bankEnName")%>
-                                </td>								
-                                <td>
-                                <div class="input-group">
-                                    <asp:DropDownList class="form-control" ID="ddlsupp" runat="server"></asp:DropDownList>
-                                    </div>
-                                </td>                                          
-                                <td>
-                                    <asp:Button ID="btnUpdate" class="button btn btn-xs  btn-info" runat="server" Text="±£¥Ê" CommandName="update" CommandArgument='<%#Eval("id")%>' />
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
+
                     </asp:Repeater>
                 </table>
                 </td>

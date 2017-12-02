@@ -119,34 +119,7 @@
                                     </td>                                    
                                 </tr>
                             </ItemTemplate>
-                            <AlternatingItemTemplate>
-                                <tr >
-                                   <td>
-                                        <input id="chkItem" type="checkbox" value='<%#Eval("id")%>' name="chkItem"/>
-                                    </td>
-                                    <td>
-                                        <%# Eval("userID")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("userName")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("payeeName")%>
-                                    </td>
-                                     <td>
-                                        <%# Eval("lastTime","{0:yyyy-MM-dd HH:mm:ss}")%>
-                                    </td> 
-                                    <td>
-                                        <%# Eval("lastIP")%>
-                                    </td>                                                                
-                                    <td>
-                                        <%# Eval("address")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("remark")%>
-                                    </td>                   
-                                </tr>
-                            </AlternatingItemTemplate>
+
                         </asp:Repeater>
                     </table>
                     <table width="100%" border="0" cellpadding="0" cellspacing="0">

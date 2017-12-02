@@ -67,7 +67,11 @@
                                 </asp:TemplateField>                                
                                 <asp:HyperLinkField DataTextField="NewsTitle" HeaderText="主题" />
                                 <asp:BoundField DataField="AddTime" HeaderText="时间" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
-                                  <asp:BoundField DataField="release" HeaderText="是否发布"/>
+                                   <asp:TemplateField HeaderText="是否发布">
+                                                                      <ItemTemplate>
+                                                                          <asp:Label ID="releaseName" runat="server"></asp:Label>
+                                                                      </ItemTemplate>
+                                                                  </asp:TemplateField>
                                 <asp:TemplateField HeaderText="操作">
                                     <ItemTemplate>
                                         <asp:Button ID="btnUpdate" runat="server" class="button btn btn-xs  btn-info" Text="编 辑" CommandName="update" CommandArgument='<%# Eval("NewsID") %>'/>

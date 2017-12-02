@@ -11,8 +11,7 @@
 
 
 <style type="text/css">
-#GridView1 th{text-align: center}
-            table
+table
             {
                 width: 100%;
                 max-width: 100%;
@@ -34,9 +33,17 @@
 
 td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important;}
 .td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
-.td1 {padding-right:3px;padding-left:3px;color: #333;padding-bottom:0px;padding-top:5px;height:25px; text-align: right; width: 20%; height: 48px;}
-.td2 {padding-right:3px;padding-left:8px;padding-top:5px; color:#999999;text-align:right;}
-.clean{border: 0 !important; background: #ecf0f5 !important; line-height: 1.8!important;;}
+.td1 {padding-right:3px;padding-left:3px;color:#999999;padding-bottom:0px;padding-top:5px;height:25px;}
+.td2 {padding-right:3px;padding-left:8px;padding-top:5px; color: #333;background: #e8eaee;text-align:right;}
+#rblrunmode{border:0 !important;}
+#rblRelease{border:0 !important;}
+#rblrunmode td{border:0 !important;}
+#rblRelease td{border:0 !important;}
+#tab th {text-align: center;}
+#tab td {text-align: center;}
+.form-control{}
+.min-width{width: 200px !important;}
+.mycenter{text-align: center !important;}
 </style>
 
  <!-- Content Wrapper. Contains page content -->
@@ -66,10 +73,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
             <td>
                 <table style="border: 1px;" cellpadding="0" cellspacing="0" class="table01" class="table table-bordered table-hover dataTable">
                     <tr>
-                        <td align="right" class="td1">
+                        <td align="right" class="td2">
                             标题
                         </td>
-                        <td align="left" >
+                        <td align="left" class="td1">
                          <div class="input-group">
                             <asp:TextBox ID="txtTitle" class="form-control" runat="server" ></asp:TextBox>
                             </div>
@@ -89,10 +96,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </td>
                     </tr>
                     <tr>
-                        <td align="right"  class="td1">
+                        <td align="right"  class="td2">
                             标题颜色
                         </td>
-                        <td align="left" >
+                        <td align="left" class="td1">
                          <div class="input-group">
                             <asp:RadioButtonList ID="rbColor" class="form-control clean" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                 <asp:ListItem Value="FF0000">&lt;span style=&quot; color:#FF0000&quot;&gt;#FF0000&lt;/span&gt;</asp:ListItem>
@@ -110,10 +117,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </td>
                     </tr>
                     <tr>
-                        <td align="right"  class="td1">
+                        <td align="right"  class="td2">
                             类型
                         </td>
-                        <td align="left" >
+                        <td align="left" class="td1">
                         <div class="input-group">
                             <asp:DropDownList class="form-control" ID="ddl_type" runat="server" Width="93px">
                             </asp:DropDownList>
@@ -121,10 +128,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </td>
                     </tr>
                     <tr>
-                        <td align="right"  class="td1">
+                        <td align="right"  class="td2">
                             内容
                         </td>
-                        <td align="left">
+                        <td align="left" class="td1">
 
 
 
@@ -136,10 +143,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </td>
                     </tr>
                     <tr>
-                        <td align="right"  class="td1">
+                        <td align="right"  class="td2">
                             添加日期
                         </td>
-                        <td align="left" >
+                        <td align="left" class="td1">
                          <div class="input-group date">
                                                        <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;</div>
                             <input id="txtDate" class="form-control" runat="server" readonly="readonly" type="text" />
@@ -147,10 +154,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                         </td>
                     </tr>
                     <tr>
-                        <td align="right"  class="td1">
+                        <td align="right"  class="td2">
                             是否发布
                         </td>
-                        <td align="left" >
+                        <td align="left" class="td1">
                         <div class="input-group ">
                             <asp:RadioButtonList ID="rbl_Release" class="form-control clean" runat="server" RepeatDirection="Horizontal"
                                 RepeatLayout="Flow">
