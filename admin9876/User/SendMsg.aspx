@@ -3,25 +3,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>发站内信</title>
+    <title>内部消息</title>
     <base target="_self" />
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
+    <script src="../style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+
+     <link rel="stylesheet" href="../style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+     <!-- Theme style -->
+     <link rel="stylesheet" href="../style/admin/dist/css/AdminLTE.min.css">
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="../style/admin/bower_components/font-awesome/css/font-awesome.min.css">
+     <!-- Ionicons -->
+     <link rel="stylesheet" href="../style/admin/bower_components/Ionicons/css/ionicons.min.css">
+     <style>
+     table{ width: 100%;max-width: 100%;able-layout:fixed;border-collapse:collapse;border: 1px solid #f4f4f4; }
+     input { border:1px solid #999;padding:3px;font:12px tahoma;ling-height:16px}
+     select { border:1px solid #999;padding:3px;margin-left:10px;font:12px tahoma;ling-height:16px}
+     td {height:30px; font-size:14px;vertical-align:middle !important;border: 1px solid #f4f4f4;padding: 10px;}
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2">
         <tr>
-            <td align="center" colspan="3" style="font-weight: bold; font-size: 14px; background-image: url(../style/images/topbg.gif);
-                color: teal; background-repeat: repeat-x; height: 24px">
-               发送内部消息
-            </td>
-        </tr>
-        <tr>
            <td align="right" class="jfontItem" style="width: 125px">
                 收信者：
             </td>
-            <td align="left">                
-                <asp:TextBox CssClass="label" ID="txtMsgTo" MaxLength="50" runat="server" Width="300px"></asp:TextBox>&nbsp;
+            <td align="left">
+                <div class="input-group">
+                <asp:TextBox CssClass="form-control" ID="txtMsgTo" MaxLength="50" runat="server" Width="540px"></asp:TextBox>
+                </div>
             </td>
         </tr>
         <tr>
@@ -29,7 +40,9 @@
                 消息标题：<asp:HiddenField ID="NewsID" Value="0" runat="server" />
             </td>
             <td align="left">
-                <asp:TextBox CssClass="label" ID="tb_title" MaxLength="50" runat="server" Width="300px"></asp:TextBox>&nbsp;
+            <div class="input-group">
+                <asp:TextBox CssClass="form-control" ID="tb_title" MaxLength="50" runat="server" Width="540px"></asp:TextBox>
+            </div>
             </td>
         </tr>
         <tr>
@@ -37,16 +50,17 @@
                 消息内容：
             </td>
             <td align="left">
-                <iframe id="eWebEditor1" src="../News/DocEditor/ewebeditor.htm?id=content&style=mini"
-                    frameborder="0" scrolling="no" style="width: 550px; height: 350px;"></iframe>
+                <textarea id="myEditor"  onblur="moveVal()" rows="10" cols="60"></textarea>
             </td>
         </tr>
         <tr>
             <td align="right" class="jfontItem" style="width: 125px; height: 40px;">
             </td>
             <td align="left" style="height: 40px">
-                <asp:Button CssClass="button" ID="bt_sub" runat="server" Text=" 发 布 " OnClick="bt_sub_Click">
+            <div class="input-group">
+                <asp:Button CssClass="button btn  btn-danger" ID="bt_sub" runat="server" Text=" 发 布 " OnClick="bt_sub_Click">
                 </asp:Button>
+            </div>
             </td>
         </tr>
         <tr>
@@ -59,5 +73,26 @@
     </table>
     <asp:HiddenField ID="content" runat="server" />
     </form>
+
+    <!-- CK Editor -->
+    <script src="<%=ADMIN_URI%>/style/admin/bower_components/ckeditor/ckeditor.js"></script>
+
+    <script>
+      $(function () {
+
+        var editor = CKEDITOR.replace('myEditor');
+
+
+        editor.on( 'change', function( event ) {
+            var data = this.getData();//内容
+            $("#hfcontent").val(data);
+        });
+
+
+
+      });
+
+    </script>
+
 </body>
 </html>

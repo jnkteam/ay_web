@@ -158,11 +158,11 @@
 
                     <div class="input-group">
                     <asp:Button ID="btn_allgetmoney" runat="server" CssClass="button btn  btn-primary" Text="一键提现" Visible="false"></asp:Button>
+
                     </div>
 
                     <div class="input-group">
-
-                    <asp:Button ID="btn_Msg" runat="server" CssClass="button btn  btn-primary" Text="内部消息" onclick="btn_Msg_Click"></asp:Button>
+                    <a class="button btn  btn-primary" href="javascript:btn_Msg('<%# Eval("userid")%>')">内部消息</a>
                     </div>
 
                     <div class="input-group">
@@ -371,6 +371,39 @@ function userAdd(id) {
           });
       });
 }
+
+function btn_Msg(id) {
+    var uid ="";
+    $(".childCheck input[type='checkbox']").each(function() {
+        if (this.checked){
+            uid += $(this).val()+","
+        }
+    });
+    if (uid.length>1){
+        uid=uid.substring(0,uid.length-1);
+    }else {
+        return false
+    }
+//    uid=(uid.slice(uid.length-1)==',')?uid.slice(0,-1):uid;
+//
+//    if (uid.length<1){
+//    return false;
+//    }
+
+     layer.ready(function(){
+          //自定页
+          layer.open({
+              type: 2,
+              title: '内部消息',
+              skin: 'layui-layer-rim', //加上边框
+              //closeBtn: 0, //不显示关闭按钮
+              area: ['67%', '90%'], //宽高
+              content:"SendMsg.aspx?uid="+uid
+
+          });
+      });
+}
+
 function userIdImg(id) {
      layer.ready(function(){
           //自定页
