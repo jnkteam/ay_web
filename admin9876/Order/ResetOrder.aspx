@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="OriginalStudio.WebUI.Manage.Order.Console_Order_ResetOrder" Codebehind="resetorder.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="OriginalStudio.WebUI.Manage.Order.ResetOrder" Codebehind="resetorder.aspx.cs" %>
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
 <!-----------------header---------------->
@@ -48,8 +48,6 @@
                 <td class="td1">
                     <asp:RadioButtonList  ID="rblOrdClass"  runat="server" RepeatDirection="horizontal">
                                 <asp:ListItem Value="1" Selected="true">网银订单</asp:ListItem>
-                                <asp:ListItem Value="2">卡类订单</asp:ListItem>
-                                <asp:ListItem Value="3">短信订单</asp:ListItem>
                          </asp:RadioButtonList>
                 </td>
             </tr>

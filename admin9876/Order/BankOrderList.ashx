@@ -108,12 +108,12 @@ public class BankOrderList : IHttpHandler {
         }
 
 
-
-
         General.Common.Json json = new General.Common.Json();
         if (table.Rows.Count > 0)
         {
             DataTable table1 = set.Tables[1];
+			
+            table.Columns.Remove("notifycontext");
             json.AddToJson("data", table);
             json.AddToJson("count", table1);
             json.AddToJson("index", page);           

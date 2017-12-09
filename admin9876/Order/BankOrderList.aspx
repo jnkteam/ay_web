@@ -77,33 +77,7 @@
                             <div class="input-group">
                             <asp:DropDownList ID="ddlmange" class="form-control" runat="server"></asp:DropDownList>
                             </div>
-
-
-
-
-
                         </td>
-                    </tr>
-                     <tr  height="30" >
-                            <td>
-                            <div class="input-group date">
-                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                                <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
-                            </div>
-
-                             <div class="input-group date">
-                               <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                            <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
-                            </div>
-                            <div class="input-group">
-                            <!--<asp:Button ID="btn_Search" runat="server"  CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>-->
-                            <button Class="button btn  btn-danger" id="search" onclick="search(1)" >查询</button>
-                            </div>
-                             <div class="input-group">
-                            <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出"
-                            OnClick="btnExport_Click"></asp:Button>
-                            </div>
-                            </td>
                     </tr>
                     <tr  height="30" >
                         <td>
@@ -125,23 +99,35 @@
                         </div>
                             <asp:TextBox ID="txtSuppOrder" runat="server" class="form-control"></asp:TextBox>
                         </div>
-
-
-
-
-
-
                         </td>
-
                         <td align="left" bgcolor="">
                         <div class="btn-group">
-                                              <button type="button" class="btn btn-default">总额：<% = TotalTranATM %></button>
-                                              <button type="button" class="btn btn-default">商户所得：<% = TotalUserATM %></button>
-                                              <button type="button" class="btn btn-default">业务总提成：<% = TotalCommission %></button>
-                                              <button type="button" class="btn btn-default">平台利润：<% = TotalProfit%></button>
-                                            </div>
-
+						  <button type="button" class="btn btn-default">总额：<% = TotalTranATM %></button>
+						  <button type="button" class="btn btn-default">商户所得：<% = TotalUserATM %></button>
+						  <button type="button" class="btn btn-default">业务总提成：<% = TotalCommission %></button>
+						  <button type="button" class="btn btn-default">平台利润：<% = TotalProfit%></button>
+						</div>
                         </td>
+						<tr  height="30" >
+                            <td>
+                            <div class="input-group date">
+                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
+                                <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
+                            </div>
+
+                             <div class="input-group date">
+                               <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
+                            <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
+                            </div>
+                            <div class="input-group">
+                            <!--<asp:Button ID="btn_Search" runat="server"  CssClass="button btn  btn-danger" Text=" 查　询 " OnClick="btn_Search_Click"></asp:Button>-->
+                            <button Class="button btn  btn-danger" id="search" onclick="search(1)" >查　询</button>
+                            </div>
+                             <div class="input-group">
+                            <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导　出" OnClick="btnExport_Click"></asp:Button>
+                            </div>
+                            </td>
+                    </tr>						
                     </tr>
                 </table>
             </td>

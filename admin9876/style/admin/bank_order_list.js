@@ -27,8 +27,8 @@ function search(page) {
             $("#search").html("查询中...");
         },
         success: function (data, textStatus) {
-            data = JSON.parse(data);
-            $("#search").html("查询");
+			data = JSON.parse(data);
+            $("#search").html("查　询");
 
 
             if (data['success']) {

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.DebugInfos" Codebehind="DebugInfos.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.RunLogList" Codebehind="RunLogList.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
@@ -44,7 +44,7 @@
 
                 <div class="input-group">
                 <div class="input-group-btn">
-                <button type="button" class="btn btn-primary">用户ID</button>
+                <button type="button" class="btn btn-primary">商户号</button>
                 </div>
                 <asp:TextBox ID="txtuserId" runat="server" class="form-control"></asp:TextBox>
                 </div>
@@ -89,7 +89,7 @@
                                     交易号
                                 </td>
                                 <td style="width:10%">
-                                    商户ID
+                                    商户号
                                 </td>
                                 <td style="width:10%">
                                     用户名
@@ -121,7 +121,7 @@
                                     <%# Eval("userorder")%>
                                 </td>
                                 <td>
-                                    <%# Eval("userid")%>
+                                    <%# Eval("MerchantName")%>
                                 </td>
                                 <td>
                                     <a href="javascript:sendInfo('<%# Eval("userid")%>')">
@@ -129,7 +129,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.debugtypeenum), Eval("bugtype"))%>
+                                    <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.LogTypeEnum), Eval("logtype"))%>
                                 </td>
                                 <td style="word-break:break-all">
                                     <%# Eval("url")%>
@@ -156,7 +156,7 @@
                                         <%# Eval("userorder")%>
                                     </td>
                                     <td>
-                                        <%# Eval("userid")%>
+                                        <%# Eval("MerchantName")%>
                                     </td>
                                     <td>
                                         <a href="javascript:sendInfo('<%# Eval("userid")%>')">
@@ -164,7 +164,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.debugtypeenum), Eval("bugtype"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Sys.LogTypeEnum), Eval("logtype"))%>
                                     </td>
                                     <td style="word-break:break-all">
                                         <%# Eval("url")%>
@@ -282,7 +282,7 @@
                         });
           }
           function showInfo(id) {
-          //    window.open("DebugInfoShow.aspx?id=" + id, "查看详细信息", "Width=800px;Height=350px;");
+          //    window.open("RunLogShow.aspx?id=" + id, "查看详细信息", "Width=800px;Height=350px;");
                layer.ready(function(){
                             //自定页
                             layer.open({
@@ -291,7 +291,7 @@
                                 skin: 'layui-layer-rim', //加上边框
                                 //closeBtn: 0, //不显示关闭按钮
                                 area: ['67%', '90%'], //宽高
-                                content: "DebugInfoShow.aspx?id=" + id,
+                                content: "RunLogShow.aspx?id=" + id,
                             });
                         });
           }

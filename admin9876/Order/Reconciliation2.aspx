@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Reconciliation2"
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.Reconciliation2"
     ValidateRequest="false" CodeBehind="Reconciliation2.aspx.cs" %>
 
 <!-----------------header---------------->
