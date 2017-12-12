@@ -42,8 +42,8 @@ vertical-align: middle !important;
                             <td>
                             <div class="input-group">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">用户ID</button></div>
-                                <asp:TextBox ID="txtuserId" runat="server" class="form-control"></asp:TextBox></div>
+                                <button type="button" class="btn btn-primary">用户号</button></div>
+                                <asp:TextBox ID="txtMerchantName" runat="server" class="form-control"></asp:TextBox></div>
                             <div class="input-group date">
                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
                                 <asp:TextBox ID="StimeBox" runat="server" class="form-control"></asp:TextBox></div>
@@ -73,7 +73,7 @@ vertical-align: middle !important;
                                         <input id="chkAll" type="checkbox">
                                     </td>
                                     <td>
-                                        商户ID
+                                        商户号
                                     </td>
                                     <td>
                                         用户名
@@ -104,7 +104,7 @@ vertical-align: middle !important;
                                         <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("id")%>' name="chkItem" />
                                     </td>
                                     <td>
-                                        <%# Eval("userid")%>
+                                        <%# Eval("merchantname")%>
                                     </td>
                                     <td>
                                         <a href="javascript:sendInfo('<%# Eval("userid")%>')">
@@ -112,7 +112,7 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                         <%# Eval("optype")%>
+                                         <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettleTypeEnum),Eval("optype"))%>
                                     </td>
                                     <td>
                                         <%# Eval("increaseAmt", "{0:f2}")%>

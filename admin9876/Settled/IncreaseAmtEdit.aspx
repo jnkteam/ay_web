@@ -110,12 +110,12 @@ padding:12px 15px 15px 15px;
         </tr>
         <tr>
             <td class="td2">
-                用户ID ：
+                用户号 ：
             </td>
             <td class="td1">
-                <asp:TextBox ID="txtuserId" runat="server" Width="200px"></asp:TextBox>
+                <asp:TextBox ID="txtMerchantName" runat="server" Width="200px"></asp:TextBox>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" 
-                    ControlToValidate="txtuserId" Display="Dynamic" ErrorMessage="不存在此用户" 
+                    ControlToValidate="txtMerchantName" Display="Dynamic" ErrorMessage="不存在此用户" 
                     onservervalidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
             </td>
         </tr>

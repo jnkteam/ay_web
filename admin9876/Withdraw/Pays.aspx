@@ -40,81 +40,42 @@ vertical-align: middle !important;
                 <td colspan="2">
                     <table>
                         <tr height="30" >
-                            <td colspan="2">
+                            <td>
                                 <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">商户ID</button></div>
-                                <asp:TextBox ID="txtUserId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">商 户 号</button></div>
+									<asp:TextBox ID="txtMerchantName" class="form-control" runat="server" Width="80px"></asp:TextBox>
+								</div>
                                 <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">申请ID</button></div>
-                                <asp:TextBox ID="txtItemInfoId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
-                            <div class="input-group">
-                            <asp:DropDownList class="form-control" ID="ddlbankName" runat="server">
-                                <asp:ListItem value="">--收款银行--</asp:ListItem>
-                                <asp:ListItem value="0002">支付宝</asp:ListItem>
-                                <asp:ListItem value="0003">财付通</asp:ListItem>
-                                <asp:ListItem value="1002">中国工商银行</asp:ListItem>
-                                <asp:ListItem value="1005">中国农业银行</asp:ListItem>
-                                <asp:ListItem value="1003">中国建设银行</asp:ListItem>
-                                <asp:ListItem value="1026">中国银行</asp:ListItem>
-                                <asp:ListItem value="1001">招商银行</asp:ListItem>
-                                <asp:ListItem value="1006">民生银行</asp:ListItem>
-                                <asp:ListItem value="1020">交通银行</asp:ListItem>
-                                <asp:ListItem value="1025">华夏银行</asp:ListItem>
-                                <asp:ListItem value="1009">兴业银行</asp:ListItem>
-                                <asp:ListItem value="1027">广发银行</asp:ListItem>
-                                <asp:ListItem value="1004">浦发银行</asp:ListItem>
-                                <asp:ListItem value="1022">光大银行</asp:ListItem>
-                                <asp:ListItem value="1021">中信银行</asp:ListItem>
-                                <asp:ListItem value="1010">优奇支付银行</asp:ListItem>
-                                <asp:ListItem value="1066">中国邮政储蓄银行</asp:ListItem>
-                            </asp:DropDownList>
-                            </div>
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">申请ID</button></div>
+									<asp:TextBox ID="txtItemInfoId" class="form-control" runat="server" Width="80px"></asp:TextBox>
+								</div>
+								<div class="input-group">
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">收款账户</button></div>
+									<asp:TextBox ID="txtAccount" runat="server" class="form-control" ></asp:TextBox>
+								</div>								
                             </td>
                         </tr>
                         <tr height="30" >
-                            <td colspan="2">
-                                <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">收款账户</button></div>
-                            <asp:TextBox ID="txtAccount" runat="server" class="form-control" ></asp:TextBox></div>
-                                <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">收款人</button></div>
-                            <asp:TextBox ID="txtpayeeName" runat="server" class="form-control"></asp:TextBox></div>
-                            <div class="input-group">
-                            <asp:DropDownList ID="ddlmode" class="form-control" runat="server">
-                            </asp:DropDownList></div>
-                            <div class="input-group">
-                            <asp:DropDownList ID="ddlSupplier" class="form-control" runat="server">
-                            </asp:DropDownList></div>
-                            </td>
-                        </tr>
-                        <tr height="30" >
-                            <td colspan="2">
+                            <td>
+								<div class="input-group"><asp:DropDownList class="form-control" ID="ddlbankName" runat="server"></asp:DropDownList></div>
+								<div class="input-group"><asp:DropDownList ID="ddlmode" class="form-control" runat="server"></asp:DropDownList></div>
+								<div class="input-group"><asp:DropDownList ID="ddlSupplier" class="form-control" runat="server"></asp:DropDownList></div>
+  								<div class="input-group"><asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
+								<div class="input-group">
+									<asp:RadioButtonList  ID="rbl_export_mode"  runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"  Visible="False">
+										<asp:ListItem Selected="True" Value="1">excel</asp:ListItem>
+										<asp:ListItem Value="2">txt</asp:ListItem>
+									</asp:RadioButtonList>
+								</div>
+								<div class="input-group"><asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click" Visible="False"></asp:Button></div>
+								<div class="input-group">
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">二级密码</button></div>
+									<asp:TextBox ID="txtPassWord" class="form-control" runat="server" TextMode="Password"></asp:TextBox>
+								</div>
 
-                            <div class="input-group">
-                            <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                            </asp:Button></div>
-
-                            <div class="input-group">
-                            <asp:RadioButtonList  ID="rbl_export_mode"  runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                            <asp:ListItem Selected="True" Value="1">excel</asp:ListItem>
-                            <asp:ListItem Value="2">txt</asp:ListItem>
-                            </asp:RadioButtonList></div>
-
-                            <div class="input-group">
-                            <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click"></asp:Button></div>
-
-                            <div class="input-group">
-                            <div class="input-group-btn">
-                            <button type="button" class="btn btn-primary">二级密码</button></div>
-                            <asp:TextBox ID="txtPassWord" class="form-control" runat="server" TextMode="Password"></asp:TextBox></div>
-
-                            <div class="input-group">
-                            <asp:Button ID="btnAllSettle" runat="server" CssClass="button btn  btn-danger" Text="批量支付" onclick="btnAllSettle_Click" OnClientClick="return checkAll();">
-                            </asp:Button></div>
+								<div class="input-group">
+									<asp:Button ID="btnAllSettle" runat="server" CssClass="button btn  btn-danger" Text="批量支付" onclick="btnAllSettle_Click" OnClientClick="return checkAll();"></asp:Button>
+								</div>
                             </td>
                         </tr>
                     </table>
@@ -154,6 +115,9 @@ vertical-align: middle !important;
                                     <td style="width: 10%">
                                         申请时间
                                     </td>
+									<td style="width: 10%">
+                                        审核时间
+                                    </td>
                                     <td style="width: 15%">
                                         状态
                                     </td>
@@ -192,9 +156,12 @@ vertical-align: middle !important;
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>
                                     </td>
+									<td>
+                                        <%# Eval("paytime","{0:yyyy-MM-dd HH:mm:ss}") %>
+                                    </td>									
                                     <td>
-                                        <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>);">修改</a>
-                                        <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>);">进行支付</a>
+                                        <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>,'modi');">修改</a>
+                                        <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>,'pay');">进行支付</a>
                                     </td>
                                     <td>
                                         <input id="<%# Eval("ID") %>" type="checkbox" name="ischecked" class="qx" value="<%# Eval("ID") %>" />
@@ -243,7 +210,7 @@ vertical-align: middle !important;
         }
     </script>
     <script type="text/javascript">
-        function showOrder(id) {
+        function showOrder(id,action) {
         //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
             layer.ready(function(){
                 //自定页
@@ -253,7 +220,7 @@ vertical-align: middle !important;
                     skin: 'layui-layer-rim', //加上边框
                     //closeBtn: 0, //不显示关闭按钮
                     area: ['67%', '90%'], //宽高
-                    content: "Pay.aspx?action=modi&ID" + id,
+                    content: "Pay.aspx?action="+action+"&ID=" + id,
                 });
             });
         }

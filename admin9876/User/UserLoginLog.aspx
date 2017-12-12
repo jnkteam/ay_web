@@ -38,8 +38,9 @@
                     <div class="input-group">
                     <asp:DropDownList ID="SeachType" class="form-control" runat="server" EnableViewState="false">
                         <asp:ListItem Value="">搜索条件</asp:ListItem>
-                        <asp:ListItem Value="UserName">用户名</asp:ListItem>
-                        <asp:ListItem Value="UserId">用户ID</asp:ListItem>
+                        <asp:ListItem Value="MerchantName">商户名</asp:ListItem>
+                        <asp:ListItem Value="UserName">用户名</asp:ListItem>								
+                        <asp:ListItem Value="UserId">用户ID</asp:ListItem>		
                     </asp:DropDownList>
                     </div>
                     <div class="input-group">
@@ -69,14 +70,14 @@
             <tr>
                 <td align="center">
                     <table width="100%" id="tab" border="0" align="center" cellpadding="2" class="table table-bordered table-hover dataTable" cellspacing="1" class="11">
-                        <asp:Repeater ID="rptUsers" EnableViewState="false" runat="server">
+                        <asp:Repeater ID="rptUsers" runat="server">
                             <HeaderTemplate>
                                 <tr height="30"  style="background: #e8eaee">
                                     <td style="width:5%">
                                         <input id="chkAll" type="checkbox">
                                     </td>
                                     <td>
-                                        商户ID</td>
+                                        商户名</td>
                                     <td>
                                         用户名</td>
                                     <td>
@@ -97,7 +98,7 @@
                                         <input id="chkItem" type="checkbox" value='<%#Eval("id")%>' name="chkItem"/>
                                     </td>
                                     <td>
-                                        <%# Eval("userID")%>
+                                        <%# Eval("MerchantName")%>
                                     </td>
                                     <td>
                                         <%# Eval("userName")%>

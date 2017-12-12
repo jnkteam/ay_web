@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Historys"
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Withdraw.Historys"
     CodeBehind="Historys.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
@@ -48,35 +48,12 @@ vertical-align: middle !important;
 
                                 <div class="input-group">
                                     <div class="input-group-btn">
-                                    <button type="button" class="btn btn-primary">商户ID</button></div>
-                                <asp:TextBox ID="txtUserId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
+                                    <button type="button" class="btn btn-primary">商户号</button></div>
+                                <asp:TextBox ID="txtMerchantName" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
                                 <div class="input-group">
                                     <div class="input-group-btn">
                                     <button type="button" class="btn btn-primary">申请ID</button></div>
                                 <asp:TextBox ID="txtItemInfoId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
-
-                                <div class="input-group">
-                                <asp:DropDownList class="form-control" ID="ddlbankName" runat="server">
-                                    <asp:ListItem Value="">--收款银行--</asp:ListItem>
-                                    <asp:ListItem Value="0002">支付宝</asp:ListItem>
-                                    <asp:ListItem Value="0003">财付通</asp:ListItem>
-                                    <asp:ListItem Value="1002">中国工商银行</asp:ListItem>
-                                    <asp:ListItem Value="1005">中国农业银行</asp:ListItem>
-                                    <asp:ListItem Value="1003">中国建设银行</asp:ListItem>
-                                    <asp:ListItem Value="1026">中国银行</asp:ListItem>
-                                    <asp:ListItem Value="1001">招商银行</asp:ListItem>
-                                    <asp:ListItem Value="1006">民生银行</asp:ListItem>
-                                    <asp:ListItem Value="1020">交通银行</asp:ListItem>
-                                    <asp:ListItem Value="1025">华夏银行</asp:ListItem>
-                                    <asp:ListItem Value="1009">兴业银行</asp:ListItem>
-                                    <asp:ListItem Value="1027">广发银行</asp:ListItem>
-                                    <asp:ListItem Value="1004">浦发银行</asp:ListItem>
-                                    <asp:ListItem Value="1022">光大银行</asp:ListItem>
-                                    <asp:ListItem Value="1021">中信银行</asp:ListItem>
-                                    <asp:ListItem Value="1010">优奇支付银行</asp:ListItem>
-                                    <asp:ListItem Value="1066">中国邮政储蓄银行</asp:ListItem>
-                                </asp:DropDownList>
-                                </div>
 
                                 <div class="input-group">
                                     <div class="input-group-btn">
@@ -90,22 +67,25 @@ vertical-align: middle !important;
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td>							
+                                <div class="input-group">
+									<asp:DropDownList class="form-control" ID="ddlbankName" runat="server"></asp:DropDownList>
+                                </div>
+								
                                 <div class="input-group">
                                     <asp:DropDownList class="form-control" ID="ddlmode" runat="server">
                                     </asp:DropDownList></div>
                                 <div class="input-group">
                                     <asp:DropDownList class="form-control" ID="ddlSupplier" runat="server">
                                     </asp:DropDownList></div>
-                             <div class="input-group date">
-                                 <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                                    <asp:TextBox ID="txtStimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
-                             <div class="input-group date">
-                                 <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                                    <asp:TextBox ID="txtEtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
+								 <div class="input-group date">
+									 <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
+										<asp:TextBox ID="txtStimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
+								 <div class="input-group date">
+									 <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
+										<asp:TextBox ID="txtEtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox></div>
                                 <div class="input-group">
-                                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                                    </asp:Button></div>
+                                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
                                 <div class="input-group">
                                     <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click"/></div>
                                 <div class="input-group">
@@ -129,7 +109,7 @@ vertical-align: middle !important;
                                         序号
                                     </td>
                                     <td>
-                                        商户
+                                        商户号
                                     </td>
                                     <td>
                                         收款信息
@@ -161,11 +141,10 @@ vertical-align: middle !important;
                                     </td>
                                     <td>
                                         <a href="?action=paylistbyid&userid=<%#Eval("userid")%>">
-                                            <%#Eval("UserName")%>(#<%#Eval("userid")%>)
+                                            <%#Eval("merchantname")%>(#<%#Eval("userid")%>)
                                         </a>
                                     </td>
                                     <td>
-                                        "PayeeBank" <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("Account")%>
                                     </td>

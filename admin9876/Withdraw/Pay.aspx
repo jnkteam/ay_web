@@ -2,7 +2,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head>
     <title>后台管理</title>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 
@@ -102,9 +102,9 @@ border-bottom: 1px solid #ddd;
                                         <tbody>
                                             <tr bgcolor="F6F6F6">
                                                 <td class="td3" colspan="1" height="40" valign="middle" style="width: 150px" align="center">
-                                                    &nbsp;用户ID</td>
+                                                    用户ID</td>
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
-                                                    用户名</td>
+                                                    商户名</td>
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
                                                     帐户余额</td>
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
@@ -112,11 +112,11 @@ border-bottom: 1px solid #ddd;
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
                                                     收款银行</td>
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
-                                                    开户地址</td>
+                                                    银行账号</td>													
                                                 <td class="td3" colspan="1" height="40" valign="middle" align="center">
-                                                    银行账号</td>
+                                                    开户地址</td>
                                                 <td class="td3" colspan="6" height="40" valign="middle" align="center">
-                                                    &nbsp;用户状态</td>
+                                                    用户状态</td>
                                             </tr>
                                             <tr bgcolor="ffffff">
                                                 <td class="td4" align="center" colspan="1" height="40" style="width: 150px" valign="middle">
@@ -128,11 +128,11 @@ border-bottom: 1px solid #ddd;
                                                 <td class="td4" colspan="1" height="40" valign="middle" align="center">
                                                     <asp:Label ID="PayeeNameLabel" runat="server"></asp:Label></td>
                                                 <td class="td4" colspan="1" height="40" valign="middle" align="center">
-                                                    <asp:Label ID="PayeeaddressLabel" runat="server"></asp:Label></td>
-                                                <td class="td4" colspan="1" height="40" valign="middle" align="center">
-                                                    <asp:Label ID="BankLabel" runat="server"></asp:Label></td>
+                                                    <asp:Label ID="BankLabel" runat="server"></asp:Label></td>													
                                                 <td class="td4" colspan="1" height="40" valign="middle" align="center">
                                                     <asp:Label ID="AccountLabel" runat="server"></asp:Label></td>
+                                                <td class="td4" colspan="1" height="40" valign="middle" align="center">
+                                                    <asp:Label ID="PayeeaddressLabel" runat="server"></asp:Label></td>													
                                                 <td class="td4" colspan="6" height="40" valign="middle" align="center">
                                                     <asp:Label ID="UserStatusLabel" runat="server" ForeColor="#00C000"></asp:Label></td>
                                             </tr>

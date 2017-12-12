@@ -43,8 +43,8 @@ vertical-align: middle !important;
                             <td>
                             <div class="input-group">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">用户ID</button></div>
-                                    <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox></div>
+                                <button type="button" class="btn btn-primary">用户号</button></div>
+                                    <asp:TextBox ID="txtMerchantName" class="form-control" runat="server"></asp:TextBox></div>
                                 <div class="input-group">
                                     <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
                             </td>
@@ -66,7 +66,7 @@ vertical-align: middle !important;
                                     <input id="chkAll" type="checkbox">
                                 </td>
                                 <td>
-                                    商户ID
+                                    商户号
                                 </td>
                                 <td>
                                     用户名
@@ -103,7 +103,7 @@ vertical-align: middle !important;
                                     <%# Eval("userid")%>
                                 </td>
                                 <td>
-                                    <%# Eval("userName")%>
+                                    <%# Eval("merchantname")%>
                                 </td>
                                 <td>
                                     <%# Eval("ContactName")%>

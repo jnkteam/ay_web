@@ -50,8 +50,8 @@
         </tr>
         <tr>
             <td>
-                用户ID
-                <asp:TextBox ID="txtuserId" runat="server"></asp:TextBox>
+                用户号
+                <asp:TextBox ID="txtMerchantName" runat="server"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" CssClass="button" Text=" 查 询 " OnClick="btnSearch_Click">
                 </asp:Button>
             </td>
@@ -67,7 +67,7 @@
                                     <input id="chkAll" type="checkbox">
                                 </td>
                                 <td>
-                                    商户ID
+                                    商户号
                                 </td> 
                                  <td>
                                     用户名
@@ -104,7 +104,7 @@
                                      <%# Eval("userid")%>
                                 </td>  
                                   <td>
-                                    <%# Eval("userName")%>
+                                    <%# Eval("merchantname")%>
                                 </td>  
                                 <td>
                                     <%# Eval("full_name")%>
@@ -138,7 +138,7 @@
                                      <%# Eval("userid")%>
                                 </td>  
                                   <td>
-                                    <%# Eval("userName")%>
+                                    <%# Eval("merchantname")%>
                                 </td>  
                                 <td>
                                     <%# Eval("full_name")%>

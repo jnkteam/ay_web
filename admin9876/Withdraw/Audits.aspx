@@ -38,84 +38,45 @@ vertical-align: middle !important;
             <tr style="height: 30px">
                 <td>
                     <table>
-                        <tr  height="30" >
-                            <td colspan="2">
-                                <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">商户ID</button></div>
-                                <asp:TextBox ID="txtUserId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
+                        <tr height="30" >
+                            <td>
+							
+							    <div class="input-group">
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">商 户 号</button></div>
+									<asp:TextBox ID="txtMerchantName" class="form-control" runat="server" Width="80px"></asp:TextBox>
+								</div>
 
                                 <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">申请ID</button></div>
-                                <asp:TextBox ID="txtItemInfoId" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">收款账户</button></div>
+									<asp:TextBox ID="txtAccount" class="form-control" runat="server" Width="80px"></asp:TextBox>
+								</div>
+
                                 <div class="input-group">
-                                <asp:DropDownList class="form-control" ID="ddlbankName" runat="server">
-                                <asp:ListItem value="">--收款银行--</asp:ListItem>
-                                <asp:ListItem value="0002">支付宝</asp:ListItem>
-                                <asp:ListItem value="0003">财付通</asp:ListItem>
-                                <asp:ListItem value="1002">中国工商银行</asp:ListItem>
-                                <asp:ListItem value="1005">中国农业银行</asp:ListItem>
-                                <asp:ListItem value="1003">中国建设银行</asp:ListItem>
-                                <asp:ListItem value="1026">中国银行</asp:ListItem>
-                                <asp:ListItem value="1001">招商银行</asp:ListItem>
-                                <asp:ListItem value="1006">民生银行</asp:ListItem>
-                                <asp:ListItem value="1020">交通银行</asp:ListItem>
-                                <asp:ListItem value="1025">华夏银行</asp:ListItem>
-                                <asp:ListItem value="1009">兴业银行</asp:ListItem>
-                                <asp:ListItem value="1027">广发银行</asp:ListItem>
-                                <asp:ListItem value="1004">浦发银行</asp:ListItem>
-                                <asp:ListItem value="1022">光大银行</asp:ListItem>
-                                <asp:ListItem value="1021">中信银行</asp:ListItem>
-                                <asp:ListItem value="1010">优奇支付银行</asp:ListItem>
-                                <asp:ListItem value="1066">中国邮政储蓄银行</asp:ListItem>
-                                </asp:DropDownList></div>
+									<div class="input-group-btn"><button type="button" class="btn btn-primary">申请ID</button></div>
+									<asp:TextBox ID="txtItemInfoId" class="form-control" runat="server" Width="80px"></asp:TextBox>
+								</div>
                             </td>
                         </tr>
-                        <tr  height="30" >
-                            <td colspan="2">
-                                <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">收款账户</button></div>
-                                <asp:TextBox ID="txtAccount" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
-
-                                <div class="input-group">
-                                <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">收款人</button></div>
-                                <asp:TextBox ID="txtpayeeName" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
-
-                                <div class="input-group">
-                                <asp:DropDownList class="form-control" ID="ddlmode" runat="server">
-                                </asp:DropDownList></div>
-
-                                <div class="input-group">
-                                <asp:DropDownList ID="ddlSupplier" class="form-control" runat="server">
-                                </asp:DropDownList></div>
-                            </td>
-                        </tr>
-                        <tr  height="30" >
-                            <td colspan="2">
-                            <div class="input-group">
-                                <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                    </asp:Button></div>
-                            <div class="input-group">
-                                <asp:Button ID="btnPass" runat="server" CssClass="button btn  btn-danger"  Text="批量通过审核"
-                        OnClick="btnPass_Click"></asp:Button></div>
-                            <div class="input-group">
-                                <asp:Button ID="btnAllPass" runat="server" CssClass="button btn  btn-danger"  Text="全部通过审核"
-                        OnClick="btnAllPass_Click"></asp:Button></div>
-                            <div class="input-group">
-                                <asp:Button ID="btnallfail" runat="server" CssClass="button btn  btn-danger" Text="全部拒绝"
-                        OnClick="btnallfail_Click"></asp:Button></div>
-                            <div class="input-group">
-                                <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click">
-                            </asp:Button></div>
-                            </td>
+                        <tr height="30" >
+                            <td>
+							    <div class="input-group"><asp:DropDownList class="form-control" ID="ddlbankName" runat="server"></asp:DropDownList></div>
+								<div class="input-group"><asp:DropDownList class="form-control" ID="ddlmode" runat="server"></asp:DropDownList></div>
+								<div class="input-group"><asp:DropDownList ID="ddlSupplier" class="form-control" runat="server"></asp:DropDownList></div>
+								<div class="input-group">
+									<asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
+								<div class="input-group">
+									<asp:Button ID="btnPass" runat="server" CssClass="button btn  btn-danger"  Text="批量通过审核" OnClick="btnPass_Click"></asp:Button></div>
+								<div class="input-group">
+									<asp:Button ID="btnAllPass" runat="server" CssClass="button btn  btn-danger"  Text="全部通过审核" OnClick="btnAllPass_Click"></asp:Button></div>
+								<div class="input-group">
+									<asp:Button ID="btnallfail" runat="server" CssClass="button btn  btn-danger" Text="全部拒绝" OnClick="btnallfail_Click"></asp:Button></div>
+								<div class="input-group">
+									<asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click"></asp:Button></div>
+                            </td>								
                         </tr>
                     </table>
                 </td>
             </tr>
-
             <tr>
                 <td bgcolor="#ffffff">
                     <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered">
@@ -211,12 +172,11 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                      "PayeeBank" <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-                                        "settmode"
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("amount","{0:f2}")%>
