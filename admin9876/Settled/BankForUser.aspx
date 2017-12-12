@@ -1,9 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.BankForUser" Codebehind="BankForUser.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Settled.BankForUser" Codebehind="BankForUser.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head id="Head1">
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
     <link href="../style/union.css" type="text/css" rel="stylesheet" />
@@ -34,7 +34,7 @@
         function isselect() {
             var result = false;
             $("input[type='checkbox']").each(function() {            
-                if ($(this).attr("id") != "chkAll") {
+                if ($(this).attr("userid") != "chkAll") {
                     if ($(this).attr('checked') == true) {
                         result = true;
                     }
@@ -151,13 +151,12 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <tr style="background-color: #EFF3FB">
-                                <asp:HiddenField ID="hfuserid" runat="server" Value='<%# Eval("id")%>' />
+                                <asp:HiddenField ID="hfuserid" runat="server" Value='<%# Eval("userid")%>' />
                                 <td>
-                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("id")%>' name="chkItem" />
+                                    <input id="chkItem" type="checkbox" runat="server" value='<%#Eval("userid")%>' name="chkItem" />
                                 </td>
                                 <td>
-                                    <%# Eval("id")%>
-                                    
+                                    <%# Eval("merchantname")%>                                    
                                 </td> 
                                 <td>
                                     <%# Eval("username")%>
@@ -172,19 +171,19 @@
                                     <%# Eval("Freeze", "{0:f2}")%>
                                 </td>
                                 <td>
-                                    <%# Eval("payeeName")%>
+                                    <%# Eval("AccountName")%>
                                 </td>
                                  <td>
-                                    <%#Eval("payeeBank").ToString())%>
+                                    <%# Eval("BankName") %>
                                 </td>
                                 <td>
-                                    <%# Eval("account")%>
+                                    <%# Eval("BankAccount")%>
                                 </td>
                                 <td>
                                     <%# Eval("bankAddress")%>
                                 </td>
                                 <td>
-                                    T+<%# Eval("settles")%>
+                                    <%# Eval("SchemeName")%>
                                 </td>
                                 <td>
                                     <asp:Literal ID="litTodayIncome" runat="server"></asp:Literal>
@@ -193,7 +192,7 @@
                                     <asp:TextBox ID="txtpayAmt" runat="server" Width="80px"></asp:TextBox>
                                 </td>                               
                                 <td>
-                                    <asp:Button ID="btnSettled" runat="server" CommandName="Settled" CommandArgument='<%#Eval("id")%>' Text="结算" />
+                                    <asp:Button ID="btnSettled" runat="server" CommandName="Settled" CommandArgument='<%# Eval("userid") %>' Text="结算" />
                                 </td>
                             </tr>
                         </ItemTemplate>

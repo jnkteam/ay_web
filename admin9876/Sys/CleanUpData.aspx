@@ -1,16 +1,139 @@
-ï»¿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="CleanUpData.aspx.cs" Inherits="ConsoleDll.Console.CleanUpData" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Sys.CleanUpData" Codebehind="CleanUpData.aspx.cs" %>
+<!-----------------header---------------->
+ <!-- #include file="../Top.aspx" -->
+<!-----------------header---------------->
+<!-----------------left------------------>
+ <!-- #include file="../Left.aspx" -->
+<!-----------------left------------------>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<style>
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
-    <title></title>
-</head>
-<body>
+#cbl_cacheTypeList td{text-align: left;}
+.my-center th{text-align: center !important;}
+#table2 td{vertical-align:middle;}
+.pass{width: 221px !important;}
+</style>
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Êý¾ÝÇåÀí
+        <small>µÚÈý·½Ö§¸¶Æ½Ì¨</small>
+      </h1>
+      <ol class="breadcrumb">
+
+      </ol>
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
     <form id="form1" runat="server">
     <div>
-    
+
+        <table width="100%" border="0" id="table2" cellpadding="3" cellspacing="1" class="table table-bordered table-hover dataTable">
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    ÒµÎñÀàÐÍ
+                </td>
+                <td>
+                <div class="input-group">
+                    <asp:CheckBoxList  ID="cbl_clearType" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem Value="order">½»Ò×¶©µ¥</asp:ListItem>
+                        <asp:ListItem Value="settled">½áËã¼ÇÂ¼</asp:ListItem>
+                        <asp:ListItem Value="stat">×ÛºÏÍ³¼Æ</asp:ListItem>                        
+                    </asp:CheckBoxList>
+                    </div>
+                </td>
+            </tr>
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    ½»Ò×ÀàÐÍ
+                </td>
+                <td>
+                    <asp:CheckBoxList ID="cb_where" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem Value="bank">ÍøÒø½»Ò×</asp:ListItem>
+                    </asp:CheckBoxList>
+                </td>
+            </tr>
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    ×´Ì¬Ñ¡Ôñ
+                </td>
+                <td>
+                    <asp:CheckBoxList ID="cb_stat" runat="server" RepeatDirection="Horizontal">
+                        <asp:ListItem Value="2">ÒÑ³É¹¦</asp:ListItem>
+                        <asp:ListItem Value="1">´¦ÀíÖÐ</asp:ListItem>
+                        <asp:ListItem Value="4">Ê§°Ü</asp:ListItem>
+                        <asp:ListItem Value="8">¿ÛÁ¿</asp:ListItem>
+                    </asp:CheckBoxList>
+                </td>
+            </tr>
+            <tr >
+                <td colspan="4" style="color: #ff0000">
+
+                    Êý¾ÝÇåÀíºó²»¿É»Ö¸´£¬½÷É÷Ê¹ÓÃ£¡ÈÕÆÚÑ¡ÔñÇåÀíÕâ¸öÈÕÆÚÖ®Ç°µÄËùÓÐÊý¾Ý
+
+                </td>
+            </tr>
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    Ñ¡ÔñÈÕÆÚ
+                </td>
+                <td colspan="6" >
+
+
+
+                            <div class="input-group date">
+                             <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;</div>
+                                <asp:TextBox ID="EtimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
+                            </div>
+                </td>
+
+            </tr>
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    ¶þ¼¶ÃÜÂë
+                </td>
+                <td colspan="6" >
+                <div class="input-group">
+                    <asp:TextBox class="form-control pass"  ID="txtcaozuo" runat="server"  TextMode="Password"></asp:TextBox>
+                    </div>
+                </td>
+            </tr>
+            <tr >
+                <td style="width: 15%; text-align: right">
+                    
+                </td>
+                <td >
+                    <asp:Button ID="btnCleanUp" runat="server" Text=" È·ÈÏÇåÀí " CssClass="button btn  btn-danger" OnClick="btndel_Click" />
+                    <asp:Label ID="lbmsg" runat="server" ForeColor="Red" Text=""></asp:Label>
+                </td>
+            </tr>
+        </table>
     </div>
     </form>
-</body>
-</html>
+</section>
+    </div>
+
+
+<!-----------------footer------------------>
+ <!-- #include file="../Footer.aspx" -->
+<!-----------------footer------------------>
+<script>
+  $(function () {
+
+
+
+
+     $("#EtimeBox").jeDate({
+
+                 format: "YYYY-MM-DD hh:mm:ss",
+
+             });
+
+
+
+  });
+  </script>

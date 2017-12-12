@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Pays" Codebehind="Pays.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Withdraw.Pays" Codebehind="Pays.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -174,7 +174,6 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                        "PayeeBank" <%# Eval("Payeeaddress")%> <br />
                                         <%# Eval("payeeName")%> <br />
                                         <%# Eval("Account")%>
                                     </td>
@@ -188,7 +187,7 @@ vertical-align: middle !important;
                                         <%# Convert.ToDecimal(Eval("amount")).ToString("f2") %>
                                     </td>
                                     <td>
-                                        "settmode"
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>

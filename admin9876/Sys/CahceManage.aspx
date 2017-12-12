@@ -1,16 +1,122 @@
-Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CahceManage.aspx.cs" Inherits="ConsoleDll.Console.CahceManage" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Sys.CahceManage" Codebehind="CahceManage.aspx.cs" %>
+<!-----------------header---------------->
+ <!-- #include file="../Top.aspx" -->
+<!-----------------header---------------->
+<!-----------------left------------------>
+ <!-- #include file="../Left.aspx" -->
+<!-----------------left------------------>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<style>
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
-    <title></title>
-</head>
-<body>
+#cbl_cacheTypeList td{text-align: left;}
+.my-center th{text-align: center !important;}
+</style>
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Õ¯πÿª∫¥Êπ‹¿Ì
+        <small>µ⁄»˝∑Ω÷ß∏∂∆ΩÃ®</small>
+      </h1>
+      <ol class="breadcrumb">
+
+      </ol>
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+
+            <table border="0" cellspacing="1" cellpadding="0" style="width: 100%; height: 100%;" id="table_zyads" class="table table-bordered">
+
+                <tr>
+                    <td align="center">
+                        <table style="border-right: #c9ddf0 1px solid; border-top: #c9ddf0 1px solid; border-left: #c9ddf0 1px solid;
+                            border-bottom: #c9ddf0 1px solid" cellspacing="0" cellpadding="0" width="100%"
+                            bgcolor="#f3f9fe" border="0" class="table table-bordered table-hover dataTable">
+                            <tr>
+                                <td>
+
+                                        <tr>
+                                            <td height="30" style="font-size: 14px;">
+                                             <div class="input-group">
+                                                ±æµÿª∫¥Ê◊‹¡ø£∫<asp:Label ID="CacheCountLabel" runat="server" Text="√ª”–ª∫¥Ê"></asp:Label>
+                                                </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="30">
+                                            <div class="input-group">
+                                                <asp:Button ID="btnDelAll" CssClass="button btn  btn-danger" runat="server" Text="«Âø’»´≤øª∫¥Ê"
+                                                    OnClick="btnDelAll_Click" />
+                                                    </div>
+                                                    </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="30">
+                                            <div class="input-group">
+                                                <asp:Label ID="Label1" runat="server" ForeColor="Red">œµÕ≥“¿Õ–ª∫¥Ê¿¥Ã·∏ﬂ‘À–––ß¬ °£«ÎŒÀÊ±„«Âø’ª∫¥Ê£°</asp:Label>
+                                                </div>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="30">
+                                            <div class="input-group">
+
+                                                <asp:CheckBoxList  ID="cbl_cacheTypeList" runat="server" Width="100%">
+
+                                                    <asp:ListItem  Value="CHANNELS">÷ß∏∂Õ®µ¿</asp:ListItem>
+                                                    <asp:ListItem Value="CHANNEL_TYPE">÷ß∏∂Õ®µ¿¿‡±</asp:ListItem>
+                                                    <asp:ListItem Value="CHANNEL_TYPE_USER_">”√ªß÷ß∏∂Õ®µ¿…Ë÷√</asp:ListItem>
+                                                    <asp:ListItem Value="NEWS">–¬Œ≈</asp:ListItem>
+                                                    <asp:ListItem Value="SUPPLIER_">Ω”ø⁄…Ã</asp:ListItem>
+                                                    <asp:ListItem Value="SUPPPAYRATE">π©”¶…Ã∑—¬ </asp:ListItem>
+                                                    <asp:ListItem Value="USER_">”√ªßª∫¥Ê</asp:ListItem>
+                                                    <asp:ListItem Value="USERHOST_">”√ªß¿¥¬∑Õ¯’æ¡–±Ì</asp:ListItem>
+                                                    <asp:ListItem Value="Question">∞≤»´Œ Ã‚¡–±Ì</asp:ListItem>
+                                                    <asp:ListItem Value="WEBINFO_">Õ¯’æ…Ë÷√</asp:ListItem>
+                                                    <asp:ListItem Value="SYSCONFIG">≈‰÷√–≈œ¢</asp:ListItem>
+                                                </asp:CheckBoxList>
+                                            </div>
+                                            <div style="clear: both"></div>
+                                                <div class="input-group">
+                                                <asp:Button ID="btnBigClass" CssClass="button btn  btn-danger"  runat="server" Text="«Â≥˝À˘—°¿‡±ª∫¥Ê"
+                                                    onclick="btnBigClass_Click" />
+                                                    </div>
+                                            </td>
+                                        </tr>
+                                        <tr><td>MemCachedª∫¥Ê</td></tr>
+                                        <tr>
+
+                                        <td>
+                                            <asp:GridView class="table table-bordered table-hover dataTable my-center" ID="gv_cache" runat="server" AutoGenerateColumns="False" Width="100%" DataKeyNames="cacheKey">
+                                                <Columns>
+                                                     <asp:TemplateField>
+                                                     <ItemTemplate>
+                                                            <asp:CheckBox ID="item" runat="server" />
+                                                     </ItemTemplate>
+                                                     </asp:TemplateField>
+                                                      <asp:BoundField HeaderText="ª∫¥Ê¿‡±" DataField="cacheType" />
+                                                      <asp:BoundField HeaderText="¿‡±√˚≥∆" DataField="cacheTypeName" />
+                                                    <asp:BoundField HeaderText="ª∫¥ÊKey" DataField="cacheKey" />                                                                                                   
+                                                </Columns>
+                                            </asp:GridView>
+                                            <asp:Button ID="btnClear" runat="server" CssClass="button btn  btn-danger" Text="∞¥–°¿‡«Â≥˝"
+                                                onclick="btnClear_Click"  />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>                               
+                            </tr>                            
+                        </table>                  
+
     </form>
-</body>
-</html>
+</section>
+    </div>
+
+
+<!-----------------footer------------------>
+ <!-- #include file="../Footer.aspx" -->
+<!-----------------footer------------------>

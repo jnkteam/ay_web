@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.ChannelEdit" Codebehind="ChannelEdit.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Channel.ChannelEdit" Codebehind="ChannelEdit.aspx.cs" %>
 
 <!DOCTYPE html>
 <head>

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.User.distribution.Distributions" Codebehind="Distributions.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Distribution.Distributions" Codebehind="Distributions.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -126,7 +126,7 @@
                                     <td>
                                         结算序号</td>  
                                     <td>
-                                        用户ID</td>
+                                        用户号</td>
                                     <td>
                                         付款信息</td>                                   
                                     <td>
@@ -158,18 +158,17 @@
                                          <%# Eval("settledId")%>
                                     </td>
                                     <td>
-                                         <%# Eval("userid")%>
+                                         <%#Eval("UserName")%>
                                     </td>                                    
                                     <td>
-                                        "bankCode" <%# Eval("bankBranch")%> <br />
-                                        <%# Eval("bankAccountName")%> <br />
+                                        <%# Eval("bankAccountName")%><br />
                                         <%# Eval("bankAccount")%>
                                     </td>
                                     <td>
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                       <%# Eval("status")%>
+									   <%#Enum.GetName(typeof(OriginalStudio.Model.Distribution.DistributionStatusEnum), Eval("status"))%>
                                     </td>
                                      <td>
                                         <%# Eval("processingTime", "{0:yyyy-MM-dd HH:mm:ss}")%>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.SupplierEdit" Codebehind="SupplierEdit.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Supplier.SupplierEdit" Codebehind="SupplierEdit.aspx.cs" %>
 
 <!DOCTYPE html>
 <html>

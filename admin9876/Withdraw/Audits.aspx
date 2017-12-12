@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Audits" CodeBehind="Audits.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Withdraw.Audits" CodeBehind="Audits.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -173,12 +173,11 @@ vertical-align: middle !important;
                                         </a>
                                     </td>
                                     <td>
-                                        PayeeBank <%# Eval("Payeeaddress")%> <br />
-                                        <%# Eval("payeeName")%> <br />
+                                        <%# Eval("payeeName")%><br />
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-                                       settmode
+									   <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("amount","{0:f2}")%>
