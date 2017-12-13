@@ -82,7 +82,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">第三方支付平台</p>
+    <p class="login-box-msg"><%=PlatformName%></p>
 
    <form id="form1" runat="server" onsubmit="return checkform()">
       <div class="form-group has-feedback">

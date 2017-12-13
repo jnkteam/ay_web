@@ -28,7 +28,7 @@
     <section class="content-header">
       <h1>
         网银状态报告
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -50,74 +50,10 @@
                         <td colspan="2">
                             <div class="input-group">
                                  <div class="input-group-btn">
-                                 <button type="button" class="btn btn-primary">商户ID</button>
+                                 <button type="button" class="btn btn-primary">商户号</button>
                                  </div>
-                                 <asp:TextBox ID="txtuserid" class="form-control" runat="server"></asp:TextBox>
+                                 <asp:TextBox ID="txtMerchantName" class="form-control" runat="server"></asp:TextBox>
                             </div>
-
-                            <div class="input-group">
-                            <%--  代理ID：
-                                 <asp:TextBox ID="txtpromid" runat="server" Width="30px"></asp:TextBox>--%>
-                                 <asp:DropDownList ID="ddlChannelType" class="form-control" runat="server" >
-                                 <asp:ListItem Value="">--通道类型--</asp:ListItem>
-                                 <asp:ListItem Value="102">网上银行</asp:ListItem>
-                                 <asp:ListItem Value="101">支付宝</asp:ListItem>
-                                 <asp:ListItem Value="100">财富通</asp:ListItem>
-                                 </asp:DropDownList>
-                            </div>
-
-
-
-
-                            <div class="input-group">
-                            <asp:DropDownList ID="ddlOrderStatus" class="form-control" runat="server" Width="95px">
-                                <asp:ListItem>--订单状态--</asp:ListItem>
-                                <asp:ListItem Value="2">已成功</asp:ListItem>
-                                <asp:ListItem Value="4">失败</asp:ListItem>
-                                <asp:ListItem Value="8">扣量</asp:ListItem>
-                            </asp:DropDownList>
-                            </div>
-
-                            <div class="input-group">
-                                <asp:DropDownList ID="ddlNotifyStatus" class="form-control" runat="server" Width="95px">
-                                <asp:ListItem>--下发状态--</asp:ListItem>
-                                <asp:ListItem Value="1">处理中</asp:ListItem>
-                                <asp:ListItem Value="2">已成功</asp:ListItem>
-                                <asp:ListItem Value="4">失败</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-
-                            <div class="input-group">
-                                 <asp:DropDownList ID="ddlmange" class="form-control" runat="server"></asp:DropDownList>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr height="30">
-                        <td>
-                            <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                               <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
-                            </div>
-
-                            <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                               <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
-                            </div>
-
-                            <div class="input-group">
-                               <asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>
-                            </div>
-
-
-                        </td>
-                    </tr>
-
-
-
-
-                    <tr height="30">
-                        <td>
                             <div class="input-group">
                             <div class="input-group-btn">
                             <button type="button" class="btn btn-primary">订单号</button>
@@ -135,14 +71,62 @@
                             <button type="button" class="btn btn-primary">接口商订单号</button>
                             </div>
                                 <asp:TextBox ID="txtSuppOrder" runat="server" class="form-control"></asp:TextBox>
+                            </div>							
+                        </td>
+                    </tr>
+                    <tr height="30">
+                        <td>
+                            <div class="input-group">
+                            <%--  代理ID：
+                                 <asp:TextBox ID="txtpromid" runat="server" Width="30px"></asp:TextBox>--%>
+                                 <asp:DropDownList ID="ddlChannelType" class="form-control" runat="server" >
+                                 <asp:ListItem Value="">--通道类型--</asp:ListItem>
+                                 <asp:ListItem Value="102">网上银行</asp:ListItem>
+                                 <asp:ListItem Value="101">支付宝</asp:ListItem>
+                                 <asp:ListItem Value="100">财富通</asp:ListItem>
+                                 </asp:DropDownList>
+                            </div>
+                            <div class="input-group">
+                            <asp:DropDownList ID="ddlOrderStatus" class="form-control" runat="server" Width="95px">
+                                <asp:ListItem>--订单状态--</asp:ListItem>
+                                <asp:ListItem Value="2">已成功</asp:ListItem>
+                                <asp:ListItem Value="4">失败</asp:ListItem>
+                                <asp:ListItem Value="8">扣量</asp:ListItem>
+                            </asp:DropDownList>
+                            </div>
+                            <div class="input-group">
+                                <asp:DropDownList ID="ddlNotifyStatus" class="form-control" runat="server" Width="95px">
+                                <asp:ListItem>--下发状态--</asp:ListItem>
+                                <asp:ListItem Value="1">处理中</asp:ListItem>
+                                <asp:ListItem Value="2">已成功</asp:ListItem>
+                                <asp:ListItem Value="4">失败</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="input-group">
+                                 <asp:DropDownList ID="ddlmange" class="form-control" runat="server"></asp:DropDownList>
                             </div>
                         </td>
                     </tr>
+                    <tr height="30">
+                        <td>
+                            <div class="input-group date">
+                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
+                               <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
+                            </div>
+
+                            <div class="input-group date">
+                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
+                               <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
+                            </div>
+
+                            <div class="input-group">
+                               <asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>
+                            </div>
+                        </td>
+                    </tr>					
                 </table>
             </td>
         </tr>
-
-
         <tr>
             <td bgcolor="#ffffff">
                 <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered">
@@ -154,7 +138,7 @@
                                     <HeaderTemplate>
                                         <tr height="30"  style="background: #e8eaee">
                                             <td>
-                                                商户ID
+                                                商户号
                                             </td>
                                             <td>
                                                 接口
@@ -169,7 +153,7 @@
                                                 通道类型
                                             </td>
                                             <td>
-                                                银行
+                                                通道
                                             </td>
                                              <td>
                                                 状态
@@ -192,10 +176,10 @@
                                         </tr>
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <tr height="30" ondblclick="javascript:sendInfo('<%# Eval("id")%>')">
+                                        <tr height="30" ondblclick="javascript:sendInfo('<%# Eval("userid")%>')">
                                             <td>
                                                 <a href="?action=userpay&userid=<%# Eval("userid") %>&status=2">
-                                                    <%# Eval("userid")%>
+                                                    <%# Eval("MerchantName")%>
                                                 </a>
                                             </td>
                                             <td>
@@ -208,10 +192,10 @@
                                                 <%# Eval("orderid")%>
                                             </td>
                                             <td>
-                                                <%# Eval("modetypename")%>
+                                                <%# Eval("TypeName")%>
                                             </td>
                                             <td>
-                                                <%# Eval("modeName")%>
+                                                <%# Eval("ChannelName")%>
                                             </td>
                                              <td>
                                                 <%# getStatusStyle(Eval("status").ToString()) %>
@@ -234,49 +218,6 @@
                                             </td>
                                         </tr>
                                     </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        <tr height="30" ondblclick="javascript:sendInfo('<%# Eval("id")%>')">
-                                              <td>
-                                                <a href="?action=userpay&userid=<%# Eval("userid") %>&status=2">
-                                                    <%# Eval("userid")%>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <%# Eval("version")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("userorder")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("orderid")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("modetypename")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("modeName")%>
-                                            </td>
-                                             <td>
-                                                 <%# getStatusStyle(Eval("status").ToString()) %>
-                                            </td>
-                                            <td>
-                                                <%# getNotifystatStatusStyle(Eval("notifystat").ToString()) %>
-                                            </td>
-                                             <td>
-                                                <%# Eval("notifytime")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("notifycount")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("notifycount")%>
-                                            </td>
-                                            <td>
-                                            <button class="button btn btn-xs  btn-info"><a style="color: #fff;" href="javascript:openuserurl('<%# Eval("againNotifyUrl")%>')">查看</a></button>
-                                                <asp:Button ID="btnReissue" class="button btn btn-xs  btn-info" runat="server" Text="补发" ToolTip="手动回发" CommandName="Reissue" CommandArgument='<%# Eval("orderid")%>' />
-                                            </td>
-                                        </tr>
-                                    </AlternatingItemTemplate>
                                 </asp:Repeater>
                             </table>
                         </td>

@@ -18,7 +18,7 @@
     <section class="content-header">
       <h1>
         商户管理
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
 
       <ol class="breadcrumb">
@@ -44,7 +44,6 @@
                            证件审核
                         </a>
         </div>
-
             <tr height="30" >
                 <td>
                     <div class="input-group">
@@ -88,10 +87,9 @@
                     --%>
                 </td>
             </tr>
-
+                <%--
             <tr height="30" >
                 <td>
-                <%--
                     <div class="input-group">
                         <asp:DropDownList ID="ddlisSpecialPayRate" class="form-control" runat="server">
                             <asp:ListItem Value="">—单独费率—</asp:ListItem>
@@ -113,45 +111,32 @@
                             <asp:ListItem Value="0">未设置</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    --%>
+
                     <div class="input-group">
-                                        <div class="input-group-btn">
-                                           <button type="button" class="btn btn-primary">QQ号码</button>
-                                        </div>
-                                        <asp:TextBox ID="txtQQ" class="form-control" runat="server"></asp:TextBox>
-                                        </div>
+						<div class="input-group-btn">
+						   <button type="button" class="btn btn-primary">QQ号码</button>
+						</div>
+						<asp:TextBox ID="txtQQ" class="form-control" runat="server"></asp:TextBox>
+						</div>
 
-                                        <div class="input-group">
-                                        <div class="input-group-btn">
-                                           <button type="button" class="btn btn-primary">手机</button>
-                                        </div>
-                                        <asp:TextBox ID="txtTel" class="form-control" runat="server"></asp:TextBox>
-                                        </div>
+						<div class="input-group">
+						<div class="input-group-btn">
+						   <button type="button" class="btn btn-primary">手机</button>
+						</div>
+						<asp:TextBox ID="txtTel" class="form-control" runat="server"></asp:TextBox>
+						</div>
 
-                                        <div class="input-group">
-                                        <div class="input-group-btn">
-                                           <button type="button" class="btn btn-primary">Email</button>
-                                        </div>
-                                        <asp:TextBox ID="txtMail" class="form-control" runat="server"></asp:TextBox>
-                                        </div>
-
-
-
-
+						<div class="input-group">
+						<div class="input-group-btn">
+						   <button type="button" class="btn btn-primary">Email</button>
+						</div>
+						<asp:TextBox ID="txtMail" class="form-control" runat="server"></asp:TextBox>
+						</div>
                 </td>
             </tr>
-
+                    --%>
             <tr height="30" >
                 <td>
-
-<div class="input-group">
-                    <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button>
-                    </div>
-
-                    <div class="input-group">
-                    <asp:Button ID="btnDelete" runat="server" CssClass="button btn  btn-primary" Text=" 删 除" onclick="btnDelete_Click"> </asp:Button>
-                    </div>
-
                     <div class="input-group">
                     <asp:Button ID="btnCashTo" runat="server" CssClass="button btn  btn-primary" Text="提 现" OnClientClick="return GetMoney_Confirm();" Visible="false"></asp:Button>
                     </div>
@@ -170,8 +155,14 @@
                     </div>
 
                     <div class="input-group">
-                    <input type="button" class="button btn  btn-primary" value="发送手机短信" onclick="sentsmswin();" />
+						<input type="button" class="button btn  btn-primary" value="发短信" onclick="sentsmswin();" />
                     </div>
+					<div class="input-group">
+						<asp:Button ID="btnDelete" runat="server" CssClass="button btn  btn-primary" Text=" 删 除" onclick="btnDelete_Click"> </asp:Button>
+                    </div>
+					<div class="input-group">
+						<asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button>
+                    </div>					
                    
                 </td>
             </tr>

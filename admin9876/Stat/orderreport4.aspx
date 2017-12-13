@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.orderreport4" Codebehind="orderreport4.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.OrderReport4" Codebehind="OrderReport4.aspx.cs" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
 <!-----------------header---------------->
@@ -17,7 +17,7 @@
     <section class="content-header">
       <h1>
         代理收益
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -32,22 +32,19 @@
 
         <tr>
             <td>
-                           <div class="input-group date">
-                                                                       <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                                                                          <asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
-                                                                      </div>
+					<div class="input-group date">
+						<div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
+						<asp:TextBox ID="StimeBox"  class="form-control"  runat="server" Width="65px"></asp:TextBox>
+					</div>
 
-                                           <div class="input-group date">
-                                                                        <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                                                                     <asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
-                                                                     </div>
+					<div class="input-group date">
+						<div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
+						<asp:TextBox ID="EtimeBox" runat="server" class="form-control" Width="65px"></asp:TextBox>
+					</div>
 
-                             <div class="input-group">
-
-
-                            <asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click">
-                                                                     </asp:Button>
-                                                                     </div>
+					<div class="input-group">
+						<asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>
+					</div>
             </td>
         </tr>
         <tr>
@@ -56,25 +53,23 @@
                     <tr>
                         <td align="center">
                             <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered table-hover dataTable">
-                                <asp:Repeater ID="rep_report" runat="server" 
-                                    OnItemDataBound="rptOrders_ItemDataBound" 
-                                    onitemcommand="rep_report_ItemCommand">
+                                <asp:Repeater ID="rep_report" runat="server" OnItemDataBound="rptOrders_ItemDataBound"  onitemcommand="rep_report_ItemCommand">
                                     <HeaderTemplate>
                                         <tr height="30"  style="background: #e8eaee">
                                             <td>
-                                                用户ID
+                                                代理名
                                             </td>
                                             <td>
-                                                用户名称
+                                                代理名称
                                             </td>
                                             <td>
-                                                真实姓名
+                                                日期
                                             </td>
                                             <td>
-                                                <asp:LinkButton ID="iBtnpromAmt" runat="server" CommandName="promAmt">收益金额</asp:LinkButton>
+                                                代理收益
                                             </td>
                                             <td>
-                                                <asp:LinkButton ID="iBtnrealvalue" runat="server" CommandName="realvalue">下线总充值金额</asp:LinkButton>
+                                                交易总金额
                                             </td>
                                             <td>
                                                 下级商户
@@ -84,47 +79,25 @@
                                     <ItemTemplate>
                                         <tr bgcolor="#EFF3FB">
                                             <td>
-                                                <%# Eval("agentid")%>
+                                                <%# Eval("代理号")%>
                                             </td>
                                              <td>
-                                                <%# Eval("username")%>
+                                                <%# Eval("代理名")%>
                                             </td>
                                              <td>
-                                                <%# Eval("full_name")%>
+                                                <%# Eval("日期")%>
                                             </td>
                                             <td>
-                                                <%# Eval("promAmt", "{0:f2}")%>
+                                                <%# Eval("利润", "{0:f2}")%>
                                             </td>
                                             <td>
-                                                <%# Eval("realvalue", "{0:f2}")%>                                           
+                                                <%# Eval("总订单金额", "{0:f2}")%>                                           
                                             </td>
                                             <td>
-                                                <a href="../User/UserList.aspx?agentid=<%# Eval("agentid")%>">查看</a>                                       
+                                                <a href="../User/UserList.aspx?agentid=<%# Eval("userid")%>">查看</a>                                       
                                             </td>
                                         </tr>
                                     </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        <tr bgcolor="#ffffff" >
-                                           <td>
-                                                <%# Eval("agentid")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("username")%>
-                                            </td>
-                                             <td>
-                                                <%# Eval("full_name")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("promAmt", "{0:f2}")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("realvalue", "{0:f2}")%>                                           
-                                            </td>
-                                            <td>
-                                                <a href="../User/UserList.aspx?agentid=<%# Eval("agentid")%>">查看</a>                                                
-                                            </td>
-                                        </tr>
-                                    </AlternatingItemTemplate>
                                 </asp:Repeater>
                             </table>
                         </td>
