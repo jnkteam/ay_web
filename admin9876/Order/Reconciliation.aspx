@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Reconciliation" ValidateRequest="false" Codebehind="Reconciliation.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.Reconciliation" ValidateRequest="false" Codebehind="Reconciliation.aspx.cs" %>
 
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
@@ -23,7 +23,7 @@
     <section class="content-header">
       <h1>
         对账查询
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -35,141 +35,25 @@
     <section class="content">
 
     <form id="form1" runat="server">
-        <table width="100%" border="0" cellspacing="1" cellpadding="3"  class="table table-bordered table-hover dataTable">
-
+        <table width="100%" border="0" cellspacing="1" cellpadding="3"  class="table table-bordered table-hover dataTable">         
             <tr>
-                <td class="td2">
-                    接口商</td>
-                <td colspan="3" class="td1">
-                <div class="input-group">
-                    <asp:DropDownList ID="ddlsupp" class="form-control" runat="server">
-                        <asp:ListItem Value="80">欧飞</asp:ListItem>
-                        <asp:ListItem Value="60866">60866</asp:ListItem>
-                        <asp:ListItem Value="81">汇元</asp:ListItem>
-                        <asp:ListItem Value="70">70card</asp:ListItem>
-                        <asp:ListItem Value="700">龙宝</asp:ListItem>
-                        <asp:ListItem Value="86">神州付</asp:ListItem>
-                        <asp:ListItem Value="3200">天付宝</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-                    </td>
-            </tr>            
-            <tr>
-                <td class="td2">
-                    订单号</td>
-                <td colspan="3" class="td1">
-                <div class="input-group">
-                    <asp:TextBox ID="txtorders" runat="server" class="form-control input_add" Width="600px"  ></asp:TextBox>
-                </div>
-                    </td>
+                <td class="td2">订单号</td>
+                <td colspan="8" class="td1">
+					<div class="input-group">
+						<asp:TextBox ID="txtorders" runat="server" class="form-control input_add" Width="600px"  ></asp:TextBox>
+					</div>
+					<div class="input-group">
+						<asp:Button ID="btn_search" CssClass="button btn  btn-danger" runat="server" Text="提交查询" onclick="btn_search_Click"/>
+					</div>
+                </td>
             </tr>              
             <tr>
-                <td>
-                    &nbsp;</td>
-                <td class="td1" colspan="3">
-                    <span style="padding-left: 3px; height: 40px">
-                     <div class="input-group">
-                        <asp:Button ID="btn_search" CssClass="button btn  btn-danger" runat="server" Text="提交查询"
-                        onclick="btn_search_Click"/>
-                        </div>
-                    </span>
+                <td class="td2">上游结果</td>
+                <td class="td1">
+					<asp:TextBox ID="txtResult" runat="server" class="form-control input_add" Width="600px"  ></asp:TextBox>
                 </td>
             </tr>
         </table>
-        <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
-       
-        <tr>
-            <td bgcolor="#ffffff">                
-                <table cellspacing="0" cellpadding="0" width="100%" border="0"  class="table table-bordered">
-                    <tr>
-                        <td align="center">
-                            <table border="0" cellpadding="0" cellspacing="1" width="100%" id="table2" class="table table-bordered table-hover dataTable">
-                                <asp:Repeater ID="rptOrders" runat="server" >
-                                    <HeaderTemplate>
-                                        <tr height="30"  style="background: #e8eaee">
-                                            <td>
-                                                订单号
-                                            </td>
-                                            <td>
-                                                流水号
-                                            </td>
-                                            <td>
-                                                支付金额
-                                            </td>
-                                            <td>
-                                                查询结果
-                                            </td>
-                                            <td>
-                                                支付状态
-                                            </td>
-                                            <td>
-                                                交易币种
-                                            </td>
-                                            <td>
-                                                卡种
-                                            </td>                                           
-                                        </tr>
-                                    </HeaderTemplate>
-                                    <ItemTemplate>
-                                        <tr bgcolor="#EFF3FB" >
-                                            <td>
-                                                <%# Eval("orderid")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("supporder")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("realamt")%>                                               
-                                            </td>
-                                            <td>
-                                                <%# Eval("result")%>
-                                            </td>                                           
-                                            <td>
-                                                <%# Eval("status")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("coin")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("cardtype")%>
-                                            </td>                                            
-                                        </tr>
-                                    </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        <tr bgcolor="#ffffff" >
-                                            <td>
-                                                <%# Eval("orderid")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("supporder")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("realamt")%>                                               
-                                            </td>
-                                            <td>
-                                                <%# Eval("result")%>
-                                            </td>                                           
-                                            <td>
-                                                <%# Eval("status")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("coin")%>
-                                            </td>
-                                            <td>
-                                                <%# Eval("cardtype")%>
-                                            </td>       
-                                        </tr>
-                                    </AlternatingItemTemplate>
-                                </asp:Repeater>
-                            </table>
-                        </td>
-                    </tr>                    
-                </table>
-            </td>
-        </tr>
-    </table>
-        
-
     </form>
 </section>
     </div>

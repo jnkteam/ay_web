@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.NewsList" Codebehind="NewsList.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.News.NewsList" Codebehind="NewsList.aspx.cs" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
@@ -20,7 +20,7 @@
     <section class="content-header">
       <h1>
         新闻管理
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 

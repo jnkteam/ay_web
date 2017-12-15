@@ -17,7 +17,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        商户管理
+        商户代理管理
         <small><%=PlatformName%></small>
       </h1>
 
@@ -57,6 +57,13 @@
                         <asp:ListItem Value="4">锁定</asp:ListItem>
                     </asp:DropDownList>
                     </div>
+                    <div class="input-group">
+                        <asp:DropDownList ID="ddlUserType" class="form-control" runat="server">
+                            <asp:ListItem Value="">—类型—</asp:ListItem>
+                            <asp:ListItem Value="3">商户</asp:ListItem>
+                            <asp:ListItem Value="4">代理</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>					
 
                     <div class="input-group">
                     <div class="input-group-btn">
@@ -67,9 +74,9 @@
 
                     <div class="input-group">
                     <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">用户ID</button>
+                       <button type="button" class="btn btn-primary">用户号</button>
                     </div>
-                    <asp:TextBox ID="txtuserId" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMerchantName" class="form-control" runat="server"></asp:TextBox>
                     </div>
                      <div class="input-group">
                                         <div class="input-group-btn">
@@ -143,7 +150,6 @@
 
                     <div class="input-group">
                     <asp:Button ID="btn_allgetmoney" runat="server" CssClass="button btn  btn-primary" Text="一键提现" Visible="false"></asp:Button>
-
                     </div>
 
                     <div class="input-group">
@@ -188,12 +194,8 @@
                                 <HeaderTemplate>
                                 <tr height="30"  style="background: #e8eaee">
                                     <td>
-                                    <input id="chkAll" type="checkbox">
-</td>
-                                   <td>
-                                   商户ID</td>
-
-
+                                    <input id="chkAll" type="checkbox"></td>
+                                   <td>商户号</td>
                                     <td>
                                         用户名</td>
                                         <td>签约属性</td>
@@ -201,23 +203,13 @@
                                     <td>
                                         <asp:HyperLink ID="hlinkOrderby" runat="server" NavigateUrl="?orderby=balance&type=asc" CssClass="rptheadlink">余额<i class="fa fa-sort-amount-asc"></i></asp:HyperLink>
                                     </td>
-                                    <td>
-                                        实名认证</td>
-                                    <td>
-                                        手机认证</td>
-                                    <td>
-                                        邮件认证</td>
-
-                                    <td>
-                                        注册时间</td>
-                                    <td>
-                                        联系人</td>
-
-                                    <td>
-                                        状态</td>
-
+                                    <td>实名认证</td>
+                                    <td>手机认证</td>
+                                    <td>邮件认证</td>
+                                    <td>注册时间</td>
+                                    <td>状态</td>
                                     <td>操作</td>
-
+									<td>设置</td>
                                 </tr>
                             </HeaderTemplate>
                             <ItemTemplate>
@@ -227,22 +219,23 @@
                                    <input id="chkItem" type="checkbox"  value='<%#Eval("userid")%>' name="chkItem" />
                                 </td>
                                     <td>
-                                        <%# Eval("userid")%>
+                                        <%# Eval("merchantname")%>
                                     </td>
 
                                     <td>
                                         <a style="color: #dd4b39" href="javascript:showInfo('<%# Eval("userid")%>')">
                                             <strong>
                                             <%#Eval("UserName")%>
+											<%# isSpecialChannel(Eval("userid").ToString()) %>
                                             </strong>
                                         </a>
                                     </td>
                                      <td>
-                                     <%#OriginalStudio.BLL.User.UserFactory.GetClassViewName(Eval("classid"))%>
+										<%#Enum.GetName(typeof(OriginalStudio.Model.User.UserClassEnum), Eval("classid"))%>										
                                      </td>
-                                       <td>
-                                        <asp:Label ID="lblUserType" runat="server"></asp:Label>
-                                                                         </td>
+                                     <td>
+										<%#Enum.GetName(typeof(OriginalStudio.Model.User.UserTypeEnum), Eval("userType"))%>
+									 </td>
                                     <td>
                                         <%# Eval("balance")%>
                                     </td>
@@ -255,27 +248,22 @@
                                      <td>
                                         <%#getpassview(Eval("IsEmail"))%>
                                     </td>
-
                                     <td>
                                         <%# Eval("addtime","{0:yyyy-MM-dd HH:ss:mm}")%>
                                     </td>
                                     <td>
-                                        <%# Eval("ContactName")%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.User.UserStatusEnum), Eval("status"))%>
                                     </td>
-
-                                    <td>
-                                        <asp:Label ID="lblUserStat" runat="server"></asp:Label>
-                                    </td>
-
-                                    <td>
-
-
-                                    <a class="button btn btn-xs btn-info" href="javascript:UserTypeLimit('<%# Eval("userid")%>')">通道限额</a>
-                                    <a class="button btn btn-xs btn-info" href="javascript:UserBindIp('<%# Eval("userid")%>')">IP</a>
-                                    <a class="button btn btn-xs btn-info" href="javascript:UserPayRate('<%# Eval("userid")%>')">费率</a>
-                                    <a class="button btn btn-xs btn-info" href="javascript:UserBankCard('<%# Eval("userid")%>')">银行卡</a>
-                                    <a class="button btn btn-xs btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">独立通道</a>
-                                    <%--<a class="button btn btn-xs btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>--%>
+									<td>
+										<asp:Label ID="labagcmd" runat="server" cssclass="button btn btn-xs"></asp:Label>
+									</td>
+                                    <td>									
+										<a class="button btn btn-xs btn-info" href="javascript:UserTypeLimit('<%# Eval("userid")%>')">通道限额</a>
+										<a class="button btn btn-xs btn-info" href="javascript:UserBindIp('<%# Eval("userid")%>')">IP</a>
+										<a class="button btn btn-xs btn-info" href="javascript:UserPayRate('<%# Eval("userid")%>')">费率</a>
+										<a class="button btn btn-xs btn-info" href="javascript:UserBankCard('<%# Eval("userid")%>')">银行卡</a>
+										<a class="button btn btn-xs btn-info" href="javascript:tongDao('<%# Eval("userid")%>')">独立通道</a>
+										<%--<a class="button btn btn-xs btn-info" href="javascript:sendMsg(<%# Eval("userid") %>);">发信息</a>--%>
                                      </td>
                                     </td>
 										

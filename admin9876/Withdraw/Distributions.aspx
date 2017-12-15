@@ -18,7 +18,7 @@
     <section class="content-header">
       <h1>
         接口付款记录
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 

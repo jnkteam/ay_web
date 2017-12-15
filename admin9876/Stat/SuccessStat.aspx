@@ -1,7 +1,6 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.OrderStat.OrderReport2" Codebehind="OrderReport2.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.OrderStat.SuccessStat" Codebehind="SuccessStat.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
-
 <!-----------------header---------------->
  <!-- #include file="../Top.aspx" -->
 <!-----------------header---------------->
@@ -18,7 +17,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        对账统计
+        成功率统计
         <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
@@ -29,31 +28,25 @@
     <!-- Main content -->
 
     <section class="content">
-
     <form id="form1" runat="server">
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
-        <tr>
+        <tr height="30" >
             <td>
-                <div class="input-group">
-                    <div class="input-group-btn">
-                       <button type="button" class="btn btn-primary">接口商</button>
-                    </div>
-                    <asp:DropDownList ID="ddlSupplier" class="form-control" runat="server"></asp:DropDownList>
-                </div>
-                <div class="input-group date">
-                <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                    <asp:TextBox ID="StimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
-                </div>
-                <div class="input-group date">
-                <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                    <asp:TextBox ID="EtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
-                </div>
-                <div class="input-group">
-                    <asp:Button ID="btn_Search" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click"></asp:Button>
-                </div>
+					<div class="input-group date">
+						<div class="input-group-addon"> <i class="fa fa-calendar"></i>开始</div>
+					<asp:TextBox ID="StimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
+					</div>
+
+					<div class="input-group date">
+					<div class="input-group-addon"> <i class="fa fa-calendar"></i>截止</div>
+					<asp:TextBox ID="EtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
+					</div>
+					<div class="input-group">
+					<asp:Button ID="btn_Search"  runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click">
+					</asp:Button>
+					</div>
             </td>
         </tr>
-
 
         <tr>
             <td bgcolor="#ffffff">                
@@ -64,7 +57,7 @@
                                 <asp:Repeater ID="rep_report" runat="server" 
                                     OnItemDataBound="rptOrders_ItemDataBound">
                                     <HeaderTemplate>
-                                        <tr height="30" style="background: #e8eaee">
+                                        <tr height="30"style="background: #e8eaee">
                                             <td>
                                                 通道名称
                                             </td>
@@ -74,17 +67,8 @@
                                             <td>
                                                 成功订单数
                                             </td>
-                                            <td>
-                                                订单总额
-                                            </td>
 											<td>
-                                                平台总额
-                                            </td>
-											<td>
-                                                代理总额
-                                            </td>
-											<td>
-                                                商户总额
+                                                成功率
                                             </td>
                                             <td>
                                                 利润
@@ -92,7 +76,7 @@
                                         </tr>
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <tr height="30">
+                                        <tr  height="30" >
                                             <td>
                                                 <%# Eval("通道名称")%>
                                             </td>
@@ -102,47 +86,14 @@
                                             <td>
                                                 <%# Eval("成功订单数")%>                               
                                             </td>
-                                            <td>
-                                                <%# Eval("订单总额", "{0:f2}")%>
-                                            </td>
 											<td>
-                                                <%# Eval("平台总额", "{0:f2}")%>
-                                            </td>
-											<td>
-                                                <%# Eval("代理总额", "{0:f2}")%>
-                                            </td>
-											<td>
-                                                <%# Eval("商户总额", "{0:f2}")%>
+                                                <%# Eval("成功率", "{0:f2}")%>%
                                             </td>
                                             <td>
                                                <%# Eval("利润", "{0:f2}")%>
                                             </td>
                                         </tr>
-                                    </ItemTemplate>                                    
-                                    <FooterTemplate>
-                                        <tr height="30">
-                                            <td>
-                                                合计
-                                            </td>
-											<td></td>
-											<td></td>
-                                            <td>
-                                                <%=TotalRealvalue%>
-                                            </td>
-                                            <td>
-                                                <%=TotalSupplierAmt%>                                
-                                            </td>
-											<td>
-                                                <%=TotalPromAmt%>
-                                            </td>
-                                            <td>
-                                                <%=TotalPayAmtATM%>
-                                            </td>
-                                            <td>
-                                                <%=TotalProfit%>
-                                            </td>
-                                        </tr>
-                                    </FooterTemplate>
+                                    </ItemTemplate>
                                 </asp:Repeater>
                             </table>
                         </td>
@@ -154,7 +105,6 @@
     </table>
     </form>
 
-
 </section>
 </div>
 
@@ -162,27 +112,27 @@
  <!-- #include file="../Footer.aspx" -->
 <!-----------------footer------------------>
 
-<script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
-<script>
-  $(function () {
+            <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
+            <script>
+              $(function () {
 
 
 
-     $("#StimeBox").jeDate({
+                 $("#StimeBox").jeDate({
 
-            format: "YYYY-MM-DD hh:mm:ss",
+                        format: "YYYY-MM-DD hh:mm:ss",
 
-        });
-     $("#EtimeBox").jeDate({
+                    });
+                 $("#EtimeBox").jeDate({
 
-                 format: "YYYY-MM-DD hh:mm:ss",
+                             format: "YYYY-MM-DD hh:mm:ss",
 
-             });
+                         });
 
 
 
-  })
-  
+              })
+
         function handler(tp) {
         }
 
@@ -201,7 +151,5 @@
                 }
             };
         }
-
-
 
     </script>

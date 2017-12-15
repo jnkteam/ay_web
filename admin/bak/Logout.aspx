@@ -1,1 +1,0 @@
-﻿<%@ page language="C#" autoeventwireup="True" inherits="OriginalStudio.WebUI.Manage.Logout" Codebehind="logout.aspx.cs" %>

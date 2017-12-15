@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.orderreport7" Codebehind="orderreport7.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.OrderStat.OrderReport7" Codebehind="OrderReport7.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 <!-----------------header---------------->
@@ -18,7 +18,7 @@
     <section class="content-header">
       <h1>
         利润分析
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -32,20 +32,19 @@
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
         <tr height="30" >
             <td>
+					<div class="input-group date">
+					<div class="input-group-addon"> <i class="fa fa-calendar"></i>开始</div>
+					<asp:TextBox ID="StimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
+					</div>
 
-                            <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;开始</div>
-                            <asp:TextBox ID="StimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
-                            </div>
-
-                            <div class="input-group date">
-                            <div class="input-group-addon"> <i class="fa fa-calendar"></i>&nbsp;截止</div>
-                            <asp:TextBox ID="EtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
-                            </div>
-                            <div class="input-group">
-                            <asp:Button ID="btn_Search"  runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click">
-                            </asp:Button>
-                            </div>
+					<div class="input-group date">
+					<div class="input-group-addon"> <i class="fa fa-calendar"></i>截止</div>
+					<asp:TextBox ID="EtimeBox" class="form-control" runat="server" Width="65px"></asp:TextBox>
+					</div>
+					<div class="input-group">
+					<asp:Button ID="btn_Search"  runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btn_Search_Click">
+					</asp:Button>
+					</div>
             </td>
         </tr>
 
@@ -60,7 +59,25 @@
                                     <HeaderTemplate>
                                         <tr height="30"style="background: #e8eaee">
                                             <td>
-                                                种类
+                                                通道类型
+                                            </td>
+                                            <td>
+                                                订单总数
+                                            </td>
+                                            <td>
+                                                成功订单数
+                                            </td>
+                                            <td>
+                                                订单总额
+                                            </td>
+											<td>
+                                                平台总额
+                                            </td>
+											<td>
+                                                代理总额
+                                            </td>
+											<td>
+                                                商户总额
                                             </td>
                                             <td>
                                                 利润
@@ -70,33 +87,31 @@
                                     <ItemTemplate>
                                         <tr  height="30" >
                                             <td>
-                                                <%# Eval("class")%>
+                                                <%# Eval("通道类型")%>
                                             </td>
                                             <td>
-                                               <%# Eval("amt", "{0:f2}")%>
+                                                <%# Eval("订单总数")%>
+                                            </td>
+                                            <td>
+                                                <%# Eval("成功订单数")%>                               
+                                            </td>
+                                            <td>
+                                                <%# Eval("订单总额", "{0:f2}")%>
+                                            </td>
+											<td>
+                                                <%# Eval("平台总额", "{0:f2}")%>
+                                            </td>
+											<td>
+                                                <%# Eval("代理总额", "{0:f2}")%>
+                                            </td>
+											<td>
+                                                <%# Eval("商户总额", "{0:f2}")%>
+                                            </td>
+                                            <td>
+                                               <%# Eval("利润", "{0:f2}")%>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
-                                    <AlternatingItemTemplate>
-                                        <tr  height="30" >
-                                            <td>
-                                                <%# Eval("class")%>
-                                            </td>
-                                            <td>
-                                               <%# Eval("amt", "{0:f2}")%>
-                                            </td>
-                                        </tr>
-                                    </AlternatingItemTemplate>
-                                    <FooterTemplate>
-                                        <tr height="30"  >
-                                            <td>
-                                                总计
-                                            </td>
-                                            <td>
-                                                <%=TotalProfit%>
-                                            </td>
-                                        </tr>
-                                    </FooterTemplate>
                                 </asp:Repeater>
                             </table>
                         </td>

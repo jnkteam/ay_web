@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="Console_User_idimg" Codebehind="idimg.aspx.cs" %>

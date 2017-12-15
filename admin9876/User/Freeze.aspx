@@ -22,7 +22,7 @@ vertical-align: middle !important;
     <section class="content-header">
       <h1>
         冻结款项
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 

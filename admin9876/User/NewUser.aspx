@@ -91,7 +91,7 @@ border: none;
     <section class="content-header">
       <h1>
         增加商户
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 

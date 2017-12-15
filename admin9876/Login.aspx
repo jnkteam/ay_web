@@ -95,10 +95,10 @@
       </div>
 
        <div class="form-group has-feedback">
-              <input type="text" name="CCode" id="CCode" class="form-control" placeholder="验证码">
+              <input type="text" name="CCode" id="CCode" class="form-control" placeholder="验证码" style="width: px">
               <span class="glyphicon  form-control-feedback" style="z-index:50;width: 94px !important; line-height: 28px !important;">
 
-              <img src="/CodeImage.aspx" alt="看不清，点击更换图片。" name="codeimg" width="88" height="30"
+              <img src="/CodeImage.aspx" alt="看不清，点击更换图片" name="codeimg" width="88" height="30"
                                           class="mid" id="codeimg" style=" cursor: pointer"
                                           onclick="ChangeMap(this)" />
                 </span>

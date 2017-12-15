@@ -19,7 +19,7 @@
     <section class="content-header">
       <h1>
         通道管理
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -54,7 +54,9 @@
                         ForeColor="#333333" GridLines="None" Width="100%" CellSpacing="1" 
                         OnRowDataBound="GVChannel_RowDataBound" onrowcommand="GVChannel_RowCommand">
                         <Columns>    
-
+							<asp:BoundField DataField="ListSort" HeaderText="序号">
+                                <ControlStyle Width="5%" />
+                            </asp:BoundField>
                             <asp:BoundField DataField="ChannelCode" HeaderText="通道编号">
                                 <ControlStyle Width="8%" />
                             </asp:BoundField>

@@ -1,1 +1,0 @@
-<%@ Page Language="C#" AutoEventWireup="true" EnableViewStateMac="false" validateRequest="false" CodeBehind="distribution_notify103.aspx.cs" Inherits="OriginalStudio.Gateway.notify.YiYouKu.distribution_notify103" %>

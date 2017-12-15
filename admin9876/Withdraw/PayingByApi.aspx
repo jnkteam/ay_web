@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.PayingByApi" Codebehind="PayingByApi.aspx.cs" %>
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Withdraw.PayingByApi" Codebehind="PayingByApi.aspx.cs" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
@@ -23,7 +23,7 @@ vertical-align: middle !important;
     <section class="content-header">
       <h1>
         付款中（通过接口）
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -41,40 +41,16 @@ vertical-align: middle !important;
                 <td>
                     <table>
                         <tr height="30" >
-                            <td colspan="2">
-
+                            <td>
                                 <div class="input-group">
                                 <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">商户ID</button></div>
-                                    <asp:TextBox ID="txtUserId" runat="server" class="form-control"></asp:TextBox></div>
+                                <button type="button" class="btn btn-primary">商户号</button></div>
+                                    <asp:TextBox ID="txtMerchantName" runat="server" class="form-control"></asp:TextBox></div>
 
                                 <div class="input-group">
                                 <div class="input-group-btn">
                                 <button type="button" class="btn btn-primary">申请ID</button></div>
                                     <asp:TextBox ID="txtItemInfoId" runat="server" class="form-control"></asp:TextBox></div>
-
-                                <div class="input-group">
-                                    <asp:DropDownList class="form-control" ID="ddlbankName" runat="server">
-                                        <asp:ListItem value="">--收款银行--</asp:ListItem>
-                                        <asp:ListItem value="0002">支付宝</asp:ListItem>
-                                        <asp:ListItem value="0003">财付通</asp:ListItem>
-                                        <asp:ListItem value="1002">中国工商银行</asp:ListItem>
-                                        <asp:ListItem value="1005">中国农业银行</asp:ListItem>
-                                        <asp:ListItem value="1003">中国建设银行</asp:ListItem>
-                                        <asp:ListItem value="1026">中国银行</asp:ListItem>
-                                        <asp:ListItem value="1001">招商银行</asp:ListItem>
-                                        <asp:ListItem value="1006">民生银行</asp:ListItem>
-                                        <asp:ListItem value="1020">交通银行</asp:ListItem>
-                                        <asp:ListItem value="1025">华夏银行</asp:ListItem>
-                                        <asp:ListItem value="1009">兴业银行</asp:ListItem>
-                                        <asp:ListItem value="1027">广发银行</asp:ListItem>
-                                        <asp:ListItem value="1004">浦发银行</asp:ListItem>
-                                        <asp:ListItem value="1022">光大银行</asp:ListItem>
-                                        <asp:ListItem value="1021">中信银行</asp:ListItem>
-                                        <asp:ListItem value="1010">优奇支付银行</asp:ListItem>
-                                        <asp:ListItem value="1066">中国邮政储蓄银行</asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
 
                                 <div class="input-group">
                                 <div class="input-group-btn">
@@ -86,6 +62,15 @@ vertical-align: middle !important;
                                 <button type="button" class="btn btn-primary">收款人</button></div>
                                     <asp:TextBox ID="txtpayeeName" class="form-control" runat="server" Width="80px"></asp:TextBox></div>
 
+
+                            </td>
+                        </tr>
+						<tr>
+							<td>
+                                <div class="input-group">
+                                    <asp:DropDownList class="form-control" ID="ddlbankName" runat="server">
+                                     </asp:DropDownList>
+                                </div>							
                                <div class="input-group">
                                     <asp:DropDownList ID="ddlmode" class="form-control" runat="server">
                                     </asp:DropDownList></div>
@@ -99,10 +84,9 @@ vertical-align: middle !important;
                                     </asp:Button></div>
 
                                <div class="input-group">
-                      <asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出"
-                            OnClick="btnExport_Click"></asp:Button></div>
-                            </td>
-                        </tr>
+									<asp:Button ID="btnExport" runat="server" CssClass="button btn  btn-danger" Text="导出" OnClick="btnExport_Click"></asp:Button></div>								
+							</td>
+						</tr>
                     </table>
                 </td>
             </tr>
@@ -122,7 +106,7 @@ vertical-align: middle !important;
                                         序号
                                     </td>
                                     <td style="width: 8%">
-                                        商户名
+                                        商户号
                                     </td>
                                     <td style="width: 8%">
                                         姓名
@@ -160,7 +144,7 @@ vertical-align: middle !important;
                                     </td>
                                     <td>
                                         <a href="javascript:sendInfo('<%# Eval("userid")%>')">
-                                            <%#Eval("UserName")%>
+                                            <%#Eval("MerchantName")%>
                                         </a>
                                     </td>
                                     <td>
@@ -169,23 +153,23 @@ vertical-align: middle !important;
                                     <td >
                                         <%# Eval("Account","{0:f2}")%>
                                     </td>
-                                    <td style="text-align:right">
+                                    <td>
                                         <%# Eval("amount", "{0:f2}")%>
                                     </td>
-                                    <td style="text-align:right">
+                                    <td>
                                         <%# Eval("Charges", "{0:f2}")%>
                                     </td>
-                                    <td style="text-align:right">
-                                        <%# Eval("amount", "{0:f2}") %>
+                                    <td>
+                                        <%# Eval("realpay", "{0:f2}") %>
                                     </td>
                                     <td>
-                                        "settmode"
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
                                     </td>
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>
                                     </td>
                                     <td>
-                                        <asp:Button ID="btnCancel" runat="server" class="button btn btn-xs  btn-info" Text="取消" CommandArgument='<%# Eval("ID") %>' CommandName="Cancel" />
+                                        <asp:Button ID="btnCancel" runat="server" class="button btn btn-xs  btn-info" Text="取消" CommandArgument='<%# Eval("ID") %>'  CommandName="Cancel" />
                                     </td>
                                   
                                 </tr>

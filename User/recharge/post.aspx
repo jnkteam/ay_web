@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="post.aspx.cs" Inherits="OriginalStudio.WebUI.User.Recharge.post" %>

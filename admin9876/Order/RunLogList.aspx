@@ -20,7 +20,7 @@
     <section class="content-header">
       <h1>
         交易调试日志
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -46,7 +46,7 @@
                 <div class="input-group-btn">
                 <button type="button" class="btn btn-primary">商户号</button>
                 </div>
-                <asp:TextBox ID="txtuserId" runat="server" class="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtMerchantName" runat="server" class="form-control"></asp:TextBox>
                 </div>
                 <div class="input-group">
                 <div class="input-group-btn">

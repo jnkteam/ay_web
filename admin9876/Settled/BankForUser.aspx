@@ -83,8 +83,8 @@
         </tr>
         <tr>
             <td>
-                用户ID
-                <asp:TextBox ID="txtuserId" runat="server"></asp:TextBox>
+                商户号
+                <asp:TextBox ID="txtMerchantName" runat="server"></asp:TextBox>
                 余额：<asp:TextBox ID="txtbalance" runat="server" Text="100"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" CssClass="button" Text=" 查 询 " OnClick="btnSearch_Click">
                 </asp:Button>                
@@ -109,7 +109,7 @@
                                     <input id="chkAll" type="checkbox">
                                 </td>
                                 <td>
-                                    商户ID
+                                    商户号
                                 </td>  
                                 <td>
                                     登录用户

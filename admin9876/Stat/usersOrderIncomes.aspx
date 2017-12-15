@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Order.usersOrderIncomes"
-    CodeBehind="usersOrderIncomes.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.OrderStat.UsersOrderIncomes"
+    CodeBehind="UsersOrderIncomes.aspx.cs" %>
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="aspxc" %>
 
 <!-----------------header---------------->
@@ -19,7 +19,7 @@
     <section class="content-header">
       <h1>
         商户各通道收益比例分析
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -38,31 +38,10 @@
                     <div class="input-group-btn">
                     <button type="button" class="btn btn-primary">商户ID</button>
                     </div>
-                    <asp:TextBox ID="txtuserid" class="form-control" runat="server" Width="65px"></asp:TextBox>
+                    <asp:TextBox ID="txtMerchantName" class="form-control" runat="server" Width="65px"></asp:TextBox>
                 </div>
                 <div class="input-group">
                 <asp:DropDownList class="form-control" ID="ddlChannelType" runat="server" Width="95px">
-                    <asp:ListItem Value="">--支付类型--</asp:ListItem>
-                    <asp:ListItem Value="102">网上银行</asp:ListItem>
-                    <asp:ListItem Value="101">支付宝</asp:ListItem>
-                    <asp:ListItem Value="100">财富通</asp:ListItem>
-                    <asp:ListItem Value="103">神州行充值卡</asp:ListItem>
-                    <asp:ListItem Value="104">盛大一卡通</asp:ListItem>
-                    <asp:ListItem Value="105">征途支付卡</asp:ListItem>
-                    <asp:ListItem Value="106">骏网一卡通</asp:ListItem>
-                    <asp:ListItem Value="107">腾讯Q币卡</asp:ListItem>
-                    <asp:ListItem Value="108">联通充值卡</asp:ListItem>
-                    <asp:ListItem Value="109">久游一卡通</asp:ListItem>
-                    <asp:ListItem Value="110">网易一卡通</asp:ListItem>
-                    <asp:ListItem Value="111">完美一卡通</asp:ListItem>
-                    <asp:ListItem Value="112">搜狐一卡通</asp:ListItem>
-                    <asp:ListItem Value="113">电信充值卡</asp:ListItem>
-                    <asp:ListItem Value="114">声讯卡</asp:ListItem>
-                    <asp:ListItem Value="115">光宇一卡通</asp:ListItem>
-                    <asp:ListItem Value="116">金山一卡通</asp:ListItem>
-                    <asp:ListItem Value="117">魔兽卡</asp:ListItem>
-                    <asp:ListItem Value="118">5173卡</asp:ListItem>
-                    <asp:ListItem Value="119">热血卡</asp:ListItem>
                 </asp:DropDownList>
                 </div>
 
@@ -101,84 +80,56 @@
                             日期
                         </td>
                         <td>
-                            商户名(#ID)
+                            商户号
                         </td>
                         <td>
-                            真实姓名
+                            通道类型
                         </td>
                         <td>
-                            充值类别
+                            订单金额
                         </td>
                         <td>
-                            面值
+                            总订单数
+                        </td>	
+						<td>
+                            订单总金额
+                        </td>						
+                        <td>
+                            费率
                         </td>
                         <td>
-                            结算比例
-                        </td>
-                        <td>
-                            总条数
-                        </td>
-                        <td>
-                            总金额
+                            商户所得
                         </td>
                     </tr>
                     <asp:Repeater ID="gv_data" runat="server">
                         <ItemTemplate>
                             <tr height="30">
                                 <td>
-                                    <%#Eval("mydate")%>
+                                    <%#Eval("fmtOrderDate")%>
                                 </td>
                                 <td>
-                                    <%#Eval("Username")%>
+                                    <%#Eval("MerchantName")%>
                                 </td>
                                 <td>
-                                    <%#Eval("full_name")%>
+                                    <%#Eval("TypeName")%>
                                 </td>
                                 <td>
-                                    <%#Eval("modetypename")%>
+									<%#Eval("OrderValue","{0:f2}")%>
                                 </td>
                                 <td>
-                                    <%#Eval("faceValue")%>
+                                    <%#Eval("OrderCount")%>
+                                </td>
+								<td>
+									<%#Eval("TotalOrderValue","{0:f2}")%>
+                                </td>								
+                                <td>
+                                    <%#Eval("PayRate","{0:p2}")%>
                                 </td>
                                 <td>
-                                    <%#Eval("payrate","{0:p2}")%>
-                                </td>
-                                <td>
-                                    <%#Eval("s_num")%>
-                                </td>
-                                <td>
-                                    <%#Eval("sumpay")%>
+                                    <%#Eval("SumPay","{0:f3}")%>
                                 </td>
                             </tr>
                         </ItemTemplate>
-                        <AlternatingItemTemplate>
-                            <tr>
-                                <td>
-                                    <%#Eval("mydate")%>
-                                </td>
-                                <td>
-                                    <%#Eval("Username")%>
-                                </td>
-                                <td>
-                                    <%#Eval("full_name")%>
-                                </td>
-                                <td>
-                                    <%#Eval("modetypename")%>
-                                </td>
-                                <td>
-                                    <%#Eval("faceValue")%>
-                                </td>
-                                <td>
-                                    <%#Eval("payrate","{0:p2}")%>
-                                </td>
-                                <td>
-                                    <%#Eval("s_num")%>
-                                </td>
-                                <td>
-                                    <%#Eval("sumpay")%>
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
                     </asp:Repeater>
                    <!---------------------pager------------------>
                    <!-- #include file="../Pager.aspx" -->

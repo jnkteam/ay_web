@@ -22,7 +22,7 @@
     <section class="content-header">
       <h1>
         数据备份
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
