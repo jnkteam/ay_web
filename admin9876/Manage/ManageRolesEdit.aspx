@@ -84,7 +84,7 @@
                 角色名称
             </td>
             <td class="td1">
-                <div class="input-group"><asp:TextBox class="form-control"  ID="title" runat="server" Width="200px"></asp:TextBox></div>
+                <div class="input-group"><asp:TextBox required class="form-control"  ID="title" runat="server" Width="200px"></asp:TextBox></div>
             </td>
         </tr>
         <tr>
