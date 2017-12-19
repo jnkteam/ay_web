@@ -101,7 +101,7 @@ function backreturn(){
                              <div>
         	<table class="table table-bordered table-hover dataTable" cellspacing="1" cellpadding="4" id="GridView" style="color:#333333;width:100%;">
         		<tr style="background-color:#E8EAEE;font-weight:bold;">
-        			<th style="text-align: center" width="5%" scope="col">ID</th><th align="center" width="5%" scope="col">选择</th><th align="left" scope="col">菜单名称</th>
+        			<th style="text-align: center" width="7%" scope="col">ID</th><th align="center" width="5%" scope="col">选择</th><th align="left" scope="col">菜单名称</th>
         		</tr>
 
         		<!---------------Menu View------------->
