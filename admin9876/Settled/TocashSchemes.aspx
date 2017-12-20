@@ -6,7 +6,11 @@
  <!-- #include file="../Left.aspx" -->
 <!-----------------left------------------>
 
+<style>
 
+td{text-align: center}
+th{text-align: center}
+</style>
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
                 <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
@@ -31,30 +35,43 @@
         <table width="100%" border="0" cellpadding="1" cellspacing="1" id="table_zyads" class="table table-bordered">
             <tr>
                 <td align="left" colspan="2" style="text-align: left !important;">
-                     <asp:Button ID="btnAdd" Class="button btn  btn-danger" runat="server" Text="新 增" OnClick="btnAdd_Click"  />
+                     <a class="button btn  btn-danger" href="javascript:add()">
+                                   新增
+                                </a>&nbsp;
                 </td>
             </tr>
             <tr>
                 <td align="center">
-                    <asp:GridView ID="GridView1" cssClass="table table-bordered table-hover dataTable" runat="server" AutoGenerateColumns="False" CellPadding="4"
+                    <asp:GridView ID="GridView1" cssClass="table table-bordered table-hover dataTable" runat="server" AutoGenerateColumns="False" CellPadding="4" OnRowDataBound="GVChannel_RowDataBound"
                         ForeColor="#333333" GridLines="None" Width="100%" CellSpacing="1" >
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="ID" />
                             <asp:BoundField DataField="schemename" HeaderText="方案名称" />
                             <asp:BoundField DataField="bankdetentiondays" HeaderText="网银T+N" />
-                            <asp:BoundField DataField="carddetentiondays" HeaderText="点卡T+N" />
+
                             <asp:BoundField DataField="alipaydetentiondays" HeaderText="支付宝T+N" />
                             <asp:BoundField DataField="weixindetentiondays" HeaderText="微信T+N" />
                             <asp:BoundField DataField="otherdetentiondays" HeaderText="其它T+N" />
-                            <asp:BoundField DataField="minamtlimitofeach" HeaderText="每笔最少提" />
-                            <asp:BoundField DataField="maxamtlimitofeach" HeaderText="每笔最多提" />
+                            <asp:BoundField DataField="SingleMinAmtLimit" HeaderText="每笔最少提" />
+                            <asp:BoundField DataField="SingleMaxAmtLimit" HeaderText="每笔最多提" />
                             <asp:BoundField DataField="dailymaxtimes" HeaderText="每天最多提次" />
                             <asp:BoundField DataField="dailymaxamt" HeaderText="每天限额" />
-                            <asp:BoundField DataField="isdefault" HeaderText="默认" />                           
-                            <asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="结算通道" >
+                            <ItemTemplate >
+                              <asp:Literal ID="transupplierName" runat="server"></asp:Literal>
+                             </ItemTemplate>
+                             </asp:TemplateField>
+                             <asp:TemplateField HeaderText="默认">
+                              <ItemTemplate>
+                              <asp:Literal ID="isdefaultIcon" runat="server"></asp:Literal>
+                              </ItemTemplate>
+
+                            </asp:TemplateField>
+                             <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
-                                    <a href="TocashSchemeModi.aspx?cmd=edit&amp;ID=<%# Eval("ID") %>">编辑</a> || 
-                                    <a onclick="return confirm('确定要删除这个用户？')" href="?cmd=del&amp;ID=<%# Eval("ID") %>">删除</a>
+                                    <a  class="button btn btn-xs btn-info" href="javascript:edit('<%# Eval("ID")%>')">编辑</a>
+                                    <a  class="button btn btn-xs btn-info" onclick="return confirm('确定要删除这个用户？')" href="?cmd=del&amp;ID=<%# Eval("ID") %>">删除</a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -89,7 +106,7 @@ function add() {
                   skin: 'layui-layer-rim', //加上边框
                   //closeBtn: 0, //不显示关闭按钮
                   area: ['67%', '90%'], //宽高
-                  content: "PayRateEdit.aspx",
+                  content: "TocashSchemeModi.aspx",
               });
           });
       }
@@ -103,7 +120,7 @@ function add() {
                         skin: 'layui-layer-rim', //加上边框
                         //closeBtn: 0, //不显示关闭按钮
                         area: ['67%', '90%'], //宽高
-                        content: "PayRateEdit.aspx?id="+id,
+                        content: "TocashSchemeModi.aspx?cmd=edit&id="+id,
                     });
                 });
             }

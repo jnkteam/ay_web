@@ -1,28 +1,44 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="True"
     Inherits="OriginalStudio.WebUI.Manage.Settled.IncreaseAmtEdit" Codebehind="IncreaseAmtEdit.aspx.cs" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>无标题页</title>
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
-
-    <script src="../../js/common.js" type="text/javascript"></script>
+   <!-- Bootstrap 3.3.7 -->
+   <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <!-- Theme style -->
+   <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/dist/css/AdminLTE.min.css">
 
     <style type="text/css">
-table { FONT-WEIGHT:normal;line-height:170%;FONT-FAMILY:Arial}
+        table
+         {
+             width: 100%;
+             max-width: 100%;
+
+
+             able-layout:fixed;
+         }
+         .table td{
+             padding: 8px;
+             line-height: 1.92857143 !important;
+             vertical-align: top;
+
+             font-size:14px;
+             overflow: hidden;
+
+             word-break: break-all; word-wrap:break-word;
+         }
 A:link {COLOR:#237C04;TEXT-DECORATION: none}
-td {height:20px; line-height:20px; font-size:12px;padding:0px; }
+td {height:20px; line-height:20px; font-size:12px;padding:0px; vertical-align:middle !important;}
 .td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
-.td1 {padding-right:3px;padding-left:3px;color:#999999;padding-bottom:0px;padding-top:5px;height:25px;width:35%;}
-.td2 {padding-right:3px;padding-left:8px;padding-top:5px;color:#083772;background:#EFF3FB;font-size:12px;text-align:right;width:15%;}
+.td1 {padding-right:3px;padding-left:3px;color:#999999;padding-bottom:0px;padding-top:5px;height:25px;}
+.td2 {padding-right:3px;padding-left:8px;padding-top:5px; color: #333;background: #e8eaee;font-size:12px;text-align:right;}
 .td3 {padding:1px 1px 0 0px;color:#083772;background:#EFF3FB;font-size:12px;text-align:center;}
 .moban {padding-top:0px;border:0px}
 input { border:1px solid #999;padding:3px;margin-left:10px;font:12px tahoma;ling-height:16px}
-.lable { border:1px solid #999;padding:3px;margin-left:10px;font:12px tahoma;ling-height:16px}
-select { border:1px solid #999;padding:3px;margin-left:10px;font:12px tahoma;ling-height:16px}
 .input4 {border:1px solid #999;padding:3px;margin-left:10px;font:11px tahoma;ling-height:16px;height:45px;}
-.button {color: #135294; border:1px solid #666; height:21px; line-height:21px;}
+
 .nrml{background-color:#eeeeee;font-weight: bold;}
 .radio { border:none; }
 .checkbox { border:none; }
@@ -46,6 +62,13 @@ font-size:12px;
 color:#4B4B4B;
 padding:12px 15px 15px 15px;
 }
+#txtdesc{width: 315px !important;
+           margin-left: 11px;}
+.form-control{width: 317px !important}
+#Active{border:0 !important;}
+#IsDebug{border:0 !important;}
+#Active td{border:0 !important;}
+#IsDebug td{border:0 !important;}
 </style>
 
     <script type="text/javascript">
@@ -87,33 +110,28 @@ padding:12px 15px 15px 15px;
 </head>
 <body>
     <form id="form1" runat="server">
-    <table width="100%" border="0" cellspacing="1" cellpadding="3">
-        <tr>
-            <td colspan="4" style="font-weight: bold; font-size: 14px; background-image: url(../style/images/topbg.gif);
-                color: teal; background-repeat: repeat-x; height: 24px">
-                加款扣款
-            </td>
-        </tr>
-    </table>
-    <table cellspacing="0" cellpadding="0" width="100%" border="0">
+
+    <table cellspacing="0" cellpadding="0" width="100%" border="0" class="table table-bordered table-hover dataTable">
         <tr>
             <td class="td2">
-                操作类型：
+                操作类型
             </td>
             <td class="td1">
+            <div class="input-group">
                 <asp:RadioButtonList ID="rbl_optype" runat="server" 
                     RepeatDirection="Horizontal">
                     <asp:ListItem Value="1" Selected="True">加款</asp:ListItem>
                     <asp:ListItem Value="2">扣款</asp:ListItem>
                 </asp:RadioButtonList>
+                </div>
             </td>
         </tr>
         <tr>
             <td class="td2">
-                用户号 ：
+                用户号 
             </td>
             <td class="td1">
-                <asp:TextBox ID="txtMerchantName" runat="server" Width="200px"></asp:TextBox>
+                 <div class="input-group"><asp:TextBox  required class="form-control"  ID="txtMerchantName" runat="server" Width="200px"></asp:TextBox></div>
                 <asp:CustomValidator ID="CustomValidator1" runat="server" 
                     ControlToValidate="txtMerchantName" Display="Dynamic" ErrorMessage="不存在此用户" 
                     onservervalidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
@@ -121,7 +139,7 @@ padding:12px 15px 15px 15px;
         </tr>
         <tr>
             <td class="td2">
-               账上余额：
+               账上余额
             </td>
             <td class="td1">
                 <asp:Label ID="lblbalance" runat="server" Text="0" CssClass="input" Width="50px"></asp:Label>
@@ -129,26 +147,26 @@ padding:12px 15px 15px 15px;
         </tr>
         <tr>
             <td class="td2">
-                异动金额 ：
+                异动金额 
             </td>
             <td class="td1">
-                <asp:TextBox ID="txtincreaseAmt" runat="server" Width="200px"></asp:TextBox>                
+                 <div class="input-group"><asp:TextBox  required class="form-control"  ID="txtincreaseAmt" runat="server" Width="200px"></asp:TextBox></div>                
             </td>
         </tr>
         <tr>
             <td class="td2">
-                备注 ：
+                备注 
             </td>
             <td class="td1">
-                <asp:TextBox ID="txtdesc" runat="server" Width="60%" Rows="4" 
-                    TextMode="MultiLine"  CssClass="lable"></asp:TextBox>
+                 <div class="input-group"><asp:TextBox  required class="form-control"  ID="txtdesc" runat="server"  Rows="4"
+                    TextMode="MultiLine"  CssClass="lable"></asp:TextBox></div>
             </td>
         </tr>
         <tr>
             <td colspan="4" style="height: 20px">
                 <div align="center">
-                    <asp:Button ID="btnAdd" runat="server" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
-                    <input type="button" value="返 回" onclick="backreturn()" />
+                    <asp:Button ID="btnAdd" runat="server" CssClass="button btn  btn-danger" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
+
                 </div>
             </td>
         </tr>

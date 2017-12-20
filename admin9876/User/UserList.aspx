@@ -391,7 +391,7 @@ function userIdImg(id) {
               title: '证件审核',
               skin: 'layui-layer-rim', //加上边框
               //closeBtn: 0, //不显示关闭按钮
-              area: ['67%', '90%'], //宽高
+              area: ['87%', '90%'], //宽高
               content:"UserIdImgList.aspx"
 
           });

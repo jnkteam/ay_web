@@ -5,8 +5,7 @@
 <html>
 <head>
     <title></title>
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
-    <script src="../../js/common.js" type="text/javascript"></script>
+
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="../style/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Theme style -->
@@ -16,6 +15,8 @@ table { FONT-WEIGHT:normal;line-height:170%;FONT-FAMILY:Arial}
 A:link {COLOR:#237C04;TEXT-DECORATION: none;}
 td {    padding: 8px;
         line-height: 1.42857143;
+        text-align: center;
+        vertical-align:middle !important;
 
         border-top: 1px solid #ddd;
         font-size: 14px;
@@ -125,7 +126,7 @@ border: none;
                                     商户名
                                 </td>
                                 <td>
-                                    商户签约属性
+                                    类型
                                 </td>
                                 <td>
                                     描述
@@ -150,28 +151,60 @@ border: none;
                                 </td>
                                 <td>
 
-                                 <%#Eval("UserName")%>
+                                 <%#Eval("MerchantName")%>
 
                                 </td>
                                 <td>
-                                    签约属性
+
+                <asp:Label ID="labelImageTypeName" style="color:#000" runat="server" cssclass="button btn btn-xs "></asp:Label>
                                 </td>
                                 <td>
                                     <%# Eval("ImageDesc")%>
                                 </td>
                                 <td>
-                                  <%# Eval("ImageFile")%>
+                                <a href="javascript:void (0)">
+                                <img data-toggle="modal" data-target="#modal-default-<%# Eval("ID")%>" src="<%# Eval("ImageFile")%>" style="max-height: 50px;"/></a>
+
                                 </td>
                                 <td>
-                                  <%# Eval("Status")%>
+
+                                    <asp:Label ID="labelStatus" runat="server" style="color:#000" runat="server" cssclass="button btn btn-xs "></asp:Label>
                                 </td>
 
+
+
+
                                 <td>
-                                    <input type="button" value="通过" class="button btn btn-xs  btn-info" onclick="javascript:setting('<%#Eval("id")%>')" />
-                                    <input type="button" value="不通过" class="button btn btn-xs  btn-info" onclick="javascript:setting('<%#Eval("id")%>')" />
+
+                                <asp:Label ID="labagcmd" runat="server" cssclass="button btn btn-xs btn-info"></asp:Label>
+
+
                                 </td>
 
                             </tr>
+
+                            <div class="modal fade" id="modal-default-<%# Eval("ID")%>">
+                                                    <div class="modal-dialog">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span></button>
+                                                          <h4 class="modal-title">图片预览</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <img  src="<%# Eval("ImageFile")%>" style="max-height: 350px;"/>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                                                          <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                                        </div>
+                                                      </div>
+                                                      <!-- /.modal-content -->
+                                                    </div>
+                                                    <!-- /.modal-dialog -->
+                                                  </div>
+                                                  <!-- /.modal -->
+
                         </ItemTemplate>
 
                                 </asp:Repeater>
@@ -191,4 +224,16 @@ border: none;
 
 
 
-<script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
+
+
+
+<!-- jQuery 3 -->
+<script src="../style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../style/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../style/admin/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../style/admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../style/admin/dist/js/demo.js"></script>

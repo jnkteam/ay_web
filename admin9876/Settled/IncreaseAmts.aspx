@@ -52,9 +52,11 @@ vertical-align: middle !important;
                                 <asp:TextBox ID="EtimeBox" runat="server" class="form-control"></asp:TextBox></div>
                     <div class="input-group">
                                 <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click">
-                                </asp:Button></div>
-                            <div class="input-group">
-                                <asp:Button ID="btnAdd" runat="server" CssClass="button btn  btn-danger" Text="新 增" OnClick="btnAdd_Click" /></div>
+                                </asp:Button>&nbsp;
+                                <a href="javascript:add()" Class="button btn  btn-danger"   >新增</a>
+                                </div>
+
+
                             </td>
                         </tr>
                     </table>
@@ -185,6 +187,21 @@ vertical-align: middle !important;
      function sendInfo(id) {
          window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "Width=800px;Height=350px;");
      }
+
+        function add(id) {
+             layer.ready(function(){
+                  //自定页
+                  layer.open({
+                      type: 2,
+                      title: '新增',
+                      skin: 'layui-layer-rim', //加上边框
+                      //closeBtn: 0, //不显示关闭按钮
+                      area: ['67%', '90%'], //宽高
+                      content:"IncreaseAmtEdit.aspx"
+
+                  });
+              });
+        }
     </script>
 
     <script type="text/javascript">
