@@ -15,7 +15,7 @@ function backreturn(){
     location.href='ChannelTypeList.aspx';
 }
     </script>
-    
+
     <script type="text/javascript">
         $().ready(function() {
             statechange();
@@ -35,7 +35,7 @@ function backreturn(){
                 $("#cblSupplier").show();
                 $("#ddlSupplier").hide();
             }
-        }  
+        }
 function backreturn(){
     history.go(-1);
 }
@@ -67,6 +67,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
 .td2 {padding-right:3px;padding-left:8px;padding-top:5px; color: #333;background: #e8eaee;text-align:right;}
 #rblrunmode{border:0 !important;}
 #rblRelease{border:0 !important;}
+.aspNetDisabled{padding:8px;}
 #rblrunmode td{border:0 !important;}
 #rblRelease td{border:0 !important;}
 #tab th {text-align: center}
@@ -106,6 +107,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                     <td class="td2">
                         通道类型 ：</td>
                     <td class="td1">
+                    <div class="input-group">
                         <asp:RadioButtonList ID="rblType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                             <asp:ListItem Value="1">网银</asp:ListItem>
                             <asp:ListItem Value="2">支付宝</asp:ListItem>
@@ -113,7 +115,9 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                             <asp:ListItem Value="4">QQ</asp:ListItem>
                             <asp:ListItem Value="5">京东</asp:ListItem>
 
-                        </asp:RadioButtonList></td>
+                        </asp:RadioButtonList>
+                    </div>
+                    </td>
                 </tr>
                 <tr>
                     <td class="td2">
@@ -121,10 +125,10 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                     <td class="td1">
                      <div class="input-group">
                         <asp:DropDownList ID="ddlOpen" class="form-control" runat="server" >
-                            <asp:ListItem Value="2">全部开启</asp:ListItem>                         
-                            <asp:ListItem Value="1">全部关闭</asp:ListItem>                            
+                            <asp:ListItem Value="2">全部开启</asp:ListItem>
+                            <asp:ListItem Value="1">全部关闭</asp:ListItem>
                             <asp:ListItem Value="8">按配置(默认开启)</asp:ListItem>
-                            <asp:ListItem Value="4">按配置(默认关闭)</asp:ListItem>                            
+                            <asp:ListItem Value="4">按配置(默认关闭)</asp:ListItem>
                         </asp:DropDownList>
                         <div style="clear: both"></div>
                         <div>
@@ -205,7 +209,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                                     </div>
                                 </td>
                             </tr>
-                        </AlternatingItemTemplate>                       
+                        </AlternatingItemTemplate>
                     </asp:Repeater>
                      </table>
                     </td>
@@ -245,7 +249,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
                     </td>
                 </tr>
                 <tr>
-                    <td class="td2">                        
+                    <td class="td2">
                     </td>
                     <td class="td1" style="text-align: center">
                         <asp:Button ID="btnSave" CssClass="button btn  btn-danger" runat="server" Text="保 存" OnClick="btnSave_Click"></asp:Button>

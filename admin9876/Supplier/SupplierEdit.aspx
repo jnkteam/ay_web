@@ -16,7 +16,7 @@
              width: 100%;
              max-width: 100%;
 
-             border: 1px solid #f4f4f4;
+
              able-layout:fixed;
          }
          .table td{

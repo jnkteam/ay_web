@@ -1,9 +1,9 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.Manage" Codebehind="Manage.aspx.cs" %>
 <!-----------------header---------------->
- <!-- #include file="./Top.aspx" -->
+ <!-- #include file="../Top.aspx" -->
 <!-----------------header---------------->
 <!-----------------left------------------>
- <!-- #include file="./Left.aspx" -->
+ <!-- #include file="../Left.aspx" -->
 <!-----------------left------------------>
 
 
@@ -198,7 +198,7 @@ td {height:20px; line-height:20px; padding:0px; vertical-align:middle !important
 
 
 <!-----------------footer------------------>
- <!-- #include file="./Footer.aspx" -->
+ <!-- #include file="../Footer.aspx" -->
 <!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>

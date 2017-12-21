@@ -9,12 +9,12 @@ using OriginalStudio.BLL.Supplier;
 using OriginalStudio.BLL.User;
 using Wuqi.Webdiyer;
 using OriginalStudio.DBAccess;
-
+using OriginalStudio.Model;
 using System.Data.SqlClient;
 using System.Text;
 
 public class BankOrderList : IHttpHandler {
-
+    
     public void AlertAndHref(string Alert,string Href,HttpContext context){}
     public enum OrderTypeEnum
     {
@@ -24,6 +24,16 @@ public class BankOrderList : IHttpHandler {
         批量销卡 = 8
     }
     public void ProcessRequest (HttpContext context) {
+        General.Common.Json json = new General.Common.Json();
+            /*
+        if (!this.IsLogin())
+            {
+                json.AddToJson("success", false);
+                json.AddToJson("info", "权限错误");
+                context.Response.Write(json.ToString());
+                HttpContext.Current.Response.End();
+            }
+        */
         List<SearchParam> searchParams = new List<SearchParam>();
         int result = 0;
         AspNetPager Pager1 = new AspNetPager();
@@ -108,7 +118,7 @@ public class BankOrderList : IHttpHandler {
         }
 
 
-        General.Common.Json json = new General.Common.Json();
+        
         if (table.Rows.Count > 0)
         {
             DataTable table1 = set.Tables[1];
@@ -131,9 +141,24 @@ public class BankOrderList : IHttpHandler {
 
 
 
+   
 
-
-
+        public bool IsLogin()
+        {
+            int uId = 0;
+             try
+            {
+                 uId = ManageFactory.CurrentManage.id;
+               
+            }
+            catch
+            {
+                uId = 0;
+            }
+           
+                return (uId > 0);
+            
+        }
 
     public double GetDifftime(int userId, object completeTime)
     {

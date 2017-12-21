@@ -16,7 +16,7 @@
     <section class="content-header">
       <h1>
         欢迎使用
-        <small>第三方支付平台</small>
+        <small><%=PlatformName%></small>
       </h1>
       <ol class="breadcrumb">
 
@@ -32,9 +32,10 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>.Net Framework v2.0</h3>
+              <h3>支付宝</h3>
 
-              <p>Net版本</p>
+              <p>总99999笔 / 成功<span style="color: #b7f026;font-weight: bold"> 999</span> 笔</p>
+              <p>总160000元 /  利润<span style="color: #b81550;font-weight: bold"> 800</span> 元</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
@@ -49,6 +50,7 @@
             <div class="inner">
               <h3>支持.NET 2.0</h3>
 
+              <p>操作系统</p>
               <p>操作系统</p>
             </div>
             <div class="icon">

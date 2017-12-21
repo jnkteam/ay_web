@@ -43,7 +43,7 @@ input {
            color: #555;
            background-color: #fff;
            background-image: none;
-           border: 1px solid #ccc;
+
            }
 label{font-weight: 400; margin-right: 10px;}
 .lable { border:1px solid #999;padding:3px;font:12px tahoma;ling-height:16px;}
@@ -91,6 +91,7 @@ height: 40px;
 color: #fff;
 border: none;
 }
+input[type="text"]{border: 0px !important;}
 </style>
 <script type="text/javascript">
     $().ready(function() {
@@ -130,7 +131,7 @@ function backreturn(){
                 <td class="td2">
                     用户名</td>
                 <td class="td1">
-                    <asp:TextBox ID="UserName" required runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox readonly ID="UserName" required runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td class="td2">
                 </td>
@@ -143,7 +144,7 @@ function backreturn(){
                     签约属性</td>
                 <td class="td1">
                 <div class="input-group">
-                    &nbsp;<asp:RadioButtonList ID="ClassID" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                    &nbsp;<asp:RadioButtonList readonly ID="ClassID" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                         <asp:ListItem Selected="true" Value="0">个人</asp:ListItem>
                         <asp:ListItem Value="1">企业</asp:ListItem>
                     </asp:RadioButtonList>
@@ -152,19 +153,19 @@ function backreturn(){
                 <td class="td2">
                     联系人</td>
                 <td class="td1">
-                    <asp:TextBox ID="ContactName" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox readonly ID="ContactName" runat="server" Width="200px"></asp:TextBox>
                 </td>
             </tr>
             <tr style="display: <%=pwdDisplay%>">
                 <td class="td2">
                     用户密码</td>
                 <td class="td1">
-                    <asp:TextBox ID="UserPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox readonly ID="UserPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td class="td2">
                     提现密码</td>
                 <td class="td1">
-                <asp:TextBox ID="UserPayPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                <asp:TextBox readonly ID="UserPayPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
 
@@ -174,25 +175,25 @@ function backreturn(){
                             <td class="td2">
                                 商户名</td>
                             <td class="td1">
-                                <asp:TextBox ID="MerchantName" runat="server" Width="200px" ></asp:TextBox>
+                                <asp:TextBox readonly ID="MerchantName" runat="server" Width="200px" ></asp:TextBox>
                             </td>
                             <td class="td2">
                                 秘钥</td>
                             <td class="td1">
-                                <asp:TextBox ID="ApiKey" runat="server" Width="200px" ></asp:TextBox>
+                                <asp:TextBox readonly ID="ApiKey" runat="server" Width="200px" ></asp:TextBox>
                             </td>
                         </tr>
                 <tr>
                             <td class="td2">
                                 身份证</td>
                             <td class="td1">
-                                <asp:TextBox ID="IDCard" runat="server" Width="200px"></asp:TextBox>
+                                <asp:TextBox readonly ID="IDCard" runat="server" Width="200px"></asp:TextBox>
                             </td>
                             <td class="td2">
                                 是否认证</td>
                             <td class="td1">
                                  <div class="input-group">
-                                                    &nbsp;<asp:RadioButtonList ID="IsRealName" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                    &nbsp;<asp:RadioButtonList readonly ID="IsRealName" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                         <asp:ListItem  Value="1">是</asp:ListItem>
                                                         <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
                                                     </asp:RadioButtonList>
@@ -203,13 +204,13 @@ function backreturn(){
                                             <td class="td2">
                                                 电话</td>
                                             <td class="td1">
-                                            <asp:TextBox ID="Phone" runat="server" Width="200px"></asp:TextBox>
+                                            <asp:TextBox ID="Phone" readonly runat="server" Width="200px"></asp:TextBox>
                                             </td>
                                             <td class="td2">
                                                 是否认证</td>
                                             <td class="td1">
                                             <div class="input-group">
-                                                                                                &nbsp;<asp:RadioButtonList ID="IsPhone" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                                                                &nbsp;<asp:RadioButtonList ID="IsPhone" readonly runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                                                                     <asp:ListItem  Value="1">是</asp:ListItem>
                                                                                                     <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
                                                                                                 </asp:RadioButtonList>
@@ -220,13 +221,13 @@ function backreturn(){
                                  <tr>
                                    <td class="td2">Email</td>
                                                              <td class="td1">
-                                                             <asp:TextBox ID="EMail" runat="server" Width="200px"></asp:TextBox>
+                                                             <asp:TextBox readonly ID="EMail" runat="server" Width="200px"></asp:TextBox>
                                                              </td>
                                                              <td class="td2">
                                                                  是否认证</td>
                                                              <td class="td1">
 <div class="input-group">
-                                                                                                &nbsp;<asp:RadioButtonList ID="IsEmail" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                                                                                &nbsp;<asp:RadioButtonList ID="IsEmail" runat="server" readonly RepeatDirection="Horizontal" RepeatLayout="Flow">
                                                                                                     <asp:ListItem  Value="1">是</asp:ListItem>
                                                                                                     <asp:ListItem Value="0" Selected="true">否</asp:ListItem>
                                                                                                 </asp:RadioButtonList>
@@ -240,12 +241,12 @@ function backreturn(){
                             <td class="td2">
                                 QQ</td>
                             <td class="td1">
-                                 <asp:TextBox ID="QQ" runat="server" Width="200px"></asp:TextBox>
+                                 <asp:TextBox readonly ID="QQ" runat="server" Width="200px"></asp:TextBox>
                             </td>
                             <td class="td2">
                                 注册时间</td>
                             <td class="td1">
-                            <asp:TextBox ID="AddTime" runat="server" Width="200px"></asp:TextBox>
+                            <asp:TextBox readonly ID="AddTime" runat="server" Width="200px"></asp:TextBox>
 
 
 
@@ -259,13 +260,13 @@ function backreturn(){
                                                 结算方案</td>
                                             <td class="td1">
 
-                                            <asp:DropDownList ID="WithdrawSchemeID" class="form-control" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
+                                            <asp:DropDownList readonly ID="WithdrawSchemeID" class="form-control" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
 
                                             </td>
                                             <td class="td2">
                                                 费率方案</td>
                                             <td class="td1">
-                                <asp:DropDownList ID="PayRateID" class="form-control" runat="server"></asp:DropDownList>
+                                <asp:DropDownList readonly ID="PayRateID" class="form-control" runat="server"></asp:DropDownList>
                                             </td>
                                  </tr>
 
@@ -274,12 +275,12 @@ function backreturn(){
                                             <td class="td2">
                                                 管理员</td>
                                             <td class="td1">
-                                            <asp:DropDownList ID="manageId" class="form-control" runat="server"></asp:DropDownList>
+                                            <asp:DropDownList readonly ID="manageId" class="form-control" runat="server"></asp:DropDownList>
                                             </td>
                                             <td class="td2">
                                                 网址</td>
                                             <td class="td1">
-                                            <asp:TextBox ID="SiteUrl" runat="server" Width="200px"></asp:TextBox>
+                                            <asp:TextBox readonly ID="SiteUrl" runat="server" Width="200px"></asp:TextBox>
                                             </td>
                                  </tr>
 
@@ -288,7 +289,7 @@ function backreturn(){
                                     结算方式</td>
                                      <td class="td1">
  <div class="input-group">
-                                             &nbsp;<asp:RadioButtonList ID="WithdrawType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                             &nbsp;<asp:RadioButtonList readonly ID="WithdrawType" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
                                               <asp:ListItem  Value="0" Selected="true">前台</asp:ListItem>
                                               <asp:ListItem Value="1" >接口</asp:ListItem>
                                               <asp:ListItem Value="2" >前台+接口</asp:ListItem>
@@ -298,32 +299,32 @@ function backreturn(){
                                        <td class="td2">
                                         随机商品名称</td>
                                         <td class="td1">
-                                    <asp:TextBox ID="RandomProduct" runat="server" Width="200px"></asp:TextBox>
+                                    <asp:TextBox ID="RandomProduct" readonly runat="server" Width="200px"></asp:TextBox>
                                         </td>
                                  </tr>
                                  <tr>
                                  <td class="td2">
                                  企业联系人</td>
                                  <td class="td1">
-<asp:TextBox ID="LinkMan" runat="server" Width="200px"></asp:TextBox>
+<asp:TextBox readonly ID="LinkMan" runat="server" Width="200px"></asp:TextBox>
                                  </td>
                                  <td class="td2">
                                   代理人</td>
                                   <td class="td1">
 
-<asp:DropDownList ID="AgentID" runat="server" class="form-control" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
+<asp:DropDownList readonly ID="AgentID" runat="server" class="form-control" RepeatDirection="Horizontal" RepeatLayout="Flow"></asp:DropDownList>
                                   </td>
                                   </tr>
                                   <tr>
                                                                    <td class="td2">
                                                                    状态</td>
                                                                    <td class="td1">
-<asp:DropDownList ID="Status" class="form-control" runat="server" Width="150px"></asp:DropDownList>
+<asp:DropDownList readonly ID="Status" class="form-control" runat="server" Width="150px"></asp:DropDownList>
                                                                    </td>
                                                                    <td class="td2">
                                                                     备注</td>
                                                                     <td class="td1">
-                        <asp:TextBox ID="LastLoginRemark" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox readonly ID="LastLoginRemark" runat="server" Width="200px"></asp:TextBox>
                                                                     </td>
                                                                     </tr>
 
@@ -344,7 +345,7 @@ function backreturn(){
             <tr>
                 <td colspan="4" style="height: 20px">
                     <div align="center">
-                        <asp:Button ID="btnAdd" runat="server" class="button btn  btn-danger" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
+                        <asp:Button ID="btnAdd" style="display:none" runat="server" class="button btn  btn-danger" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
 
                     </div>
                 </td>
@@ -357,14 +358,3 @@ function backreturn(){
 <link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/skin/jedate.css">
 <script src="<%=ADMIN_URI%>/style/admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/jquery.jedate.js"></script>
-<script>
-  $(function () {
-
-     $("#AddTime").jeDate({
-
-            format: "YYYY-MM-DD hh:mm:ss",
-
-        });
-
-  });
-</script>

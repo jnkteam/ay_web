@@ -1,102 +1,127 @@
 <%@ Page Language="C#" AutoEventWireup="True" Inherits="OriginalStudio.WebUI.Manage.TocashScheme" Codebehind="TocashSchemes.aspx.cs" %>
+<!-----------------header---------------->
+ <!-- #include file="../Top.aspx" -->
+<!-----------------header---------------->
+<!-----------------left------------------>
+ <!-- #include file="../Left.aspx" -->
+<!-----------------left------------------>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title>后台管理</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <link href="../style/union.css" type="text/css" rel="stylesheet" />
+<style>
 
-    <script type="text/javascript" language="JavaScript">
-        function Setchkall(obj) {
-            var objs = document.getElementsByName("chk");
-            for (i = 0; i < objs.length; i++) {
-                objs[i].checked = obj.checked;
-            }
-        }    </script>
+td{text-align: center}
+th{text-align: center}
+</style>
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"><div id="top-alert" class="fixed alert alert-error" style="display:none">
+                <button onclick="closeTopAlert()" class="close fixed" >&times;</button>
+                <div class="alert-content"></div>
+</div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        提现方案
+        <small><%=PlatformName%></small>
+      </h1>
+      <ol class="breadcrumb">
 
-    <style type="text/css">
-        body
-        {
-            margin: 0px;
-        }
-    </style>
-</head>
-<body>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
     <form id="form1" runat="server">
     <div>
-        <table width="100%" border="0" cellpadding="1" cellspacing="1" id="table_zyads" style="width: 100%;
-            height: 100%; border: #c9ddf0 1px solid; background-color: White;">
+        <table width="100%" border="0" cellpadding="1" cellspacing="1" id="table_zyads" class="table table-bordered">
             <tr>
-                <td align="left" colspan="2" style="font-weight: bold; font-size: 14px; background-image: url(style/images/topbg.gif);
-                    color: teal; background-repeat: repeat-x; height: 28px">
-                    提现方案 <asp:Button ID="btnAdd" runat="server" Text="新 增" OnClick="btnAdd_Click"  />
+                <td align="left" colspan="2" style="text-align: left !important;">
+                     <a class="button btn  btn-danger" href="javascript:add()">
+                                   新增
+                                </a>&nbsp;
                 </td>
             </tr>
             <tr>
                 <td align="center">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
-                        ForeColor="#333333" GridLines="None" Width="100%" CellSpacing="1" AllowPaging="True"
-                        OnPageIndexChanging="GridView1_PageIndexChanging">
+                    <asp:GridView ID="GridView1" cssClass="table table-bordered table-hover dataTable" runat="server" AutoGenerateColumns="False" CellPadding="4" OnRowDataBound="GVChannel_RowDataBound"
+                        ForeColor="#333333" GridLines="None" Width="100%" CellSpacing="1" >
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="ID" />
                             <asp:BoundField DataField="schemename" HeaderText="方案名称" />
                             <asp:BoundField DataField="bankdetentiondays" HeaderText="网银T+N" />
-                            <asp:BoundField DataField="carddetentiondays" HeaderText="点卡T+N" />
+
                             <asp:BoundField DataField="alipaydetentiondays" HeaderText="支付宝T+N" />
                             <asp:BoundField DataField="weixindetentiondays" HeaderText="微信T+N" />
                             <asp:BoundField DataField="otherdetentiondays" HeaderText="其它T+N" />
-                            <asp:BoundField DataField="minamtlimitofeach" HeaderText="每笔最少提" />
-                            <asp:BoundField DataField="maxamtlimitofeach" HeaderText="每笔最多提" />
+                            <asp:BoundField DataField="SingleMinAmtLimit" HeaderText="每笔最少提" />
+                            <asp:BoundField DataField="SingleMaxAmtLimit" HeaderText="每笔最多提" />
                             <asp:BoundField DataField="dailymaxtimes" HeaderText="每天最多提次" />
                             <asp:BoundField DataField="dailymaxamt" HeaderText="每天限额" />
-                            <asp:BoundField DataField="isdefault" HeaderText="默认" />                           
-                            <asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="结算通道" >
+                            <ItemTemplate >
+                              <asp:Literal ID="transupplierName" runat="server"></asp:Literal>
+                             </ItemTemplate>
+                             </asp:TemplateField>
+                             <asp:TemplateField HeaderText="默认">
+                              <ItemTemplate>
+                              <asp:Literal ID="isdefaultIcon" runat="server"></asp:Literal>
+                              </ItemTemplate>
+
+                            </asp:TemplateField>
+                             <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
-                                    <a href="TocashSchemeModi.aspx?cmd=edit&amp;ID=<%# Eval("ID") %>">编辑</a> || 
-                                    <a onclick="return confirm('确定要删除这个用户？')" href="?cmd=del&amp;ID=<%# Eval("ID") %>">删除</a>
+                                    <a  class="button btn btn-xs btn-info" href="javascript:edit('<%# Eval("ID")%>')">编辑</a>
+                                    <a  class="button btn btn-xs btn-info" onclick="return confirm('确定要删除这个用户？')" href="?cmd=del&amp;ID=<%# Eval("ID") %>">删除</a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
-                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <RowStyle BackColor="#EFF3FB" />
-                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <EditRowStyle BackColor="#2461BF" />
-                        <AlternatingRowStyle BackColor="White" />
+                        <FooterStyle BackColor="#e8eaee" Font-Bold="True" ForeColor="White" />
+                                                                                             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                                                             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                                                             <HeaderStyle BackColor="#e8eaee" Font-Bold="True"  />
+                                                                                             <EditRowStyle BackColor="#2461BF" />
+                                                                                             <AlternatingRowStyle BackColor="White" />
                     </asp:GridView>
                 </td>
             </tr>          
         </table>
     </div>
     </form>
-</body>
-</html>
+ </section>
+       </div>
 
-<script type="text/javascript" language="JavaScript">
-    var table = document.getElementById("table_zyads");
-    if (table) {
-        for (i = 0; i < table.rows.length; i++) {
-            if (i % 2 == 0) {
-                table.rows[i].bgColor = "ffffff";
-            } else { table.rows[i].bgColor = "f3f9fe" }
-        }
-    }
-    var mytr = document.getElementById("GridView1").getElementsByTagName("tr");
-    for (var i = 1; i < mytr.length; i++) {
-        mytr[i].onmouseover = function() {
-            var rows = this.childNodes.length;
-            for (var row = 0; row < rows; row++) {
-                this.childNodes[row].style.backgroundColor = '#B2D3FF';
+
+   <!-----------------footer------------------>
+    <!-- #include file="../Footer.aspx" -->
+   <!-----------------footer------------------>
+<script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
+<script>
+function add() {
+  //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+          layer.ready(function(){
+              //自定页
+              layer.open({
+                  type: 2,
+                  title: '新增',
+                  skin: 'layui-layer-rim', //加上边框
+                  //closeBtn: 0, //不显示关闭按钮
+                  area: ['67%', '90%'], //宽高
+                  content: "TocashSchemeModi.aspx",
+              });
+          });
+      }
+      function edit(id) {
+        //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+                layer.ready(function(){
+                    //自定页
+                    layer.open({
+                        type: 2,
+                        title: '编辑',
+                        skin: 'layui-layer-rim', //加上边框
+                        //closeBtn: 0, //不显示关闭按钮
+                        area: ['67%', '90%'], //宽高
+                        content: "TocashSchemeModi.aspx?cmd=edit&id="+id,
+                    });
+                });
             }
-        };
-        mytr[i].onmouseout = function() {
-            var rows = this.childNodes.length;
-            for (var row = 0; row < rows; row++) {
-                this.childNodes[row].style.backgroundColor = '';
-            }
-        };
-    }
 </script>
-
