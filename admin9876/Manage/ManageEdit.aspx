@@ -27,6 +27,7 @@
 
                   word-break: break-all; word-wrap:break-word;
               }
+     .btn-control{margin-left: 10px;}
      A:link {COLOR:#237C04;TEXT-DECORATION: none}
      td {height:20px; line-height:20px; font-size:12px;padding:0px; vertical-align:middle !important;}
      .td_title,th {height:20px;line-height:22px;font-weight:bold;border:0px solid #fff;text-align:left;}
@@ -61,7 +62,7 @@
     color:#4B4B4B;
     padding:12px 15px 15px 15px;
     }
-
+    #cbl_roles input{margin-left:10px !important;}
     #rblTypeOpen{border:0 !important;}
     #rblOpen{border:0 !important;}
     #rblTypeOpen td{border:0 !important;}
@@ -123,7 +124,7 @@ function backreturn(){
                 属性
             </td>
             <td class="td1">
-                <asp:CheckBox ID="ckb_SuperAdmin" runat="server" Text="超级管理员" />
+                <asp:CheckBox class="btn-control" ID="ckb_SuperAdmin" runat="server" Text="超级管理员" />
                 <asp:CheckBox ID="ckb_Agent" runat="server" Text="代理" Visible="false" />
             </td>
         </tr>        
