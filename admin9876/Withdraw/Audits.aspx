@@ -130,7 +130,7 @@ vertical-align: middle !important;
                                     </td>
                                     <td>
                                         <a href="javascript:sendInfo('<%# Eval("userid")%>')">
-                                            <%#Eval("UserName")%>
+                                            <%#Eval("MerchantName")%>
                                         </a>
                                     </td>
                                     <td>

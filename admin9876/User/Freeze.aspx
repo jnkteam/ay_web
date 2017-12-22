@@ -43,7 +43,7 @@ vertical-align: middle !important;
                             <td>
                             <div class="input-group">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-primary">用户号</button></div>
+                                <button type="button" class="btn btn-primary">商户号</button></div>
                                     <asp:TextBox ID="txtMerchantName" class="form-control" runat="server"></asp:TextBox></div>
                                 <div class="input-group">
                                     <asp:Button ID="btnSearch" runat="server" CssClass="button btn  btn-danger" Text=" 查 询 " OnClick="btnSearch_Click"></asp:Button></div>
