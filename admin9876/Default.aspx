@@ -32,13 +32,13 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>支付宝</h3>
+              <h3>合计</h3>
 
-              <p>总99999笔 / 成功<span style="color: #b7f026;font-weight: bold"> 999</span> 笔</p>
-              <p>总160000元 /  利润<span style="color: #b81550;font-weight: bold"> 800</span> 元</p>
+              <p>总 <%=合计[0]%> 笔 / 成功<span style="color: #b7f026;font-weight: bold"> <%=合计[1]%></span> 笔</p>
+              <p>总 <%=合计[2]%> 元 /  利润<span style="color: #b81550;font-weight: bold"> <%=合计[3]%></span> 元</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-podium"></i>
             </div>
              <a href="#" class="small-box-footer">&nbsp;</a>
           </div>
@@ -48,13 +48,13 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>支持.NET 2.0</h3>
+             <h3>网银</h3>
 
-              <p>操作系统</p>
-              <p>操作系统</p>
+                           <p>总 <%=网银[0]%> 笔 / 成功<span style="color: #b7f026;font-weight: bold"> <%=网银[1]%></span> 笔</p>
+                           <p>总 <%=网银[2]%> 元 /  利润<span style="color: #b81550;font-weight: bold"> <%=网银[3]%></span> 元</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-playstation"></i>
             </div>
              <a href="#" class="small-box-footer">&nbsp;</a>
           </div>
@@ -64,12 +64,13 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>SQL Server 2005/2008</h3>
+              <h3>支付宝</h3>
 
-              <p>数据库</p>
+                            <p>总 <%=支付宝[0]%> 笔 / 成功<span style="color: #b7f026;font-weight: bold"> <%=支付宝[1]%></span> 笔</p>
+                            <p>总 <%=支付宝[2]%> 元 /  利润<span style="color: #b81550;font-weight: bold"> <%=支付宝[3]%></span> 元</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-ipad"></i>
             </div>
             <a href="#" class="small-box-footer">&nbsp;</a>
           </div>
@@ -79,12 +80,13 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>.Net Framework v2.0以上</h3>
+              <h3>微信</h3>
 
-              <p>运行环境</p>
+                            <p>总 <%=微信[0]%> 笔 / 成功<span style="color: #b7f026;font-weight: bold"> <%=微信[1]%></span> 笔</p>
+                            <p>总 <%=微信[2]%> 元 /  利润<span style="color: #b81550;font-weight: bold"> <%=微信[3]%></span> 元</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="ion ion-chatbubbles"></i>
             </div>
              <a href="#" class="small-box-footer">&nbsp;</a>
           </div>
