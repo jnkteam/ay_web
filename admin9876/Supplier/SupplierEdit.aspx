@@ -62,9 +62,9 @@ font-size:12px;
 color:#4B4B4B;
 padding:12px 15px 15px 15px;
 }
-#txtdesc{width: 193px !important;
+#txtdesc{width: 600px !important;
            margin-left: 11px;}
-.form-control{width: 317px !important}
+.form-control{width: 600px !important}
 #Active{border:0 !important;}
 #IsDebug{border:0 !important;}
 #Active td{border:0 !important;}

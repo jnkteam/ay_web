@@ -10,7 +10,7 @@
 
 #cbl_cacheTypeList td{text-align: left;}
 .my-center th{text-align: center !important;}
-#table2 td{vertical-align:middle;}
+#table2 td{vertical-align:middle;padding:6px;}
 .pass{width: 221px !important;}
 </style>
  <!-- Content Wrapper. Contains page content -->

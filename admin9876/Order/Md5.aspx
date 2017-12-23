@@ -76,7 +76,7 @@
 				</td>
 				<td class="td1">
 					<div class="input-group">
-						<asp:TextBox ID="txtMd5Str" style="width:280px !important" class="form-control" runat="server"></asp:TextBox>
+						<asp:TextBox ID="txtMd5Str" style="width:560px !important" class="form-control" runat="server"></asp:TextBox>
 					</div>
 				</td>
             </tr>
@@ -101,7 +101,7 @@
 				</td>
 				<td class="td1">
 					<div class="input-group">
-						<asp:TextBox ID="txtresult" style="margin-left:10px; width:280px !important; height:100px" class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+						<asp:TextBox ID="txtresult" style="margin-left:10px; width:560px !important; height:100px" class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
 					</div>
 				</td>				
             </tr>
