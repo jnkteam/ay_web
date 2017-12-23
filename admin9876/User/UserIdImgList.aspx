@@ -176,8 +176,8 @@ border: none;
 
                                 <td>
 
-                                <asp:Label ID="labagcmd" runat="server" cssclass="button btn btn-xs btn-info"></asp:Label>
-
+                <asp:Label ID="labagcmd" runat="server" cssclass="button btn btn-xs btn-info"></asp:Label>
+                <asp:Label ID="labagcmd1" runat="server" cssclass="button btn btn-xs btn-info"></asp:Label>
 
                                 </td>
 

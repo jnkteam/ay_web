@@ -102,10 +102,10 @@
                         </td>
                         <td align="left" bgcolor="">
                         <div class="btn-group">
-						  <button type="button" class="btn btn-default">总额：<% = TotalTranATM %></button>
-						  <button type="button" class="btn btn-default">商户所得：<% = TotalUserATM %></button>
-						  <button type="button" class="btn btn-default">业务总提成：<% = TotalCommission %></button>
-						  <button type="button" class="btn btn-default">平台利润：<% = TotalProfit%></button>
+						  <button type="button" class="btn btn-default">总额：<span id="realvalue">0</span></button>
+						  <button type="button" class="btn btn-default">商户所得：<span id="payAmt">0</span></button>
+						  <button type="button" class="btn btn-default">业务总提成：<span id="commission">0</span></button>
+						  <button type="button" class="btn btn-default">平台利润：<span id="profits">0</span></button>
 						</div>
                         </td>
 						<tr  height="30" >
@@ -256,7 +256,7 @@
 <!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
-<script src="<%=ADMIN_URI%>/style/admin/bank_order_list.js"></script>
+<script src="<%=ADMIN_URI%>/style/admin/bank_order_list.js?date=201712231022"></script>
 <script>
   $(function () {
 

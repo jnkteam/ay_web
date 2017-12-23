@@ -32,10 +32,18 @@ function search(page) {
 
 
             if (data['success']) {
-                //console.info(data['data']);
+
 
                 var dtCount = data['data'].length;
                 var html = "";
+                var realvalue   = 0; //总额
+                var payAmt      = 0; //商户所得
+                var commission  = 0; //业务总提成
+                var profits     = 0; //平台利润
+
+
+
+
                 for (var i = 0; i < dtCount; i++) {
 
 
@@ -58,9 +66,23 @@ function search(page) {
                     html+= "<td>"+getHandler(data['data'][i]['status'],data['data'][i]['orderid'],data['data'][i]['supplierId'],data['data'][i]['refervalue'],data['data'][i]['difftime'])+"</td></tr>";
 
 
+                    realvalue = accAdd(realvalue,data['data'][i]['realvalue']);
+                    payAmt = accAdd(payAmt,data['data'][i]['payAmt']);
+                    commission = accAdd(commission,data['data'][i]['commission']);
+                    profits = accAdd(profits,data['data'][i]['profits']);
+
+
 
                 };
+
+                //统计赋值
+
+
                 $("#data").html(html);
+                $("#realvalue").html(realvalue?realvalue:0);
+                $("#payAmt").html(payAmt?payAmt:0);
+                $("#commission").html(commission?commission:0);
+                $("#profits").html(profits?profits:0);
                 //console.info("总记录："+data['count'][0]['rec_Count']);
                 //console.info("总页数："+data['count'][0]['page_Count']);
                 //console.info("当前页："+data['index']);
@@ -76,7 +98,23 @@ function search(page) {
 
 
 }
-
+// 两个浮点数求和
+function accAdd(num1,num2){
+    var r1,r2,m;
+    try{
+        r1 = num1.toString().split('.')[1].length;
+    }catch(e){
+        r1 = 0;
+    }
+    try{
+        r2=num2.toString().split(".")[1].length;
+    }catch(e){
+        r2=0;
+    }
+    m=Math.pow(10,Math.max(r1,r2));
+    // return (num1*m+num2*m)/m;
+    return Math.round(num1*m+num2*m)/m;
+}
 //分页操作
 function pager(allCount , pageCount, index){
     var pagerHtml = "";
