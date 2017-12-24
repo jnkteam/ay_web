@@ -226,7 +226,6 @@ border-bottom: 1px solid #ddd;
                        <div align="center">
                            <asp:Button ID="btnSave" class="button btn  btn-danger" runat="server" Text="保存资料" onclick="btnSave_Click" />
                            <asp:Button ID="btnSure" class="button btn  btn-danger" runat="server" Text="确认支付" onclick="btnSure_Click" />
-                           <input type="button" id="btnreturn" class="button btn  btn-danger" value="返回列表" onclick="javascript:window.location.href='Pays.aspx'" />
                            </div>
                    </td>
                    </tr>
