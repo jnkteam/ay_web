@@ -256,7 +256,7 @@
 <!-----------------footer------------------>
 
 <script src="<%=ADMIN_URI%>/style/admin/layer/layer.js"></script>
-<script src="<%=ADMIN_URI%>/style/admin/bank_order_list.js?date=201712231022"></script>
+<script src="<%=ADMIN_URI%>/style/admin/bank_order_list.js?date=201712251345"></script>
 <script>
   $(function () {
 

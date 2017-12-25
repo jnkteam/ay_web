@@ -79,10 +79,11 @@ function search(page) {
 
 
                 $("#data").html(html);
-                $("#realvalue").html(realvalue?realvalue:0);
-                $("#payAmt").html(payAmt?payAmt:0);
-                $("#commission").html(commission?commission:0);
-                $("#profits").html(profits?profits:0);
+
+                $("#realvalue").html(data['count'][0]['SuppAmt']);
+                $("#payAmt").html(data['count'][0]['PayAmt']);
+                $("#commission").html(data['count'][0]['RCommissionAmt']);
+                $("#profits").html(data['count'][0]['RProfit']);
                 //console.info("总记录："+data['count'][0]['rec_Count']);
                 //console.info("总页数："+data['count'][0]['page_Count']);
                 //console.info("当前页："+data['index']);
