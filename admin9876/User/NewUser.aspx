@@ -262,7 +262,7 @@ border: none;
 
                                     <tr>
                                                 <td class="td2">
-                                                    管理员</td>
+                                                    所属商务</td>
                                                 <td class="td1">
                                                 <asp:DropDownList ID="manageId" class="form-control" runat="server"></asp:DropDownList>
                                                 </td>
@@ -288,7 +288,10 @@ border: none;
                                            <td class="td2">
                                             随机商品名称</td>
                                             <td class="td1">
-                                        <asp:TextBox ID="RandomProduct" runat="server" Width="200px"></asp:TextBox>
+												<asp:RadioButtonList ID="RandomProduct" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+													<asp:ListItem  Value="1">是</asp:ListItem>
+													<asp:ListItem Value="0" Selected="true">否</asp:ListItem>
+												</asp:RadioButtonList>
                                             </td>
                                      </tr>
                                      <tr>
