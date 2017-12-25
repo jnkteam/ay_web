@@ -159,12 +159,12 @@ function backreturn(){
                 <td class="td2">
                     用户密码</td>
                 <td class="td1">
-                    <asp:TextBox ID="UserPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="UserPwd"  runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td class="td2">
                     提现密码</td>
                 <td class="td1">
-                <asp:TextBox ID="UserPayPwd" required runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="UserPayPwd"  runat="server" Width="200px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
 
