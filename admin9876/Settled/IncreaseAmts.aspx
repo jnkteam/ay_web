@@ -185,7 +185,20 @@ vertical-align: middle !important;
     </script>
  <script type="text/javascript">
      function sendInfo(id) {
-         window.open("../User/UserEdit.aspx?id=" + id, "查看用户信息", "Width=800px;Height=350px;");
+        
+         layer.ready(function(){
+                           //自定页
+                           layer.open({
+                               type: 2,
+                               title: '新增',
+                               skin: 'layui-layer-rim', //加上边框
+                               //closeBtn: 0, //不显示关闭按钮
+                               area: ['67%', '90%'], //宽高
+                               content:"../User/UserView.aspx?id=" + id,
+
+                           });
+                       });
+
      }
 
         function add(id) {

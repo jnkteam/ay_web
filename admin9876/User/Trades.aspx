@@ -166,7 +166,7 @@ vertical-align: middle !important;
                           skin: 'layui-layer-rim', //加上边框
                           //closeBtn: 0, //不显示关闭按钮
                           area: ['67%', '90%'], //宽高
-                          content: "../User/UserAdd.aspx?id=" + id,
+                          content: "../User/UserView.aspx?id=" + id,
                       });
                   });
               }

@@ -353,3 +353,17 @@ border: none;
 <!-----------------footer------------------>
  <!-- #include file="../Footer.aspx" -->
 <!-----------------footer------------------>
+<link rel="stylesheet" href="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/skin/jedate.css">
+<script src="<%=ADMIN_URI%>/style/admin/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<%=ADMIN_URI%>/style/admin/jedate-6.0.2/jquery.jedate.js"></script>
+<script>
+  $(function () {
+
+     $("#AddTime").jeDate({
+
+            format: "YYYY-MM-DD hh:mm:ss",
+
+        });
+
+  });
+</script>
