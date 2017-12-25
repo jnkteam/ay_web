@@ -151,7 +151,7 @@ function backreturn(){
                                                        <%# Eval("ip_type_desc")%>
                                                     </td>
                                                      <td>
-                                                        <%# Eval("bind_date")%>
+                                                        <%# Eval("bind_date","{0:yyyy-MM-dd HH:ss:mm}") %>
                                                      </td>
                                                       <td>
 

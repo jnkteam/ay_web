@@ -189,7 +189,7 @@ function backreturn(){
                                 <asp:TextBox ID="IDCard" runat="server" Width="200px"></asp:TextBox>
                             </td>
                             <td class="td2">
-                                是否认证</td>
+                                实名认证</td>
                             <td class="td1">
                                  <div class="input-group">
                                                     &nbsp;<asp:RadioButtonList ID="IsRealName" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -206,7 +206,7 @@ function backreturn(){
                                             <asp:TextBox ID="Phone" runat="server" Width="200px"></asp:TextBox>
                                             </td>
                                             <td class="td2">
-                                                是否认证</td>
+                                                电话认证</td>
                                             <td class="td1">
                                             <div class="input-group">
                                                                                                 &nbsp;<asp:RadioButtonList ID="IsPhone" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -223,7 +223,7 @@ function backreturn(){
                                                              <asp:TextBox ID="EMail" runat="server" Width="200px"></asp:TextBox>
                                                              </td>
                                                              <td class="td2">
-                                                                 是否认证</td>
+                                                                 邮箱认证</td>
                                                              <td class="td1">
 <div class="input-group">
                                                                                                 &nbsp;<asp:RadioButtonList ID="IsEmail" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
@@ -246,14 +246,8 @@ function backreturn(){
                                 注册时间</td>
                             <td class="td1">
                             <asp:TextBox ID="AddTime" runat="server" Width="200px"></asp:TextBox>
-
-
-
                             </td>
                  </tr>
-
-
-
                 <tr>
                <td class="td2">
                                                 结算方案</td>
@@ -326,21 +320,6 @@ function backreturn(){
                         <asp:TextBox ID="LastLoginRemark" runat="server" Width="200px"></asp:TextBox>
                                                                     </td>
                                                                     </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <tr>
                 <td colspan="4" style="height: 20px">
                     <div align="center">
