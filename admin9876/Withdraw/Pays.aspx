@@ -107,7 +107,7 @@ vertical-align: middle !important;
                                         手 续 费
                                     </td>
                                     <td style="width: 8%">
-                                        实际支付金额
+                                        总金额
                                     </td>
                                     <td style="width: 8%">
                                         类型
@@ -142,10 +142,10 @@ vertical-align: middle !important;
                                         <%# Eval("Account")%>
                                     </td>
                                     <td>
-                                        <%# Eval("amount", "{0:f2}")%>
+                                        <%# Eval("settleamount", "{0:f2}")%>
                                     </td>
                                     <td>
-                                        <%# Eval("Charges", "{0:f2}")%>
+                                        <%# Eval("all_charges", "{0:f2}")%>
                                     </td>
                                     <td>
                                         <%# Convert.ToDecimal(Eval("amount")).ToString("f2") %>

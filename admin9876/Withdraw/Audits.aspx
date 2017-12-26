@@ -106,11 +106,14 @@ vertical-align: middle !important;
                                     <td style="width: 8%">
                                         申请金额
                                     </td>
-                                    <td style="width: 10%">
-                                        申请时间
+									<td style="width: 8%">
+                                        手 续 费
+                                    </td>
+                                    <td style="width: 8%">
+                                        总金额
                                     </td>
                                     <td style="width: 10%">
-                                        支付到期
+                                        申请时间
                                     </td>
                                     <td style="width: 8%">
                                         付款接口
@@ -138,16 +141,19 @@ vertical-align: middle !important;
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-									   <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
+									   <%# Enum.GetName(typeof(OriginalStudio.Model.Settled.SettlePayTypeEnum), Eval("PayType"))%>
                                     </td>
                                     <td>
-                                        <%# Eval("amount","{0:f2}")%>
+                                        <%# Eval("settleamount","{0:f2}")%>
+                                    </td>
+									<td>
+                                        <%# Eval("all_charges", "{0:f2}")%>
+                                    </td>
+                                    <td>
+                                        <%# Convert.ToDecimal(Eval("amount")).ToString("f2") %>
                                     </td>
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>
-                                    </td>
-                                    <td>
-                                        <%# Eval("required", "{0:yyyy-MM-dd}")%>
                                     </td>
                                     <td>
                                         <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
@@ -158,44 +164,6 @@ vertical-align: middle !important;
                                     </td>                                    
                                 </tr>
                             </ItemTemplate>
-                            <AlternatingItemTemplate>
-                                <tr>
-                                   <td>
-                                        <input id="<%# Eval("ID") %>" type="checkbox" name="ischecked" class="qx" value="<%# Eval("ID") %>" />
-                                    </td>
-                                    <td>
-                                        <%# Eval("ID")%>
-                                    </td>
-                                    <td>
-                                        <a href="javascript:sendInfo('<%# Eval("userid")%>')">
-                                            <%#Eval("UserName")%>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <%# Eval("payeeName")%> <br />
-                                        <%# Eval("account")%>
-                                    </td>                                    
-                                    <td>
-                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettlePayTypeEnum), Eval("paytype"))%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("amount","{0:f2}")%>
-                                    </td>
-                                    <td>
-                                        <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>
-                                    </td>
-                                    <td>
-                                        <%# Eval("required", "{0:yyyy-MM-dd}")%>
-                                    </td>
-                                    <td>
-                                         <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
-                                    </td>
-                                    <td>
-                                        <asp:Button ID="btnAudit" class="button btn btn-xs  btn-info" runat="server" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />
-                                        <asp:Button ID="btnRefuse" class="button btn btn-xs  btn-info" runat="server" Text="拒绝" CommandName="Refuse" CommandArgument='<%# Eval("ID") %>'  />
-                                    </td>    
-                                </tr>
-                            </AlternatingItemTemplate>
                         </asp:Repeater>
                                 </table>
                             </td>
@@ -231,7 +199,7 @@ vertical-align: middle !important;
                           skin: 'layui-layer-rim', //加上边框
                           //closeBtn: 0, //不显示关闭按钮
                           area: ['67%', '90%'], //宽高
-                          content: "../User/UserEdit.aspx?id=" + id,
+                          content: "../User/UserView.aspx?id=" + id,
                       });
                   });
               }

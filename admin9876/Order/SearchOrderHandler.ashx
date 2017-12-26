@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="SearchOrderHandler.ashx.cs" Class="OriginalStudio.WebUI.Manage.Order.SearchOrderHandler" %>
