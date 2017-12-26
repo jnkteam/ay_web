@@ -326,8 +326,9 @@ function backreturn(){
             <tr>
                 <td colspan="4" style="height: 20px">
                     <div align="center">
-                        <asp:Button ID="btnAdd" runat="server" class="button btn  btn-danger" Text="提 交" OnClick="btnAdd_Click"></asp:Button>
-
+                        <asp:Button ID="btnAdd" runat="server" class="button btn  btn-danger" Text="提　　　交" OnClick="btnAdd_Click"></asp:Button>
+						<asp:Button ID="btnResetPwd" runat="server" class="button btn  btn-danger" Text="复位登录密码" OnClick="btnResetPwd_Click" OnClientClick="javascript:return confirm('确定复位登录密码吗?');"></asp:Button>
+						<asp:Button ID="btnResetPayPwd" runat="server" class="button btn  btn-danger" Text="复位支付密码" OnClick="btnResetPayPwd_Click" OnClientClick="javascript:return confirm('确定复位支付密码吗?');"></asp:Button>
                     </div>
                 </td>
             </tr>

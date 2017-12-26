@@ -121,11 +121,7 @@ vertical-align: middle !important;
                                     <td style="width: 15%">
                                         状态
                                     </td>
-                                    <td>
-                                        <input id="Checkboxall" type="checkbox" class="qx" onclick="checkall(this)" />
-                                        全选
-                                    </td>
-                                </tr>
+                                  </tr>
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <tr>
@@ -160,11 +156,7 @@ vertical-align: middle !important;
                                         <%# Eval("paytime","{0:yyyy-MM-dd HH:mm:ss}") %>
                                     </td>									
                                     <td>
-                                        <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>,'modi');">修改</a>
                                         <a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>,'pay');">进行支付</a>
-                                    </td>
-                                    <td>
-                                        <input id="<%# Eval("ID") %>" type="checkbox" name="ischecked" class="qx" value="<%# Eval("ID") %>" />
                                     </td>
                                 </tr>
                             </ItemTemplate>

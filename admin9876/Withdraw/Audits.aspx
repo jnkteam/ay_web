@@ -159,6 +159,7 @@ vertical-align: middle !important;
                                         <%# OriginalStudio.WebUI.WebUtility.GetsupplierName(Eval("tranapi"))%>
                                     </td>
                                     <td>
+										<a class="button btn btn-xs  btn-info" href="javascript:showOrder(<%# Eval("ID") %>,'modi');">修改</a>
                                         <asp:Button ID="btnAudit" runat="server" class="button btn btn-xs  btn-info" Text="通过" CommandName="Pass" CommandArgument='<%# Eval("ID") %>'  />
                                         <asp:Button ID="btnRefuse" runat="server" class="button btn btn-xs  btn-info" Text="拒绝" CommandName="Refuse" CommandArgument='<%# Eval("ID") %>'  />
                                     </td>                                    
@@ -219,6 +220,23 @@ vertical-align: middle !important;
             }
         }
     </script>
+	
+    <script type="text/javascript">
+        function showOrder(id,action) {
+        //页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+            layer.ready(function(){
+                //自定页
+                layer.open({
+                    type: 2,
+                    title: '提现管理',
+                    skin: 'layui-layer-rim', //加上边框
+                    //closeBtn: 0, //不显示关闭按钮
+                    area: ['67%', '90%'], //宽高
+                    content: "Pay.aspx?action="+action+"&ID=" + id,
+                });
+            });
+        }
+    </script>	
 
 <script type="text/javascript" language="JavaScript">
     var table = document.getElementById("table_zyads"); if (table) { for (i = 0; i < table.rows.length; i++) { if (i % 2 == 0) { table.rows[i].bgColor = "ffffff"; } else { table.rows[i].bgColor = "f3f9fe" } } } var mytr = document.getElementById("table2").getElementsByTagName("tr"); for (var i = 1; i < mytr.length; i++) { mytr[i].onmouseover = function() { var rows = this.childNodes.length; for (var row = 0; row < rows; row++) { this.childNodes[row].style.backgroundColor = '#DFE8F6'; } }; mytr[i].onmouseout = function() { var rows = this.childNodes.length; for (var row = 0; row < rows; row++) { this.childNodes[row].style.backgroundColor = ''; } }; }</script>

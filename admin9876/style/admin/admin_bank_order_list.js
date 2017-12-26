@@ -29,24 +29,14 @@ function search(page) {
         success: function (data, textStatus) {
 			data = JSON.parse(data);
             $("#search").html("查　询");
-
-
             if (data['success']) {
-
-
                 var dtCount = data['data'].length;
                 var html = "";
                 var realvalue   = 0; //总额
                 var payAmt      = 0; //商户所得
                 var commission  = 0; //业务总提成
                 var profits     = 0; //平台利润
-
-
-
-
                 for (var i = 0; i < dtCount; i++) {
-
-
                     html+= "<tr height='30'  ondblclick='javascript:sendInfo("+data['data'][i]['id']+")'>";
                     html+= "<td> "+data['data'][i]['MerchantName']+"</td>";
                     html+= "<td> "+data['data'][i]['orderid']+"</td>";
@@ -62,24 +52,15 @@ function search(page) {
                     html+= "<td> "+getNotifystatStatusStyle(data['data'][i]['notifystat'])+"</td>";
                     html+= "<td> "+data['data'][i]['supplierName']+"</td>";
                     html+= "<td> "+data['data'][i]['server']+"</td>";
-
                     html+= "<td>"+getHandler(data['data'][i]['status'],data['data'][i]['orderid'],data['data'][i]['supplierId'],data['data'][i]['refervalue'],data['data'][i]['difftime'])+"</td></tr>";
-
-
                     realvalue = accAdd(realvalue,data['data'][i]['realvalue']);
                     payAmt = accAdd(payAmt,data['data'][i]['payAmt']);
                     commission = accAdd(commission,data['data'][i]['commission']);
                     profits = accAdd(profits,data['data'][i]['profits']);
-
-
-
                 };
 
                 //统计赋值
-
-
                 $("#data").html(html);
-
                 $("#realvalue").html(data['count'][0]['SuppAmt']);
                 $("#payAmt").html(data['count'][0]['PayAmt']);
                 $("#commission").html(data['count'][0]['RCommissionAmt']);
@@ -90,6 +71,8 @@ function search(page) {
 
                 pager(data['count'][0]['rec_Count'],data['count'][0]['page_Count'],data['index']);
             }
+			else
+				$("#data").html("");
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             errorMsg = '';
