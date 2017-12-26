@@ -176,7 +176,7 @@ vertical-align: middle !important;
                                         <%# Eval("account")%>
                                     </td>                                    
                                     <td>
-                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettlePayTypeEnum), Eval("paytype"))%>
                                     </td>
                                     <td>
                                         <%# Eval("amount","{0:f2}")%>

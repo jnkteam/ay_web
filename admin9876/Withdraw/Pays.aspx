@@ -134,7 +134,7 @@ vertical-align: middle !important;
                                     </td>
                                     <td>
                                         <a href="javascript:sendInfo('<%# Eval("userid")%>')">
-                                            <%#Eval("UserName")%>
+                                            <%#Eval("MerchantName")%>
                                         </a>
                                     </td>
                                     <td>
@@ -151,7 +151,7 @@ vertical-align: middle !important;
                                         <%# Convert.ToDecimal(Eval("amount")).ToString("f2") %>
                                     </td>
                                     <td>
-                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettledModeEnum), Eval("settmode"))%>
+                                        <%#Enum.GetName(typeof(OriginalStudio.Model.Settled.SettlePayTypeEnum), Eval("paytype"))%>
                                     </td>
                                     <td>
                                         <%# Eval("AddTime","{0:yyyy-MM-dd HH:mm:ss}") %>
