@@ -300,15 +300,11 @@ function backreturn(){
                                         随机商品名称</td>
                                         <td class="td1">
                                      <asp:RadioButtonList ID="RandomProduct" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-<<<<<<< HEAD
+
 													<asp:ListItem  Value="1">是</asp:ListItem>
 													<asp:ListItem Value="0" Selected="true">否</asp:ListItem>
 												</asp:RadioButtonList>
-=======
-                                    													<asp:ListItem  Value="1">是</asp:ListItem>
-                                    													<asp:ListItem Value="0" Selected="true">否</asp:ListItem>
-                                    												</asp:RadioButtonList>
->>>>>>> adb8270e98894ae2071311055ea785966e18100d
+
                                         </td>
                                  </tr>
                                  <tr>

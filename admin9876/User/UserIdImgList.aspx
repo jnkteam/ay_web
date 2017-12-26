@@ -89,10 +89,12 @@ top:2px;
 border: none;
 }
 .btn-danger{
-height: 40px;
+height: 34px;
 color: #fff;
 border: none;
 }
+.input-group{float: left; }
+.btn-primary{float:left;}
 </style>
 
 </head>
@@ -102,11 +104,31 @@ border: none;
     <table width="100%" border="0" cellspacing="1" cellpadding="0" class="table1">
 
 
-        <tr>
-            <td>
+         <tr height="30" >
+                                <td>
 
-            </td>
-        </tr>
+
+                                    <div class="input-group" style="padding: 10px;">
+
+                                    <button type="button" class="btn btn-primary">商户号</button>
+                                    <asp:TextBox ID="merchantName"  class="form-control" runat="server"></asp:TextBox>
+                                    </div>
+
+                                       <div class="input-group" style="padding: 10px;">
+                                                                        <asp:DropDownList ID="status" class="form-control" runat="server">
+                                                                          <asp:ListItem Value="0">--全部--</asp:ListItem>
+                                                                          <asp:ListItem Value="1">审核中</asp:ListItem>
+                                                                          <asp:ListItem Value="2">审核成功</asp:ListItem>
+                                                                          <asp:ListItem Value="4">审核失败</asp:ListItem>
+
+                                                                         </asp:DropDownList>
+                                                                          </div>
+
+                                      <div class="input-group" style="padding: 10px;">
+                                      <asp:Button ID="btnSearch" Class="button btn  btn-danger"  runat="server" Text="查询" OnClick="btnSearch_Click" ></asp:Button>
+                                      </div>
+                                </td>
+                                </tr>
 
 
         <tr >
