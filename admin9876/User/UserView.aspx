@@ -299,7 +299,10 @@ function backreturn(){
                                        <td class="td2">
                                         随机商品名称</td>
                                         <td class="td1">
-                                    <asp:TextBox ID="RandomProduct" readonly runat="server" Width="200px"></asp:TextBox>
+                                     <asp:RadioButtonList ID="RandomProduct" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                                    													<asp:ListItem  Value="1">是</asp:ListItem>
+                                    													<asp:ListItem Value="0" Selected="true">否</asp:ListItem>
+                                    												</asp:RadioButtonList>
                                         </td>
                                  </tr>
                                  <tr>
