@@ -6,13 +6,11 @@ using System.Collections.Generic;
 using OriginalStudio.Lib.Data;
 using OriginalStudio.BLL;
 using OriginalStudio.BLL.Supplier;
-using OriginalStudio.BLL.User;
 using Wuqi.Webdiyer;
 using OriginalStudio.DBAccess;
-using OriginalStudio.Model;
 using System.Data.SqlClient;
 using System.Text;
-
+using OriginalStudio.BLL.Settled;
 public class BankOrderList : IHttpHandler {
     
     public void AlertAndHref(string Alert,string Href,HttpContext context){}

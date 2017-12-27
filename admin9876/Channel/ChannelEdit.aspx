@@ -113,7 +113,7 @@ function backreturn(){
                         通道类型 </td>
                     <td class="td1">
                     <div class="input-group">
-                        <asp:DropDownList class="form-control" ID="ddlType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlType_SelectedIndexChanged">
+                        <asp:DropDownList class="form-control" ID="ddlType" runat="server"  >
                         </asp:DropDownList>
                         </div>
                     </td>

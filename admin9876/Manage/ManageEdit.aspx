@@ -119,24 +119,24 @@ function backreturn(){
                 <div class="input-group"><asp:TextBox  class="form-control"  ID="txtsecondpwd" runat="server" Width="200px" TextMode="Password"></asp:TextBox>（不修改请留空）</div>
             </td>
         </tr>
-        <tr>
-            <td class="td2">
-                属性
-            </td>
-            <td class="td1">
-                <asp:CheckBox class="btn-control" ID="ckb_SuperAdmin" runat="server" Text="超级管理员" />
-                <asp:CheckBox ID="ckb_Agent" runat="server" Text="代理" Visible="false" />
-            </td>
-        </tr>        
-        <tr>
-            <td class="td2">
-                权限 
-            </td>
-            <td class="td1" style="width:80%">
-                <asp:CheckBoxList ID="cbl_roles" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
-                </asp:CheckBoxList>
-            </td>
-        </tr>
+        <%--<tr>--%>
+            <%--<td class="td2">--%>
+                <%--属性--%>
+            <%--</td>--%>
+            <%--<td class="td1">--%>
+                <%--<asp:CheckBox class="btn-control" ID="ckb_SuperAdmin" runat="server" Text="超级管理员" />--%>
+                <%--<asp:CheckBox ID="ckb_Agent" runat="server" Text="代理" Visible="false" />--%>
+            <%--</td>--%>
+        <%--</tr>        --%>
+        <%--<tr>--%>
+            <%--<td class="td2">--%>
+                <%--权限 --%>
+            <%--</td>--%>
+            <%--<td class="td1" style="width:80%">--%>
+                <%--<asp:CheckBoxList ID="cbl_roles" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">--%>
+                <%--</asp:CheckBoxList>--%>
+            <%--</td>--%>
+        <%--</tr>--%>
 
             <tr>
             <td class="td2">
